@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/org.metable.hex.ch01.domain.emf/src-gen" creationIcons="false"
+    editDirectory="/org.metable.hex.ch01.domain.emf.edit/src-gen" editorDirectory="/org.metable.hex.ch01.domain.emf.editor/src-gen"
+    modelPluginID="org.metable.hex.ch01.domain.emf" modelName="Network" editPluginClass="org.metable.hex.ch01.domain.emf.network.provider.NetworkEditPlugin"
+    editorPluginClass="org.metable.hex.ch01.domain.emf.network.presentation.NetworkEditorPlugin"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    testSuiteClass="org.metable.hex.ch01.domain.emf.network.tests.NetworkAllTests"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    editPluginID="org.metable.hex.ch01.domain.emf.edit" editorPluginID="org.metable.hex.ch01.domain.emf.editor"
+    operationReflection="true" runtimePlatform="RCP" importOrganizing="true">
+  <foreignModel>network.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Network" basePackage="org.metable.hex.ch01.domain.emf" disposableProviderFactory="true"
+      ecorePackage="network.ecore#/">
+    <genDataTypes ecoreDataType="network.ecore#//RouterId"/>
+    <genDataTypes ecoreDataType="network.ecore#//RouterType"/>
+    <genClasses ecoreClass="network.ecore#//Router">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//Router/routerId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//Router/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="network.ecore#//IRouter"/>
+  </genPackages>
+</genmodel:GenModel>

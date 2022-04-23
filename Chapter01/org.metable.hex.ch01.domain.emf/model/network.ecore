@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="network" nsURI="http://org.metable.hex.ch01.domain.network.emf/network"
+    nsPrefix="org.metable.hex.ch01.domain.network.emf">
+  <eClassifiers xsi:type="ecore:EDataType" name="RouterId" instanceClassName="org.metable.hex.ch01.domain.emf.network.impl.RouterIdImpl"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Router" eSuperTypes="#//IRouter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="routerId" eType="#//RouterId"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RouterType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IRouter" instanceClassName="org.metable.hex.ch01.domain.Router"
+      abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="RouterType" instanceClassName="org.metable.hex.ch01.domain.RouterType"/>
+</ecore:EPackage>

@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Domain
+Bundle-SymbolicName: org.metable.hex.ch01.domain
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.metable.hex.ch1.domain
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.metable.hex.ch01.domain

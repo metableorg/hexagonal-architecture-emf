@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.metable.hex.ch01.domain.network.emf="http://org.metable.hex.ch01.domain.network.emf/network">
+  <org.metable.hex.ch01.domain.network.emf:Router routerId="bf47e93f-8bcf-4bc0-a882-1184cd564c57" type="CORE"/>
+  <org.metable.hex.ch01.domain.network.emf:Router routerId="6e2164ff-606b-4574-88fc-28877dab0654" type="EDGE"/>
+  <org.metable.hex.ch01.domain.network.emf:Router routerId="d7f5eaef-f1eb-471a-9d9f-71bcdf0db4ea" type="CORE"/>
+  <org.metable.hex.ch01.domain.network.emf:Router routerId="34596568-6d15-496b-b379-0ea8878ef1a3" type="EDGE"/>
+  <org.metable.hex.ch01.domain.network.emf:Router routerId="e80d0872-d3a8-40d8-b489-e4a1ee5053e0" type="CORE"/>
+  <org.metable.hex.ch01.domain.network.emf:Router routerId="f41658b6-1e76-44e0-8f2f-7852b4387446" type="EDGE"/>
+  <org.metable.hex.ch01.domain.network.emf:Router routerId="35267cd0-afc5-416f-9768-3dc32e392f9c" type="CORE"/>
+  <org.metable.hex.ch01.domain.network.emf:Router routerId="8f650248-386d-4503-b08c-d09ea679b18b" type="EDGE"/>
+  <org.metable.hex.ch01.domain.network.emf:Router routerId="bc1202d0-65c0-4c42-9be9-1098bb0ac1f1" type="CORE"/>
+  <org.metable.hex.ch01.domain.network.emf:Router routerId="63069103-15c5-4a3f-8d93-85871e9dc87f" type="EDGE"/>
+</xmi:XMI>
