@@ -5,9 +5,11 @@ Bundle-SymbolicName: org.metable.hex.ch01.framework.adapters
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: org.metable.hex.ch01.framework.adapters
 Bundle-RequiredExecutionEnvironment: JavaSE-11
-Require-Bundle: org.metable.hex.ch01.application;bundle-version="1.0.0",
- org.metable.hex.ch01.domain;bundle-version="1.0.0",
- org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.emf.ecore.xmi,
- org.metable.hex.ch01.domain.emf;bundle-version="0.1.0"
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi
 Export-Package: org.metable.hex.ch01.framework.adapters.input.stdin
+Import-Package: org.metable.hex.ch01.application.ports.input,
+ org.metable.hex.ch01.application.ports.output,
+ org.metable.hex.ch01.application.usecases,
+ org.metable.hex.ch01.domain,
+ org.metable.hex.ch01.domain.emf.network

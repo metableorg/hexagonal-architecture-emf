@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.metable.hex.ch01.application
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: org.metable.hex.ch1.application.usecases
 Bundle-RequiredExecutionEnvironment: JavaSE-11
-Require-Bundle: org.metable.hex.ch01.domain;bundle-version="1.0.0"
 Export-Package: org.metable.hex.ch01.application.ports.input,
  org.metable.hex.ch01.application.ports.output,
  org.metable.hex.ch01.application.usecases
+Import-Package: org.metable.hex.ch01.domain
