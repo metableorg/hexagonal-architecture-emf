@@ -7,10 +7,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.metable.hex.ch01.domain.RouterDto;
 import org.metable.hex.ch01.domain.RouterType;
 import org.metable.hex.ch01.domain.emf.network.NetworkFactory;
 import org.metable.hex.ch01.domain.emf.network.NetworkPackage;
+import org.metable.hex.ch01.domain.emf.network.RouterDto;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!-- end-user-doc -->
@@ -31,13 +31,6 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * @generated
      */
     private EClass iRouterDtoEClass = null;
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    private EDataType routerIdEDataType = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -123,7 +116,7 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * 
      * @generated
      */
-    public EAttribute getRouterDto_RouterId() {
+    public EAttribute getRouterDto_Id() {
         return (EAttribute) routerDtoEClass.getEStructuralFeatures().get(0);
     }
 
@@ -143,15 +136,6 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      */
     public EClass getIRouterDto() {
         return iRouterDtoEClass;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public EDataType getRouterId() {
-        return routerIdEDataType;
     }
 
     /**
@@ -192,13 +176,12 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
 
         // Create classes and their features
         routerDtoEClass = createEClass(ROUTER_DTO);
-        createEAttribute(routerDtoEClass, ROUTER_DTO__ROUTER_ID);
+        createEAttribute(routerDtoEClass, ROUTER_DTO__ID);
         createEAttribute(routerDtoEClass, ROUTER_DTO__TYPE);
 
         iRouterDtoEClass = createEClass(IROUTER_DTO);
 
         // Create data types
-        routerIdEDataType = createEDataType(ROUTER_ID);
         routerTypeEDataType = createEDataType(ROUTER_TYPE);
     }
 
@@ -233,20 +216,17 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
         routerDtoEClass.getESuperTypes().add(this.getIRouterDto());
 
         // Initialize classes, features, and operations; add parameters
-        initEClass(routerDtoEClass, org.metable.hex.ch01.domain.emf.network.RouterDto.class, "RouterDto", !IS_ABSTRACT,
-                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getRouterDto_RouterId(), this.getRouterId(), "routerId", null, 0, 1,
-                org.metable.hex.ch01.domain.emf.network.RouterDto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getRouterDto_Type(), this.getRouterType(), "type", null, 0, 1,
-                org.metable.hex.ch01.domain.emf.network.RouterDto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(routerDtoEClass, RouterDto.class, "RouterDto", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getRouterDto_Id(), ecorePackage.getEString(), "id", null, 0, 1, RouterDto.class, !IS_TRANSIENT,
+                !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getRouterDto_Type(), this.getRouterType(), "type", null, 0, 1, RouterDto.class, !IS_TRANSIENT,
+                !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        initEClass(iRouterDtoEClass, RouterDto.class, "IRouterDto", IS_ABSTRACT, IS_INTERFACE,
-                !IS_GENERATED_INSTANCE_CLASS);
+        initEClass(iRouterDtoEClass, org.metable.hex.ch01.domain.RouterDto.class, "IRouterDto", IS_ABSTRACT,
+                IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize data types
-        initEDataType(routerIdEDataType, RouterIdImpl.class, "RouterId", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
         initEDataType(routerTypeEDataType, RouterType.class, "RouterType", IS_SERIALIZABLE,
                 !IS_GENERATED_INSTANCE_CLASS);
 

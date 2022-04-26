@@ -14,10 +14,9 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Network" basePackage="org.metable.hex.ch01.domain.emf" disposableProviderFactory="true"
       ecorePackage="network.ecore#/">
-    <genDataTypes ecoreDataType="network.ecore#//RouterId"/>
     <genDataTypes ecoreDataType="network.ecore#//RouterType"/>
     <genClasses ecoreClass="network.ecore#//RouterDto">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//RouterDto/routerId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//RouterDto/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//RouterDto/type"/>
     </genClasses>
     <genClasses image="false" ecoreClass="network.ecore#//IRouterDto"/>

@@ -4,7 +4,6 @@ package org.metable.hex.ch01.domain.emf.network;
 
 import org.eclipse.emf.ecore.EObject;
 import org.metable.hex.ch01.domain.RouterType;
-import org.metable.hex.ch01.domain.emf.network.impl.RouterIdImpl;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Router Dto</b></em>'. <!-- end-user-doc -->
@@ -13,7 +12,7 @@ import org.metable.hex.ch01.domain.emf.network.impl.RouterIdImpl;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.metable.hex.ch01.domain.emf.network.RouterDto#getRouterId <em>Router Id</em>}</li>
+ * <li>{@link org.metable.hex.ch01.domain.emf.network.RouterDto#getId <em>Id</em>}</li>
  * <li>{@link org.metable.hex.ch01.domain.emf.network.RouterDto#getType <em>Type</em>}</li>
  * </ul>
  *
@@ -23,25 +22,25 @@ import org.metable.hex.ch01.domain.emf.network.impl.RouterIdImpl;
  */
 public interface RouterDto extends EObject, org.metable.hex.ch01.domain.RouterDto {
     /**
-     * Returns the value of the '<em><b>Router Id</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the value of the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @return the value of the '<em>Router Id</em>' attribute.
-     * @see #setRouterId(RouterIdImpl)
-     * @see org.metable.hex.ch01.domain.emf.network.NetworkPackage#getRouterDto_RouterId()
-     * @model dataType="org.metable.hex.ch01.domain.emf.network.RouterId"
+     * @return the value of the '<em>Id</em>' attribute.
+     * @see #setId(String)
+     * @see org.metable.hex.ch01.domain.emf.network.NetworkPackage#getRouterDto_Id()
+     * @model
      * @generated
      */
-    RouterIdImpl getRouterId();
+    String getId();
 
     /**
-     * Sets the value of the '{@link org.metable.hex.ch01.domain.emf.network.RouterDto#getRouterId <em>Router Id</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Sets the value of the '{@link org.metable.hex.ch01.domain.emf.network.RouterDto#getId <em>Id</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @param value the new value of the '<em>Router Id</em>' attribute.
-     * @see #getRouterId()
+     * @param value the new value of the '<em>Id</em>' attribute.
+     * @see #getId()
      * @generated
      */
-    void setRouterId(RouterIdImpl value);
+    void setId(String value);
 
     /**
      * Returns the value of the '<em><b>Type</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->

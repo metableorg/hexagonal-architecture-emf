@@ -10,7 +10,6 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.metable.hex.ch01.domain.RouterType;
 import org.metable.hex.ch01.domain.emf.network.NetworkFactory;
 import org.metable.hex.ch01.domain.emf.network.RouterDto;
-import org.metable.hex.ch01.domain.emf.network.impl.RouterIdImpl;
 
 public class WriteRouterFile {
 
@@ -23,11 +22,10 @@ public class WriteRouterFile {
 
         for (int i = 0; i < 10; ++i) {
             final RouterDto router = NetworkFactory.eINSTANCE.createRouterDto();
-            final RouterIdImpl id = new RouterIdImpl(UUID.randomUUID().toString());
 
             final RouterType type = ((i % 2) == 0) ? RouterType.CORE : RouterType.EDGE;
 
-            router.setRouterId(id);
+            router.setId(UUID.randomUUID().toString());
             router.setType(type);
             resource.getContents().add(router);
         }

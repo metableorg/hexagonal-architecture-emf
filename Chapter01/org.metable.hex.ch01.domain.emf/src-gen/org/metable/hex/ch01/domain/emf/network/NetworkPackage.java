@@ -89,12 +89,12 @@ public interface NetworkPackage extends EPackage {
     int ROUTER_DTO = 0;
 
     /**
-     * The feature id for the '<em><b>Router Id</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
      * @ordered
      */
-    int ROUTER_DTO__ROUTER_ID = IROUTER_DTO_FEATURE_COUNT + 0;
+    int ROUTER_DTO__ID = IROUTER_DTO_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Type</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -122,22 +122,13 @@ public interface NetworkPackage extends EPackage {
     int ROUTER_DTO_OPERATION_COUNT = IROUTER_DTO_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '<em>Router Id</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see org.metable.hex.ch01.domain.emf.network.impl.RouterIdImpl
-     * @see org.metable.hex.ch01.domain.emf.network.impl.NetworkPackageImpl#getRouterId()
-     * @generated
-     */
-    int ROUTER_ID = 2;
-
-    /**
      * The meta object id for the '<em>Router Type</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see org.metable.hex.ch01.domain.RouterType
      * @see org.metable.hex.ch01.domain.emf.network.impl.NetworkPackageImpl#getRouterType()
      * @generated
      */
-    int ROUTER_TYPE = 3;
+    int ROUTER_TYPE = 2;
 
     /**
      * Returns the meta object for class '{@link org.metable.hex.ch01.domain.emf.network.RouterDto <em>Router
@@ -150,15 +141,15 @@ public interface NetworkPackage extends EPackage {
     EClass getRouterDto();
 
     /**
-     * Returns the meta object for the attribute '{@link org.metable.hex.ch01.domain.emf.network.RouterDto#getRouterId
-     * <em>Router Id</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for the attribute '{@link org.metable.hex.ch01.domain.emf.network.RouterDto#getId
+     * <em>Id</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @return the meta object for the attribute '<em>Router Id</em>'.
-     * @see org.metable.hex.ch01.domain.emf.network.RouterDto#getRouterId()
+     * @return the meta object for the attribute '<em>Id</em>'.
+     * @see org.metable.hex.ch01.domain.emf.network.RouterDto#getId()
      * @see #getRouterDto()
      * @generated
      */
-    EAttribute getRouterDto_RouterId();
+    EAttribute getRouterDto_Id();
 
     /**
      * Returns the meta object for the attribute '{@link org.metable.hex.ch01.domain.emf.network.RouterDto#getType
@@ -181,17 +172,6 @@ public interface NetworkPackage extends EPackage {
      * @generated
      */
     EClass getIRouterDto();
-
-    /**
-     * Returns the meta object for data type '{@link org.metable.hex.ch01.domain.emf.network.impl.RouterIdImpl
-     * <em>Router Id</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for data type '<em>Router Id</em>'.
-     * @see org.metable.hex.ch01.domain.emf.network.impl.RouterIdImpl
-     * @model instanceClass="org.metable.hex.ch01.domain.emf.network.impl.RouterIdImpl"
-     * @generated
-     */
-    EDataType getRouterId();
 
     /**
      * Returns the meta object for data type '{@link org.metable.hex.ch01.domain.RouterType <em>Router Type</em>}'. <!--
@@ -237,12 +217,12 @@ public interface NetworkPackage extends EPackage {
         EClass ROUTER_DTO = eINSTANCE.getRouterDto();
 
         /**
-         * The meta object literal for the '<em><b>Router Id</b></em>' attribute feature. <!-- begin-user-doc --> <!--
+         * The meta object literal for the '<em><b>Id</b></em>' attribute feature. <!-- begin-user-doc --> <!--
          * end-user-doc -->
          * 
          * @generated
          */
-        EAttribute ROUTER_DTO__ROUTER_ID = eINSTANCE.getRouterDto_RouterId();
+        EAttribute ROUTER_DTO__ID = eINSTANCE.getRouterDto_Id();
 
         /**
          * The meta object literal for the '<em><b>Type</b></em>' attribute feature. <!-- begin-user-doc --> <!--
@@ -261,15 +241,6 @@ public interface NetworkPackage extends EPackage {
          * @generated
          */
         EClass IROUTER_DTO = eINSTANCE.getIRouterDto();
-
-        /**
-         * The meta object literal for the '<em>Router Id</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @see org.metable.hex.ch01.domain.emf.network.impl.RouterIdImpl
-         * @see org.metable.hex.ch01.domain.emf.network.impl.NetworkPackageImpl#getRouterId()
-         * @generated
-         */
-        EDataType ROUTER_ID = eINSTANCE.getRouterId();
 
         /**
          * The meta object literal for the '<em>Router Type</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc

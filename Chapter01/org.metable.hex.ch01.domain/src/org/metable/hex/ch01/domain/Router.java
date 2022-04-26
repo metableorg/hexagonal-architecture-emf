@@ -22,12 +22,13 @@ public class Router {
     }
 
     static Router fromDto(RouterDto dto) {
-        return new Router(dto.getType(), dto.getId());
+        return new Router(dto.getType(), RouterId.of(dto.getId()));
     }
 
     private RouterType type;
 
     private RouterId id;
+
     private Router(RouterType type, RouterId id) {
         this.type = type;
         this.id = id;
@@ -46,8 +47,8 @@ public class Router {
         return new RouterDto() {
 
             @Override
-            public RouterId getId() {
-                return id;
+            public String getId() {
+                return id.toString();
             }
 
             @Override

@@ -69,8 +69,6 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
     @Override
     public Object createFromString(EDataType eDataType, String initialValue) {
         switch (eDataType.getClassifierID()) {
-        case NetworkPackage.ROUTER_ID:
-            return createRouterIdFromString(eDataType, initialValue);
         case NetworkPackage.ROUTER_TYPE:
             return createRouterTypeFromString(eDataType, initialValue);
         default:
@@ -86,8 +84,6 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
     @Override
     public String convertToString(EDataType eDataType, Object instanceValue) {
         switch (eDataType.getClassifierID()) {
-        case NetworkPackage.ROUTER_ID:
-            return convertRouterIdToString(eDataType, instanceValue);
         case NetworkPackage.ROUTER_TYPE:
             return convertRouterTypeToString(eDataType, instanceValue);
         default:
@@ -103,24 +99,6 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
     public RouterDto createRouterDto() {
         RouterDtoImpl routerDto = new RouterDtoImpl();
         return routerDto;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public RouterIdImpl createRouterIdFromString(EDataType eDataType, String initialValue) {
-        return (RouterIdImpl) super.createFromString(eDataType, initialValue);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public String convertRouterIdToString(EDataType eDataType, Object instanceValue) {
-        return super.convertToString(eDataType, instanceValue);
     }
 
     /**

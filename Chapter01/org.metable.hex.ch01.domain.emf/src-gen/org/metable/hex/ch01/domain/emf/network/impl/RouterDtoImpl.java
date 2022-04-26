@@ -6,7 +6,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.metable.hex.ch01.domain.RouterId;
 import org.metable.hex.ch01.domain.RouterType;
 import org.metable.hex.ch01.domain.emf.network.NetworkPackage;
 import org.metable.hex.ch01.domain.emf.network.RouterDto;
@@ -17,7 +16,7 @@ import org.metable.hex.ch01.domain.emf.network.RouterDto;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.metable.hex.ch01.domain.emf.network.impl.RouterDtoImpl#getRouterId <em>Router Id</em>}</li>
+ * <li>{@link org.metable.hex.ch01.domain.emf.network.impl.RouterDtoImpl#getId <em>Id</em>}</li>
  * <li>{@link org.metable.hex.ch01.domain.emf.network.impl.RouterDtoImpl#getType <em>Type</em>}</li>
  * </ul>
  *
@@ -25,24 +24,22 @@ import org.metable.hex.ch01.domain.emf.network.RouterDto;
  */
 public class RouterDtoImpl extends MinimalEObjectImpl.Container implements RouterDto {
     /**
-     * The default value of the '{@link #getRouterId() <em>Router Id</em>}' attribute. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
+     * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see #getRouterId()
+     * @see #getId()
      * @generated
      * @ordered
      */
-    protected static final RouterIdImpl ROUTER_ID_EDEFAULT = null;
+    protected static final String ID_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getRouterId() <em>Router Id</em>}' attribute. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
+     * The cached value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see #getRouterId()
+     * @see #getId()
      * @generated
      * @ordered
      */
-    protected RouterIdImpl routerId = ROUTER_ID_EDEFAULT;
+    protected String id = ID_EDEFAULT;
 
     /**
      * The default value of the '{@link #getType() <em>Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
@@ -88,8 +85,8 @@ public class RouterDtoImpl extends MinimalEObjectImpl.Container implements Route
      * 
      * @generated
      */
-    public RouterIdImpl getRouterId() {
-        return routerId;
+    public String getId() {
+        return id;
     }
 
     /**
@@ -97,12 +94,11 @@ public class RouterDtoImpl extends MinimalEObjectImpl.Container implements Route
      * 
      * @generated
      */
-    public void setRouterId(RouterIdImpl newRouterId) {
-        RouterIdImpl oldRouterId = routerId;
-        routerId = newRouterId;
+    public void setId(String newId) {
+        String oldId = id;
+        id = newId;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NetworkPackage.ROUTER_DTO__ROUTER_ID, oldRouterId,
-                    routerId));
+            eNotify(new ENotificationImpl(this, Notification.SET, NetworkPackage.ROUTER_DTO__ID, oldId, id));
     }
 
     /**
@@ -134,8 +130,8 @@ public class RouterDtoImpl extends MinimalEObjectImpl.Container implements Route
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case NetworkPackage.ROUTER_DTO__ROUTER_ID:
-            return getRouterId();
+        case NetworkPackage.ROUTER_DTO__ID:
+            return getId();
         case NetworkPackage.ROUTER_DTO__TYPE:
             return getType();
         }
@@ -150,8 +146,8 @@ public class RouterDtoImpl extends MinimalEObjectImpl.Container implements Route
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case NetworkPackage.ROUTER_DTO__ROUTER_ID:
-            setRouterId((RouterIdImpl) newValue);
+        case NetworkPackage.ROUTER_DTO__ID:
+            setId((String) newValue);
             return;
         case NetworkPackage.ROUTER_DTO__TYPE:
             setType((RouterType) newValue);
@@ -168,8 +164,8 @@ public class RouterDtoImpl extends MinimalEObjectImpl.Container implements Route
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case NetworkPackage.ROUTER_DTO__ROUTER_ID:
-            setRouterId(ROUTER_ID_EDEFAULT);
+        case NetworkPackage.ROUTER_DTO__ID:
+            setId(ID_EDEFAULT);
             return;
         case NetworkPackage.ROUTER_DTO__TYPE:
             setType(TYPE_EDEFAULT);
@@ -186,8 +182,8 @@ public class RouterDtoImpl extends MinimalEObjectImpl.Container implements Route
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case NetworkPackage.ROUTER_DTO__ROUTER_ID:
-            return ROUTER_ID_EDEFAULT == null ? routerId != null : !ROUTER_ID_EDEFAULT.equals(routerId);
+        case NetworkPackage.ROUTER_DTO__ID:
+            return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
         case NetworkPackage.ROUTER_DTO__TYPE:
             return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
         }
@@ -205,17 +201,12 @@ public class RouterDtoImpl extends MinimalEObjectImpl.Container implements Route
             return super.toString();
 
         StringBuilder result = new StringBuilder(super.toString());
-        result.append(" (routerId: ");
-        result.append(routerId);
+        result.append(" (id: ");
+        result.append(id);
         result.append(", type: ");
         result.append(type);
         result.append(')');
         return result.toString();
-    }
-
-    @Override
-    public RouterId getId() {
-        return routerId.getDomainModel();
     }
 
 } // RouterDtoImpl
