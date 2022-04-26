@@ -11,7 +11,9 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.metable.hex.ch01.application.ports.output.RouterViewOutputPort;
 import org.metable.hex.ch01.domain.Router;
+import org.metable.hex.ch01.domain.RouterFactory;
 import org.metable.hex.ch01.domain.emf.network.NetworkPackage;
+import org.metable.hex.ch01.domain.emf.network.RouterDto;
 
 public class RouterViewFileAdapter implements RouterViewOutputPort {
 
@@ -38,7 +40,7 @@ public class RouterViewFileAdapter implements RouterViewOutputPort {
 
         resource.load(null);
 
-        resource.getContents().forEach(router -> routers.add((Router) router));
+        resource.getContents().forEach(router -> routers.add(RouterFactory.newRouter((RouterDto) router)));
 
         return routers;
     }

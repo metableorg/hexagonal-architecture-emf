@@ -8,16 +8,16 @@ public class RouterIdImpl {
     public RouterIdImpl(String id) {
         routerId = RouterId.of(id);
     }
-   
+
     @Override
     public String toString() {
         return routerId.toString();
     }
-    
+
     public void valueOf(String id) {
         routerId = RouterId.of(id);
     }
-    
+
     public RouterId getDomainModel() {
         return routerId;
     }

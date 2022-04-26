@@ -6,60 +6,54 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
+import org.metable.hex.ch01.domain.RouterDto;
 import org.metable.hex.ch01.domain.RouterType;
-
 import org.metable.hex.ch01.domain.emf.network.NetworkFactory;
 import org.metable.hex.ch01.domain.emf.network.NetworkPackage;
-import org.metable.hex.ch01.domain.emf.network.Router;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model <b>Package</b>.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    private EClass routerEClass = null;
+    private EClass routerDtoEClass = null;
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    private EClass iRouterEClass = null;
+    private EClass iRouterDtoEClass = null;
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     private EDataType routerIdEDataType = null;
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     private EDataType routerTypeEDataType = null;
 
     /**
-     * Creates an instance of the model <b>Package</b>, registered with
-     * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
-     * package URI value.
-     * <p>Note: the correct way to create the package is via the static
-     * factory method {@link #init init()}, which also performs
-     * initialization of the package, or returns the registered package,
-     * if one already exists.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Creates an instance of the model <b>Package</b>, registered with {@link org.eclipse.emf.ecore.EPackage.Registry
+     * EPackage.Registry} by the package package URI value.
+     * <p>
+     * Note: the correct way to create the package is via the static factory method {@link #init init()}, which also
+     * performs initialization of the package, or returns the registered package, if one already exists. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see org.eclipse.emf.ecore.EPackage.Registry
      * @see org.metable.hex.ch01.domain.emf.network.NetworkPackage#eNS_URI
      * @see #init()
@@ -70,8 +64,8 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     private static boolean isInited = false;
@@ -79,10 +73,11 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
     /**
      * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
      *
-     * <p>This method is used to initialize {@link NetworkPackage#eINSTANCE} when that field is accessed.
-     * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <p>
+     * This method is used to initialize {@link NetworkPackage#eINSTANCE} when that field is accessed. Clients should
+     * not invoke it directly. Instead, they should simply access that field to obtain the package. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     * 
      * @see #eNS_URI
      * @see #createPackageContents()
      * @see #initializePackageContents()
@@ -115,44 +110,44 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    public EClass getRouter() {
-        return routerEClass;
+    public EClass getRouterDto() {
+        return routerDtoEClass;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    public EAttribute getRouter_RouterId() {
-        return (EAttribute) routerEClass.getEStructuralFeatures().get(0);
+    public EAttribute getRouterDto_RouterId() {
+        return (EAttribute) routerDtoEClass.getEStructuralFeatures().get(0);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    public EAttribute getRouter_Type() {
-        return (EAttribute) routerEClass.getEStructuralFeatures().get(1);
+    public EAttribute getRouterDto_Type() {
+        return (EAttribute) routerDtoEClass.getEStructuralFeatures().get(1);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    public EClass getIRouter() {
-        return iRouterEClass;
+    public EClass getIRouterDto() {
+        return iRouterDtoEClass;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EDataType getRouterId() {
@@ -160,8 +155,8 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public EDataType getRouterType() {
@@ -169,8 +164,8 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public NetworkFactory getNetworkFactory() {
@@ -178,17 +173,16 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     private boolean isCreated = false;
 
     /**
-     * Creates the meta-model objects for the package.  This method is
-     * guarded to have no affect on any invocation but its first.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Creates the meta-model objects for the package. This method is guarded to have no affect on any invocation but
+     * its first. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void createPackageContents() {
@@ -197,11 +191,11 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
         isCreated = true;
 
         // Create classes and their features
-        routerEClass = createEClass(ROUTER);
-        createEAttribute(routerEClass, ROUTER__ROUTER_ID);
-        createEAttribute(routerEClass, ROUTER__TYPE);
+        routerDtoEClass = createEClass(ROUTER_DTO);
+        createEAttribute(routerDtoEClass, ROUTER_DTO__ROUTER_ID);
+        createEAttribute(routerDtoEClass, ROUTER_DTO__TYPE);
 
-        iRouterEClass = createEClass(IROUTER);
+        iRouterDtoEClass = createEClass(IROUTER_DTO);
 
         // Create data types
         routerIdEDataType = createEDataType(ROUTER_ID);
@@ -209,17 +203,16 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     private boolean isInitialized = false;
 
     /**
-     * Complete the initialization of the package and its meta-model.  This
-     * method is guarded to have no affect on any invocation but its first.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Complete the initialization of the package and its meta-model. This method is guarded to have no affect on any
+     * invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void initializePackageContents() {
@@ -237,16 +230,19 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
         // Set bounds for type parameters
 
         // Add supertypes to classes
-        routerEClass.getESuperTypes().add(this.getIRouter());
+        routerDtoEClass.getESuperTypes().add(this.getIRouterDto());
 
         // Initialize classes, features, and operations; add parameters
-        initEClass(routerEClass, Router.class, "Router", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getRouter_RouterId(), this.getRouterId(), "routerId", null, 0, 1, Router.class, !IS_TRANSIENT,
-                !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getRouter_Type(), this.getRouterType(), "type", null, 0, 1, Router.class, !IS_TRANSIENT,
-                !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEClass(routerDtoEClass, org.metable.hex.ch01.domain.emf.network.RouterDto.class, "RouterDto", !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getRouterDto_RouterId(), this.getRouterId(), "routerId", null, 0, 1,
+                org.metable.hex.ch01.domain.emf.network.RouterDto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getRouterDto_Type(), this.getRouterType(), "type", null, 0, 1,
+                org.metable.hex.ch01.domain.emf.network.RouterDto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        initEClass(iRouterEClass, org.metable.hex.ch01.domain.Router.class, "IRouter", IS_ABSTRACT, IS_INTERFACE,
+        initEClass(iRouterDtoEClass, RouterDto.class, "IRouterDto", IS_ABSTRACT, IS_INTERFACE,
                 !IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize data types
@@ -258,4 +254,4 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
         createResource(eNS_URI);
     }
 
-} //NetworkPackageImpl
+} // NetworkPackageImpl

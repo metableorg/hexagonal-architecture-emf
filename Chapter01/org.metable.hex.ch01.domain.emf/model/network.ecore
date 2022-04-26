@@ -3,11 +3,11 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="network" nsURI="http://org.metable.hex.ch01.domain.network.emf/network"
     nsPrefix="org.metable.hex.ch01.domain.network.emf">
   <eClassifiers xsi:type="ecore:EDataType" name="RouterId" instanceClassName="org.metable.hex.ch01.domain.emf.network.impl.RouterIdImpl"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Router" eSuperTypes="#//IRouter">
+  <eClassifiers xsi:type="ecore:EClass" name="RouterDto" eSuperTypes="#//IRouterDto">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="routerId" eType="#//RouterId"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RouterType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IRouter" instanceClassName="org.metable.hex.ch01.domain.Router"
+  <eClassifiers xsi:type="ecore:EClass" name="IRouterDto" instanceClassName="org.metable.hex.ch01.domain.RouterDto"
       abstract="true" interface="true"/>
   <eClassifiers xsi:type="ecore:EDataType" name="RouterType" instanceClassName="org.metable.hex.ch01.domain.RouterType"/>
 </ecore:EPackage>

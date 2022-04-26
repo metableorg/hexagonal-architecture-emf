@@ -16,10 +16,10 @@
       ecorePackage="network.ecore#/">
     <genDataTypes ecoreDataType="network.ecore#//RouterId"/>
     <genDataTypes ecoreDataType="network.ecore#//RouterType"/>
-    <genClasses ecoreClass="network.ecore#//Router">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//Router/routerId"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//Router/type"/>
+    <genClasses ecoreClass="network.ecore#//RouterDto">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//RouterDto/routerId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//RouterDto/type"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="network.ecore#//IRouter"/>
+    <genClasses image="false" ecoreClass="network.ecore#//IRouterDto"/>
   </genPackages>
 </genmodel:GenModel>

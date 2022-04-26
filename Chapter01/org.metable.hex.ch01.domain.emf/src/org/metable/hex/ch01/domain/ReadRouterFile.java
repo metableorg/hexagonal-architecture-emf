@@ -1,4 +1,4 @@
-package org.metable.hex.ch01.domain.emf;
+package org.metable.hex.ch01.domain;
 
 import java.io.IOException;
 
@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.metable.hex.ch01.domain.emf.network.NetworkPackage;
-import org.metable.hex.ch01.domain.emf.network.Router;
+import org.metable.hex.ch01.domain.emf.network.RouterDto;
 
 public class ReadRouterFile {
 
@@ -23,8 +23,8 @@ public class ReadRouterFile {
 
         resource.load(null);
 
-        Router router = (Router) resource.getContents().get(0);
+        Router router = Router.fromDto((RouterDto) resource.getContents().get(0));
 
-        System.out.println("Router id: " + router.getId() + " type: " + router.getType());
+        System.out.println(router);
     }
 }

@@ -25,6 +25,6 @@ public class RouterViewCLIAdapter {
     }
 
     public void prettyPrint(List<Router> routers) {
-        routers.forEach(router -> System.out.println(Router.toString(router)));
+        routers.forEach(router -> System.out.println(router));
     }
 }

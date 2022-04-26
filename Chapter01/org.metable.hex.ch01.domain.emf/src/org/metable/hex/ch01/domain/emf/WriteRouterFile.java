@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.metable.hex.ch01.domain.RouterType;
 import org.metable.hex.ch01.domain.emf.network.NetworkFactory;
-import org.metable.hex.ch01.domain.emf.network.Router;
+import org.metable.hex.ch01.domain.emf.network.RouterDto;
 import org.metable.hex.ch01.domain.emf.network.impl.RouterIdImpl;
 
 public class WriteRouterFile {
@@ -22,7 +22,7 @@ public class WriteRouterFile {
         Resource resource = resourceSet.createResource(uri);
 
         for (int i = 0; i < 10; ++i) {
-            final Router router = NetworkFactory.eINSTANCE.createRouter();
+            final RouterDto router = NetworkFactory.eINSTANCE.createRouterDto();
             final RouterIdImpl id = new RouterIdImpl(UUID.randomUUID().toString());
 
             final RouterType type = ((i % 2) == 0) ? RouterType.CORE : RouterType.EDGE;

@@ -4,34 +4,29 @@ package org.metable.hex.ch01.domain.emf.network.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
-import org.metable.hex.ch01.domain.emf.network.*;
+import org.metable.hex.ch01.domain.RouterDto;
+import org.metable.hex.ch01.domain.emf.network.NetworkPackage;
 
 /**
- * <!-- begin-user-doc -->
- * The <b>Adapter Factory</b> for the model.
- * It provides an adapter <code>createXXX</code> method for each class of the model.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter <code>createXXX</code>
+ * method for each class of the model. <!-- end-user-doc -->
+ * 
  * @see org.metable.hex.ch01.domain.emf.network.NetworkPackage
  * @generated
  */
 public class NetworkAdapterFactory extends AdapterFactoryImpl {
     /**
-     * The cached model package.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected static NetworkPackage modelPackage;
 
     /**
-     * Creates an instance of the adapter factory.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Creates an instance of the adapter factory. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public NetworkAdapterFactory() {
@@ -41,10 +36,10 @@ public class NetworkAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Returns whether this factory is applicable for the type of the object.
-     * <!-- begin-user-doc -->
-     * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
-     * <!-- end-user-doc -->
+     * Returns whether this factory is applicable for the type of the object. <!-- begin-user-doc --> This
+     * implementation returns <code>true</code> if the object is either the model's package or is an instance object of
+     * the model. <!-- end-user-doc -->
+     * 
      * @return whether this factory is applicable for the type of the object.
      * @generated
      */
@@ -60,20 +55,19 @@ public class NetworkAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * The switch that delegates to the <code>createXXX</code> methods.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The switch that delegates to the <code>createXXX</code> methods. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected NetworkSwitch<Adapter> modelSwitch = new NetworkSwitch<Adapter>() {
         @Override
-        public Adapter caseRouter(Router object) {
-            return createRouterAdapter();
+        public Adapter caseRouterDto(org.metable.hex.ch01.domain.emf.network.RouterDto object) {
+            return createRouterDtoAdapter();
         }
 
         @Override
-        public Adapter caseIRouter(org.metable.hex.ch01.domain.Router object) {
-            return createIRouterAdapter();
+        public Adapter caseIRouterDto(RouterDto object) {
+            return createIRouterDtoAdapter();
         }
 
         @Override
@@ -83,9 +77,8 @@ public class NetworkAdapterFactory extends AdapterFactoryImpl {
     };
 
     /**
-     * Creates an adapter for the <code>target</code>.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @param target the object to adapt.
      * @return the adapter for the <code>target</code>.
      * @generated
@@ -96,38 +89,35 @@ public class NetworkAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.metable.hex.ch01.domain.emf.network.Router <em>Router</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
+     * Creates a new adapter for an object of class '{@link org.metable.hex.ch01.domain.emf.network.RouterDto <em>Router
+     * Dto</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
-     * @see org.metable.hex.ch01.domain.emf.network.Router
+     * @see org.metable.hex.ch01.domain.emf.network.RouterDto
      * @generated
      */
-    public Adapter createRouterAdapter() {
+    public Adapter createRouterDtoAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.metable.hex.ch01.domain.Router <em>IRouter</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
+     * Creates a new adapter for an object of class '{@link org.metable.hex.ch01.domain.RouterDto <em>IRouter
+     * Dto</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
-     * @see org.metable.hex.ch01.domain.Router
+     * @see org.metable.hex.ch01.domain.RouterDto
      * @generated
      */
-    public Adapter createIRouterAdapter() {
+    public Adapter createIRouterDtoAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for the default case.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null.
+     * Creates a new adapter for the default case. <!-- begin-user-doc --> This default implementation returns null.
      * <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @generated
      */
@@ -135,4 +125,4 @@ public class NetworkAdapterFactory extends AdapterFactoryImpl {
         return null;
     }
 
-} //NetworkAdapterFactory
+} // NetworkAdapterFactory

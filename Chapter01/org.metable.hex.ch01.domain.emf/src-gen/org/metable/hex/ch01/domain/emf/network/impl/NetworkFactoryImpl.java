@@ -6,26 +6,22 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import org.metable.hex.ch01.domain.RouterType;
-
-import org.metable.hex.ch01.domain.emf.network.*;
+import org.metable.hex.ch01.domain.emf.network.NetworkFactory;
+import org.metable.hex.ch01.domain.emf.network.NetworkPackage;
+import org.metable.hex.ch01.domain.emf.network.RouterDto;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model <b>Factory</b>.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
     /**
-     * Creates the default factory implementation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static NetworkFactory init() {
@@ -42,9 +38,8 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
     }
 
     /**
-     * Creates an instance of the factory.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public NetworkFactoryImpl() {
@@ -52,23 +47,23 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
-        case NetworkPackage.ROUTER:
-            return createRouter();
+        case NetworkPackage.ROUTER_DTO:
+            return createRouterDto();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -84,8 +79,8 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -101,18 +96,18 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    public Router createRouter() {
-        RouterImpl router = new RouterImpl();
-        return router;
+    public RouterDto createRouterDto() {
+        RouterDtoImpl routerDto = new RouterDtoImpl();
+        return routerDto;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public RouterIdImpl createRouterIdFromString(EDataType eDataType, String initialValue) {
@@ -120,8 +115,8 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public String convertRouterIdToString(EDataType eDataType, Object instanceValue) {
@@ -129,8 +124,8 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public RouterType createRouterTypeFromString(EDataType eDataType, String initialValue) {
@@ -138,8 +133,8 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public String convertRouterTypeToString(EDataType eDataType, Object instanceValue) {
@@ -147,8 +142,8 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public NetworkPackage getNetworkPackage() {
@@ -156,8 +151,8 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @deprecated
      * @generated
      */
@@ -166,4 +161,4 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
         return NetworkPackage.eINSTANCE;
     }
 
-} //NetworkFactoryImpl
+} // NetworkFactoryImpl

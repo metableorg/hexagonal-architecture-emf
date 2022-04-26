@@ -4,30 +4,56 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public interface Router {
-
+public class Router {
     public static Predicate<Router> filterRouterByType(RouterType routerType) {
         return routerType.equals(RouterType.CORE) ? isCore() : isEdge();
-    }
-
-    private static Predicate<Router> isCore() {
-        return p -> p.getType() == RouterType.CORE;
-    }
-
-    private static Predicate<Router> isEdge() {
-        return p -> p.getType() == RouterType.EDGE;
     }
 
     public static List<Router> retrieveRouter(List<Router> routers, Predicate<Router> predicate) {
         return routers.stream().filter(predicate).collect(Collectors.<Router>toList());
     }
 
-    public static String toString(Router router) {
-        return "Router{" + "routerType=" + router.getType() + ", routerId=" + router.getId() + '}';
+    private static Predicate<Router> isCore() {
+        return p -> p.getRouterType() == RouterType.CORE;
     }
 
-    public RouterId getId();
+    private static Predicate<Router> isEdge() {
+        return p -> p.getRouterType() == RouterType.EDGE;
+    }
 
-    public RouterType getType();
+    static Router fromDto(RouterDto dto) {
+        return new Router(dto.getType(), dto.getId());
+    }
 
+    private RouterType type;
+
+    private RouterId id;
+    private Router(RouterType type, RouterId id) {
+        this.type = type;
+        this.id = id;
+    }
+
+    public RouterType getRouterType() {
+        return type;
+    }
+
+    @Override
+    public String toString() {
+        return "Router [type=" + type + ", id=" + id + "]";
+    }
+
+    protected RouterDto toDto() {
+        return new RouterDto() {
+
+            @Override
+            public RouterId getId() {
+                return id;
+            }
+
+            @Override
+            public RouterType getType() {
+                return type;
+            }
+        };
+    }
 }
