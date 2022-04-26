@@ -10,46 +10,46 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.metable.hex.ch02.domain.emf.network.NetworkPackage;
-import org.metable.hex.ch02.domain.emf.network.Router;
-import org.metable.hex.ch02.domain.emf.network.Switch;
-import org.metable.hex.ch02.domain.valueobject.RouterId;
+import org.metable.hex.ch02.domain.emf.network.RouterDto;
+import org.metable.hex.ch02.domain.emf.network.SwitchDto;
+
 import org.metable.hex.ch02.domain.valueobject.RouterType;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Router</b></em>'.
+ * An implementation of the model object '<em><b>Router Dto</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.metable.hex.ch02.domain.emf.network.impl.RouterImpl#getRouterId <em>Router Id</em>}</li>
- *   <li>{@link org.metable.hex.ch02.domain.emf.network.impl.RouterImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.metable.hex.ch02.domain.emf.network.impl.RouterImpl#getSwitch <em>Switch</em>}</li>
+ *   <li>{@link org.metable.hex.ch02.domain.emf.network.impl.RouterDtoImpl#getId <em>Id</em>}</li>
+ *   <li>{@link org.metable.hex.ch02.domain.emf.network.impl.RouterDtoImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.metable.hex.ch02.domain.emf.network.impl.RouterDtoImpl#getSwitch <em>Switch</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RouterImpl extends IRouterImpl implements Router {
+public class RouterDtoImpl extends IRouterDtoImpl implements RouterDto {
     /**
-     * The default value of the '{@link #getRouterId() <em>Router Id</em>}' attribute.
+     * The default value of the '{@link #getId() <em>Id</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getRouterId()
+     * @see #getId()
      * @generated
      * @ordered
      */
-    protected static final RouterIdImpl ROUTER_ID_EDEFAULT = null;
+    protected static final String ID_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getRouterId() <em>Router Id</em>}' attribute.
+     * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getRouterId()
+     * @see #getId()
      * @generated
      * @ordered
      */
-    protected RouterIdImpl routerId = ROUTER_ID_EDEFAULT;
+    protected String id = ID_EDEFAULT;
 
     /**
      * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -79,14 +79,14 @@ public class RouterImpl extends IRouterImpl implements Router {
      * @generated
      * @ordered
      */
-    protected Switch switch_;
+    protected SwitchDto switch_;
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected RouterImpl() {
+    protected RouterDtoImpl() {
         super();
     }
 
@@ -97,7 +97,7 @@ public class RouterImpl extends IRouterImpl implements Router {
      */
     @Override
     protected EClass eStaticClass() {
-        return NetworkPackage.Literals.ROUTER;
+        return NetworkPackage.Literals.ROUTER_DTO;
     }
 
     /**
@@ -105,8 +105,8 @@ public class RouterImpl extends IRouterImpl implements Router {
      * <!-- end-user-doc -->
      * @generated
      */
-    public RouterIdImpl getRouterId() {
-        return routerId;
+    public String getId() {
+        return id;
     }
 
     /**
@@ -114,12 +114,11 @@ public class RouterImpl extends IRouterImpl implements Router {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setRouterId(RouterIdImpl newRouterId) {
-        RouterIdImpl oldRouterId = routerId;
-        routerId = newRouterId;
+    public void setId(String newId) {
+        String oldId = id;
+        id = newId;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NetworkPackage.ROUTER__ROUTER_ID, oldRouterId,
-                    routerId));
+            eNotify(new ENotificationImpl(this, Notification.SET, NetworkPackage.ROUTER_DTO__ID, oldId, id));
     }
 
     /**
@@ -140,7 +139,7 @@ public class RouterImpl extends IRouterImpl implements Router {
         RouterType oldType = type;
         type = newType;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NetworkPackage.ROUTER__TYPE, oldType, type));
+            eNotify(new ENotificationImpl(this, Notification.SET, NetworkPackage.ROUTER_DTO__TYPE, oldType, type));
     }
 
     /**
@@ -148,14 +147,14 @@ public class RouterImpl extends IRouterImpl implements Router {
      * <!-- end-user-doc -->
      * @generated
      */
-    public Switch getSwitch() {
+    public SwitchDto getSwitch() {
         if (switch_ != null && switch_.eIsProxy()) {
             InternalEObject oldSwitch = (InternalEObject) switch_;
-            switch_ = (Switch) eResolveProxy(oldSwitch);
+            switch_ = (SwitchDto) eResolveProxy(oldSwitch);
             if (switch_ != oldSwitch) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, NetworkPackage.ROUTER__SWITCH, oldSwitch,
-                            switch_));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, NetworkPackage.ROUTER_DTO__SWITCH,
+                            oldSwitch, switch_));
             }
         }
         return switch_;
@@ -166,7 +165,7 @@ public class RouterImpl extends IRouterImpl implements Router {
      * <!-- end-user-doc -->
      * @generated
      */
-    public Switch basicGetSwitch() {
+    public SwitchDto basicGetSwitch() {
         return switch_;
     }
 
@@ -175,11 +174,12 @@ public class RouterImpl extends IRouterImpl implements Router {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setSwitch(Switch newSwitch) {
-        Switch oldSwitch = switch_;
+    public void setSwitch(SwitchDto newSwitch) {
+        SwitchDto oldSwitch = switch_;
         switch_ = newSwitch;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NetworkPackage.ROUTER__SWITCH, oldSwitch, switch_));
+            eNotify(new ENotificationImpl(this, Notification.SET, NetworkPackage.ROUTER_DTO__SWITCH, oldSwitch,
+                    switch_));
     }
 
     /**
@@ -190,11 +190,11 @@ public class RouterImpl extends IRouterImpl implements Router {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case NetworkPackage.ROUTER__ROUTER_ID:
-            return getRouterId();
-        case NetworkPackage.ROUTER__TYPE:
+        case NetworkPackage.ROUTER_DTO__ID:
+            return getId();
+        case NetworkPackage.ROUTER_DTO__TYPE:
             return getType();
-        case NetworkPackage.ROUTER__SWITCH:
+        case NetworkPackage.ROUTER_DTO__SWITCH:
             if (resolve)
                 return getSwitch();
             return basicGetSwitch();
@@ -210,14 +210,14 @@ public class RouterImpl extends IRouterImpl implements Router {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case NetworkPackage.ROUTER__ROUTER_ID:
-            setRouterId((RouterIdImpl) newValue);
+        case NetworkPackage.ROUTER_DTO__ID:
+            setId((String) newValue);
             return;
-        case NetworkPackage.ROUTER__TYPE:
+        case NetworkPackage.ROUTER_DTO__TYPE:
             setType((RouterType) newValue);
             return;
-        case NetworkPackage.ROUTER__SWITCH:
-            setSwitch((Switch) newValue);
+        case NetworkPackage.ROUTER_DTO__SWITCH:
+            setSwitch((SwitchDto) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -231,14 +231,14 @@ public class RouterImpl extends IRouterImpl implements Router {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case NetworkPackage.ROUTER__ROUTER_ID:
-            setRouterId(ROUTER_ID_EDEFAULT);
+        case NetworkPackage.ROUTER_DTO__ID:
+            setId(ID_EDEFAULT);
             return;
-        case NetworkPackage.ROUTER__TYPE:
+        case NetworkPackage.ROUTER_DTO__TYPE:
             setType(TYPE_EDEFAULT);
             return;
-        case NetworkPackage.ROUTER__SWITCH:
-            setSwitch((Switch) null);
+        case NetworkPackage.ROUTER_DTO__SWITCH:
+            setSwitch((SwitchDto) null);
             return;
         }
         super.eUnset(featureID);
@@ -252,11 +252,11 @@ public class RouterImpl extends IRouterImpl implements Router {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case NetworkPackage.ROUTER__ROUTER_ID:
-            return ROUTER_ID_EDEFAULT == null ? routerId != null : !ROUTER_ID_EDEFAULT.equals(routerId);
-        case NetworkPackage.ROUTER__TYPE:
+        case NetworkPackage.ROUTER_DTO__ID:
+            return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+        case NetworkPackage.ROUTER_DTO__TYPE:
             return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-        case NetworkPackage.ROUTER__SWITCH:
+        case NetworkPackage.ROUTER_DTO__SWITCH:
             return switch_ != null;
         }
         return super.eIsSet(featureID);
@@ -273,17 +273,12 @@ public class RouterImpl extends IRouterImpl implements Router {
             return super.toString();
 
         StringBuilder result = new StringBuilder(super.toString());
-        result.append(" (routerId: ");
-        result.append(routerId);
+        result.append(" (id: ");
+        result.append(id);
         result.append(", type: ");
         result.append(type);
         result.append(')');
         return result.toString();
     }
 
-    @Override
-    public RouterId getId() {
-        return routerId.getDomainModel();
-    }
-
-} //RouterImpl
+} //RouterDtoImpl

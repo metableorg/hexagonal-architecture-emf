@@ -63,10 +63,10 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
     @Override
     public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
-        case NetworkPackage.ROUTER:
-            return createRouter();
-        case NetworkPackage.SWITCH:
-            return createSwitch();
+        case NetworkPackage.ROUTER_DTO:
+            return createRouterDto();
+        case NetworkPackage.SWITCH_DTO:
+            return createSwitchDto();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -82,12 +82,8 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
         switch (eDataType.getClassifierID()) {
         case NetworkPackage.ROUTER_TYPE:
             return createRouterTypeFromString(eDataType, initialValue);
-        case NetworkPackage.ROUTER_ID:
-            return createRouterIdFromString(eDataType, initialValue);
         case NetworkPackage.SWITCH_TYPE:
             return createSwitchTypeFromString(eDataType, initialValue);
-        case NetworkPackage.SWITCH_ID:
-            return createSwitchIdFromString(eDataType, initialValue);
         case NetworkPackage.NETWORK:
             return createNetworkFromString(eDataType, initialValue);
         case NetworkPackage.IP:
@@ -109,12 +105,8 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
         switch (eDataType.getClassifierID()) {
         case NetworkPackage.ROUTER_TYPE:
             return convertRouterTypeToString(eDataType, instanceValue);
-        case NetworkPackage.ROUTER_ID:
-            return convertRouterIdToString(eDataType, instanceValue);
         case NetworkPackage.SWITCH_TYPE:
             return convertSwitchTypeToString(eDataType, instanceValue);
-        case NetworkPackage.SWITCH_ID:
-            return convertSwitchIdToString(eDataType, instanceValue);
         case NetworkPackage.NETWORK:
             return convertNetworkToString(eDataType, instanceValue);
         case NetworkPackage.IP:
@@ -131,9 +123,9 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public Router createRouter() {
-        RouterImpl router = new RouterImpl();
-        return router;
+    public RouterDto createRouterDto() {
+        RouterDtoImpl routerDto = new RouterDtoImpl();
+        return routerDto;
     }
 
     /**
@@ -141,9 +133,9 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public Switch createSwitch() {
-        SwitchImpl switch_ = new SwitchImpl();
-        return switch_;
+    public SwitchDto createSwitchDto() {
+        SwitchDtoImpl switchDto = new SwitchDtoImpl();
+        return switchDto;
     }
 
     /**
@@ -169,24 +161,6 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public RouterIdImpl createRouterIdFromString(EDataType eDataType, String initialValue) {
-        return (RouterIdImpl) super.createFromString(eDataType, initialValue);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public String convertRouterIdToString(EDataType eDataType, Object instanceValue) {
-        return super.convertToString(eDataType, instanceValue);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     public SwitchType createSwitchTypeFromString(EDataType eDataType, String initialValue) {
         return (SwitchType) super.createFromString(eDataType, initialValue);
     }
@@ -197,24 +171,6 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
      * @generated
      */
     public String convertSwitchTypeToString(EDataType eDataType, Object instanceValue) {
-        return super.convertToString(eDataType, instanceValue);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public SwitchIdImpl createSwitchIdFromString(EDataType eDataType, String initialValue) {
-        return (SwitchIdImpl) super.createFromString(eDataType, initialValue);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public String convertSwitchIdToString(EDataType eDataType, Object instanceValue) {
         return super.convertToString(eDataType, instanceValue);
     }
 

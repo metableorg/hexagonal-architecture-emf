@@ -67,23 +67,23 @@ public class NetworkAdapterFactory extends AdapterFactoryImpl {
      */
     protected NetworkSwitch<Adapter> modelSwitch = new NetworkSwitch<Adapter>() {
         @Override
-        public Adapter caseRouter(Router object) {
-            return createRouterAdapter();
+        public Adapter caseRouterDto(RouterDto object) {
+            return createRouterDtoAdapter();
         }
 
         @Override
-        public Adapter caseIRouter(org.metable.hex.ch02.domain.entity.Router object) {
-            return createIRouterAdapter();
+        public Adapter caseIRouterDto(org.metable.hex.ch02.domain.entity.RouterDto object) {
+            return createIRouterDtoAdapter();
         }
 
         @Override
-        public Adapter caseSwitch(Switch object) {
-            return createSwitchAdapter();
+        public Adapter caseSwitchDto(SwitchDto object) {
+            return createSwitchDtoAdapter();
         }
 
         @Override
-        public Adapter caseISwitch(org.metable.hex.ch02.domain.entity.Switch object) {
-            return createISwitchAdapter();
+        public Adapter caseISwitchDto(org.metable.hex.ch02.domain.entity.SwitchDto object) {
+            return createISwitchDtoAdapter();
         }
 
         @Override
@@ -106,58 +106,58 @@ public class NetworkAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.metable.hex.ch02.domain.emf.network.Router <em>Router</em>}'.
+     * Creates a new adapter for an object of class '{@link org.metable.hex.ch02.domain.emf.network.RouterDto <em>Router Dto</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.metable.hex.ch02.domain.emf.network.Router
+     * @see org.metable.hex.ch02.domain.emf.network.RouterDto
      * @generated
      */
-    public Adapter createRouterAdapter() {
+    public Adapter createRouterDtoAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.metable.hex.ch02.domain.entity.Router <em>IRouter</em>}'.
+     * Creates a new adapter for an object of class '{@link org.metable.hex.ch02.domain.entity.RouterDto <em>IRouter Dto</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.metable.hex.ch02.domain.entity.Router
+     * @see org.metable.hex.ch02.domain.entity.RouterDto
      * @generated
      */
-    public Adapter createIRouterAdapter() {
+    public Adapter createIRouterDtoAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.metable.hex.ch02.domain.emf.network.Switch <em>Switch</em>}'.
+     * Creates a new adapter for an object of class '{@link org.metable.hex.ch02.domain.emf.network.SwitchDto <em>Switch Dto</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.metable.hex.ch02.domain.emf.network.Switch
+     * @see org.metable.hex.ch02.domain.emf.network.SwitchDto
      * @generated
      */
-    public Adapter createSwitchAdapter() {
+    public Adapter createSwitchDtoAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.metable.hex.ch02.domain.entity.Switch <em>ISwitch</em>}'.
+     * Creates a new adapter for an object of class '{@link org.metable.hex.ch02.domain.entity.SwitchDto <em>ISwitch Dto</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.metable.hex.ch02.domain.entity.Switch
+     * @see org.metable.hex.ch02.domain.entity.SwitchDto
      * @generated
      */
-    public Adapter createISwitchAdapter() {
+    public Adapter createISwitchDtoAdapter() {
         return null;
     }
 

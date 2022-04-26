@@ -16,30 +16,29 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 import org.metable.hex.ch02.domain.emf.network.NetworkPackage;
-import org.metable.hex.ch02.domain.emf.network.Switch;
+import org.metable.hex.ch02.domain.emf.network.SwitchDto;
 
 import org.metable.hex.ch02.domain.valueobject.IP;
 import org.metable.hex.ch02.domain.valueobject.Network;
-import org.metable.hex.ch02.domain.valueobject.SwitchId;
 import org.metable.hex.ch02.domain.valueobject.SwitchType;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Switch</b></em>'.
+ * An implementation of the model object '<em><b>Switch Dto</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.metable.hex.ch02.domain.emf.network.impl.SwitchImpl#getNetworks <em>Networks</em>}</li>
- *   <li>{@link org.metable.hex.ch02.domain.emf.network.impl.SwitchImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.metable.hex.ch02.domain.emf.network.impl.SwitchImpl#getSwitchId <em>Switch Id</em>}</li>
- *   <li>{@link org.metable.hex.ch02.domain.emf.network.impl.SwitchImpl#getIpAddress <em>Ip Address</em>}</li>
+ *   <li>{@link org.metable.hex.ch02.domain.emf.network.impl.SwitchDtoImpl#getNetworks <em>Networks</em>}</li>
+ *   <li>{@link org.metable.hex.ch02.domain.emf.network.impl.SwitchDtoImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.metable.hex.ch02.domain.emf.network.impl.SwitchDtoImpl#getSwitchId <em>Switch Id</em>}</li>
+ *   <li>{@link org.metable.hex.ch02.domain.emf.network.impl.SwitchDtoImpl#getIpAddress <em>Ip Address</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SwitchImpl extends MinimalEObjectImpl.Container implements Switch {
+public class SwitchDtoImpl extends MinimalEObjectImpl.Container implements SwitchDto {
     /**
      * The cached value of the '{@link #getNetworks() <em>Networks</em>}' attribute list.
      * <!-- begin-user-doc -->
@@ -78,7 +77,7 @@ public class SwitchImpl extends MinimalEObjectImpl.Container implements Switch {
      * @generated
      * @ordered
      */
-    protected static final SwitchIdImpl SWITCH_ID_EDEFAULT = null;
+    protected static final String SWITCH_ID_EDEFAULT = null;
 
     /**
      * The cached value of the '{@link #getSwitchId() <em>Switch Id</em>}' attribute.
@@ -88,7 +87,7 @@ public class SwitchImpl extends MinimalEObjectImpl.Container implements Switch {
      * @generated
      * @ordered
      */
-    protected SwitchIdImpl switchId = SWITCH_ID_EDEFAULT;
+    protected String switchId = SWITCH_ID_EDEFAULT;
 
     /**
      * The default value of the '{@link #getIpAddress() <em>Ip Address</em>}' attribute.
@@ -115,7 +114,7 @@ public class SwitchImpl extends MinimalEObjectImpl.Container implements Switch {
      * <!-- end-user-doc -->
      * @generated
      */
-    protected SwitchImpl() {
+    protected SwitchDtoImpl() {
         super();
     }
 
@@ -126,7 +125,7 @@ public class SwitchImpl extends MinimalEObjectImpl.Container implements Switch {
      */
     @Override
     protected EClass eStaticClass() {
-        return NetworkPackage.Literals.SWITCH;
+        return NetworkPackage.Literals.SWITCH_DTO;
     }
 
     /**
@@ -136,7 +135,7 @@ public class SwitchImpl extends MinimalEObjectImpl.Container implements Switch {
      */
     public EList<Network> getNetworks() {
         if (networks == null) {
-            networks = new EDataTypeUniqueEList<Network>(Network.class, this, NetworkPackage.SWITCH__NETWORKS);
+            networks = new EDataTypeUniqueEList<Network>(Network.class, this, NetworkPackage.SWITCH_DTO__NETWORKS);
         }
         return networks;
     }
@@ -159,7 +158,7 @@ public class SwitchImpl extends MinimalEObjectImpl.Container implements Switch {
         SwitchType oldType = type;
         type = newType;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NetworkPackage.SWITCH__TYPE, oldType, type));
+            eNotify(new ENotificationImpl(this, Notification.SET, NetworkPackage.SWITCH_DTO__TYPE, oldType, type));
     }
 
     /**
@@ -167,7 +166,7 @@ public class SwitchImpl extends MinimalEObjectImpl.Container implements Switch {
      * <!-- end-user-doc -->
      * @generated
      */
-    public SwitchIdImpl getSwitchId() {
+    public String getSwitchId() {
         return switchId;
     }
 
@@ -176,11 +175,11 @@ public class SwitchImpl extends MinimalEObjectImpl.Container implements Switch {
      * <!-- end-user-doc -->
      * @generated
      */
-    public void setSwitchId(SwitchIdImpl newSwitchId) {
-        SwitchIdImpl oldSwitchId = switchId;
+    public void setSwitchId(String newSwitchId) {
+        String oldSwitchId = switchId;
         switchId = newSwitchId;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NetworkPackage.SWITCH__SWITCH_ID, oldSwitchId,
+            eNotify(new ENotificationImpl(this, Notification.SET, NetworkPackage.SWITCH_DTO__SWITCH_ID, oldSwitchId,
                     switchId));
     }
 
@@ -202,7 +201,7 @@ public class SwitchImpl extends MinimalEObjectImpl.Container implements Switch {
         IP oldIpAddress = ipAddress;
         ipAddress = newIpAddress;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, NetworkPackage.SWITCH__IP_ADDRESS, oldIpAddress,
+            eNotify(new ENotificationImpl(this, Notification.SET, NetworkPackage.SWITCH_DTO__IP_ADDRESS, oldIpAddress,
                     ipAddress));
     }
 
@@ -214,13 +213,13 @@ public class SwitchImpl extends MinimalEObjectImpl.Container implements Switch {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case NetworkPackage.SWITCH__NETWORKS:
+        case NetworkPackage.SWITCH_DTO__NETWORKS:
             return getNetworks();
-        case NetworkPackage.SWITCH__TYPE:
+        case NetworkPackage.SWITCH_DTO__TYPE:
             return getType();
-        case NetworkPackage.SWITCH__SWITCH_ID:
+        case NetworkPackage.SWITCH_DTO__SWITCH_ID:
             return getSwitchId();
-        case NetworkPackage.SWITCH__IP_ADDRESS:
+        case NetworkPackage.SWITCH_DTO__IP_ADDRESS:
             return getIpAddress();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -235,17 +234,17 @@ public class SwitchImpl extends MinimalEObjectImpl.Container implements Switch {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case NetworkPackage.SWITCH__NETWORKS:
+        case NetworkPackage.SWITCH_DTO__NETWORKS:
             getNetworks().clear();
             getNetworks().addAll((Collection<? extends Network>) newValue);
             return;
-        case NetworkPackage.SWITCH__TYPE:
+        case NetworkPackage.SWITCH_DTO__TYPE:
             setType((SwitchType) newValue);
             return;
-        case NetworkPackage.SWITCH__SWITCH_ID:
-            setSwitchId((SwitchIdImpl) newValue);
+        case NetworkPackage.SWITCH_DTO__SWITCH_ID:
+            setSwitchId((String) newValue);
             return;
-        case NetworkPackage.SWITCH__IP_ADDRESS:
+        case NetworkPackage.SWITCH_DTO__IP_ADDRESS:
             setIpAddress((IP) newValue);
             return;
         }
@@ -260,16 +259,16 @@ public class SwitchImpl extends MinimalEObjectImpl.Container implements Switch {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case NetworkPackage.SWITCH__NETWORKS:
+        case NetworkPackage.SWITCH_DTO__NETWORKS:
             getNetworks().clear();
             return;
-        case NetworkPackage.SWITCH__TYPE:
+        case NetworkPackage.SWITCH_DTO__TYPE:
             setType(TYPE_EDEFAULT);
             return;
-        case NetworkPackage.SWITCH__SWITCH_ID:
+        case NetworkPackage.SWITCH_DTO__SWITCH_ID:
             setSwitchId(SWITCH_ID_EDEFAULT);
             return;
-        case NetworkPackage.SWITCH__IP_ADDRESS:
+        case NetworkPackage.SWITCH_DTO__IP_ADDRESS:
             setIpAddress(IP_ADDRESS_EDEFAULT);
             return;
         }
@@ -284,13 +283,13 @@ public class SwitchImpl extends MinimalEObjectImpl.Container implements Switch {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case NetworkPackage.SWITCH__NETWORKS:
+        case NetworkPackage.SWITCH_DTO__NETWORKS:
             return networks != null && !networks.isEmpty();
-        case NetworkPackage.SWITCH__TYPE:
+        case NetworkPackage.SWITCH_DTO__TYPE:
             return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-        case NetworkPackage.SWITCH__SWITCH_ID:
+        case NetworkPackage.SWITCH_DTO__SWITCH_ID:
             return SWITCH_ID_EDEFAULT == null ? switchId != null : !SWITCH_ID_EDEFAULT.equals(switchId);
-        case NetworkPackage.SWITCH__IP_ADDRESS:
+        case NetworkPackage.SWITCH_DTO__IP_ADDRESS:
             return IP_ADDRESS_EDEFAULT == null ? ipAddress != null : !IP_ADDRESS_EDEFAULT.equals(ipAddress);
         }
         return super.eIsSet(featureID);
@@ -319,15 +318,4 @@ public class SwitchImpl extends MinimalEObjectImpl.Container implements Switch {
         return result.toString();
     }
 
-    @Override
-    public org.metable.hex.ch02.domain.entity.Switch addNetwork(Network network) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public SwitchId getId() {
-        return switchId.getDomainModel();
-    }
-
-} //SwitchImpl
+} //SwitchDtoImpl

@@ -58,51 +58,51 @@ public interface NetworkPackage extends EPackage {
     NetworkPackage eINSTANCE = org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl.init();
 
     /**
-     * The meta object id for the '{@link org.metable.hex.ch02.domain.emf.network.impl.IRouterImpl <em>IRouter</em>}' class.
+     * The meta object id for the '{@link org.metable.hex.ch02.domain.emf.network.impl.IRouterDtoImpl <em>IRouter Dto</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.metable.hex.ch02.domain.emf.network.impl.IRouterImpl
-     * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getIRouter()
+     * @see org.metable.hex.ch02.domain.emf.network.impl.IRouterDtoImpl
+     * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getIRouterDto()
      * @generated
      */
-    int IROUTER = 1;
+    int IROUTER_DTO = 1;
 
     /**
-     * The number of structural features of the '<em>IRouter</em>' class.
+     * The number of structural features of the '<em>IRouter Dto</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int IROUTER_FEATURE_COUNT = 0;
+    int IROUTER_DTO_FEATURE_COUNT = 0;
 
     /**
-     * The number of operations of the '<em>IRouter</em>' class.
+     * The number of operations of the '<em>IRouter Dto</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int IROUTER_OPERATION_COUNT = 0;
+    int IROUTER_DTO_OPERATION_COUNT = 0;
 
     /**
-     * The meta object id for the '{@link org.metable.hex.ch02.domain.emf.network.impl.RouterImpl <em>Router</em>}' class.
+     * The meta object id for the '{@link org.metable.hex.ch02.domain.emf.network.impl.RouterDtoImpl <em>Router Dto</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.metable.hex.ch02.domain.emf.network.impl.RouterImpl
-     * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getRouter()
+     * @see org.metable.hex.ch02.domain.emf.network.impl.RouterDtoImpl
+     * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getRouterDto()
      * @generated
      */
-    int ROUTER = 0;
+    int ROUTER_DTO = 0;
 
     /**
-     * The feature id for the '<em><b>Router Id</b></em>' attribute.
+     * The feature id for the '<em><b>Id</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ROUTER__ROUTER_ID = IROUTER_FEATURE_COUNT + 0;
+    int ROUTER_DTO__ID = IROUTER_DTO_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -111,7 +111,7 @@ public interface NetworkPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int ROUTER__TYPE = IROUTER_FEATURE_COUNT + 1;
+    int ROUTER_DTO__TYPE = IROUTER_DTO_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Switch</b></em>' reference.
@@ -120,63 +120,63 @@ public interface NetworkPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int ROUTER__SWITCH = IROUTER_FEATURE_COUNT + 2;
+    int ROUTER_DTO__SWITCH = IROUTER_DTO_FEATURE_COUNT + 2;
 
     /**
-     * The number of structural features of the '<em>Router</em>' class.
+     * The number of structural features of the '<em>Router Dto</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ROUTER_FEATURE_COUNT = IROUTER_FEATURE_COUNT + 3;
+    int ROUTER_DTO_FEATURE_COUNT = IROUTER_DTO_FEATURE_COUNT + 3;
 
     /**
-     * The number of operations of the '<em>Router</em>' class.
+     * The number of operations of the '<em>Router Dto</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ROUTER_OPERATION_COUNT = IROUTER_OPERATION_COUNT + 0;
+    int ROUTER_DTO_OPERATION_COUNT = IROUTER_DTO_OPERATION_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link org.metable.hex.ch02.domain.entity.Switch <em>ISwitch</em>}' class.
+     * The meta object id for the '{@link org.metable.hex.ch02.domain.entity.SwitchDto <em>ISwitch Dto</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.metable.hex.ch02.domain.entity.Switch
-     * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getISwitch()
+     * @see org.metable.hex.ch02.domain.entity.SwitchDto
+     * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getISwitchDto()
      * @generated
      */
-    int ISWITCH = 3;
+    int ISWITCH_DTO = 3;
 
     /**
-     * The number of structural features of the '<em>ISwitch</em>' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ISWITCH_FEATURE_COUNT = 0;
-
-    /**
-     * The number of operations of the '<em>ISwitch</em>' class.
+     * The number of structural features of the '<em>ISwitch Dto</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ISWITCH_OPERATION_COUNT = 0;
+    int ISWITCH_DTO_FEATURE_COUNT = 0;
 
     /**
-     * The meta object id for the '{@link org.metable.hex.ch02.domain.emf.network.impl.SwitchImpl <em>Switch</em>}' class.
+     * The number of operations of the '<em>ISwitch Dto</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.metable.hex.ch02.domain.emf.network.impl.SwitchImpl
-     * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getSwitch()
+     * @generated
+     * @ordered
+     */
+    int ISWITCH_DTO_OPERATION_COUNT = 0;
+
+    /**
+     * The meta object id for the '{@link org.metable.hex.ch02.domain.emf.network.impl.SwitchDtoImpl <em>Switch Dto</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.metable.hex.ch02.domain.emf.network.impl.SwitchDtoImpl
+     * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getSwitchDto()
      * @generated
      */
-    int SWITCH = 2;
+    int SWITCH_DTO = 2;
 
     /**
      * The feature id for the '<em><b>Networks</b></em>' attribute list.
@@ -185,7 +185,7 @@ public interface NetworkPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SWITCH__NETWORKS = ISWITCH_FEATURE_COUNT + 0;
+    int SWITCH_DTO__NETWORKS = ISWITCH_DTO_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -194,7 +194,7 @@ public interface NetworkPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SWITCH__TYPE = ISWITCH_FEATURE_COUNT + 1;
+    int SWITCH_DTO__TYPE = ISWITCH_DTO_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Switch Id</b></em>' attribute.
@@ -203,7 +203,7 @@ public interface NetworkPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SWITCH__SWITCH_ID = ISWITCH_FEATURE_COUNT + 2;
+    int SWITCH_DTO__SWITCH_ID = ISWITCH_DTO_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Ip Address</b></em>' attribute.
@@ -212,25 +212,25 @@ public interface NetworkPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SWITCH__IP_ADDRESS = ISWITCH_FEATURE_COUNT + 3;
+    int SWITCH_DTO__IP_ADDRESS = ISWITCH_DTO_FEATURE_COUNT + 3;
 
     /**
-     * The number of structural features of the '<em>Switch</em>' class.
+     * The number of structural features of the '<em>Switch Dto</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SWITCH_FEATURE_COUNT = ISWITCH_FEATURE_COUNT + 4;
+    int SWITCH_DTO_FEATURE_COUNT = ISWITCH_DTO_FEATURE_COUNT + 4;
 
     /**
-     * The number of operations of the '<em>Switch</em>' class.
+     * The number of operations of the '<em>Switch Dto</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SWITCH_OPERATION_COUNT = ISWITCH_OPERATION_COUNT + 0;
+    int SWITCH_DTO_OPERATION_COUNT = ISWITCH_DTO_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '<em>Router Type</em>' data type.
@@ -243,16 +243,6 @@ public interface NetworkPackage extends EPackage {
     int ROUTER_TYPE = 4;
 
     /**
-     * The meta object id for the '<em>Router Id</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.metable.hex.ch02.domain.emf.network.impl.RouterIdImpl
-     * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getRouterId()
-     * @generated
-     */
-    int ROUTER_ID = 5;
-
-    /**
      * The meta object id for the '<em>Switch Type</em>' data type.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -260,17 +250,7 @@ public interface NetworkPackage extends EPackage {
      * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getSwitchType()
      * @generated
      */
-    int SWITCH_TYPE = 6;
-
-    /**
-     * The meta object id for the '<em>Switch Id</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.metable.hex.ch02.domain.emf.network.impl.SwitchIdImpl
-     * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getSwitchId()
-     * @generated
-     */
-    int SWITCH_ID = 7;
+    int SWITCH_TYPE = 5;
 
     /**
      * The meta object id for the '<em>Network</em>' data type.
@@ -280,7 +260,7 @@ public interface NetworkPackage extends EPackage {
      * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getNetwork()
      * @generated
      */
-    int NETWORK = 8;
+    int NETWORK = 6;
 
     /**
      * The meta object id for the '<em>IP</em>' data type.
@@ -290,7 +270,7 @@ public interface NetworkPackage extends EPackage {
      * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getIP()
      * @generated
      */
-    int IP = 9;
+    int IP = 7;
 
     /**
      * The meta object id for the '<em>Protocol</em>' data type.
@@ -300,126 +280,126 @@ public interface NetworkPackage extends EPackage {
      * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getProtocol()
      * @generated
      */
-    int PROTOCOL = 10;
+    int PROTOCOL = 8;
 
     /**
-     * Returns the meta object for class '{@link org.metable.hex.ch02.domain.emf.network.Router <em>Router</em>}'.
+     * Returns the meta object for class '{@link org.metable.hex.ch02.domain.emf.network.RouterDto <em>Router Dto</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Router</em>'.
-     * @see org.metable.hex.ch02.domain.emf.network.Router
+     * @return the meta object for class '<em>Router Dto</em>'.
+     * @see org.metable.hex.ch02.domain.emf.network.RouterDto
      * @generated
      */
-    EClass getRouter();
+    EClass getRouterDto();
 
     /**
-     * Returns the meta object for the attribute '{@link org.metable.hex.ch02.domain.emf.network.Router#getRouterId <em>Router Id</em>}'.
+     * Returns the meta object for the attribute '{@link org.metable.hex.ch02.domain.emf.network.RouterDto#getId <em>Id</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Router Id</em>'.
-     * @see org.metable.hex.ch02.domain.emf.network.Router#getRouterId()
-     * @see #getRouter()
+     * @return the meta object for the attribute '<em>Id</em>'.
+     * @see org.metable.hex.ch02.domain.emf.network.RouterDto#getId()
+     * @see #getRouterDto()
      * @generated
      */
-    EAttribute getRouter_RouterId();
+    EAttribute getRouterDto_Id();
 
     /**
-     * Returns the meta object for the attribute '{@link org.metable.hex.ch02.domain.emf.network.Router#getType <em>Type</em>}'.
+     * Returns the meta object for the attribute '{@link org.metable.hex.ch02.domain.emf.network.RouterDto#getType <em>Type</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the attribute '<em>Type</em>'.
-     * @see org.metable.hex.ch02.domain.emf.network.Router#getType()
-     * @see #getRouter()
+     * @see org.metable.hex.ch02.domain.emf.network.RouterDto#getType()
+     * @see #getRouterDto()
      * @generated
      */
-    EAttribute getRouter_Type();
+    EAttribute getRouterDto_Type();
 
     /**
-     * Returns the meta object for the reference '{@link org.metable.hex.ch02.domain.emf.network.Router#getSwitch <em>Switch</em>}'.
+     * Returns the meta object for the reference '{@link org.metable.hex.ch02.domain.emf.network.RouterDto#getSwitch <em>Switch</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the reference '<em>Switch</em>'.
-     * @see org.metable.hex.ch02.domain.emf.network.Router#getSwitch()
-     * @see #getRouter()
+     * @see org.metable.hex.ch02.domain.emf.network.RouterDto#getSwitch()
+     * @see #getRouterDto()
      * @generated
      */
-    EReference getRouter_Switch();
+    EReference getRouterDto_Switch();
 
     /**
-     * Returns the meta object for class '{@link org.metable.hex.ch02.domain.entity.Router <em>IRouter</em>}'.
+     * Returns the meta object for class '{@link org.metable.hex.ch02.domain.entity.RouterDto <em>IRouter Dto</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>IRouter</em>'.
-     * @see org.metable.hex.ch02.domain.entity.Router
-     * @model instanceClass="org.metable.hex.ch02.domain.entity.Router"
+     * @return the meta object for class '<em>IRouter Dto</em>'.
+     * @see org.metable.hex.ch02.domain.entity.RouterDto
+     * @model instanceClass="org.metable.hex.ch02.domain.entity.RouterDto"
      * @generated
      */
-    EClass getIRouter();
+    EClass getIRouterDto();
 
     /**
-     * Returns the meta object for class '{@link org.metable.hex.ch02.domain.emf.network.Switch <em>Switch</em>}'.
+     * Returns the meta object for class '{@link org.metable.hex.ch02.domain.emf.network.SwitchDto <em>Switch Dto</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Switch</em>'.
-     * @see org.metable.hex.ch02.domain.emf.network.Switch
+     * @return the meta object for class '<em>Switch Dto</em>'.
+     * @see org.metable.hex.ch02.domain.emf.network.SwitchDto
      * @generated
      */
-    EClass getSwitch();
+    EClass getSwitchDto();
 
     /**
-     * Returns the meta object for the attribute list '{@link org.metable.hex.ch02.domain.emf.network.Switch#getNetworks <em>Networks</em>}'.
+     * Returns the meta object for the attribute list '{@link org.metable.hex.ch02.domain.emf.network.SwitchDto#getNetworks <em>Networks</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the attribute list '<em>Networks</em>'.
-     * @see org.metable.hex.ch02.domain.emf.network.Switch#getNetworks()
-     * @see #getSwitch()
+     * @see org.metable.hex.ch02.domain.emf.network.SwitchDto#getNetworks()
+     * @see #getSwitchDto()
      * @generated
      */
-    EAttribute getSwitch_Networks();
+    EAttribute getSwitchDto_Networks();
 
     /**
-     * Returns the meta object for the attribute '{@link org.metable.hex.ch02.domain.emf.network.Switch#getType <em>Type</em>}'.
+     * Returns the meta object for the attribute '{@link org.metable.hex.ch02.domain.emf.network.SwitchDto#getType <em>Type</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the attribute '<em>Type</em>'.
-     * @see org.metable.hex.ch02.domain.emf.network.Switch#getType()
-     * @see #getSwitch()
+     * @see org.metable.hex.ch02.domain.emf.network.SwitchDto#getType()
+     * @see #getSwitchDto()
      * @generated
      */
-    EAttribute getSwitch_Type();
+    EAttribute getSwitchDto_Type();
 
     /**
-     * Returns the meta object for the attribute '{@link org.metable.hex.ch02.domain.emf.network.Switch#getSwitchId <em>Switch Id</em>}'.
+     * Returns the meta object for the attribute '{@link org.metable.hex.ch02.domain.emf.network.SwitchDto#getSwitchId <em>Switch Id</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the attribute '<em>Switch Id</em>'.
-     * @see org.metable.hex.ch02.domain.emf.network.Switch#getSwitchId()
-     * @see #getSwitch()
+     * @see org.metable.hex.ch02.domain.emf.network.SwitchDto#getSwitchId()
+     * @see #getSwitchDto()
      * @generated
      */
-    EAttribute getSwitch_SwitchId();
+    EAttribute getSwitchDto_SwitchId();
 
     /**
-     * Returns the meta object for the attribute '{@link org.metable.hex.ch02.domain.emf.network.Switch#getIpAddress <em>Ip Address</em>}'.
+     * Returns the meta object for the attribute '{@link org.metable.hex.ch02.domain.emf.network.SwitchDto#getIpAddress <em>Ip Address</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the attribute '<em>Ip Address</em>'.
-     * @see org.metable.hex.ch02.domain.emf.network.Switch#getIpAddress()
-     * @see #getSwitch()
+     * @see org.metable.hex.ch02.domain.emf.network.SwitchDto#getIpAddress()
+     * @see #getSwitchDto()
      * @generated
      */
-    EAttribute getSwitch_IpAddress();
+    EAttribute getSwitchDto_IpAddress();
 
     /**
-     * Returns the meta object for class '{@link org.metable.hex.ch02.domain.entity.Switch <em>ISwitch</em>}'.
+     * Returns the meta object for class '{@link org.metable.hex.ch02.domain.entity.SwitchDto <em>ISwitch Dto</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>ISwitch</em>'.
-     * @see org.metable.hex.ch02.domain.entity.Switch
-     * @model instanceClass="org.metable.hex.ch02.domain.entity.Switch"
+     * @return the meta object for class '<em>ISwitch Dto</em>'.
+     * @see org.metable.hex.ch02.domain.entity.SwitchDto
+     * @model instanceClass="org.metable.hex.ch02.domain.entity.SwitchDto"
      * @generated
      */
-    EClass getISwitch();
+    EClass getISwitchDto();
 
     /**
      * Returns the meta object for data type '{@link org.metable.hex.ch02.domain.valueobject.RouterType <em>Router Type</em>}'.
@@ -433,17 +413,6 @@ public interface NetworkPackage extends EPackage {
     EDataType getRouterType();
 
     /**
-     * Returns the meta object for data type '{@link org.metable.hex.ch02.domain.emf.network.impl.RouterIdImpl <em>Router Id</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for data type '<em>Router Id</em>'.
-     * @see org.metable.hex.ch02.domain.emf.network.impl.RouterIdImpl
-     * @model instanceClass="org.metable.hex.ch02.domain.emf.network.impl.RouterIdImpl"
-     * @generated
-     */
-    EDataType getRouterId();
-
-    /**
      * Returns the meta object for data type '{@link org.metable.hex.ch02.domain.valueobject.SwitchType <em>Switch Type</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -453,17 +422,6 @@ public interface NetworkPackage extends EPackage {
      * @generated
      */
     EDataType getSwitchType();
-
-    /**
-     * Returns the meta object for data type '{@link org.metable.hex.ch02.domain.emf.network.impl.SwitchIdImpl <em>Switch Id</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for data type '<em>Switch Id</em>'.
-     * @see org.metable.hex.ch02.domain.emf.network.impl.SwitchIdImpl
-     * @model instanceClass="org.metable.hex.ch02.domain.emf.network.impl.SwitchIdImpl"
-     * @generated
-     */
-    EDataType getSwitchId();
 
     /**
      * Returns the meta object for data type '{@link org.metable.hex.ch02.domain.valueobject.Network <em>Network</em>}'.
@@ -522,22 +480,22 @@ public interface NetworkPackage extends EPackage {
      */
     interface Literals {
         /**
-         * The meta object literal for the '{@link org.metable.hex.ch02.domain.emf.network.impl.RouterImpl <em>Router</em>}' class.
+         * The meta object literal for the '{@link org.metable.hex.ch02.domain.emf.network.impl.RouterDtoImpl <em>Router Dto</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.metable.hex.ch02.domain.emf.network.impl.RouterImpl
-         * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getRouter()
+         * @see org.metable.hex.ch02.domain.emf.network.impl.RouterDtoImpl
+         * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getRouterDto()
          * @generated
          */
-        EClass ROUTER = eINSTANCE.getRouter();
+        EClass ROUTER_DTO = eINSTANCE.getRouterDto();
 
         /**
-         * The meta object literal for the '<em><b>Router Id</b></em>' attribute feature.
+         * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute ROUTER__ROUTER_ID = eINSTANCE.getRouter_RouterId();
+        EAttribute ROUTER_DTO__ID = eINSTANCE.getRouterDto_Id();
 
         /**
          * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -545,7 +503,7 @@ public interface NetworkPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute ROUTER__TYPE = eINSTANCE.getRouter_Type();
+        EAttribute ROUTER_DTO__TYPE = eINSTANCE.getRouterDto_Type();
 
         /**
          * The meta object literal for the '<em><b>Switch</b></em>' reference feature.
@@ -553,27 +511,27 @@ public interface NetworkPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference ROUTER__SWITCH = eINSTANCE.getRouter_Switch();
+        EReference ROUTER_DTO__SWITCH = eINSTANCE.getRouterDto_Switch();
 
         /**
-         * The meta object literal for the '{@link org.metable.hex.ch02.domain.emf.network.impl.IRouterImpl <em>IRouter</em>}' class.
+         * The meta object literal for the '{@link org.metable.hex.ch02.domain.emf.network.impl.IRouterDtoImpl <em>IRouter Dto</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.metable.hex.ch02.domain.emf.network.impl.IRouterImpl
-         * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getIRouter()
+         * @see org.metable.hex.ch02.domain.emf.network.impl.IRouterDtoImpl
+         * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getIRouterDto()
          * @generated
          */
-        EClass IROUTER = eINSTANCE.getIRouter();
+        EClass IROUTER_DTO = eINSTANCE.getIRouterDto();
 
         /**
-         * The meta object literal for the '{@link org.metable.hex.ch02.domain.emf.network.impl.SwitchImpl <em>Switch</em>}' class.
+         * The meta object literal for the '{@link org.metable.hex.ch02.domain.emf.network.impl.SwitchDtoImpl <em>Switch Dto</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.metable.hex.ch02.domain.emf.network.impl.SwitchImpl
-         * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getSwitch()
+         * @see org.metable.hex.ch02.domain.emf.network.impl.SwitchDtoImpl
+         * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getSwitchDto()
          * @generated
          */
-        EClass SWITCH = eINSTANCE.getSwitch();
+        EClass SWITCH_DTO = eINSTANCE.getSwitchDto();
 
         /**
          * The meta object literal for the '<em><b>Networks</b></em>' attribute list feature.
@@ -581,7 +539,7 @@ public interface NetworkPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute SWITCH__NETWORKS = eINSTANCE.getSwitch_Networks();
+        EAttribute SWITCH_DTO__NETWORKS = eINSTANCE.getSwitchDto_Networks();
 
         /**
          * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -589,7 +547,7 @@ public interface NetworkPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute SWITCH__TYPE = eINSTANCE.getSwitch_Type();
+        EAttribute SWITCH_DTO__TYPE = eINSTANCE.getSwitchDto_Type();
 
         /**
          * The meta object literal for the '<em><b>Switch Id</b></em>' attribute feature.
@@ -597,7 +555,7 @@ public interface NetworkPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute SWITCH__SWITCH_ID = eINSTANCE.getSwitch_SwitchId();
+        EAttribute SWITCH_DTO__SWITCH_ID = eINSTANCE.getSwitchDto_SwitchId();
 
         /**
          * The meta object literal for the '<em><b>Ip Address</b></em>' attribute feature.
@@ -605,17 +563,17 @@ public interface NetworkPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute SWITCH__IP_ADDRESS = eINSTANCE.getSwitch_IpAddress();
+        EAttribute SWITCH_DTO__IP_ADDRESS = eINSTANCE.getSwitchDto_IpAddress();
 
         /**
-         * The meta object literal for the '{@link org.metable.hex.ch02.domain.entity.Switch <em>ISwitch</em>}' class.
+         * The meta object literal for the '{@link org.metable.hex.ch02.domain.entity.SwitchDto <em>ISwitch Dto</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.metable.hex.ch02.domain.entity.Switch
-         * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getISwitch()
+         * @see org.metable.hex.ch02.domain.entity.SwitchDto
+         * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getISwitchDto()
          * @generated
          */
-        EClass ISWITCH = eINSTANCE.getISwitch();
+        EClass ISWITCH_DTO = eINSTANCE.getISwitchDto();
 
         /**
          * The meta object literal for the '<em>Router Type</em>' data type.
@@ -628,16 +586,6 @@ public interface NetworkPackage extends EPackage {
         EDataType ROUTER_TYPE = eINSTANCE.getRouterType();
 
         /**
-         * The meta object literal for the '<em>Router Id</em>' data type.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @see org.metable.hex.ch02.domain.emf.network.impl.RouterIdImpl
-         * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getRouterId()
-         * @generated
-         */
-        EDataType ROUTER_ID = eINSTANCE.getRouterId();
-
-        /**
          * The meta object literal for the '<em>Switch Type</em>' data type.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -646,16 +594,6 @@ public interface NetworkPackage extends EPackage {
          * @generated
          */
         EDataType SWITCH_TYPE = eINSTANCE.getSwitchType();
-
-        /**
-         * The meta object literal for the '<em>Switch Id</em>' data type.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @see org.metable.hex.ch02.domain.emf.network.impl.SwitchIdImpl
-         * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getSwitchId()
-         * @generated
-         */
-        EDataType SWITCH_ID = eINSTANCE.getSwitchId();
 
         /**
          * The meta object literal for the '<em>Network</em>' data type.

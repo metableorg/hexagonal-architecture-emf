@@ -22,22 +22,22 @@ public interface NetworkFactory extends EFactory {
     NetworkFactory eINSTANCE = org.metable.hex.ch02.domain.emf.network.impl.NetworkFactoryImpl.init();
 
     /**
-     * Returns a new object of class '<em>Router</em>'.
+     * Returns a new object of class '<em>Router Dto</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Router</em>'.
+     * @return a new object of class '<em>Router Dto</em>'.
      * @generated
      */
-    Router createRouter();
+    RouterDto createRouterDto();
 
     /**
-     * Returns a new object of class '<em>Switch</em>'.
+     * Returns a new object of class '<em>Switch Dto</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Switch</em>'.
+     * @return a new object of class '<em>Switch Dto</em>'.
      * @generated
      */
-    Switch createSwitch();
+    SwitchDto createSwitchDto();
 
     /**
      * Returns the package supported by this factory.

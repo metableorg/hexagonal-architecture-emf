@@ -6,39 +6,37 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.metable.hex.ch02.domain.emf.network.impl.SwitchIdImpl;
-
 import org.metable.hex.ch02.domain.valueobject.IP;
 import org.metable.hex.ch02.domain.valueobject.Network;
 import org.metable.hex.ch02.domain.valueobject.SwitchType;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Switch</b></em>'.
+ * A representation of the model object '<em><b>Switch Dto</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.metable.hex.ch02.domain.emf.network.Switch#getNetworks <em>Networks</em>}</li>
- *   <li>{@link org.metable.hex.ch02.domain.emf.network.Switch#getType <em>Type</em>}</li>
- *   <li>{@link org.metable.hex.ch02.domain.emf.network.Switch#getSwitchId <em>Switch Id</em>}</li>
- *   <li>{@link org.metable.hex.ch02.domain.emf.network.Switch#getIpAddress <em>Ip Address</em>}</li>
+ *   <li>{@link org.metable.hex.ch02.domain.emf.network.SwitchDto#getNetworks <em>Networks</em>}</li>
+ *   <li>{@link org.metable.hex.ch02.domain.emf.network.SwitchDto#getType <em>Type</em>}</li>
+ *   <li>{@link org.metable.hex.ch02.domain.emf.network.SwitchDto#getSwitchId <em>Switch Id</em>}</li>
+ *   <li>{@link org.metable.hex.ch02.domain.emf.network.SwitchDto#getIpAddress <em>Ip Address</em>}</li>
  * </ul>
  *
- * @see org.metable.hex.ch02.domain.emf.network.NetworkPackage#getSwitch()
- * @model superTypes="org.metable.hex.ch02.domain.emf.network.ISwitch"
+ * @see org.metable.hex.ch02.domain.emf.network.NetworkPackage#getSwitchDto()
+ * @model superTypes="org.metable.hex.ch02.domain.emf.network.ISwitchDto"
  * @generated
  */
-public interface Switch extends EObject, org.metable.hex.ch02.domain.entity.Switch {
+public interface SwitchDto extends EObject, org.metable.hex.ch02.domain.entity.SwitchDto {
     /**
      * Returns the value of the '<em><b>Networks</b></em>' attribute list.
      * The list contents are of type {@link org.metable.hex.ch02.domain.valueobject.Network}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Networks</em>' attribute list.
-     * @see org.metable.hex.ch02.domain.emf.network.NetworkPackage#getSwitch_Networks()
+     * @see org.metable.hex.ch02.domain.emf.network.NetworkPackage#getSwitchDto_Networks()
      * @model dataType="org.metable.hex.ch02.domain.emf.network.Network"
      * @generated
      */
@@ -50,14 +48,14 @@ public interface Switch extends EObject, org.metable.hex.ch02.domain.entity.Swit
      * <!-- end-user-doc -->
      * @return the value of the '<em>Type</em>' attribute.
      * @see #setType(SwitchType)
-     * @see org.metable.hex.ch02.domain.emf.network.NetworkPackage#getSwitch_Type()
+     * @see org.metable.hex.ch02.domain.emf.network.NetworkPackage#getSwitchDto_Type()
      * @model dataType="org.metable.hex.ch02.domain.emf.network.SwitchType"
      * @generated
      */
     SwitchType getType();
 
     /**
-     * Sets the value of the '{@link org.metable.hex.ch02.domain.emf.network.Switch#getType <em>Type</em>}' attribute.
+     * Sets the value of the '{@link org.metable.hex.ch02.domain.emf.network.SwitchDto#getType <em>Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @param value the new value of the '<em>Type</em>' attribute.
@@ -71,22 +69,22 @@ public interface Switch extends EObject, org.metable.hex.ch02.domain.entity.Swit
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Switch Id</em>' attribute.
-     * @see #setSwitchId(SwitchIdImpl)
-     * @see org.metable.hex.ch02.domain.emf.network.NetworkPackage#getSwitch_SwitchId()
-     * @model dataType="org.metable.hex.ch02.domain.emf.network.SwitchId"
+     * @see #setSwitchId(String)
+     * @see org.metable.hex.ch02.domain.emf.network.NetworkPackage#getSwitchDto_SwitchId()
+     * @model
      * @generated
      */
-    SwitchIdImpl getSwitchId();
+    String getSwitchId();
 
     /**
-     * Sets the value of the '{@link org.metable.hex.ch02.domain.emf.network.Switch#getSwitchId <em>Switch Id</em>}' attribute.
+     * Sets the value of the '{@link org.metable.hex.ch02.domain.emf.network.SwitchDto#getSwitchId <em>Switch Id</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @param value the new value of the '<em>Switch Id</em>' attribute.
      * @see #getSwitchId()
      * @generated
      */
-    void setSwitchId(SwitchIdImpl value);
+    void setSwitchId(String value);
 
     /**
      * Returns the value of the '<em><b>Ip Address</b></em>' attribute.
@@ -94,14 +92,14 @@ public interface Switch extends EObject, org.metable.hex.ch02.domain.entity.Swit
      * <!-- end-user-doc -->
      * @return the value of the '<em>Ip Address</em>' attribute.
      * @see #setIpAddress(IP)
-     * @see org.metable.hex.ch02.domain.emf.network.NetworkPackage#getSwitch_IpAddress()
+     * @see org.metable.hex.ch02.domain.emf.network.NetworkPackage#getSwitchDto_IpAddress()
      * @model dataType="org.metable.hex.ch02.domain.emf.network.IP"
      * @generated
      */
     IP getIpAddress();
 
     /**
-     * Sets the value of the '{@link org.metable.hex.ch02.domain.emf.network.Switch#getIpAddress <em>Ip Address</em>}' attribute.
+     * Sets the value of the '{@link org.metable.hex.ch02.domain.emf.network.SwitchDto#getIpAddress <em>Ip Address</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @param value the new value of the '<em>Ip Address</em>' attribute.
@@ -110,4 +108,4 @@ public interface Switch extends EObject, org.metable.hex.ch02.domain.entity.Swit
      */
     void setIpAddress(IP value);
 
-} // Switch
+} // SwitchDto

@@ -11,24 +11,22 @@
   <genPackages prefix="Network" basePackage="org.metable.hex.ch02.domain.emf" disposableProviderFactory="true"
       ecorePackage="network.ecore#/">
     <genDataTypes ecoreDataType="network.ecore#//RouterType"/>
-    <genDataTypes ecoreDataType="network.ecore#//RouterId"/>
     <genDataTypes ecoreDataType="network.ecore#//SwitchType"/>
-    <genDataTypes ecoreDataType="network.ecore#//SwitchId"/>
     <genDataTypes ecoreDataType="network.ecore#//Network"/>
     <genDataTypes ecoreDataType="network.ecore#//IP"/>
     <genDataTypes ecoreDataType="network.ecore#//Protocol"/>
-    <genClasses ecoreClass="network.ecore#//Router">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//Router/routerId"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//Router/type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference network.ecore#//Router/switch"/>
+    <genClasses ecoreClass="network.ecore#//RouterDto">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//RouterDto/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//RouterDto/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference network.ecore#//RouterDto/switch"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="network.ecore#//IRouter"/>
-    <genClasses ecoreClass="network.ecore#//Switch">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//Switch/networks"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//Switch/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//Switch/switchId"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//Switch/ipAddress"/>
+    <genClasses image="false" ecoreClass="network.ecore#//IRouterDto"/>
+    <genClasses ecoreClass="network.ecore#//SwitchDto">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//SwitchDto/networks"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//SwitchDto/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//SwitchDto/switchId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//SwitchDto/ipAddress"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="network.ecore#//ISwitch"/>
+    <genClasses image="false" ecoreClass="network.ecore#//ISwitchDto"/>
   </genPackages>
 </genmodel:GenModel>

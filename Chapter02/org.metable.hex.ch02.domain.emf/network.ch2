@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="ASCII"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.metable.hex.ch02.domain.network.emf="http://org.metable.hex.ch02.domain.network.emf/network">
-  <org.metable.hex.ch02.domain.network.emf:Router routerId="d8cf2cb7-d397-4f51-9602-53dc0915a304" type="CORE"/>
-  <org.metable.hex.ch02.domain.network.emf:Router routerId="bdd8824e-7678-4659-924b-3c3377b23805" type="EDGE"/>
-  <org.metable.hex.ch02.domain.network.emf:Router routerId="a9dff9fc-d499-44e8-bb63-7778a1702523" type="CORE"/>
-  <org.metable.hex.ch02.domain.network.emf:Router routerId="d5066972-4e86-4042-a2a0-1e72d71cbe09" type="EDGE"/>
-  <org.metable.hex.ch02.domain.network.emf:Router routerId="2bc8c745-963f-4547-afaa-0c0424fc2b87" type="CORE"/>
-  <org.metable.hex.ch02.domain.network.emf:Router routerId="f5a5db01-95d2-4469-8e65-d0b576066a8e" type="EDGE"/>
-  <org.metable.hex.ch02.domain.network.emf:Router routerId="6617ab88-c68c-464b-99e6-89849d47ad62" type="CORE"/>
-  <org.metable.hex.ch02.domain.network.emf:Router routerId="83db0407-dfa6-416e-b5cb-c373e868093f" type="EDGE"/>
-  <org.metable.hex.ch02.domain.network.emf:Router routerId="b476625f-eba7-4874-89b6-8052001434a1" type="CORE"/>
-  <org.metable.hex.ch02.domain.network.emf:Router routerId="a185e183-80d5-4563-b7da-88d85f1ad5dd" type="EDGE"/>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="a4d56ae8-55a5-4d08-bc3d-340187962ced" type="CORE"/>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="9261cf82-7a03-4fda-a251-c3b88c075401" type="EDGE"/>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="fe0386ef-1fcd-43e8-aa43-2b78aea6df04" type="CORE"/>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="e5df734e-4e09-47fb-a3a4-a8ef5487560d" type="EDGE"/>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="354d09c1-81ab-462a-a704-179544667bf1" type="CORE"/>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="1b7e3bda-dd6f-417c-aea8-23f3ffff33e3" type="EDGE"/>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="9f4c5c72-194b-411c-b047-8db0d7da1810" type="CORE"/>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="7350b9f6-2fd1-46c2-84d5-1d12754e6339" type="EDGE"/>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="a121ba17-2f07-4c41-915f-2b420c97d7f3" type="CORE"/>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="b820ea76-27c6-4e79-9024-c0ef91f63dd1" type="EDGE"/>
 </xmi:XMI>

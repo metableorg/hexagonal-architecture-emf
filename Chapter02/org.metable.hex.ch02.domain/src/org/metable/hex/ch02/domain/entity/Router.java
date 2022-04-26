@@ -8,39 +8,67 @@ import org.metable.hex.ch02.domain.valueobject.Network;
 import org.metable.hex.ch02.domain.valueobject.RouterId;
 import org.metable.hex.ch02.domain.valueobject.RouterType;
 
-public interface Router {
-    
-    public static void addNetworkToSwitch(Router router, Network network) {
-        router.getSwitch().addNetwork(network);
-    }
-
-    public static Network createNetwork(IP address, String name, int cidr) {
-        return new Network(address, name, cidr);
-    }
+public class Router {
 
     public static Predicate<Router> filterRouterByType(RouterType routerType) {
         return routerType.equals(RouterType.CORE) ? Router.isCore() : Router.isEdge();
     }
 
     public static Predicate<Router> isCore() {
-        return p -> p.getType() == RouterType.CORE;
+        return p -> p.getRouterType() == RouterType.CORE;
     }
-
     public static Predicate<Router> isEdge() {
-        return p -> p.getType() == RouterType.EDGE;
+        return p -> p.getRouterType() == RouterType.EDGE;
     }
 
-    public static List<Network> retrieveNetworks(Router router) {
-        return router.getSwitch().getNetworks();
+    static Router fromDto(RouterDto dto) {
+        return new Router(dto.getType(), RouterId.withId(dto.getId()));
     }
 
-    public static String toString(Router router) {
-        return "Router{" + "routerType=" + router.getType() + ", routerId=" + router.getId() + '}';
+    private final RouterType type;
+
+    private final RouterId id;
+
+    private Switch networkSwitch;
+
+    public Router(RouterType type, RouterId id) {
+        this.type = type;
+        this.id = id;
     }
 
-    public abstract RouterId getId();
+    public void addNetworkToSwitch(Network network) {
+        this.networkSwitch = networkSwitch.addNetwork(network);
+    }
 
-    public abstract Switch getSwitch();
+    public Network createNetwork(IP address, String name, int cidr) {
+        return new Network(address, name, cidr);
+    }
 
-    public abstract RouterType getType();
+    public RouterType getRouterType() {
+        return type;
+    }
+
+    public List<Network> retrieveNetworks() {
+        return networkSwitch.getNetworks();
+    }
+    
+    @Override
+    public String toString() {
+        return "Router [type=" + type + ", id=" + id + "]";
+    }
+
+    protected RouterDto toDto() {
+        return new RouterDto() {
+
+            @Override
+            public String getId() {
+                return id.toString();
+            }
+
+            @Override
+            public RouterType getType() {
+                return type;
+            }
+        };
+    }
 }

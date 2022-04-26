@@ -66,34 +66,34 @@ public class NetworkSwitch<T> extends Switch<T> {
     @Override
     protected T doSwitch(int classifierID, EObject theEObject) {
         switch (classifierID) {
-        case NetworkPackage.ROUTER: {
-            Router router = (Router) theEObject;
-            T result = caseRouter(router);
+        case NetworkPackage.ROUTER_DTO: {
+            RouterDto routerDto = (RouterDto) theEObject;
+            T result = caseRouterDto(routerDto);
             if (result == null)
-                result = caseIRouter(router);
-            if (result == null)
-                result = defaultCase(theEObject);
-            return result;
-        }
-        case NetworkPackage.IROUTER: {
-            org.metable.hex.ch02.domain.entity.Router iRouter = (org.metable.hex.ch02.domain.entity.Router) theEObject;
-            T result = caseIRouter(iRouter);
+                result = caseIRouterDto(routerDto);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;
         }
-        case NetworkPackage.SWITCH: {
-            org.metable.hex.ch02.domain.emf.network.Switch switch_ = (org.metable.hex.ch02.domain.emf.network.Switch) theEObject;
-            T result = caseSwitch(switch_);
-            if (result == null)
-                result = caseISwitch(switch_);
+        case NetworkPackage.IROUTER_DTO: {
+            org.metable.hex.ch02.domain.entity.RouterDto iRouterDto = (org.metable.hex.ch02.domain.entity.RouterDto) theEObject;
+            T result = caseIRouterDto(iRouterDto);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;
         }
-        case NetworkPackage.ISWITCH: {
-            org.metable.hex.ch02.domain.entity.Switch iSwitch = (org.metable.hex.ch02.domain.entity.Switch) theEObject;
-            T result = caseISwitch(iSwitch);
+        case NetworkPackage.SWITCH_DTO: {
+            SwitchDto switchDto = (SwitchDto) theEObject;
+            T result = caseSwitchDto(switchDto);
+            if (result == null)
+                result = caseISwitchDto(switchDto);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case NetworkPackage.ISWITCH_DTO: {
+            org.metable.hex.ch02.domain.entity.SwitchDto iSwitchDto = (org.metable.hex.ch02.domain.entity.SwitchDto) theEObject;
+            T result = caseISwitchDto(iSwitchDto);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;
@@ -104,62 +104,62 @@ public class NetworkSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Router</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>Router Dto</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
      * returning a non-null result will terminate the switch.
      * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Router</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Router Dto</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseRouter(Router object) {
+    public T caseRouterDto(RouterDto object) {
         return null;
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>IRouter</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>IRouter Dto</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
      * returning a non-null result will terminate the switch.
      * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>IRouter</em>'.
+     * @return the result of interpreting the object as an instance of '<em>IRouter Dto</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseIRouter(org.metable.hex.ch02.domain.entity.Router object) {
+    public T caseIRouterDto(org.metable.hex.ch02.domain.entity.RouterDto object) {
         return null;
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Switch</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>Switch Dto</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
      * returning a non-null result will terminate the switch.
      * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Switch</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Switch Dto</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseSwitch(org.metable.hex.ch02.domain.emf.network.Switch object) {
+    public T caseSwitchDto(SwitchDto object) {
         return null;
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>ISwitch</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>ISwitch Dto</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
      * returning a non-null result will terminate the switch.
      * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>ISwitch</em>'.
+     * @return the result of interpreting the object as an instance of '<em>ISwitch Dto</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseISwitch(org.metable.hex.ch02.domain.entity.Switch object) {
+    public T caseISwitchDto(org.metable.hex.ch02.domain.entity.SwitchDto object) {
         return null;
     }
 

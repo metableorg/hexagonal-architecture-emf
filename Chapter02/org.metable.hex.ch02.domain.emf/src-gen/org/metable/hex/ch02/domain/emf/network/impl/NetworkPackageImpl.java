@@ -12,9 +12,8 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.metable.hex.ch02.domain.emf.network.NetworkFactory;
 import org.metable.hex.ch02.domain.emf.network.NetworkPackage;
-import org.metable.hex.ch02.domain.emf.network.Router;
-import org.metable.hex.ch02.domain.emf.network.Switch;
-
+import org.metable.hex.ch02.domain.emf.network.RouterDto;
+import org.metable.hex.ch02.domain.emf.network.SwitchDto;
 import org.metable.hex.ch02.domain.valueobject.Network;
 import org.metable.hex.ch02.domain.valueobject.Protocol;
 import org.metable.hex.ch02.domain.valueobject.RouterType;
@@ -32,28 +31,28 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    private EClass routerEClass = null;
+    private EClass routerDtoEClass = null;
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    private EClass iRouterEClass = null;
+    private EClass iRouterDtoEClass = null;
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    private EClass switchEClass = null;
+    private EClass switchDtoEClass = null;
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    private EClass iSwitchEClass = null;
+    private EClass iSwitchDtoEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -67,21 +66,7 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    private EDataType routerIdEDataType = null;
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     private EDataType switchTypeEDataType = null;
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    private EDataType switchIdEDataType = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -173,8 +158,8 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EClass getRouter() {
-        return routerEClass;
+    public EClass getRouterDto() {
+        return routerDtoEClass;
     }
 
     /**
@@ -182,8 +167,8 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getRouter_RouterId() {
-        return (EAttribute) routerEClass.getEStructuralFeatures().get(0);
+    public EAttribute getRouterDto_Id() {
+        return (EAttribute) routerDtoEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -191,8 +176,8 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getRouter_Type() {
-        return (EAttribute) routerEClass.getEStructuralFeatures().get(1);
+    public EAttribute getRouterDto_Type() {
+        return (EAttribute) routerDtoEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -200,8 +185,8 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getRouter_Switch() {
-        return (EReference) routerEClass.getEStructuralFeatures().get(2);
+    public EReference getRouterDto_Switch() {
+        return (EReference) routerDtoEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -209,8 +194,8 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EClass getIRouter() {
-        return iRouterEClass;
+    public EClass getIRouterDto() {
+        return iRouterDtoEClass;
     }
 
     /**
@@ -218,8 +203,8 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EClass getSwitch() {
-        return switchEClass;
+    public EClass getSwitchDto() {
+        return switchDtoEClass;
     }
 
     /**
@@ -227,8 +212,8 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getSwitch_Networks() {
-        return (EAttribute) switchEClass.getEStructuralFeatures().get(0);
+    public EAttribute getSwitchDto_Networks() {
+        return (EAttribute) switchDtoEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -236,8 +221,8 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getSwitch_Type() {
-        return (EAttribute) switchEClass.getEStructuralFeatures().get(1);
+    public EAttribute getSwitchDto_Type() {
+        return (EAttribute) switchDtoEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -245,8 +230,8 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getSwitch_SwitchId() {
-        return (EAttribute) switchEClass.getEStructuralFeatures().get(2);
+    public EAttribute getSwitchDto_SwitchId() {
+        return (EAttribute) switchDtoEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -254,8 +239,8 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAttribute getSwitch_IpAddress() {
-        return (EAttribute) switchEClass.getEStructuralFeatures().get(3);
+    public EAttribute getSwitchDto_IpAddress() {
+        return (EAttribute) switchDtoEClass.getEStructuralFeatures().get(3);
     }
 
     /**
@@ -263,8 +248,8 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EClass getISwitch() {
-        return iSwitchEClass;
+    public EClass getISwitchDto() {
+        return iSwitchDtoEClass;
     }
 
     /**
@@ -281,26 +266,8 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EDataType getRouterId() {
-        return routerIdEDataType;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     public EDataType getSwitchType() {
         return switchTypeEDataType;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public EDataType getSwitchId() {
-        return switchIdEDataType;
     }
 
     /**
@@ -359,26 +326,24 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
         isCreated = true;
 
         // Create classes and their features
-        routerEClass = createEClass(ROUTER);
-        createEAttribute(routerEClass, ROUTER__ROUTER_ID);
-        createEAttribute(routerEClass, ROUTER__TYPE);
-        createEReference(routerEClass, ROUTER__SWITCH);
+        routerDtoEClass = createEClass(ROUTER_DTO);
+        createEAttribute(routerDtoEClass, ROUTER_DTO__ID);
+        createEAttribute(routerDtoEClass, ROUTER_DTO__TYPE);
+        createEReference(routerDtoEClass, ROUTER_DTO__SWITCH);
 
-        iRouterEClass = createEClass(IROUTER);
+        iRouterDtoEClass = createEClass(IROUTER_DTO);
 
-        switchEClass = createEClass(SWITCH);
-        createEAttribute(switchEClass, SWITCH__NETWORKS);
-        createEAttribute(switchEClass, SWITCH__TYPE);
-        createEAttribute(switchEClass, SWITCH__SWITCH_ID);
-        createEAttribute(switchEClass, SWITCH__IP_ADDRESS);
+        switchDtoEClass = createEClass(SWITCH_DTO);
+        createEAttribute(switchDtoEClass, SWITCH_DTO__NETWORKS);
+        createEAttribute(switchDtoEClass, SWITCH_DTO__TYPE);
+        createEAttribute(switchDtoEClass, SWITCH_DTO__SWITCH_ID);
+        createEAttribute(switchDtoEClass, SWITCH_DTO__IP_ADDRESS);
 
-        iSwitchEClass = createEClass(ISWITCH);
+        iSwitchDtoEClass = createEClass(ISWITCH_DTO);
 
         // Create data types
         routerTypeEDataType = createEDataType(ROUTER_TYPE);
-        routerIdEDataType = createEDataType(ROUTER_ID);
         switchTypeEDataType = createEDataType(SWITCH_TYPE);
-        switchIdEDataType = createEDataType(SWITCH_ID);
         networkEDataType = createEDataType(NETWORK);
         ipEDataType = createEDataType(IP);
         protocolEDataType = createEDataType(PROTOCOL);
@@ -413,42 +378,42 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
         // Set bounds for type parameters
 
         // Add supertypes to classes
-        routerEClass.getESuperTypes().add(this.getIRouter());
-        switchEClass.getESuperTypes().add(this.getISwitch());
+        routerDtoEClass.getESuperTypes().add(this.getIRouterDto());
+        switchDtoEClass.getESuperTypes().add(this.getISwitchDto());
 
         // Initialize classes, features, and operations; add parameters
-        initEClass(routerEClass, Router.class, "Router", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getRouter_RouterId(), this.getRouterId(), "routerId", null, 0, 1, Router.class, !IS_TRANSIENT,
+        initEClass(routerDtoEClass, RouterDto.class, "RouterDto", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getRouterDto_Id(), ecorePackage.getEString(), "id", null, 0, 1, RouterDto.class, !IS_TRANSIENT,
                 !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getRouter_Type(), this.getRouterType(), "type", null, 0, 1, Router.class, !IS_TRANSIENT,
+        initEAttribute(getRouterDto_Type(), this.getRouterType(), "type", null, 0, 1, RouterDto.class, !IS_TRANSIENT,
                 !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getRouter_Switch(), this.getSwitch(), null, "switch", null, 0, 1, Router.class, !IS_TRANSIENT,
-                !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-                IS_ORDERED);
+        initEReference(getRouterDto_Switch(), this.getSwitchDto(), null, "switch", null, 0, 1, RouterDto.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+                IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        initEClass(iRouterEClass, org.metable.hex.ch02.domain.entity.Router.class, "IRouter", IS_ABSTRACT,
+        initEClass(iRouterDtoEClass, org.metable.hex.ch02.domain.entity.RouterDto.class, "IRouterDto", IS_ABSTRACT,
                 !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 
-        initEClass(switchEClass, Switch.class, "Switch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getSwitch_Networks(), this.getNetwork(), "networks", null, 0, -1, Switch.class, !IS_TRANSIENT,
+        initEClass(switchDtoEClass, SwitchDto.class, "SwitchDto", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getSwitchDto_Networks(), this.getNetwork(), "networks", null, 0, -1, SwitchDto.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSwitchDto_Type(), this.getSwitchType(), "type", null, 0, 1, SwitchDto.class, !IS_TRANSIENT,
                 !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getSwitch_Type(), this.getSwitchType(), "type", null, 0, 1, Switch.class, !IS_TRANSIENT,
-                !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getSwitch_SwitchId(), this.getSwitchId(), "switchId", null, 0, 1, Switch.class, !IS_TRANSIENT,
-                !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getSwitch_IpAddress(), this.getIP(), "ipAddress", null, 0, 1, Switch.class, !IS_TRANSIENT,
+        initEAttribute(getSwitchDto_SwitchId(), ecorePackage.getEString(), "switchId", null, 0, 1, SwitchDto.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSwitchDto_IpAddress(), this.getIP(), "ipAddress", null, 0, 1, SwitchDto.class, !IS_TRANSIENT,
                 !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        initEClass(iSwitchEClass, org.metable.hex.ch02.domain.entity.Switch.class, "ISwitch", IS_ABSTRACT, IS_INTERFACE,
-                !IS_GENERATED_INSTANCE_CLASS);
+        initEClass(iSwitchDtoEClass, org.metable.hex.ch02.domain.entity.SwitchDto.class, "ISwitchDto", IS_ABSTRACT,
+                IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize data types
         initEDataType(routerTypeEDataType, RouterType.class, "RouterType", IS_SERIALIZABLE,
                 !IS_GENERATED_INSTANCE_CLASS);
-        initEDataType(routerIdEDataType, RouterIdImpl.class, "RouterId", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
         initEDataType(switchTypeEDataType, SwitchType.class, "SwitchType", IS_SERIALIZABLE,
                 !IS_GENERATED_INSTANCE_CLASS);
-        initEDataType(switchIdEDataType, SwitchIdImpl.class, "SwitchId", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
         initEDataType(networkEDataType, Network.class, "Network", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
         initEDataType(ipEDataType, org.metable.hex.ch02.domain.valueobject.IP.class, "IP", IS_SERIALIZABLE,
                 !IS_GENERATED_INSTANCE_CLASS);

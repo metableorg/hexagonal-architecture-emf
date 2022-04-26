@@ -18,7 +18,8 @@ public final class SwitchId {
         return new SwitchId(UUID.randomUUID());
     }
 
+    @Override
     public String toString() {
-        return id.toString(); 
+        return id.toString();
     }
 }
