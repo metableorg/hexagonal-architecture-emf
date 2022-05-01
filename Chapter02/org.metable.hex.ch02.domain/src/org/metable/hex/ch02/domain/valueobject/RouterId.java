@@ -4,12 +4,6 @@ import java.util.UUID;
 
 public final class RouterId {
 
-    private final UUID id;
-
-    private RouterId(UUID id) {
-        this.id = id;
-    }
-
     public static RouterId withId(String id) {
         return new RouterId(UUID.fromString(id));
     }
@@ -18,8 +12,14 @@ public final class RouterId {
         return new RouterId(UUID.randomUUID());
     }
 
+    private final UUID id;
+
+    private RouterId(UUID id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
-        return id.toString(); 
+        return id.toString();
     }
 }

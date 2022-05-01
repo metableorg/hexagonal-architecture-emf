@@ -7,98 +7,92 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.metable.hex.ch02.domain.emf.network.NetworkFactory;
 import org.metable.hex.ch02.domain.emf.network.NetworkPackage;
 import org.metable.hex.ch02.domain.emf.network.RouterDto;
 import org.metable.hex.ch02.domain.emf.network.SwitchDto;
-import org.metable.hex.ch02.domain.valueobject.Network;
 import org.metable.hex.ch02.domain.valueobject.Protocol;
 import org.metable.hex.ch02.domain.valueobject.RouterType;
 import org.metable.hex.ch02.domain.valueobject.SwitchType;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model <b>Package</b>.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     private EClass routerDtoEClass = null;
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     private EClass iRouterDtoEClass = null;
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     private EClass switchDtoEClass = null;
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     private EClass iSwitchDtoEClass = null;
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     private EDataType routerTypeEDataType = null;
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     private EDataType switchTypeEDataType = null;
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    private EDataType networkEDataType = null;
+    private EDataType networkValueObjectEDataType = null;
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     private EDataType ipEDataType = null;
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     private EDataType protocolEDataType = null;
 
     /**
-     * Creates an instance of the model <b>Package</b>, registered with
-     * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
-     * package URI value.
-     * <p>Note: the correct way to create the package is via the static
-     * factory method {@link #init init()}, which also performs
-     * initialization of the package, or returns the registered package,
-     * if one already exists.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Creates an instance of the model <b>Package</b>, registered with {@link org.eclipse.emf.ecore.EPackage.Registry
+     * EPackage.Registry} by the package package URI value.
+     * <p>
+     * Note: the correct way to create the package is via the static factory method {@link #init init()}, which also
+     * performs initialization of the package, or returns the registered package, if one already exists. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see org.eclipse.emf.ecore.EPackage.Registry
      * @see org.metable.hex.ch02.domain.emf.network.NetworkPackage#eNS_URI
      * @see #init()
@@ -109,8 +103,8 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     private static boolean isInited = false;
@@ -118,10 +112,11 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
     /**
      * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
      *
-     * <p>This method is used to initialize {@link NetworkPackage#eINSTANCE} when that field is accessed.
-     * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <p>
+     * This method is used to initialize {@link NetworkPackage#eINSTANCE} when that field is accessed. Clients should
+     * not invoke it directly. Instead, they should simply access that field to obtain the package. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     * 
      * @see #eNS_URI
      * @see #createPackageContents()
      * @see #initializePackageContents()
@@ -154,170 +149,186 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public EClass getRouterDto() {
         return routerDtoEClass;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public EAttribute getRouterDto_Id() {
         return (EAttribute) routerDtoEClass.getEStructuralFeatures().get(0);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public EAttribute getRouterDto_Type() {
         return (EAttribute) routerDtoEClass.getEStructuralFeatures().get(1);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public EReference getRouterDto_Switch() {
         return (EReference) routerDtoEClass.getEStructuralFeatures().get(2);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public EClass getIRouterDto() {
         return iRouterDtoEClass;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public EClass getSwitchDto() {
         return switchDtoEClass;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    public EAttribute getSwitchDto_Networks() {
+    @Override
+    public EAttribute getSwitchDto_NetworkValueObjects() {
         return (EAttribute) switchDtoEClass.getEStructuralFeatures().get(0);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public EAttribute getSwitchDto_Type() {
         return (EAttribute) switchDtoEClass.getEStructuralFeatures().get(1);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    public EAttribute getSwitchDto_SwitchId() {
+    @Override
+    public EAttribute getSwitchDto_Id() {
         return (EAttribute) switchDtoEClass.getEStructuralFeatures().get(2);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    public EAttribute getSwitchDto_IpAddress() {
+    @Override
+    public EAttribute getSwitchDto_Address() {
         return (EAttribute) switchDtoEClass.getEStructuralFeatures().get(3);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public EClass getISwitchDto() {
         return iSwitchDtoEClass;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public EDataType getRouterType() {
         return routerTypeEDataType;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public EDataType getSwitchType() {
         return switchTypeEDataType;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    public EDataType getNetwork() {
-        return networkEDataType;
+    @Override
+    public EDataType getNetworkValueObject() {
+        return networkValueObjectEDataType;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public EDataType getIP() {
         return ipEDataType;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public EDataType getProtocol() {
         return protocolEDataType;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public NetworkFactory getNetworkFactory() {
         return (NetworkFactory) getEFactoryInstance();
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     private boolean isCreated = false;
 
     /**
-     * Creates the meta-model objects for the package.  This method is
-     * guarded to have no affect on any invocation but its first.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Creates the meta-model objects for the package. This method is guarded to have no affect on any invocation but
+     * its first. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void createPackageContents() {
@@ -334,33 +345,32 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
         iRouterDtoEClass = createEClass(IROUTER_DTO);
 
         switchDtoEClass = createEClass(SWITCH_DTO);
-        createEAttribute(switchDtoEClass, SWITCH_DTO__NETWORKS);
+        createEAttribute(switchDtoEClass, SWITCH_DTO__NETWORK_VALUE_OBJECTS);
         createEAttribute(switchDtoEClass, SWITCH_DTO__TYPE);
-        createEAttribute(switchDtoEClass, SWITCH_DTO__SWITCH_ID);
-        createEAttribute(switchDtoEClass, SWITCH_DTO__IP_ADDRESS);
+        createEAttribute(switchDtoEClass, SWITCH_DTO__ID);
+        createEAttribute(switchDtoEClass, SWITCH_DTO__ADDRESS);
 
         iSwitchDtoEClass = createEClass(ISWITCH_DTO);
 
         // Create data types
         routerTypeEDataType = createEDataType(ROUTER_TYPE);
         switchTypeEDataType = createEDataType(SWITCH_TYPE);
-        networkEDataType = createEDataType(NETWORK);
+        networkValueObjectEDataType = createEDataType(NETWORK_VALUE_OBJECT);
         ipEDataType = createEDataType(IP);
         protocolEDataType = createEDataType(PROTOCOL);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     private boolean isInitialized = false;
 
     /**
-     * Complete the initialization of the package and its meta-model.  This
-     * method is guarded to have no affect on any invocation but its first.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Complete the initialization of the package and its meta-model. This method is guarded to have no affect on any
+     * invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void initializePackageContents() {
@@ -389,7 +399,7 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
         initEAttribute(getRouterDto_Type(), this.getRouterType(), "type", null, 0, 1, RouterDto.class, !IS_TRANSIENT,
                 !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getRouterDto_Switch(), this.getSwitchDto(), null, "switch", null, 0, 1, RouterDto.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
                 IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(iRouterDtoEClass, org.metable.hex.ch02.domain.entity.RouterDto.class, "IRouterDto", IS_ABSTRACT,
@@ -397,14 +407,15 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
 
         initEClass(switchDtoEClass, SwitchDto.class, "SwitchDto", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getSwitchDto_Networks(), this.getNetwork(), "networks", null, 0, -1, SwitchDto.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSwitchDto_NetworkValueObjects(), this.getNetworkValueObject(), "networkValueObjects", null, 0,
+                -1, SwitchDto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, IS_ORDERED);
         initEAttribute(getSwitchDto_Type(), this.getSwitchType(), "type", null, 0, 1, SwitchDto.class, !IS_TRANSIENT,
                 !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getSwitchDto_SwitchId(), ecorePackage.getEString(), "switchId", null, 0, 1, SwitchDto.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getSwitchDto_IpAddress(), this.getIP(), "ipAddress", null, 0, 1, SwitchDto.class, !IS_TRANSIENT,
+        initEAttribute(getSwitchDto_Id(), ecorePackage.getEString(), "id", null, 0, 1, SwitchDto.class, !IS_TRANSIENT,
                 !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSwitchDto_Address(), this.getIP(), "address", null, 0, 1, SwitchDto.class, !IS_TRANSIENT,
+                !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         initEClass(iSwitchDtoEClass, org.metable.hex.ch02.domain.entity.SwitchDto.class, "ISwitchDto", IS_ABSTRACT,
                 IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
@@ -414,7 +425,8 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
                 !IS_GENERATED_INSTANCE_CLASS);
         initEDataType(switchTypeEDataType, SwitchType.class, "SwitchType", IS_SERIALIZABLE,
                 !IS_GENERATED_INSTANCE_CLASS);
-        initEDataType(networkEDataType, Network.class, "Network", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+        initEDataType(networkValueObjectEDataType, NetworkValueObject.class, "NetworkValueObject", IS_SERIALIZABLE,
+                !IS_GENERATED_INSTANCE_CLASS);
         initEDataType(ipEDataType, org.metable.hex.ch02.domain.valueobject.IP.class, "IP", IS_SERIALIZABLE,
                 !IS_GENERATED_INSTANCE_CLASS);
         initEDataType(protocolEDataType, Protocol.class, "Protocol", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -423,4 +435,4 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
         createResource(eNS_URI);
     }
 
-} //NetworkPackageImpl
+} // NetworkPackageImpl

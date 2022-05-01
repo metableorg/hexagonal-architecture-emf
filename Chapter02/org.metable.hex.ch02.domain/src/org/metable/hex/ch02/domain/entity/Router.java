@@ -17,12 +17,15 @@ public class Router {
     public static Predicate<Router> isCore() {
         return p -> p.getRouterType() == RouterType.CORE;
     }
+
     public static Predicate<Router> isEdge() {
         return p -> p.getRouterType() == RouterType.EDGE;
     }
 
     static Router fromDto(RouterDto dto) {
-        return new Router(dto.getType(), RouterId.withId(dto.getId()));
+        Router router = new Router(dto.getType(), RouterId.withId(dto.getId()));
+        router.networkSwitch = Switch.fromDto(dto.getSwitch());
+        return router;
     }
 
     private final RouterType type;
@@ -31,7 +34,7 @@ public class Router {
 
     private Switch networkSwitch;
 
-    public Router(RouterType type, RouterId id) {
+    private Router(RouterType type, RouterId id) {
         this.type = type;
         this.id = id;
     }
@@ -51,18 +54,23 @@ public class Router {
     public List<Network> retrieveNetworks() {
         return networkSwitch.getNetworks();
     }
-    
+
     @Override
     public String toString() {
-        return "Router [type=" + type + ", id=" + id + "]";
+        return "Router [type=" + type + ", id=" + id + ", networkSwitch=" + networkSwitch + "]";
     }
 
-    protected RouterDto toDto() {
+    RouterDto toDto() {
         return new RouterDto() {
 
             @Override
             public String getId() {
                 return id.toString();
+            }
+
+            @Override
+            public SwitchDto getSwitch() {
+                return networkSwitch.toDto();
             }
 
             @Override

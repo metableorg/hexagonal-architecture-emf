@@ -1,13 +1,163 @@
 <?xml version="1.0" encoding="ASCII"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.metable.hex.ch02.domain.network.emf="http://org.metable.hex.ch02.domain.network.emf/network">
-  <org.metable.hex.ch02.domain.network.emf:RouterDto id="a4d56ae8-55a5-4d08-bc3d-340187962ced" type="CORE"/>
-  <org.metable.hex.ch02.domain.network.emf:RouterDto id="9261cf82-7a03-4fda-a251-c3b88c075401" type="EDGE"/>
-  <org.metable.hex.ch02.domain.network.emf:RouterDto id="fe0386ef-1fcd-43e8-aa43-2b78aea6df04" type="CORE"/>
-  <org.metable.hex.ch02.domain.network.emf:RouterDto id="e5df734e-4e09-47fb-a3a4-a8ef5487560d" type="EDGE"/>
-  <org.metable.hex.ch02.domain.network.emf:RouterDto id="354d09c1-81ab-462a-a704-179544667bf1" type="CORE"/>
-  <org.metable.hex.ch02.domain.network.emf:RouterDto id="1b7e3bda-dd6f-417c-aea8-23f3ffff33e3" type="EDGE"/>
-  <org.metable.hex.ch02.domain.network.emf:RouterDto id="9f4c5c72-194b-411c-b047-8db0d7da1810" type="CORE"/>
-  <org.metable.hex.ch02.domain.network.emf:RouterDto id="7350b9f6-2fd1-46c2-84d5-1d12754e6339" type="EDGE"/>
-  <org.metable.hex.ch02.domain.network.emf:RouterDto id="a121ba17-2f07-4c41-915f-2b420c97d7f3" type="CORE"/>
-  <org.metable.hex.ch02.domain.network.emf:RouterDto id="b820ea76-27c6-4e79-9024-c0ef91f63dd1" type="EDGE"/>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="c5456b5f-8b7d-45ba-a06c-c0bb6faaf6f3" type="CORE">
+    <switch type="LAYER3" id="96d3ca7b-2932-4514-9498-ed4fc8a2ea84" address="12.0.0.1">
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.3&#xD;
+name=N1&#xD;
+cidr=3&#xD;
+</networkValueObjects>
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.4&#xD;
+name=N2&#xD;
+cidr=4&#xD;
+</networkValueObjects>
+    </switch>
+  </org.metable.hex.ch02.domain.network.emf:RouterDto>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="1e59ce71-c8cc-45fb-8fb7-651ca73f4984" type="EDGE">
+    <switch type="LAYER3" id="202b9802-be43-4cc0-b2b1-73d905634723" address="12.0.0.1">
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.3&#xD;
+name=N1&#xD;
+cidr=3&#xD;
+</networkValueObjects>
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.4&#xD;
+name=N2&#xD;
+cidr=4&#xD;
+</networkValueObjects>
+    </switch>
+  </org.metable.hex.ch02.domain.network.emf:RouterDto>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="32e6bf20-df5c-4954-ae45-3dcdf3962d3b" type="CORE">
+    <switch type="LAYER3" id="93555ee1-c5fa-4cee-b098-a36e2d8bb7ab" address="12.0.0.1">
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.3&#xD;
+name=N1&#xD;
+cidr=3&#xD;
+</networkValueObjects>
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.4&#xD;
+name=N2&#xD;
+cidr=4&#xD;
+</networkValueObjects>
+    </switch>
+  </org.metable.hex.ch02.domain.network.emf:RouterDto>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="b9e784f7-8ceb-4a68-806a-de2684a85570" type="EDGE">
+    <switch type="LAYER3" id="a3afac9b-18fb-40cf-88ea-760f0e0c1aa0" address="12.0.0.1">
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.3&#xD;
+name=N1&#xD;
+cidr=3&#xD;
+</networkValueObjects>
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.4&#xD;
+name=N2&#xD;
+cidr=4&#xD;
+</networkValueObjects>
+    </switch>
+  </org.metable.hex.ch02.domain.network.emf:RouterDto>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="937387b6-7a3f-49ba-93d3-4d32e2109b3d" type="CORE">
+    <switch type="LAYER3" id="d559280d-b903-42f2-9133-e0165a3e28d4" address="12.0.0.1">
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.3&#xD;
+name=N1&#xD;
+cidr=3&#xD;
+</networkValueObjects>
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.4&#xD;
+name=N2&#xD;
+cidr=4&#xD;
+</networkValueObjects>
+    </switch>
+  </org.metable.hex.ch02.domain.network.emf:RouterDto>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="10bbf2ba-c15d-4372-ad42-6c3875bbda50" type="EDGE">
+    <switch type="LAYER3" id="aaec911d-399d-4e9d-b580-932d87e6f561" address="12.0.0.1">
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.3&#xD;
+name=N1&#xD;
+cidr=3&#xD;
+</networkValueObjects>
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.4&#xD;
+name=N2&#xD;
+cidr=4&#xD;
+</networkValueObjects>
+    </switch>
+  </org.metable.hex.ch02.domain.network.emf:RouterDto>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="87dbbf6f-6628-4f53-8208-91f861201a75" type="CORE">
+    <switch type="LAYER3" id="03d3607e-f568-4d49-948e-8418a013bb40" address="12.0.0.1">
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.3&#xD;
+name=N1&#xD;
+cidr=3&#xD;
+</networkValueObjects>
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.4&#xD;
+name=N2&#xD;
+cidr=4&#xD;
+</networkValueObjects>
+    </switch>
+  </org.metable.hex.ch02.domain.network.emf:RouterDto>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="16aef3e7-afd5-434a-a88d-972baee6afc4" type="EDGE">
+    <switch type="LAYER3" id="84789855-754a-4cca-ac25-07ac4a711d69" address="12.0.0.1">
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.3&#xD;
+name=N1&#xD;
+cidr=3&#xD;
+</networkValueObjects>
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.4&#xD;
+name=N2&#xD;
+cidr=4&#xD;
+</networkValueObjects>
+    </switch>
+  </org.metable.hex.ch02.domain.network.emf:RouterDto>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="739b6fe9-dc82-4ee7-a41d-30dd764fa545" type="CORE">
+    <switch type="LAYER3" id="f8f65c31-704c-4a41-a9fc-37bb727df9bd" address="12.0.0.1">
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.3&#xD;
+name=N1&#xD;
+cidr=3&#xD;
+</networkValueObjects>
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.4&#xD;
+name=N2&#xD;
+cidr=4&#xD;
+</networkValueObjects>
+    </switch>
+  </org.metable.hex.ch02.domain.network.emf:RouterDto>
+  <org.metable.hex.ch02.domain.network.emf:RouterDto id="a6870b52-b27b-4953-8c1e-225e6befdf67" type="EDGE">
+    <switch type="LAYER3" id="6ccedf08-6c49-47e9-8f97-6de299f4d4cc" address="12.0.0.1">
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.3&#xD;
+name=N1&#xD;
+cidr=3&#xD;
+</networkValueObjects>
+      <networkValueObjects>#Network&#xD;
+#Sun May 01 08:09:24 CDT 2022&#xD;
+address=256.1.1.4&#xD;
+name=N2&#xD;
+cidr=4&#xD;
+</networkValueObjects>
+    </switch>
+  </org.metable.hex.ch02.domain.network.emf:RouterDto>
 </xmi:XMI>

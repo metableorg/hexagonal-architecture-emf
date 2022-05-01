@@ -1,7 +1,6 @@
 package org.metable.hex.ch02.domain.valueobject;
 
 public final class Network {
-
     private final IP address;
     private final String name;
     private final int cidr;
@@ -19,16 +18,16 @@ public final class Network {
         return address;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public int getCidr() {
         return cidr;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
-        return "Network{" + "address=" + address + ", name='" + name + '\'' + ", cidr=" + cidr + '}';
+        return "Network [address=" + address + ", name=" + name + ", cidr=" + cidr + "]";
     }
 }

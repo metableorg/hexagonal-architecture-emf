@@ -3,24 +3,19 @@
 package org.metable.hex.ch02.domain.emf.network.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.metable.hex.ch02.domain.emf.network.NetworkPackage;
-
 import org.metable.hex.ch02.domain.entity.RouterDto;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>IRouter Dto</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>IRouter Dto</b></em>'. <!-- end-user-doc -->
  *
  * @generated
  */
 public abstract class IRouterDtoImpl extends MinimalEObjectImpl.Container implements RouterDto {
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected IRouterDtoImpl() {
@@ -28,8 +23,8 @@ public abstract class IRouterDtoImpl extends MinimalEObjectImpl.Container implem
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -37,4 +32,4 @@ public abstract class IRouterDtoImpl extends MinimalEObjectImpl.Container implem
         return NetworkPackage.Literals.IROUTER_DTO;
     }
 
-} //IRouterDtoImpl
+} // IRouterDtoImpl

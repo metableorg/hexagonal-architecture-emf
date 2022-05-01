@@ -12,18 +12,6 @@ import org.metable.hex.ch02.domain.valueobject.Protocol;
 
 public class Event implements Comparable<Event> {
 
-    private OffsetDateTime timestamp;
-    private EventId id;
-    private Protocol protocol;
-    private Activity activity;
-
-    public Event(OffsetDateTime timestamp, EventId id, Protocol protocol, Activity activity) {
-        this.timestamp = timestamp;
-        this.id = id;
-        this.protocol = protocol;
-        this.activity = activity;
-    }
-
     public static Event parsedEvent(String unparsedEvent, ParsePolicyType policy) {
         switch (policy) {
         case REGEX:
@@ -33,6 +21,18 @@ public class Event implements Comparable<Event> {
         default:
             throw new IllegalArgumentException("");
         }
+    }
+    private OffsetDateTime timestamp;
+    private EventId id;
+    private Protocol protocol;
+
+    private Activity activity;
+
+    public Event(OffsetDateTime timestamp, EventId id, Protocol protocol, Activity activity) {
+        this.timestamp = timestamp;
+        this.id = id;
+        this.protocol = protocol;
+        this.activity = activity;
     }
 
     @Override
