@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.metable.hex.ch02.domain.emf.network.NetworkFactory;
 import org.metable.hex.ch02.domain.emf.network.RouterDto;
 import org.metable.hex.ch02.domain.emf.network.SwitchDto;
-import org.metable.hex.ch02.domain.emf.network.impl.NetworkValueObject;
 import org.metable.hex.ch02.domain.valueobject.IP;
+import org.metable.hex.ch02.domain.valueobject.NetworkValueObject;
 import org.metable.hex.ch02.domain.valueobject.RouterType;
 import org.metable.hex.ch02.domain.valueobject.SwitchType;
 

@@ -4,8 +4,8 @@ package org.metable.hex.ch02.domain.emf.network;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import org.metable.hex.ch02.domain.emf.network.impl.NetworkValueObject;
 import org.metable.hex.ch02.domain.valueobject.IP;
+import org.metable.hex.ch02.domain.valueobject.NetworkValueObject;
 import org.metable.hex.ch02.domain.valueobject.SwitchType;
 
 /**
@@ -29,8 +29,7 @@ import org.metable.hex.ch02.domain.valueobject.SwitchType;
 public interface SwitchDto extends EObject, org.metable.hex.ch02.domain.entity.SwitchDto {
     /**
      * Returns the value of the '<em><b>Network Value Objects</b></em>' attribute list. The list contents are of type
-     * {@link org.metable.hex.ch02.domain.emf.network.impl.NetworkValueObject}. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
+     * {@link org.metable.hex.ch02.domain.valueobject.NetworkValueObject}. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the value of the '<em>Network Value Objects</em>' attribute list.
      * @see org.metable.hex.ch02.domain.emf.network.NetworkPackage#getSwitchDto_NetworkValueObjects()

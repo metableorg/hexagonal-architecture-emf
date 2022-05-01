@@ -1,12 +1,9 @@
-package org.metable.hex.ch02.domain.emf.network.impl;
+package org.metable.hex.ch02.domain.valueobject;
 
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.Properties;
-
-import org.metable.hex.ch02.domain.valueobject.IP;
-import org.metable.hex.ch02.domain.valueobject.Network;
 
 public class NetworkValueObject {
 

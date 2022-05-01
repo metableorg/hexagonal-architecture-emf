@@ -12,7 +12,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="IRouterDto" instanceClassName="org.metable.hex.ch02.domain.entity.RouterDto"
       abstract="true"/>
   <eClassifiers xsi:type="ecore:EDataType" name="SwitchType" instanceClassName="org.metable.hex.ch02.domain.valueobject.SwitchType"/>
-  <eClassifiers xsi:type="ecore:EDataType" name="NetworkValueObject" instanceClassName="org.metable.hex.ch02.domain.emf.network.impl.NetworkValueObject"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="NetworkValueObject" instanceClassName="org.metable.hex.ch02.domain.valueobject.NetworkValueObject"/>
   <eClassifiers xsi:type="ecore:EDataType" name="IP" instanceClassName="org.metable.hex.ch02.domain.valueobject.IP"/>
   <eClassifiers xsi:type="ecore:EDataType" name="Protocol" instanceClassName="org.metable.hex.ch02.domain.valueobject.Protocol"/>
   <eClassifiers xsi:type="ecore:EClass" name="SwitchDto" eSuperTypes="#//ISwitchDto">

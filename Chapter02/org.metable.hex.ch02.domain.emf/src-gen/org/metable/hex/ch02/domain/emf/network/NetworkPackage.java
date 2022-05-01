@@ -239,7 +239,7 @@ public interface NetworkPackage extends EPackage {
     /**
      * The meta object id for the '<em>Value Object</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkValueObject
+     * @see org.metable.hex.ch02.domain.valueobject.NetworkValueObject
      * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getNetworkValueObject()
      * @generated
      */
@@ -407,12 +407,12 @@ public interface NetworkPackage extends EPackage {
     EDataType getSwitchType();
 
     /**
-     * Returns the meta object for data type '{@link org.metable.hex.ch02.domain.emf.network.impl.NetworkValueObject
+     * Returns the meta object for data type '{@link org.metable.hex.ch02.domain.valueobject.NetworkValueObject
      * <em>Value Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for data type '<em>Value Object</em>'.
-     * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkValueObject
-     * @model instanceClass="org.metable.hex.ch02.domain.emf.network.impl.NetworkValueObject"
+     * @see org.metable.hex.ch02.domain.valueobject.NetworkValueObject
+     * @model instanceClass="org.metable.hex.ch02.domain.valueobject.NetworkValueObject"
      * @generated
      */
     EDataType getNetworkValueObject();
@@ -581,7 +581,7 @@ public interface NetworkPackage extends EPackage {
          * The meta object literal for the '<em>Value Object</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc
          * -->
          * 
-         * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkValueObject
+         * @see org.metable.hex.ch02.domain.entity.NetworkValueObject
          * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getNetworkValueObject()
          * @generated
          */

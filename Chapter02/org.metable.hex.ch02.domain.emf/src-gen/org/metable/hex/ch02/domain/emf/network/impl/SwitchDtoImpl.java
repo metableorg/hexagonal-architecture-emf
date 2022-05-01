@@ -17,6 +17,7 @@ import org.metable.hex.ch02.domain.emf.network.NetworkPackage;
 import org.metable.hex.ch02.domain.emf.network.SwitchDto;
 import org.metable.hex.ch02.domain.valueobject.IP;
 import org.metable.hex.ch02.domain.valueobject.Network;
+import org.metable.hex.ch02.domain.valueobject.NetworkValueObject;
 import org.metable.hex.ch02.domain.valueobject.SwitchType;
 
 /**
