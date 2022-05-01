@@ -28,5 +28,11 @@ public class ReadEventFile {
         Event event = Event.parsedEvent(eventDto.getLogEntry(), ParsePolicyType.SPLIT);
 
         System.out.println(event);
+
+        eventDto = (EventDto) resource.getContents().get(1);
+
+        event = Event.parsedEvent(eventDto.getLogEntry(), ParsePolicyType.REGEX);
+
+        System.out.println(event);
     }
 }

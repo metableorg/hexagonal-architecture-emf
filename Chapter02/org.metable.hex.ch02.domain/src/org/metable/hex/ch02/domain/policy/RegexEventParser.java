@@ -24,10 +24,10 @@ public class RegexEventParser implements EventParser {
             fields.add(matcher.group(0));
         }
 
-        var timestamp = LocalDateTime.parse(matcher.group(0), formatter).atOffset(ZoneOffset.UTC);
-        var id = EventId.of(matcher.group(1));
-        var protocol = Protocol.valueOf(matcher.group(2));
-        var activity = new Activity(matcher.group(3), matcher.group(5));
+        var timestamp = LocalDateTime.parse(fields.get(0).toString(), formatter).atOffset(ZoneOffset.UTC);
+        var id = EventId.of(fields.get(1).toString());
+        var protocol = Protocol.valueOf(fields.get(2).toString());
+        var activity = new Activity(fields.get(3).toString(), fields.get(5).toString());
 
         return new Event(timestamp, id, protocol, activity);
     }
