@@ -22,10 +22,10 @@ public class Event implements Comparable<Event> {
             throw new IllegalArgumentException("");
         }
     }
+
     private OffsetDateTime timestamp;
     private EventId id;
     private Protocol protocol;
-
     private Activity activity;
 
     public Event(OffsetDateTime timestamp, EventId id, Protocol protocol, Activity activity) {
@@ -54,5 +54,21 @@ public class Event implements Comparable<Event> {
     @Override
     public int hashCode() {
         return Objects.hash(timestamp, id, protocol, activity) + 31;
+    }
+
+    @Override
+    public String toString() {
+        return "Event [timestamp=" + timestamp + ", id=" + id + ", protocol=" + protocol + ", activity=" + activity
+                + "]";
+    }
+
+    EventDto toDto() {
+        return new EventDto() {
+            @Override
+            public String getLogEntry() {
+                return timestamp.toString() + " " + id.toString() + " " + protocol.toString() + " "
+                        + activity.getSourceHost() + " " + activity.getDestHost();
+            }
+        };
     }
 }

@@ -219,13 +219,75 @@ public interface NetworkPackage extends EPackage {
     int SWITCH_DTO_OPERATION_COUNT = ISWITCH_DTO_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link org.metable.hex.ch02.domain.emf.network.impl.IEventDtoImpl <em>IEvent
+     * Dto</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @see org.metable.hex.ch02.domain.emf.network.impl.IEventDtoImpl
+     * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getIEventDto()
+     * @generated
+     */
+    int IEVENT_DTO = 5;
+
+    /**
+     * The number of structural features of the '<em>IEvent Dto</em>' class. <!-- begin-user-doc --> <!-- end-user-doc
+     * -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int IEVENT_DTO_FEATURE_COUNT = 0;
+
+    /**
+     * The number of operations of the '<em>IEvent Dto</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int IEVENT_DTO_OPERATION_COUNT = 0;
+
+    /**
+     * The meta object id for the '{@link org.metable.hex.ch02.domain.emf.network.impl.EventDtoImpl <em>Event Dto</em>}'
+     * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @see org.metable.hex.ch02.domain.emf.network.impl.EventDtoImpl
+     * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getEventDto()
+     * @generated
+     */
+    int EVENT_DTO = 4;
+
+    /**
+     * The feature id for the '<em><b>Log Entry</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int EVENT_DTO__LOG_ENTRY = IEVENT_DTO_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Event Dto</em>' class. <!-- begin-user-doc --> <!-- end-user-doc
+     * -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int EVENT_DTO_FEATURE_COUNT = IEVENT_DTO_FEATURE_COUNT + 1;
+
+    /**
+     * The number of operations of the '<em>Event Dto</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int EVENT_DTO_OPERATION_COUNT = IEVENT_DTO_OPERATION_COUNT + 0;
+
+    /**
      * The meta object id for the '<em>Router Type</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see org.metable.hex.ch02.domain.valueobject.RouterType
      * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getRouterType()
      * @generated
      */
-    int ROUTER_TYPE = 4;
+    int ROUTER_TYPE = 6;
 
     /**
      * The meta object id for the '<em>Switch Type</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -234,7 +296,7 @@ public interface NetworkPackage extends EPackage {
      * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getSwitchType()
      * @generated
      */
-    int SWITCH_TYPE = 5;
+    int SWITCH_TYPE = 7;
 
     /**
      * The meta object id for the '<em>Value Object</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -243,7 +305,7 @@ public interface NetworkPackage extends EPackage {
      * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getNetworkValueObject()
      * @generated
      */
-    int NETWORK_VALUE_OBJECT = 6;
+    int NETWORK_VALUE_OBJECT = 8;
 
     /**
      * The meta object id for the '<em>IP</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -252,7 +314,7 @@ public interface NetworkPackage extends EPackage {
      * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getIP()
      * @generated
      */
-    int IP = 7;
+    int IP = 9;
 
     /**
      * The meta object id for the '<em>Protocol</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -261,7 +323,7 @@ public interface NetworkPackage extends EPackage {
      * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getProtocol()
      * @generated
      */
-    int PROTOCOL = 8;
+    int PROTOCOL = 10;
 
     /**
      * Returns the meta object for class '{@link org.metable.hex.ch02.domain.emf.network.RouterDto <em>Router
@@ -383,6 +445,38 @@ public interface NetworkPackage extends EPackage {
      * @generated
      */
     EClass getISwitchDto();
+
+    /**
+     * Returns the meta object for class '{@link org.metable.hex.ch02.domain.emf.network.EventDto <em>Event Dto</em>}'.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for class '<em>Event Dto</em>'.
+     * @see org.metable.hex.ch02.domain.emf.network.EventDto
+     * @generated
+     */
+    EClass getEventDto();
+
+    /**
+     * Returns the meta object for the attribute '{@link org.metable.hex.ch02.domain.emf.network.EventDto#getLogEntry
+     * <em>Log Entry</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for the attribute '<em>Log Entry</em>'.
+     * @see org.metable.hex.ch02.domain.emf.network.EventDto#getLogEntry()
+     * @see #getEventDto()
+     * @generated
+     */
+    EAttribute getEventDto_LogEntry();
+
+    /**
+     * Returns the meta object for class '{@link org.metable.hex.ch02.domain.entity.EventDto <em>IEvent Dto</em>}'. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for class '<em>IEvent Dto</em>'.
+     * @see org.metable.hex.ch02.domain.entity.EventDto
+     * @model instanceClass="org.metable.hex.ch02.domain.entity.EventDto"
+     * @generated
+     */
+    EClass getIEventDto();
 
     /**
      * Returns the meta object for data type '{@link org.metable.hex.ch02.domain.valueobject.RouterType <em>Router
@@ -556,6 +650,34 @@ public interface NetworkPackage extends EPackage {
          * @generated
          */
         EClass ISWITCH_DTO = eINSTANCE.getISwitchDto();
+
+        /**
+         * The meta object literal for the '{@link org.metable.hex.ch02.domain.emf.network.impl.EventDtoImpl <em>Event
+         * Dto</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
+         * @see org.metable.hex.ch02.domain.emf.network.impl.EventDtoImpl
+         * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getEventDto()
+         * @generated
+         */
+        EClass EVENT_DTO = eINSTANCE.getEventDto();
+
+        /**
+         * The meta object literal for the '<em><b>Log Entry</b></em>' attribute feature. <!-- begin-user-doc --> <!--
+         * end-user-doc -->
+         * 
+         * @generated
+         */
+        EAttribute EVENT_DTO__LOG_ENTRY = eINSTANCE.getEventDto_LogEntry();
+
+        /**
+         * The meta object literal for the '{@link org.metable.hex.ch02.domain.emf.network.impl.IEventDtoImpl <em>IEvent
+         * Dto</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
+         * @see org.metable.hex.ch02.domain.emf.network.impl.IEventDtoImpl
+         * @see org.metable.hex.ch02.domain.emf.network.impl.NetworkPackageImpl#getIEventDto()
+         * @generated
+         */
+        EClass IEVENT_DTO = eINSTANCE.getIEventDto();
 
         /**
          * The meta object literal for the '<em>Router Type</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc

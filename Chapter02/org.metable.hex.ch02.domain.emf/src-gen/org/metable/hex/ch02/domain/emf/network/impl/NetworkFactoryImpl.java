@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.metable.hex.ch02.domain.emf.network.EventDto;
 import org.metable.hex.ch02.domain.emf.network.NetworkFactory;
 import org.metable.hex.ch02.domain.emf.network.NetworkPackage;
 import org.metable.hex.ch02.domain.emf.network.RouterDto;
@@ -63,6 +64,8 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
             return createRouterDto();
         case NetworkPackage.SWITCH_DTO:
             return createSwitchDto();
+        case NetworkPackage.EVENT_DTO:
+            return createEventDto();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -134,6 +137,17 @@ public class NetworkFactoryImpl extends EFactoryImpl implements NetworkFactory {
     public SwitchDto createSwitchDto() {
         SwitchDtoImpl switchDto = new SwitchDtoImpl();
         return switchDto;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public EventDto createEventDto() {
+        EventDtoImpl eventDto = new EventDtoImpl();
+        return eventDto;
     }
 
     /**

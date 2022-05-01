@@ -7,7 +7,7 @@ import org.metable.hex.ch02.domain.entity.Event;
 
 public interface EventParser {
 
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS").withZone(ZoneId.of("UTC"));
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd:HH:mm:ss.SSS").withZone(ZoneId.of("UTC"));
 
     Event parseEvent(String event);
 }

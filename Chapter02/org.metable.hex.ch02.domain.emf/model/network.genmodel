@@ -28,5 +28,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//SwitchDto/address"/>
     </genClasses>
     <genClasses image="false" ecoreClass="network.ecore#//ISwitchDto"/>
+    <genClasses ecoreClass="network.ecore#//EventDto">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//EventDto/logEntry"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="network.ecore#//IEventDto"/>
   </genPackages>
 </genmodel:GenModel>

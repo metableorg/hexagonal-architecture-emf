@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.metable.hex.ch02.domain.network.emf="http://org.metable.hex.ch02.domain.network.emf/network">
+  <org.metable.hex.ch02.domain.network.emf:EventDto logEntry="2022-05-01:10:56:13.831 0 IPV6 127.0.0.0 > 127.0.0.100"/>
+  <org.metable.hex.ch02.domain.network.emf:EventDto logEntry="2022-05-01:10:56:13.932 1 IPV6 127.0.0.1 > 127.0.0.200"/>
+  <org.metable.hex.ch02.domain.network.emf:EventDto logEntry="2022-05-01:10:56:13.932 2 IPV6 127.0.0.2 > 127.0.0.300"/>
+</xmi:XMI>

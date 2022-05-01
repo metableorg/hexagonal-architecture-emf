@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.metable.hex.ch02.domain.emf.network.EventDto;
 import org.metable.hex.ch02.domain.emf.network.NetworkFactory;
 import org.metable.hex.ch02.domain.emf.network.NetworkPackage;
 import org.metable.hex.ch02.domain.emf.network.RouterDto;
@@ -50,6 +51,20 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * @generated
      */
     private EClass iSwitchDtoEClass = null;
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    private EClass eventDtoEClass = null;
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    private EClass iEventDtoEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -265,6 +280,36 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * @generated
      */
     @Override
+    public EClass getEventDto() {
+        return eventDtoEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public EAttribute getEventDto_LogEntry() {
+        return (EAttribute) eventDtoEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public EClass getIEventDto() {
+        return iEventDtoEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
     public EDataType getRouterType() {
         return routerTypeEDataType;
     }
@@ -353,6 +398,11 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
 
         iSwitchDtoEClass = createEClass(ISWITCH_DTO);
 
+        eventDtoEClass = createEClass(EVENT_DTO);
+        createEAttribute(eventDtoEClass, EVENT_DTO__LOG_ENTRY);
+
+        iEventDtoEClass = createEClass(IEVENT_DTO);
+
         // Create data types
         routerTypeEDataType = createEDataType(ROUTER_TYPE);
         switchTypeEDataType = createEDataType(SWITCH_TYPE);
@@ -391,6 +441,7 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
         // Add supertypes to classes
         routerDtoEClass.getESuperTypes().add(this.getIRouterDto());
         switchDtoEClass.getESuperTypes().add(this.getISwitchDto());
+        eventDtoEClass.getESuperTypes().add(this.getIEventDto());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(routerDtoEClass, RouterDto.class, "RouterDto", !IS_ABSTRACT, !IS_INTERFACE,
@@ -420,6 +471,14 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
 
         initEClass(iSwitchDtoEClass, org.metable.hex.ch02.domain.entity.SwitchDto.class, "ISwitchDto", IS_ABSTRACT,
                 IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(eventDtoEClass, EventDto.class, "EventDto", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getEventDto_LogEntry(), ecorePackage.getEString(), "logEntry", null, 0, 1, EventDto.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(iEventDtoEClass, org.metable.hex.ch02.domain.entity.EventDto.class, "IEventDto", IS_ABSTRACT,
+                !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 
         // Initialize data types
         initEDataType(routerTypeEDataType, RouterType.class, "RouterType", IS_SERIALIZABLE,

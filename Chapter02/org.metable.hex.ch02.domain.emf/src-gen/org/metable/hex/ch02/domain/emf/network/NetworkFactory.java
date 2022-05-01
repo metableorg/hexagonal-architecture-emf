@@ -36,6 +36,14 @@ public interface NetworkFactory extends EFactory {
     SwitchDto createSwitchDto();
 
     /**
+     * Returns a new object of class '<em>Event Dto</em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return a new object of class '<em>Event Dto</em>'.
+     * @generated
+     */
+    EventDto createEventDto();
+
+    /**
      * Returns the package supported by this factory. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the package supported by this factory.

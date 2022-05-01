@@ -5,6 +5,7 @@ package org.metable.hex.ch02.domain.emf.network.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.metable.hex.ch02.domain.emf.network.EventDto;
 import org.metable.hex.ch02.domain.emf.network.NetworkPackage;
 import org.metable.hex.ch02.domain.emf.network.RouterDto;
 import org.metable.hex.ch02.domain.emf.network.SwitchDto;
@@ -91,6 +92,22 @@ public class NetworkSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
+        case NetworkPackage.EVENT_DTO: {
+            EventDto eventDto = (EventDto) theEObject;
+            T result = caseEventDto(eventDto);
+            if (result == null)
+                result = caseIEventDto(eventDto);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case NetworkPackage.IEVENT_DTO: {
+            org.metable.hex.ch02.domain.entity.EventDto iEventDto = (org.metable.hex.ch02.domain.entity.EventDto) theEObject;
+            T result = caseIEventDto(iEventDto);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
         default:
             return defaultCase(theEObject);
         }
@@ -145,6 +162,32 @@ public class NetworkSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseISwitchDto(org.metable.hex.ch02.domain.entity.SwitchDto object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Event Dto</em>'. <!-- begin-user-doc -->
+     * This implementation returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
+     * 
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Event Dto</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseEventDto(EventDto object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>IEvent Dto</em>'. <!-- begin-user-doc -->
+     * This implementation returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
+     * 
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>IEvent Dto</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseIEventDto(org.metable.hex.ch02.domain.entity.EventDto object) {
         return null;
     }
 

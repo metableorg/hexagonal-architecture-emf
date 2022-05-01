@@ -6,6 +6,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.metable.hex.ch02.domain.emf.network.EventDto;
 import org.metable.hex.ch02.domain.emf.network.NetworkPackage;
 import org.metable.hex.ch02.domain.emf.network.RouterDto;
 import org.metable.hex.ch02.domain.emf.network.SwitchDto;
@@ -82,6 +83,16 @@ public class NetworkAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
+        public Adapter caseEventDto(EventDto object) {
+            return createEventDtoAdapter();
+        }
+
+        @Override
+        public Adapter caseIEventDto(org.metable.hex.ch02.domain.entity.EventDto object) {
+            return createIEventDtoAdapter();
+        }
+
+        @Override
         public Adapter defaultCase(EObject object) {
             return createEObjectAdapter();
         }
@@ -148,6 +159,32 @@ public class NetworkAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createISwitchDtoAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.metable.hex.ch02.domain.emf.network.EventDto <em>Event
+     * Dto</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     * 
+     * @return the new adapter.
+     * @see org.metable.hex.ch02.domain.emf.network.EventDto
+     * @generated
+     */
+    public Adapter createEventDtoAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link org.metable.hex.ch02.domain.entity.EventDto <em>IEvent
+     * Dto</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     * 
+     * @return the new adapter.
+     * @see org.metable.hex.ch02.domain.entity.EventDto
+     * @generated
+     */
+    public Adapter createIEventDtoAdapter() {
         return null;
     }
 
