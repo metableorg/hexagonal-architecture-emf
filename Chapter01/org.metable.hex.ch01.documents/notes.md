@@ -19,4 +19,14 @@ Technology code (e.g., UI and persistence frameworks) is expressed using the lan
 
 Technology code can depend on problem domain code, but not vice-versa. Technology code must be adapted to the
 the problem domain code. In this way, technology code can change with no impact on the problem domain
-representation. 
+representation.
+
+The hexagonal architecture can be graphically represented as 3 concentric hexagons.
+
+<p align="center">
+    <img src="./images/the_hex_architecture.jpg"/>
+</p>
+
+The inner most hexagon is the Domain hexagon. Surrounding the Domain hexagon is the Application hexagon. The outer
+most hexagon is the Framework hexagon surrounding the Application hexagon.
+
