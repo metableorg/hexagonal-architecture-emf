@@ -8,6 +8,6 @@ public class App {
     public static void main(String... args) {
         final var cli = new RouterViewCLIAdapter();
         final var type = "CORE";
-        cli.prettyPrint(cli.obtainRelatedRouters(type));
+        cli.prettyPrint(cli.obtainRelatedRouters(type), System.out);
     }
 }

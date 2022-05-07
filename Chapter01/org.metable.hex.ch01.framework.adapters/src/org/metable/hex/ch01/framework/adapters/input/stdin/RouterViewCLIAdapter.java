@@ -1,5 +1,6 @@
 package org.metable.hex.ch01.framework.adapters.input.stdin;
 
+import java.io.PrintStream;
 import java.util.List;
 
 import org.metable.hex.ch01.application.ports.input.RouterViewInputPort;
@@ -24,7 +25,7 @@ public class RouterViewCLIAdapter {
         this.routerViewUseCase = new RouterViewInputPort(RouterViewFileAdapter.getInstance());
     }
 
-    public void prettyPrint(List<Router> routers) {
-        routers.forEach(router -> System.out.println(router));
+    public void prettyPrint(List<Router> routers, PrintStream printStream) {
+        routers.forEach(router -> printStream.println(router.toString()));
     }
 }

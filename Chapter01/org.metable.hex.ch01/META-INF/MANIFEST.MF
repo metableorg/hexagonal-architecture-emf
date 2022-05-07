@@ -7,3 +7,4 @@ Automatic-Module-Name: org.metable.hex.ch01
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Import-Package: org.metable.hex.ch01.domain,
  org.metable.hex.ch01.framework.adapters.input.stdin
+Require-Bundle: org.junit
