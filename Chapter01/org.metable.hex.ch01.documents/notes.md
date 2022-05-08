@@ -28,5 +28,6 @@ The hexagonal architecture can be graphically represented as 3 concentric hexago
 </p>
 
 The inner most hexagon is the Domain hexagon. Surrounding the Domain hexagon is the Application hexagon. The outer
-most hexagon is the Framework hexagon surrounding the Application hexagon.
-
+most hexagon is the Framework hexagon surrounding the Application hexagon. This way of depicting the architecture
+emphasizes the requirement that the direction all dependencies is from the outside in. At the center of the
+architecture is the domain, whichs is independent of all other parts of the architecture. 
