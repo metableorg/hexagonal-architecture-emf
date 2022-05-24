@@ -3,6 +3,10 @@ package org.metable.hex.domain.ch02.valueobject;
 import java.util.UUID;
 
 public final class SwitchId {
+    
+    public static SwitchId valueOf(String value) {
+        return withId(value);
+    }
 
     public static SwitchId withId(String id) {
         return new SwitchId(UUID.fromString(id));

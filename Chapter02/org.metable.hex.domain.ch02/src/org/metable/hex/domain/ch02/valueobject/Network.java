@@ -1,8 +1,29 @@
 package org.metable.hex.domain.ch02.valueobject;
 
+import java.io.IOException;
+import java.io.StringReader;
+import java.io.StringWriter;
+import java.util.Properties;
+
 public final class Network {
+    public static Network valueOf(String value) {
+        Properties properties = new Properties();
+
+        try (StringReader reader = new StringReader(value)) {
+            properties.load(reader);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        final String address = properties.getProperty("address");
+        final String name = properties.getProperty("name");
+        final String cidr = properties.getProperty("cidr");
+
+        return new Network(new IP(address), name, Integer.parseInt(cidr));
+    }
     private final IP address;
     private final String name;
+
     private final int cidr;
 
     public Network(IP address, String name, int cidr) {
@@ -28,6 +49,20 @@ public final class Network {
 
     @Override
     public String toString() {
-        return "Network [address=" + address + ", name=" + name + ", cidr=" + cidr + "]";
+        Properties properties = new Properties();
+        properties.setProperty("address", getAddress().toString());
+        properties.setProperty("name", getName());
+        properties.setProperty("cidr", getCidr() + "");
+
+        String result = "";
+
+        try (StringWriter writer = new StringWriter()) {
+            properties.store(writer, Network.class.getSimpleName());
+            result = writer.getBuffer().toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return result;
     }
 }
