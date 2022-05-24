@@ -13,7 +13,9 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.metable.hex.domain.ch02.valueobject.Network;
 import org.metable.hex.domain.ch02.valueobject.Protocol;
 import org.metable.hex.domain.ch02.valueobject.RouterId;
+import org.metable.hex.domain.ch02.valueobject.RouterType;
 import org.metable.hex.domain.ch02.valueobject.SwitchId;
+import org.metable.hex.domain.ch02.valueobject.SwitchType;
 
 /**
  * <!-- begin-user-doc -->
@@ -223,13 +225,31 @@ public class EntityPackage extends EPackageImpl {
     public static final int SWITCH_EMF__ID = ISWITCH_FEATURE_COUNT + 1;
 
     /**
+     * The feature id for the '<em><b>Type</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    public static final int SWITCH_EMF__TYPE = ISWITCH_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Address</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    public static final int SWITCH_EMF__ADDRESS = ISWITCH_FEATURE_COUNT + 3;
+
+    /**
      * The feature id for the '<em><b>Networks</b></em>' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    public static final int SWITCH_EMF__NETWORKS = ISWITCH_FEATURE_COUNT + 2;
+    public static final int SWITCH_EMF__NETWORKS = ISWITCH_FEATURE_COUNT + 4;
 
     /**
      * The number of structural features of the '<em>Switch Emf</em>' class.
@@ -238,7 +258,7 @@ public class EntityPackage extends EPackageImpl {
      * @generated
      * @ordered
      */
-    public static final int SWITCH_EMF_FEATURE_COUNT = ISWITCH_FEATURE_COUNT + 3;
+    public static final int SWITCH_EMF_FEATURE_COUNT = ISWITCH_FEATURE_COUNT + 5;
 
     /**
      * The number of operations of the '<em>Switch Emf</em>' class.
@@ -287,13 +307,22 @@ public class EntityPackage extends EPackageImpl {
     public static final int ROUTER_EMF__SWITCH = IROUTER_FEATURE_COUNT + 2;
 
     /**
+     * The feature id for the '<em><b>Type</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    public static final int ROUTER_EMF__TYPE = IROUTER_FEATURE_COUNT + 3;
+
+    /**
      * The number of structural features of the '<em>Router Emf</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    public static final int ROUTER_EMF_FEATURE_COUNT = IROUTER_FEATURE_COUNT + 3;
+    public static final int ROUTER_EMF_FEATURE_COUNT = IROUTER_FEATURE_COUNT + 4;
 
     /**
      * The number of operations of the '<em>Router Emf</em>' class.
@@ -373,6 +402,36 @@ public class EntityPackage extends EPackageImpl {
      * @generated
      */
     public static final int NETWORK = 12;
+
+    /**
+     * The meta object id for the '<em>Router Type</em>' data type.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.metable.hex.domain.ch02.valueobject.RouterType
+     * @see org.metable.hex.domain.ch02.entity.EntityPackage#getRouterType()
+     * @generated
+     */
+    public static final int ROUTER_TYPE = 13;
+
+    /**
+     * The meta object id for the '<em>IP</em>' data type.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.metable.hex.domain.ch02.valueobject.IP
+     * @see org.metable.hex.domain.ch02.entity.EntityPackage#getIP()
+     * @generated
+     */
+    public static final int IP = 14;
+
+    /**
+     * The meta object id for the '<em>Switch Type</em>' data type.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.metable.hex.domain.ch02.valueobject.SwitchType
+     * @see org.metable.hex.domain.ch02.entity.EntityPackage#getSwitchType()
+     * @generated
+     */
+    public static final int SWITCH_TYPE = 15;
 
     /**
      * <!-- begin-user-doc -->
@@ -464,6 +523,27 @@ public class EntityPackage extends EPackageImpl {
      * @generated
      */
     private EDataType networkEDataType = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EDataType routerTypeEDataType = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EDataType ipEDataType = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EDataType switchTypeEDataType = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -644,6 +724,34 @@ public class EntityPackage extends EPackageImpl {
     }
 
     /**
+     * Returns the meta object for the attribute '{@link org.metable.hex.domain.ch02.entity.SwitchEmf#getType <em>Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Type</em>'.
+     * @see org.metable.hex.domain.ch02.entity.SwitchEmf#getType()
+     * @see #getSwitchEmf()
+     * @generated
+     */
+    public EAttribute getSwitchEmf_Type() {
+        return (EAttribute)switchEmfEClass.getEStructuralFeatures().get(2);
+    }
+
+
+    /**
+     * Returns the meta object for the attribute '{@link org.metable.hex.domain.ch02.entity.SwitchEmf#getAddress <em>Address</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Address</em>'.
+     * @see org.metable.hex.domain.ch02.entity.SwitchEmf#getAddress()
+     * @see #getSwitchEmf()
+     * @generated
+     */
+    public EAttribute getSwitchEmf_Address() {
+        return (EAttribute)switchEmfEClass.getEStructuralFeatures().get(3);
+    }
+
+
+    /**
      * Returns the meta object for the attribute list '{@link org.metable.hex.domain.ch02.entity.SwitchEmf#getNetworks <em>Networks</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -653,7 +761,7 @@ public class EntityPackage extends EPackageImpl {
      * @generated
      */
     public EAttribute getSwitchEmf_Networks() {
-        return (EAttribute)switchEmfEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)switchEmfEClass.getEStructuralFeatures().get(4);
     }
 
 
@@ -708,6 +816,20 @@ public class EntityPackage extends EPackageImpl {
     public EReference getRouterEmf_Switch() {
         return (EReference)routerEmfEClass.getEStructuralFeatures().get(2);
     }
+
+    /**
+     * Returns the meta object for the attribute '{@link org.metable.hex.domain.ch02.entity.RouterEmf#getType <em>Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Type</em>'.
+     * @see org.metable.hex.domain.ch02.entity.RouterEmf#getType()
+     * @see #getRouterEmf()
+     * @generated
+     */
+    public EAttribute getRouterEmf_Type() {
+        return (EAttribute)routerEmfEClass.getEStructuralFeatures().get(3);
+    }
+
 
     /**
      * Returns the meta object for data type '{@link org.metable.hex.domain.ch02.valueobject.Protocol <em>Protocol</em>}'.
@@ -802,6 +924,48 @@ public class EntityPackage extends EPackageImpl {
 
 
     /**
+     * Returns the meta object for data type '{@link org.metable.hex.domain.ch02.valueobject.RouterType <em>Router Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for data type '<em>Router Type</em>'.
+     * @see org.metable.hex.domain.ch02.valueobject.RouterType
+     * @model instanceClass="org.metable.hex.domain.ch02.valueobject.RouterType"
+     * @generated
+     */
+    public EDataType getRouterType() {
+        return routerTypeEDataType;
+    }
+
+
+    /**
+     * Returns the meta object for data type '{@link org.metable.hex.domain.ch02.valueobject.IP <em>IP</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for data type '<em>IP</em>'.
+     * @see org.metable.hex.domain.ch02.valueobject.IP
+     * @model instanceClass="org.metable.hex.domain.ch02.valueobject.IP"
+     * @generated
+     */
+    public EDataType getIP() {
+        return ipEDataType;
+    }
+
+
+    /**
+     * Returns the meta object for data type '{@link org.metable.hex.domain.ch02.valueobject.SwitchType <em>Switch Type</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for data type '<em>Switch Type</em>'.
+     * @see org.metable.hex.domain.ch02.valueobject.SwitchType
+     * @model instanceClass="org.metable.hex.domain.ch02.valueobject.SwitchType"
+     * @generated
+     */
+    public EDataType getSwitchType() {
+        return switchTypeEDataType;
+    }
+
+
+    /**
      * Returns the factory that creates the instances of the model.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -844,12 +1008,15 @@ public class EntityPackage extends EPackageImpl {
         switchEmfEClass = createEClass(SWITCH_EMF);
         createEAttribute(switchEmfEClass, SWITCH_EMF__ENTITY);
         createEAttribute(switchEmfEClass, SWITCH_EMF__ID);
+        createEAttribute(switchEmfEClass, SWITCH_EMF__TYPE);
+        createEAttribute(switchEmfEClass, SWITCH_EMF__ADDRESS);
         createEAttribute(switchEmfEClass, SWITCH_EMF__NETWORKS);
 
         routerEmfEClass = createEClass(ROUTER_EMF);
         createEAttribute(routerEmfEClass, ROUTER_EMF__ENTITY);
         createEAttribute(routerEmfEClass, ROUTER_EMF__ID);
         createEReference(routerEmfEClass, ROUTER_EMF__SWITCH);
+        createEAttribute(routerEmfEClass, ROUTER_EMF__TYPE);
 
         // Create data types
         protocolEDataType = createEDataType(PROTOCOL);
@@ -859,6 +1026,9 @@ public class EntityPackage extends EPackageImpl {
         switchEntityEDataType = createEDataType(SWITCH_ENTITY);
         routerEntityEDataType = createEDataType(ROUTER_ENTITY);
         networkEDataType = createEDataType(NETWORK);
+        routerTypeEDataType = createEDataType(ROUTER_TYPE);
+        ipEDataType = createEDataType(IP);
+        switchTypeEDataType = createEDataType(SWITCH_TYPE);
     }
 
     /**
@@ -907,12 +1077,15 @@ public class EntityPackage extends EPackageImpl {
         initEClass(switchEmfEClass, SwitchEmf.class, "SwitchEmf", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getSwitchEmf_Entity(), this.getSwitchEntity(), "entity", null, 0, 1, SwitchEmf.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getSwitchEmf_Id(), this.getSwitchId(), "id", null, 0, 1, SwitchEmf.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSwitchEmf_Type(), this.getSwitchType(), "type", null, 0, 1, SwitchEmf.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSwitchEmf_Address(), this.getIP(), "address", null, 0, 1, SwitchEmf.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getSwitchEmf_Networks(), this.getNetwork(), "networks", null, 0, -1, SwitchEmf.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(routerEmfEClass, RouterEmf.class, "RouterEmf", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getRouterEmf_Entity(), this.getRouterEntity(), "entity", null, 0, 1, RouterEmf.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getRouterEmf_Id(), this.getRouterId(), "id", null, 0, 1, RouterEmf.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getRouterEmf_Switch(), this.getSwitchEmf(), null, "switch", null, 0, 1, RouterEmf.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getRouterEmf_Type(), this.getRouterType(), "type", null, 0, 1, RouterEmf.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize data types
         initEDataType(protocolEDataType, Protocol.class, "Protocol", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -922,6 +1095,9 @@ public class EntityPackage extends EPackageImpl {
         initEDataType(switchEntityEDataType, Switch.class, "SwitchEntity", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
         initEDataType(routerEntityEDataType, Router.class, "RouterEntity", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
         initEDataType(networkEDataType, Network.class, "Network", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+        initEDataType(routerTypeEDataType, RouterType.class, "RouterType", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+        initEDataType(ipEDataType, org.metable.hex.domain.ch02.valueobject.IP.class, "IP", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+        initEDataType(switchTypeEDataType, SwitchType.class, "SwitchType", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
         // Create resource
         createResource(eNS_URI);
@@ -1024,6 +1200,22 @@ public class EntityPackage extends EPackageImpl {
         public static final EAttribute SWITCH_EMF__ID = eINSTANCE.getSwitchEmf_Id();
 
         /**
+         * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        public static final EAttribute SWITCH_EMF__TYPE = eINSTANCE.getSwitchEmf_Type();
+
+        /**
+         * The meta object literal for the '<em><b>Address</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        public static final EAttribute SWITCH_EMF__ADDRESS = eINSTANCE.getSwitchEmf_Address();
+
+        /**
          * The meta object literal for the '<em><b>Networks</b></em>' attribute list feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -1064,6 +1256,14 @@ public class EntityPackage extends EPackageImpl {
          * @generated
          */
         public static final EReference ROUTER_EMF__SWITCH = eINSTANCE.getRouterEmf_Switch();
+
+        /**
+         * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        public static final EAttribute ROUTER_EMF__TYPE = eINSTANCE.getRouterEmf_Type();
 
         /**
          * The meta object literal for the '<em>Protocol</em>' data type.
@@ -1134,6 +1334,36 @@ public class EntityPackage extends EPackageImpl {
          * @generated
          */
         public static final EDataType NETWORK = eINSTANCE.getNetwork();
+
+        /**
+         * The meta object literal for the '<em>Router Type</em>' data type.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see org.metable.hex.domain.ch02.valueobject.RouterType
+         * @see org.metable.hex.domain.ch02.entity.EntityPackage#getRouterType()
+         * @generated
+         */
+        public static final EDataType ROUTER_TYPE = eINSTANCE.getRouterType();
+
+        /**
+         * The meta object literal for the '<em>IP</em>' data type.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see org.metable.hex.domain.ch02.valueobject.IP
+         * @see org.metable.hex.domain.ch02.entity.EntityPackage#getIP()
+         * @generated
+         */
+        public static final EDataType IP = eINSTANCE.getIP();
+
+        /**
+         * The meta object literal for the '<em>Switch Type</em>' data type.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see org.metable.hex.domain.ch02.valueobject.SwitchType
+         * @see org.metable.hex.domain.ch02.entity.EntityPackage#getSwitchType()
+         * @generated
+         */
+        public static final EDataType SWITCH_TYPE = eINSTANCE.getSwitchType();
 
     }
 

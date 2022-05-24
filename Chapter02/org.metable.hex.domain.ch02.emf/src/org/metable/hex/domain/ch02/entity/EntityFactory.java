@@ -8,32 +8,31 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.metable.hex.domain.ch02.valueobject.IP;
 import org.metable.hex.domain.ch02.valueobject.Network;
 import org.metable.hex.domain.ch02.valueobject.Protocol;
 import org.metable.hex.domain.ch02.valueobject.RouterId;
+import org.metable.hex.domain.ch02.valueobject.RouterType;
 import org.metable.hex.domain.ch02.valueobject.SwitchId;
+import org.metable.hex.domain.ch02.valueobject.SwitchType;
 
 /**
- * <!-- begin-user-doc -->
- * The <b>Factory</b> for the model.
- * It provides a create method for each non-abstract class of the model.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> The <b>Factory</b> for the model. It provides a create method for each non-abstract class of
+ * the model. <!-- end-user-doc -->
  * @see org.metable.hex.domain.ch02.entity.EntityPackage
  * @generated
  */
 public class EntityFactory extends EFactoryImpl {
     /**
      * The singleton instance of the factory.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public static final EntityFactory eINSTANCE = init();
 
     /**
      * Creates the default factory implementation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public static EntityFactory init() {
@@ -51,8 +50,7 @@ public class EntityFactory extends EFactoryImpl {
 
     /**
      * Creates an instance of the factory.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public EntityFactory() {
@@ -60,8 +58,7 @@ public class EntityFactory extends EFactoryImpl {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -76,8 +73,7 @@ public class EntityFactory extends EFactoryImpl {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -97,14 +93,19 @@ public class EntityFactory extends EFactoryImpl {
                 return createRouterEntityFromString(eDataType, initialValue);
             case EntityPackage.NETWORK:
                 return createNetworkFromString(eDataType, initialValue);
+            case EntityPackage.ROUTER_TYPE:
+                return createRouterTypeFromString(eDataType, initialValue);
+            case EntityPackage.IP:
+                return createIPFromString(eDataType, initialValue);
+            case EntityPackage.SWITCH_TYPE:
+                return createSwitchTypeFromString(eDataType, initialValue);
             default:
                 throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -124,14 +125,19 @@ public class EntityFactory extends EFactoryImpl {
                 return convertRouterEntityToString(eDataType, instanceValue);
             case EntityPackage.NETWORK:
                 return convertNetworkToString(eDataType, instanceValue);
+            case EntityPackage.ROUTER_TYPE:
+                return convertRouterTypeToString(eDataType, instanceValue);
+            case EntityPackage.IP:
+                return convertIPToString(eDataType, instanceValue);
+            case EntityPackage.SWITCH_TYPE:
+                return convertSwitchTypeToString(eDataType, instanceValue);
             default:
                 throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public EventEmf createEventEmf() {
@@ -140,28 +146,43 @@ public class EntityFactory extends EFactoryImpl {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated OFF
      */
     public SwitchEmf createSwitchEmf() {
         SwitchEmf switchEmf = new SwitchEmf();
+        switchEmf.setEntity(new Switch());
+        return switchEmf;
+    }
+
+    public SwitchEmf createSwitchEmf(SwitchId id, SwitchType type) {
+        SwitchEmf switchEmf = createSwitchEmf();
+        switchEmf.setEntity(new Switch(id, type, new IP("127.0.0.1")));
         return switchEmf;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated OFF
      */
     public RouterEmf createRouterEmf() {
         RouterEmf routerEmf = new RouterEmf();
+        routerEmf.setEntity(new Router());
+        return routerEmf;
+    }
+
+    public RouterEmf createRouterEmf(RouterId id, RouterType type) {
+        RouterEmf routerEmf = createRouterEmf();
+
+        routerEmf.setEntity(new Router(id, type));
+
         return routerEmf;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public Protocol createProtocolFromString(EDataType eDataType, String initialValue) {
@@ -169,8 +190,7 @@ public class EntityFactory extends EFactoryImpl {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public String convertProtocolToString(EDataType eDataType, Object instanceValue) {
@@ -178,8 +198,7 @@ public class EntityFactory extends EFactoryImpl {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public Event createEventEntityFromString(EDataType eDataType, String initialValue) {
@@ -187,8 +206,7 @@ public class EntityFactory extends EFactoryImpl {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public String convertEventEntityToString(EDataType eDataType, Object instanceValue) {
@@ -196,8 +214,7 @@ public class EntityFactory extends EFactoryImpl {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public RouterId createRouterIdFromString(EDataType eDataType, String initialValue) {
@@ -205,8 +222,7 @@ public class EntityFactory extends EFactoryImpl {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public String convertRouterIdToString(EDataType eDataType, Object instanceValue) {
@@ -214,8 +230,7 @@ public class EntityFactory extends EFactoryImpl {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public SwitchId createSwitchIdFromString(EDataType eDataType, String initialValue) {
@@ -223,8 +238,7 @@ public class EntityFactory extends EFactoryImpl {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public String convertSwitchIdToString(EDataType eDataType, Object instanceValue) {
@@ -232,8 +246,7 @@ public class EntityFactory extends EFactoryImpl {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public Switch createSwitchEntityFromString(EDataType eDataType, String initialValue) {
@@ -241,8 +254,7 @@ public class EntityFactory extends EFactoryImpl {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public String convertSwitchEntityToString(EDataType eDataType, Object instanceValue) {
@@ -250,8 +262,7 @@ public class EntityFactory extends EFactoryImpl {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public Router createRouterEntityFromString(EDataType eDataType, String initialValue) {
@@ -259,8 +270,7 @@ public class EntityFactory extends EFactoryImpl {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public String convertRouterEntityToString(EDataType eDataType, Object instanceValue) {
@@ -268,8 +278,7 @@ public class EntityFactory extends EFactoryImpl {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public Network createNetworkFromString(EDataType eDataType, String initialValue) {
@@ -277,8 +286,7 @@ public class EntityFactory extends EFactoryImpl {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public String convertNetworkToString(EDataType eDataType, Object instanceValue) {
@@ -286,8 +294,55 @@ public class EntityFactory extends EFactoryImpl {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    public RouterType createRouterTypeFromString(EDataType eDataType, String initialValue) {
+        return (RouterType)super.createFromString(eDataType, initialValue);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertRouterTypeToString(EDataType eDataType, Object instanceValue) {
+        return super.convertToString(eDataType, instanceValue);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    public IP createIPFromString(EDataType eDataType, String initialValue) {
+        return (IP)super.createFromString(eDataType, initialValue);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertIPToString(EDataType eDataType, Object instanceValue) {
+        return super.convertToString(eDataType, instanceValue);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    public SwitchType createSwitchTypeFromString(EDataType eDataType, String initialValue) {
+        return (SwitchType)super.createFromString(eDataType, initialValue);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertSwitchTypeToString(EDataType eDataType, Object instanceValue) {
+        return super.convertToString(eDataType, instanceValue);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public EntityPackage getEntityPackage() {
@@ -295,8 +350,7 @@ public class EntityFactory extends EFactoryImpl {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @deprecated
      * @generated
      */
@@ -305,4 +359,4 @@ public class EntityFactory extends EFactoryImpl {
         return EntityPackage.eINSTANCE;
     }
 
-} //EntityFactory
+} // EntityFactory

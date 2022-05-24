@@ -10,6 +10,10 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.metable.hex.domain.ch02.valueobject.IP;
 import org.metable.hex.domain.ch02.valueobject.Network;
+import org.metable.hex.domain.ch02.valueobject.RouterId;
+import org.metable.hex.domain.ch02.valueobject.RouterType;
+import org.metable.hex.domain.ch02.valueobject.SwitchId;
+import org.metable.hex.domain.ch02.valueobject.SwitchType;
 
 public class WriteRouterFile {
 
@@ -21,8 +25,8 @@ public class WriteRouterFile {
         Resource resource = resourceSet.createResource(uri);
 
         for (int i = 0; i < 5; ++i) {
-            RouterEmf router = EntityFactory.eINSTANCE.createRouterEmf();
-            ISwitch networkSwitch = EntityFactory.eINSTANCE.createSwitchEmf();
+            RouterEmf router = EntityFactory.eINSTANCE.createRouterEmf(RouterId.withoutId(), RouterType.EDGE);
+            ISwitch networkSwitch = EntityFactory.eINSTANCE.createSwitchEmf(SwitchId.withoutId(), SwitchType.LAYER3);
 
             for (int j = 0; j < 2; ++j) {
                 Network network = new Network(new IP("127.0.0." + j), "Network " + i + (j * 10), 23);

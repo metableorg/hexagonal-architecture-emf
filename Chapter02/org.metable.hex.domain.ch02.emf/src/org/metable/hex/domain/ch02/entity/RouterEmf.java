@@ -2,6 +2,8 @@
  */
 package org.metable.hex.domain.ch02.entity;
 
+import java.util.List;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -10,12 +12,13 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.metable.hex.domain.ch02.valueobject.IP;
+import org.metable.hex.domain.ch02.valueobject.Network;
 import org.metable.hex.domain.ch02.valueobject.RouterId;
+import org.metable.hex.domain.ch02.valueobject.RouterType;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Router Emf</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>Router Emf</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
@@ -24,6 +27,7 @@ import org.metable.hex.domain.ch02.valueobject.RouterId;
  *   <li>{@link org.metable.hex.domain.ch02.entity.RouterEmf#getEntity <em>Entity</em>}</li>
  *   <li>{@link org.metable.hex.domain.ch02.entity.RouterEmf#getId <em>Id</em>}</li>
  *   <li>{@link org.metable.hex.domain.ch02.entity.RouterEmf#getSwitch <em>Switch</em>}</li>
+ *   <li>{@link org.metable.hex.domain.ch02.entity.RouterEmf#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see org.metable.hex.domain.ch02.entity.EntityPackage#getRouterEmf()
@@ -33,8 +37,8 @@ import org.metable.hex.domain.ch02.valueobject.RouterId;
 public class RouterEmf extends MinimalEObjectImpl.Container implements EObject, IRouter {
     /**
      * The default value of the '{@link #getEntity() <em>Entity</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!--
+     * end-user-doc -->
      * @see #getEntity()
      * @generated
      * @ordered
@@ -42,8 +46,8 @@ public class RouterEmf extends MinimalEObjectImpl.Container implements EObject, 
     protected static final Router ENTITY_EDEFAULT = null;
     /**
      * The cached value of the '{@link #getEntity() <em>Entity</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!--
+     * end-user-doc -->
      * @see #getEntity()
      * @generated
      * @ordered
@@ -51,8 +55,7 @@ public class RouterEmf extends MinimalEObjectImpl.Container implements EObject, 
     protected Router entity = ENTITY_EDEFAULT;
     /**
      * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getId()
      * @generated
      * @ordered
@@ -69,18 +72,24 @@ public class RouterEmf extends MinimalEObjectImpl.Container implements EObject, 
     protected SwitchEmf switch_;
 
     /**
+     * The default value of the '{@link #getType() <em>Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated OFF
+     * @see #getType()
+     * @generated
+     * @ordered
+     */
+    protected static final RouterType TYPE_EDEFAULT = null;
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
      */
     protected RouterEmf() {
         super();
-        entity = new Router(RouterId.withoutId());
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -90,8 +99,7 @@ public class RouterEmf extends MinimalEObjectImpl.Container implements EObject, 
 
     /**
      * Returns the value of the '<em><b>Entity</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @return the value of the '<em>Entity</em>' attribute.
      * @see #setEntity(Router)
      * @see org.metable.hex.domain.ch02.entity.EntityPackage#getRouterEmf_Entity()
@@ -104,8 +112,7 @@ public class RouterEmf extends MinimalEObjectImpl.Container implements EObject, 
 
     /**
      * Sets the value of the '{@link org.metable.hex.domain.ch02.entity.RouterEmf#getEntity <em>Entity</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @param newEntity the new value of the '<em>Entity</em>' attribute.
      * @see #getEntity()
      * @generated
@@ -118,9 +125,8 @@ public class RouterEmf extends MinimalEObjectImpl.Container implements EObject, 
     }
 
     /**
-     * Returns the value of the '<em><b>Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Returns the value of the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the value of the '<em>Id</em>' attribute.
      * @see #setId(RouterId)
      * @see org.metable.hex.domain.ch02.entity.EntityPackage#getRouterEmf_Id()
@@ -132,9 +138,9 @@ public class RouterEmf extends MinimalEObjectImpl.Container implements EObject, 
     }
 
     /**
-     * Sets the value of the '{@link org.metable.hex.domain.ch02.entity.RouterEmf#getId <em>Id</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Sets the value of the '{@link org.metable.hex.domain.ch02.entity.RouterEmf#getId <em>Id</em>}' attribute. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @param newId the new value of the '<em>Id</em>' attribute.
      * @see #getId()
      * @generated OFF
@@ -145,8 +151,8 @@ public class RouterEmf extends MinimalEObjectImpl.Container implements EObject, 
 
     /**
      * Returns the value of the '<em><b>Switch</b></em>' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!--
+     * end-user-doc -->
      * @return the value of the '<em>Switch</em>' containment reference.
      * @see #setSwitch(SwitchEmf)
      * @see org.metable.hex.domain.ch02.entity.EntityPackage#getRouterEmf_Switch()
@@ -158,8 +164,7 @@ public class RouterEmf extends MinimalEObjectImpl.Container implements EObject, 
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public NotificationChain basicSetSwitch(SwitchEmf newSwitch, NotificationChain msgs) {
@@ -173,32 +178,60 @@ public class RouterEmf extends MinimalEObjectImpl.Container implements EObject, 
     }
 
     /**
-     * Sets the value of the '{@link org.metable.hex.domain.ch02.entity.RouterEmf#getSwitch <em>Switch</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Sets the value of the '{@link org.metable.hex.domain.ch02.entity.RouterEmf#getSwitch <em>Switch</em>}'
+     * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @param newSwitch the new value of the '<em>Switch</em>' containment reference.
      * @see #getSwitch()
      * @generated OFF
      */
     public void setSwitch(SwitchEmf newSwitch) {
         entity.setSwitch(newSwitch.getEntity());
-        
+
         if (newSwitch != switch_) {
             NotificationChain msgs = null;
             if (switch_ != null)
-                msgs = switch_.eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EntityPackage.ROUTER_EMF__SWITCH, null, msgs);
+                msgs = switch_.eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EntityPackage.ROUTER_EMF__SWITCH, null,
+                        msgs);
             if (newSwitch != null)
-                msgs = newSwitch.eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EntityPackage.ROUTER_EMF__SWITCH, null, msgs);
+                msgs = newSwitch.eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EntityPackage.ROUTER_EMF__SWITCH, null,
+                        msgs);
             msgs = basicSetSwitch(newSwitch, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, EntityPackage.ROUTER_EMF__SWITCH, newSwitch, newSwitch));
+            if (msgs != null)
+                msgs.dispatch();
+        } else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, EntityPackage.ROUTER_EMF__SWITCH, newSwitch,
+                    newSwitch));
     }
 
     /**
+     * Returns the value of the '<em><b>Type</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @return the value of the '<em>Type</em>' attribute.
+     * @see #setType(RouterType)
+     * @see org.metable.hex.domain.ch02.entity.EntityPackage#getRouterEmf_Type()
+     * @model dataType="org.metable.hex.domain.ch02.entity.RouterType" volatile="true"
+     * @generated OFF
+     */
+    public RouterType getType() {
+        return entity.getType();
+    }
+
+    /**
+     * Sets the value of the '{@link org.metable.hex.domain.ch02.entity.RouterEmf#getType <em>Type</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param newType the new value of the '<em>Type</em>' attribute.
+     * @see #getType()
+     * @generated OFF
+     */
+    public void setType(RouterType newType) {
+        entity.setType(newType);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -211,8 +244,7 @@ public class RouterEmf extends MinimalEObjectImpl.Container implements EObject, 
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -224,13 +256,14 @@ public class RouterEmf extends MinimalEObjectImpl.Container implements EObject, 
                 return getId();
             case EntityPackage.ROUTER_EMF__SWITCH:
                 return getSwitch();
+            case EntityPackage.ROUTER_EMF__TYPE:
+                return getType();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -245,13 +278,15 @@ public class RouterEmf extends MinimalEObjectImpl.Container implements EObject, 
             case EntityPackage.ROUTER_EMF__SWITCH:
                 setSwitch((SwitchEmf)newValue);
                 return;
+            case EntityPackage.ROUTER_EMF__TYPE:
+                setType((RouterType)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -266,13 +301,15 @@ public class RouterEmf extends MinimalEObjectImpl.Container implements EObject, 
             case EntityPackage.ROUTER_EMF__SWITCH:
                 setSwitch((SwitchEmf)null);
                 return;
+            case EntityPackage.ROUTER_EMF__TYPE:
+                setType(TYPE_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -284,13 +321,14 @@ public class RouterEmf extends MinimalEObjectImpl.Container implements EObject, 
                 return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
             case EntityPackage.ROUTER_EMF__SWITCH:
                 return switch_ != null;
+            case EntityPackage.ROUTER_EMF__TYPE:
+                return TYPE_EDEFAULT == null ? getType() != null : !TYPE_EDEFAULT.equals(getType());
         }
         return super.eIsSet(featureID);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -307,6 +345,21 @@ public class RouterEmf extends MinimalEObjectImpl.Container implements EObject, 
     @Override
     public void setSwitch(ISwitch value) {
         setSwitch((SwitchEmf) value);
+    }
+
+    @Override
+    public void addNetworkToSwitch(Network network) {
+        entity.addNetworkToSwitch(network);
+    }
+
+    @Override
+    public Network createNetwork(IP address, String name, int cidr) {
+        return entity.createNetwork(address, name, cidr);
+    }
+
+    @Override
+    public List<Network> retrieveNetworks() {
+        return entity.retrieveNetworks();
     }
 
 } // RouterEmf

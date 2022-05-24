@@ -14,6 +14,9 @@
     <genDataTypes ecoreDataType="entity.ecore#//SwitchEntity"/>
     <genDataTypes ecoreDataType="entity.ecore#//RouterEntity"/>
     <genDataTypes ecoreDataType="entity.ecore#//Network"/>
+    <genDataTypes ecoreDataType="entity.ecore#//RouterType"/>
+    <genDataTypes ecoreDataType="entity.ecore#//IP"/>
+    <genDataTypes ecoreDataType="entity.ecore#//SwitchType"/>
     <genClasses ecoreClass="entity.ecore#//EventEmf">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute entity.ecore#//EventEmf/entity"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute entity.ecore#//EventEmf/protocol"/>
@@ -24,12 +27,15 @@
     <genClasses ecoreClass="entity.ecore#//SwitchEmf">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute entity.ecore#//SwitchEmf/entity"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute entity.ecore#//SwitchEmf/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute entity.ecore#//SwitchEmf/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute entity.ecore#//SwitchEmf/address"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute entity.ecore#//SwitchEmf/networks"/>
     </genClasses>
     <genClasses ecoreClass="entity.ecore#//RouterEmf">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute entity.ecore#//RouterEmf/entity"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute entity.ecore#//RouterEmf/id"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference entity.ecore#//RouterEmf/switch"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute entity.ecore#//RouterEmf/type"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
