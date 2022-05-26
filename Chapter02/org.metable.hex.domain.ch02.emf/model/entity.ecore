@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="entity" nsURI="http://org.metable.hex.domain.ch02.network.emf/entity"
+    nsPrefix="org.metable.hex.domain.ch02.entity">
+  <eClassifiers xsi:type="ecore:EDataType" name="Protocol" instanceClassName="org.metable.hex.domain.ch02.valueobject.Protocol"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EventEmf" eSuperTypes="#//IEvent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entity" eType="#//EventEntity"
+        changeable="false" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="protocol" eType="#//Protocol"
+        volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="EventEntity" instanceClassName="org.metable.hex.domain.ch02.entity.Event"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IEvent" instanceClassName="org.metable.hex.domain.ch02.entity.IEvent"
+      abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="RouterId" instanceClassName="org.metable.hex.domain.ch02.valueobject.RouterId"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="SwitchId" instanceClassName="org.metable.hex.domain.ch02.valueobject.SwitchId"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ISwitch" instanceClassName="org.metable.hex.domain.ch02.entity.ISwitch"
+      abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IRouter" instanceClassName="org.metable.hex.domain.ch02.entity.IRouter"
+      abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="SwitchEntity" instanceClassName="org.metable.hex.domain.ch02.entity.Switch"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="RouterEntity" instanceClassName="org.metable.hex.domain.ch02.entity.Router"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SwitchEmf" eSuperTypes="#//ISwitch">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entity" eType="#//SwitchEntity"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//SwitchId"
+        volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//SwitchType"
+        volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="address" eType="#//IP"
+        volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="networks" upperBound="-1"
+        eType="#//Network" volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RouterEmf" eSuperTypes="#//IRouter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entity" eType="#//RouterEntity"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//RouterId"
+        volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="switch" eType="#//SwitchEmf"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RouterType"
+        volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Network" instanceClassName="org.metable.hex.domain.ch02.valueobject.Network"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="RouterType" instanceClassName="org.metable.hex.domain.ch02.valueobject.RouterType"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="IP" instanceClassName="org.metable.hex.domain.ch02.valueobject.IP"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="SwitchType" instanceClassName="org.metable.hex.domain.ch02.valueobject.SwitchType"/>
+</ecore:EPackage>

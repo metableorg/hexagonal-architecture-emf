@@ -24,6 +24,10 @@ public final class IP {
         return protocol;
     }
 
+    public static IP valueOf(String value) {
+        return new IP(value);
+    }
+
     @Override
     public String toString() {
         return address;

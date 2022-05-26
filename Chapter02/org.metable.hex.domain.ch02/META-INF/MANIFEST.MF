@@ -5,5 +5,6 @@ Bundle-SymbolicName: org.metable.hex.domain.ch02
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: org.metable.hex.domain.ch02
 Bundle-RequiredExecutionEnvironment: JavaSE-11
-Export-Package: org.metable.hex.domain.ch02,
+Export-Package: org.metable.hex.domain.ch02.entity,
+ org.metable.hex.domain.ch02.policy,
  org.metable.hex.domain.ch02.valueobject

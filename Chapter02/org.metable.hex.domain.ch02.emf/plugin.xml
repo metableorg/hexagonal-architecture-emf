@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated network -->
+      <package
+            uri="http://org.metable.hex.domain.ch02.network.emf/network"
+            class="network.NetworkPackage"
+            genModel="model/entity.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated entity -->
+      <package
+            uri="http://org.metable.hex.domain.ch02.network.emf/entity"
+            class="org.metable.hex.domain.ch02.entity.EntityPackage"
+            genModel="model/entity.genmodel"/>
+   </extension>
+
+</plugin>
