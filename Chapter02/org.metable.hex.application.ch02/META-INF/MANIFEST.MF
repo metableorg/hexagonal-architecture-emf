@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Ch02
-Bundle-SymbolicName: org.metable.hex.application.ch02
+Bundle-SymbolicName: org.metable.hex.ch02.application
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: org.metable.hex.application.ch02
 Bundle-RequiredExecutionEnvironment: JavaSE-11
-Import-Package: org.metable.hex.domain.ch02.entity,
- org.metable.hex.domain.ch02.service
+Import-Package: org.metable.hex.ch02.domain.entity,
+ org.metable.hex.ch02.domain.service
