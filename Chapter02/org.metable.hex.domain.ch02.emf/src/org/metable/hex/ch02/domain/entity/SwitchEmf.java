@@ -24,39 +24,39 @@ import org.metable.hex.ch02.domain.valueobject.SwitchType;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.metable.hex.ch02.domain.entity.SwitchEmf#getEntity <em>Entity</em>}</li>
- *   <li>{@link org.metable.hex.ch02.domain.entity.SwitchEmf#getId <em>Id</em>}</li>
- *   <li>{@link org.metable.hex.ch02.domain.entity.SwitchEmf#getType <em>Type</em>}</li>
- *   <li>{@link org.metable.hex.ch02.domain.entity.SwitchEmf#getAddress <em>Address</em>}</li>
- *   <li>{@link org.metable.hex.ch02.domain.entity.SwitchEmf#getNetworks <em>Networks</em>}</li>
+ * <li>{@link org.metable.hex.ch02.domain.entity.SwitchEmf#getEntity <em>Entity</em>}</li>
+ * <li>{@link org.metable.hex.ch02.domain.entity.SwitchEmf#getId <em>Id</em>}</li>
+ * <li>{@link org.metable.hex.ch02.domain.entity.SwitchEmf#getType <em>Type</em>}</li>
+ * <li>{@link org.metable.hex.ch02.domain.entity.SwitchEmf#getAddress <em>Address</em>}</li>
+ * <li>{@link org.metable.hex.ch02.domain.entity.SwitchEmf#getNetworks <em>Networks</em>}</li>
  * </ul>
  *
  * @see org.metable.hex.ch02.domain.entity.EntityPackage#getSwitchEmf()
- * @model kind="class" superTypes="org.metable.hex.domain.ch02.entity.ISwitch"
+ * @model kind="class" superTypes="org.metable.hex.ch02.domain.entity.ISwitch"
  * @generated
  */
 public class SwitchEmf extends MinimalEObjectImpl.Container implements EObject, ISwitch {
     /**
-     * The default value of the '{@link #getEntity() <em>Entity</em>}' attribute.
-     * <!-- begin-user-doc --> <!--
+     * The default value of the '{@link #getEntity() <em>Entity</em>}' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @see #getEntity()
      * @generated
      * @ordered
      */
     protected static final Switch ENTITY_EDEFAULT = null;
     /**
-     * The cached value of the '{@link #getEntity() <em>Entity</em>}' attribute.
-     * <!-- begin-user-doc --> <!--
+     * The cached value of the '{@link #getEntity() <em>Entity</em>}' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @see #getEntity()
      * @generated
      * @ordered
      */
     protected Switch entity = ENTITY_EDEFAULT;
     /**
-     * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getId()
      * @generated
      * @ordered
@@ -64,18 +64,18 @@ public class SwitchEmf extends MinimalEObjectImpl.Container implements EObject, 
     protected static final SwitchId ID_EDEFAULT = null;
 
     /**
-     * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The default value of the '{@link #getType() <em>Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
+     * -->
+     * 
      * @see #getType()
      * @generated
      * @ordered
      */
     protected static final SwitchType TYPE_EDEFAULT = null;
     /**
-     * The default value of the '{@link #getAddress() <em>Address</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The default value of the '{@link #getAddress() <em>Address</em>}' attribute. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
      * @see #getAddress()
      * @generated
      * @ordered
@@ -84,6 +84,7 @@ public class SwitchEmf extends MinimalEObjectImpl.Container implements EObject, 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected SwitchEmf() {
@@ -92,6 +93,7 @@ public class SwitchEmf extends MinimalEObjectImpl.Container implements EObject, 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -100,12 +102,12 @@ public class SwitchEmf extends MinimalEObjectImpl.Container implements EObject, 
     }
 
     /**
-     * Returns the value of the '<em><b>Entity</b></em>' attribute.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the value of the '<em><b>Entity</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the value of the '<em>Entity</em>' attribute.
      * @see #setEntity(Switch)
      * @see org.metable.hex.ch02.domain.entity.EntityPackage#getSwitchEmf_Entity()
-     * @model dataType="org.metable.hex.domain.ch02.entity.SwitchEntity" transient="true"
+     * @model dataType="org.metable.hex.ch02.domain.entity.SwitchEntity" transient="true"
      * @generated
      */
     public Switch getEntity() {
@@ -115,6 +117,7 @@ public class SwitchEmf extends MinimalEObjectImpl.Container implements EObject, 
     /**
      * Sets the value of the '{@link org.metable.hex.ch02.domain.entity.SwitchEmf#getEntity <em>Entity</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @param newEntity the new value of the '<em>Entity</em>' attribute.
      * @see #getEntity()
      * @generated
@@ -152,9 +155,8 @@ public class SwitchEmf extends MinimalEObjectImpl.Container implements EObject, 
     }
 
     /**
-     * Returns the value of the '<em><b>Type</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Returns the value of the '<em><b>Type</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the value of the '<em>Type</em>' attribute.
      * @see #setType(SwitchType)
      * @see org.metable.hex.ch02.domain.entity.EntityPackage#getSwitchEmf_Type()
@@ -167,8 +169,8 @@ public class SwitchEmf extends MinimalEObjectImpl.Container implements EObject, 
 
     /**
      * Sets the value of the '{@link org.metable.hex.ch02.domain.entity.SwitchEmf#getType <em>Type</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @param newType the new value of the '<em>Type</em>' attribute.
      * @see #getType()
      * @generated OFF
@@ -178,9 +180,8 @@ public class SwitchEmf extends MinimalEObjectImpl.Container implements EObject, 
     }
 
     /**
-     * Returns the value of the '<em><b>Address</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Returns the value of the '<em><b>Address</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the value of the '<em>Address</em>' attribute.
      * @see #setAddress(IP)
      * @see org.metable.hex.ch02.domain.entity.EntityPackage#getSwitchEmf_Address()
@@ -188,13 +189,13 @@ public class SwitchEmf extends MinimalEObjectImpl.Container implements EObject, 
      * @generated OFF
      */
     public IP getAddress() {
-        return entity.getAddress(); 
+        return entity.getAddress();
     }
 
     /**
-     * Sets the value of the '{@link org.metable.hex.ch02.domain.entity.SwitchEmf#getAddress <em>Address</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Sets the value of the '{@link org.metable.hex.ch02.domain.entity.SwitchEmf#getAddress <em>Address</em>}'
+     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @param newAddress the new value of the '<em>Address</em>' attribute.
      * @see #getAddress()
      * @generated OFF
@@ -230,107 +231,113 @@ public class SwitchEmf extends MinimalEObjectImpl.Container implements EObject, 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case EntityPackage.SWITCH_EMF__ENTITY:
-                return getEntity();
-            case EntityPackage.SWITCH_EMF__ID:
-                return getId();
-            case EntityPackage.SWITCH_EMF__TYPE:
-                return getType();
-            case EntityPackage.SWITCH_EMF__ADDRESS:
-                return getAddress();
-            case EntityPackage.SWITCH_EMF__NETWORKS:
-                return getNetworks();
+        case EntityPackage.SWITCH_EMF__ENTITY:
+            return getEntity();
+        case EntityPackage.SWITCH_EMF__ID:
+            return getId();
+        case EntityPackage.SWITCH_EMF__TYPE:
+            return getType();
+        case EntityPackage.SWITCH_EMF__ADDRESS:
+            return getAddress();
+        case EntityPackage.SWITCH_EMF__NETWORKS:
+            return getNetworks();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case EntityPackage.SWITCH_EMF__ENTITY:
-                setEntity((Switch)newValue);
-                return;
-            case EntityPackage.SWITCH_EMF__ID:
-                setId((SwitchId)newValue);
-                return;
-            case EntityPackage.SWITCH_EMF__TYPE:
-                setType((SwitchType)newValue);
-                return;
-            case EntityPackage.SWITCH_EMF__ADDRESS:
-                setAddress((IP)newValue);
-                return;
-            case EntityPackage.SWITCH_EMF__NETWORKS:
-                getNetworks().clear();
-                getNetworks().addAll((Collection<? extends Network>)newValue);
-                return;
+        case EntityPackage.SWITCH_EMF__ENTITY:
+            setEntity((Switch) newValue);
+            return;
+        case EntityPackage.SWITCH_EMF__ID:
+            setId((SwitchId) newValue);
+            return;
+        case EntityPackage.SWITCH_EMF__TYPE:
+            setType((SwitchType) newValue);
+            return;
+        case EntityPackage.SWITCH_EMF__ADDRESS:
+            setAddress((IP) newValue);
+            return;
+        case EntityPackage.SWITCH_EMF__NETWORKS:
+            getNetworks().clear();
+            getNetworks().addAll((Collection<? extends Network>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case EntityPackage.SWITCH_EMF__ENTITY:
-                setEntity(ENTITY_EDEFAULT);
-                return;
-            case EntityPackage.SWITCH_EMF__ID:
-                setId(ID_EDEFAULT);
-                return;
-            case EntityPackage.SWITCH_EMF__TYPE:
-                setType(TYPE_EDEFAULT);
-                return;
-            case EntityPackage.SWITCH_EMF__ADDRESS:
-                setAddress(ADDRESS_EDEFAULT);
-                return;
-            case EntityPackage.SWITCH_EMF__NETWORKS:
-                getNetworks().clear();
-                return;
+        case EntityPackage.SWITCH_EMF__ENTITY:
+            setEntity(ENTITY_EDEFAULT);
+            return;
+        case EntityPackage.SWITCH_EMF__ID:
+            setId(ID_EDEFAULT);
+            return;
+        case EntityPackage.SWITCH_EMF__TYPE:
+            setType(TYPE_EDEFAULT);
+            return;
+        case EntityPackage.SWITCH_EMF__ADDRESS:
+            setAddress(ADDRESS_EDEFAULT);
+            return;
+        case EntityPackage.SWITCH_EMF__NETWORKS:
+            getNetworks().clear();
+            return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case EntityPackage.SWITCH_EMF__ENTITY:
-                return ENTITY_EDEFAULT == null ? entity != null : !ENTITY_EDEFAULT.equals(entity);
-            case EntityPackage.SWITCH_EMF__ID:
-                return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
-            case EntityPackage.SWITCH_EMF__TYPE:
-                return TYPE_EDEFAULT == null ? getType() != null : !TYPE_EDEFAULT.equals(getType());
-            case EntityPackage.SWITCH_EMF__ADDRESS:
-                return ADDRESS_EDEFAULT == null ? getAddress() != null : !ADDRESS_EDEFAULT.equals(getAddress());
-            case EntityPackage.SWITCH_EMF__NETWORKS:
-                return !getNetworks().isEmpty();
+        case EntityPackage.SWITCH_EMF__ENTITY:
+            return ENTITY_EDEFAULT == null ? entity != null : !ENTITY_EDEFAULT.equals(entity);
+        case EntityPackage.SWITCH_EMF__ID:
+            return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
+        case EntityPackage.SWITCH_EMF__TYPE:
+            return TYPE_EDEFAULT == null ? getType() != null : !TYPE_EDEFAULT.equals(getType());
+        case EntityPackage.SWITCH_EMF__ADDRESS:
+            return ADDRESS_EDEFAULT == null ? getAddress() != null : !ADDRESS_EDEFAULT.equals(getAddress());
+        case EntityPackage.SWITCH_EMF__NETWORKS:
+            return !getNetworks().isEmpty();
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuilder result = new StringBuilder(super.toString());
         result.append(" (entity: ");

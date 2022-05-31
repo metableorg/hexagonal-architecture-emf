@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.metable.hex.ch02.domain.entity="http://org.metable.hex.ch02.domain.network.emf/entity">
+  <org.metable.hex.ch02.domain.entity:RouterEmf id="d32f8994-1b3a-4724-af08-eb732cd6e6f2" type="CORE">
+    <switch id="c1df430b-f087-4eb4-b9a7-6c97bb590095" type="LAYER3" address="127.0.0.1">
+      <networks>#Network&#xD;
+#Mon May 30 18:54:09 CDT 2022&#xD;
+address=127.0.0.0&#xD;
+name=Network 00&#xD;
+cidr=23&#xD;
+</networks>
+      <networks>#Network&#xD;
+#Mon May 30 18:54:09 CDT 2022&#xD;
+address=127.0.0.1&#xD;
+name=Network 010&#xD;
+cidr=23&#xD;
+</networks>
+    </switch>
+  </org.metable.hex.ch02.domain.entity:RouterEmf>
+  <org.metable.hex.ch02.domain.entity:RouterEmf id="9bc47065-62ff-40dd-a9d3-2bd27389a671" type="EDGE">
+    <switch id="20bb26a4-bd66-457b-bed5-845c675e9e0d" type="LAYER3" address="127.0.0.1">
+      <networks>#Network&#xD;
+#Mon May 30 18:54:09 CDT 2022&#xD;
+address=127.0.0.0&#xD;
+name=Network 10&#xD;
+cidr=23&#xD;
+</networks>
+      <networks>#Network&#xD;
+#Mon May 30 18:54:09 CDT 2022&#xD;
+address=127.0.0.1&#xD;
+name=Network 110&#xD;
+cidr=23&#xD;
+</networks>
+    </switch>
+  </org.metable.hex.ch02.domain.entity:RouterEmf>
+  <org.metable.hex.ch02.domain.entity:RouterEmf id="6aa7c15f-a349-46eb-b3ee-56903736757d" type="CORE">
+    <switch id="fe8eefdb-eb1e-493f-a6e4-786d2a6bf57c" type="LAYER3" address="127.0.0.1">
+      <networks>#Network&#xD;
+#Mon May 30 18:54:09 CDT 2022&#xD;
+address=127.0.0.0&#xD;
+name=Network 20&#xD;
+cidr=23&#xD;
+</networks>
+      <networks>#Network&#xD;
+#Mon May 30 18:54:09 CDT 2022&#xD;
+address=127.0.0.1&#xD;
+name=Network 210&#xD;
+cidr=23&#xD;
+</networks>
+    </switch>
+  </org.metable.hex.ch02.domain.entity:RouterEmf>
+  <org.metable.hex.ch02.domain.entity:RouterEmf id="8a51c15f-e7e5-4442-9964-5cde8d1d96f7" type="EDGE">
+    <switch id="4122d6c6-9d94-4e8f-a6d2-08546cc59a02" type="LAYER3" address="127.0.0.1">
+      <networks>#Network&#xD;
+#Mon May 30 18:54:09 CDT 2022&#xD;
+address=127.0.0.0&#xD;
+name=Network 30&#xD;
+cidr=23&#xD;
+</networks>
+      <networks>#Network&#xD;
+#Mon May 30 18:54:09 CDT 2022&#xD;
+address=127.0.0.1&#xD;
+name=Network 310&#xD;
+cidr=23&#xD;
+</networks>
+    </switch>
+  </org.metable.hex.ch02.domain.entity:RouterEmf>
+  <org.metable.hex.ch02.domain.entity:RouterEmf id="f176c664-b7f2-488b-854a-bebca41c15bc" type="CORE">
+    <switch id="00129d48-ac55-4794-8b5c-5d7c05cd66e1" type="LAYER3" address="127.0.0.1">
+      <networks>#Network&#xD;
+#Mon May 30 18:54:09 CDT 2022&#xD;
+address=127.0.0.0&#xD;
+name=Network 40&#xD;
+cidr=23&#xD;
+</networks>
+      <networks>#Network&#xD;
+#Mon May 30 18:54:09 CDT 2022&#xD;
+address=127.0.0.1&#xD;
+name=Network 410&#xD;
+cidr=23&#xD;
+</networks>
+    </switch>
+  </org.metable.hex.ch02.domain.entity:RouterEmf>
+</xmi:XMI>

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Adapters
+Bundle-SymbolicName: org.metable.hex.ch02.framework.adapters
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.metable.hex.ch02.framework.adapters
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.metable.hex.ch02.framework.adapters.input.stdin,
+ org.metable.hex.ch02.framework.adapters.output.file
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi,
+ org.metable.hex.ch02.domain.emf
+Import-Package: org.metable.hex.ch02.application.ports.input,
+ org.metable.hex.ch02.application.ports.output,
+ org.metable.hex.ch02.application.usecases,
+ org.metable.hex.ch02.domain.entity,
+ org.metable.hex.ch02.domain.valueobject

@@ -25,7 +25,8 @@ public class WriteRouterFile {
         Resource resource = resourceSet.createResource(uri);
 
         for (int i = 0; i < 5; ++i) {
-            RouterEmf router = EntityFactory.eINSTANCE.createRouterEmf(RouterId.withoutId(), RouterType.EDGE);
+            final RouterType type = i % 2 == 0 ? RouterType.CORE : RouterType.EDGE;
+            RouterEmf router = EntityFactory.eINSTANCE.createRouterEmf(RouterId.withoutId(), type);
             ISwitch networkSwitch = EntityFactory.eINSTANCE.createSwitchEmf(SwitchId.withoutId(), SwitchType.LAYER3);
 
             for (int j = 0; j < 2; ++j) {

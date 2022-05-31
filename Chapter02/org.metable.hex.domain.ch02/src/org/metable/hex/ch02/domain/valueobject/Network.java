@@ -21,6 +21,7 @@ public final class Network {
 
         return new Network(new IP(address), name, Integer.parseInt(cidr));
     }
+
     private final IP address;
     private final String name;
 

@@ -5,7 +5,7 @@
     suppressInterfaces="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="11.0"
     copyrightFields="false" operationReflection="true" runtimePlatform="RCP" importOrganizing="true">
   <foreignModel>entity.ecore</foreignModel>
-  <genPackages prefix="Entity" basePackage="org.metable.hex.domain.ch02" disposableProviderFactory="true"
+  <genPackages prefix="Entity" basePackage="org.metable.hex.ch02.domain" disposableProviderFactory="true"
       ecorePackage="entity.ecore#/">
     <genDataTypes ecoreDataType="entity.ecore#//Protocol"/>
     <genDataTypes ecoreDataType="entity.ecore#//EventEntity"/>

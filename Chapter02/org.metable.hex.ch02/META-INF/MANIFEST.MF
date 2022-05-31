@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ch02
+Bundle-SymbolicName: org.metable.hex.ch02
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.metable.hex.ch02
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Import-Package: org.metable.hex.ch02.application.ports.input,
+ org.metable.hex.ch02.domain.entity,
+ org.metable.hex.ch02.framework.adapters.input.stdin

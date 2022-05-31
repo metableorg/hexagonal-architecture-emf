@@ -14,6 +14,6 @@ public final class EventId {
 
     @Override
     public String toString() {
-        return id; 
+        return id;
     }
 }

@@ -3,7 +3,7 @@ package org.metable.hex.ch02.domain.valueobject;
 import java.util.UUID;
 
 public final class RouterId {
-    
+
     public static RouterId valueOf(String value) {
         return withId(value);
     }

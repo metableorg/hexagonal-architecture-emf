@@ -10,15 +10,15 @@ import org.metable.hex.ch02.domain.valueobject.RouterType;
 
 public interface IRouter {
 
-    static Predicate<Router> filterRouterByType(RouterType routerType) {
+    static Predicate<IRouter> filterRouterByType(RouterType routerType) {
         return routerType.equals(RouterType.CORE) ? IRouter.isCore() : IRouter.isEdge();
     }
 
-    static Predicate<Router> isCore() {
+    static Predicate<IRouter> isCore() {
         return p -> p.getType() == RouterType.CORE;
     }
 
-    static Predicate<Router> isEdge() {
+    static Predicate<IRouter> isEdge() {
         return p -> p.getType() == RouterType.EDGE;
     }
 
