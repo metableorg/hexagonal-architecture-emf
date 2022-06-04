@@ -5,7 +5,7 @@
   <eClassifiers xsi:type="ecore:EDataType" name="Protocol" instanceClassName="org.metable.hex.ch02.domain.valueobject.Protocol"/>
   <eClassifiers xsi:type="ecore:EClass" name="EventEmf" eSuperTypes="#//IEvent">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="entity" eType="#//EventEntity"
-        changeable="false" transient="true"/>
+        transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="protocol" eType="#//Protocol"
         volatile="true"/>
   </eClassifiers>

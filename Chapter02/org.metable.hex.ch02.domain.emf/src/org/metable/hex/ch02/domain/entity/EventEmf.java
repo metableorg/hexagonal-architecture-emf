@@ -2,8 +2,10 @@
  */
 package org.metable.hex.ch02.domain.entity;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.metable.hex.ch02.domain.valueobject.Protocol;
 
@@ -74,12 +76,28 @@ public class EventEmf extends MinimalEObjectImpl.Container implements EObject, I
      * Returns the value of the '<em><b>Entity</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the value of the '<em>Entity</em>' attribute.
+     * @see #setEntity(Event)
      * @see org.metable.hex.ch02.domain.entity.EntityPackage#getEventEmf_Entity()
-     * @model dataType="org.metable.hex.ch02.domain.entity.EventEntity" transient="true" changeable="false"
+     * @model dataType="org.metable.hex.ch02.domain.entity.EventEntity" transient="true"
      * @generated
      */
     public Event getEntity() {
         return entity;
+    }
+
+    /**
+     * Sets the value of the '{@link org.metable.hex.ch02.domain.entity.EventEmf#getEntity <em>Entity</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @param newEntity the new value of the '<em>Entity</em>' attribute.
+     * @see #getEntity()
+     * @generated
+     */
+    public void setEntity(Event newEntity) {
+        Event oldEntity = entity;
+        entity = newEntity;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, EntityPackage.EVENT_EMF__ENTITY, oldEntity, entity));
     }
 
     /**
@@ -89,12 +107,10 @@ public class EventEmf extends MinimalEObjectImpl.Container implements EObject, I
      * @see #setProtocol(Protocol)
      * @see org.metable.hex.ch02.domain.entity.EntityPackage#getEventEmf_Protocol()
      * @model dataType="org.metable.hex.ch02.domain.entity.Protocol" volatile="true"
-     * @generated
+     * @generated OFF
      */
     public Protocol getProtocol() {
-        // TODO: implement this method to return the 'Protocol' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        return entity.getProtocol();
     }
 
     /**
@@ -103,12 +119,10 @@ public class EventEmf extends MinimalEObjectImpl.Container implements EObject, I
      * 
      * @param newProtocol the new value of the '<em>Protocol</em>' attribute.
      * @see #getProtocol()
-     * @generated
+     * @generated OFF
      */
     public void setProtocol(Protocol newProtocol) {
-        // TODO: implement this method to set the 'Protocol' attribute
-        // Ensure that you remove @generated or mark it @generated NOT
-        throw new UnsupportedOperationException();
+        entity.setProtocol(newProtocol);
     }
 
     /**
@@ -135,6 +149,9 @@ public class EventEmf extends MinimalEObjectImpl.Container implements EObject, I
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
+        case EntityPackage.EVENT_EMF__ENTITY:
+            setEntity((Event) newValue);
+            return;
         case EntityPackage.EVENT_EMF__PROTOCOL:
             setProtocol((Protocol) newValue);
             return;
@@ -150,6 +167,9 @@ public class EventEmf extends MinimalEObjectImpl.Container implements EObject, I
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
+        case EntityPackage.EVENT_EMF__ENTITY:
+            setEntity(ENTITY_EDEFAULT);
+            return;
         case EntityPackage.EVENT_EMF__PROTOCOL:
             setProtocol(PROTOCOL_EDEFAULT);
             return;
@@ -192,8 +212,7 @@ public class EventEmf extends MinimalEObjectImpl.Container implements EObject, I
 
     @Override
     public void updateProtocol(Protocol protocol) {
-        // TODO Auto-generated method stub
-
+        entity.updateProtocol(protocol);
     }
 
 } // EventEmf

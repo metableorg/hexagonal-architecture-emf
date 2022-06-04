@@ -1022,7 +1022,7 @@ public class EntityPackage extends EPackageImpl {
         initEClass(eventEmfEClass, EventEmf.class, "EventEmf", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getEventEmf_Entity(), this.getEventEntity(), "entity", null, 0, 1, EventEmf.class, IS_TRANSIENT,
-                !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+                !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getEventEmf_Protocol(), this.getProtocol(), "protocol", null, 0, 1, EventEmf.class,
                 !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

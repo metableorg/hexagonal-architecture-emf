@@ -146,10 +146,11 @@ public class EntityFactory extends EFactoryImpl {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @generated
+     * @generated OFF
      */
     public EventEmf createEventEmf() {
         EventEmf eventEmf = new EventEmf();
+        eventEmf.setEntity(new Event());
         return eventEmf;
     }
 

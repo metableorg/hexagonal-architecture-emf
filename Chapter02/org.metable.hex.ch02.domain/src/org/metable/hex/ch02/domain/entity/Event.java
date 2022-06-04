@@ -6,8 +6,7 @@ public class Event implements IEvent {
 
     private Protocol protocol;
 
-    public Event(Protocol protocol) {
-        this.protocol = protocol;
+    public Event() {
     }
 
     @Override
