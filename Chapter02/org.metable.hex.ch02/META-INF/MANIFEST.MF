@@ -6,5 +6,12 @@ Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: org.metable.hex.ch02
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Import-Package: org.metable.hex.ch02.application.ports.input,
+ org.metable.hex.ch02.application.ports.output,
+ org.metable.hex.ch02.application.usecases,
  org.metable.hex.ch02.domain.entity,
- org.metable.hex.ch02.framework.adapters.input.stdin
+ org.metable.hex.ch02.domain.entity.util,
+ org.metable.hex.ch02.domain.policy,
+ org.metable.hex.ch02.domain.service,
+ org.metable.hex.ch02.domain.valueobject,
+ org.metable.hex.ch02.framework.adapters.input.stdin,
+ org.metable.hex.ch02.framework.adapters.output.file
