@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Entity
+Bundle-SymbolicName: org.metable.hex.ch02.domain
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.metable.hex.ch02.domain.entity
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.metable.hex.ch02.domain.entity,
+ org.metable.hex.ch02.domain.policy,
+ org.metable.hex.ch02.domain.valueobject
+Require-Bundle: org.junit

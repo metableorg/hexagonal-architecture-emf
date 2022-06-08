@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="network" nsURI="http://org.metable.hex.ch02.domain.network.emf/network"
+    nsPrefix="org.metable.hex.ch02.domain.network.emf">
+  <eClassifiers xsi:type="ecore:EClass" name="RouterDto" eSuperTypes="#//IRouterDto">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RouterType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="switch" eType="#//SwitchDto"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="RouterType" instanceClassName="org.metable.hex.ch02.domain.valueobject.RouterType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IRouterDto" instanceClassName="org.metable.hex.ch02.domain.entity.RouterDto"
+      abstract="true"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="SwitchType" instanceClassName="org.metable.hex.ch02.domain.valueobject.SwitchType"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="NetworkValueObject" instanceClassName="org.metable.hex.ch02.domain.valueobject.NetworkValueObject"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="IP" instanceClassName="org.metable.hex.ch02.domain.valueobject.IP"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Protocol" instanceClassName="org.metable.hex.ch02.domain.valueobject.Protocol"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SwitchDto" eSuperTypes="#//ISwitchDto">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="networkValueObjects" upperBound="-1"
+        eType="#//NetworkValueObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//SwitchType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="address" ordered="false"
+        eType="#//IP"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ISwitchDto" instanceClassName="org.metable.hex.ch02.domain.entity.SwitchDto"
+      abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EventDto" eSuperTypes="#//IEventDto">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="logEntry" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IEventDto" instanceClassName="org.metable.hex.ch02.domain.entity.EventDto"
+      abstract="true"/>
+</ecore:EPackage>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/org.metable.hex.ch02.domain.emf/src-gen" creationIcons="false"
+    editDirectory="/org.metable.hex.ch02.domain.emf.edit/src-gen" editorDirectory="/org.metable.hex.ch02.domain.emf.editor/src-gen"
+    modelPluginID="org.metable.hex.ch02.domain.emf" modelName="Network" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" runtimePlatform="RCP" importOrganizing="true">
+  <foreignModel>network.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Network" basePackage="org.metable.hex.ch02.domain.emf" disposableProviderFactory="true"
+      ecorePackage="network.ecore#/">
+    <genDataTypes ecoreDataType="network.ecore#//RouterType"/>
+    <genDataTypes ecoreDataType="network.ecore#//SwitchType"/>
+    <genDataTypes ecoreDataType="network.ecore#//NetworkValueObject"/>
+    <genDataTypes ecoreDataType="network.ecore#//IP"/>
+    <genDataTypes ecoreDataType="network.ecore#//Protocol"/>
+    <genClasses ecoreClass="network.ecore#//RouterDto">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//RouterDto/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//RouterDto/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference network.ecore#//RouterDto/switch"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="network.ecore#//IRouterDto"/>
+    <genClasses ecoreClass="network.ecore#//SwitchDto">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//SwitchDto/networkValueObjects"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//SwitchDto/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//SwitchDto/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//SwitchDto/address"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="network.ecore#//ISwitchDto"/>
+    <genClasses ecoreClass="network.ecore#//EventDto">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//EventDto/logEntry"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="network.ecore#//IEventDto"/>
+  </genPackages>
+</genmodel:GenModel>
