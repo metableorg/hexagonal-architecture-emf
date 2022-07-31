@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Domain
+Bundle-SymbolicName: org.metable.hex.soccer.domain
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.metable.hex.soccer.domain
+Bundle-RequiredExecutionEnvironment: JavaSE-11
