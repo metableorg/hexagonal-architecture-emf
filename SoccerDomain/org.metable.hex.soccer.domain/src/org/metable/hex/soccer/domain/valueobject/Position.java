@@ -1,6 +1,25 @@
 package org.metable.hex.soccer.domain.valueobject;
 
+import java.util.Objects;
+
 public final class Position {
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(fieldPosition, specialityPosition);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Position other = (Position) obj;
+        return fieldPosition == other.fieldPosition && specialityPosition == other.specialityPosition;
+    }
 
     public static Position Striker = new Position(FieldPosition.Forward, SpecialityPosition.Striker);
 
