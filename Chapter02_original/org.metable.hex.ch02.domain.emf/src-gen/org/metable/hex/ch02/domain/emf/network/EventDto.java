@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  * <li>{@link org.metable.hex.ch02.domain.emf.network.EventDto#getLogEntry <em>Log Entry</em>}</li>
+ * <li>{@link org.metable.hex.ch02.domain.emf.network.EventDto#getId <em>Id</em>}</li>
  * </ul>
  *
  * @see org.metable.hex.ch02.domain.emf.network.NetworkPackage#getEventDto()
@@ -39,5 +40,26 @@ public interface EventDto extends EObject, org.metable.hex.ch02.domain.entity.Ev
      * @generated
      */
     void setLogEntry(String value);
+
+    /**
+     * Returns the value of the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the value of the '<em>Id</em>' attribute.
+     * @see #setId(String)
+     * @see org.metable.hex.ch02.domain.emf.network.NetworkPackage#getEventDto_Id()
+     * @model
+     * @generated
+     */
+    String getId();
+
+    /**
+     * Sets the value of the '{@link org.metable.hex.ch02.domain.emf.network.EventDto#getId <em>Id</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @param value the new value of the '<em>Id</em>' attribute.
+     * @see #getId()
+     * @generated
+     */
+    void setId(String value);
 
 } // EventDto

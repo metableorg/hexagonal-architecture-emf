@@ -264,13 +264,21 @@ public interface NetworkPackage extends EPackage {
     int EVENT_DTO__LOG_ENTRY = IEVENT_DTO_FEATURE_COUNT + 0;
 
     /**
+     * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int EVENT_DTO__ID = IEVENT_DTO_FEATURE_COUNT + 1;
+
+    /**
      * The number of structural features of the '<em>Event Dto</em>' class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
      * 
      * @generated
      * @ordered
      */
-    int EVENT_DTO_FEATURE_COUNT = IEVENT_DTO_FEATURE_COUNT + 1;
+    int EVENT_DTO_FEATURE_COUNT = IEVENT_DTO_FEATURE_COUNT + 2;
 
     /**
      * The number of operations of the '<em>Event Dto</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -466,6 +474,17 @@ public interface NetworkPackage extends EPackage {
      * @generated
      */
     EAttribute getEventDto_LogEntry();
+
+    /**
+     * Returns the meta object for the attribute '{@link org.metable.hex.ch02.domain.emf.network.EventDto#getId
+     * <em>Id</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for the attribute '<em>Id</em>'.
+     * @see org.metable.hex.ch02.domain.emf.network.EventDto#getId()
+     * @see #getEventDto()
+     * @generated
+     */
+    EAttribute getEventDto_Id();
 
     /**
      * Returns the meta object for class '{@link org.metable.hex.ch02.domain.entity.EventDto <em>IEvent Dto</em>}'. <!--
@@ -668,6 +687,14 @@ public interface NetworkPackage extends EPackage {
          * @generated
          */
         EAttribute EVENT_DTO__LOG_ENTRY = eINSTANCE.getEventDto_LogEntry();
+
+        /**
+         * The meta object literal for the '<em><b>Id</b></em>' attribute feature. <!-- begin-user-doc --> <!--
+         * end-user-doc -->
+         * 
+         * @generated
+         */
+        EAttribute EVENT_DTO__ID = eINSTANCE.getEventDto_Id();
 
         /**
          * The meta object literal for the '{@link org.metable.hex.ch02.domain.emf.network.impl.IEventDtoImpl <em>IEvent

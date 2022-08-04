@@ -30,6 +30,7 @@
     <genClasses image="false" ecoreClass="network.ecore#//ISwitchDto"/>
     <genClasses ecoreClass="network.ecore#//EventDto">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//EventDto/logEntry"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute network.ecore#//EventDto/id"/>
     </genClasses>
     <genClasses image="false" ecoreClass="network.ecore#//IEventDto"/>
   </genPackages>

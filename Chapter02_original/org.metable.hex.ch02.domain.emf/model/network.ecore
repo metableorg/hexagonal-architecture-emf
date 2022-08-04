@@ -27,6 +27,7 @@
       abstract="true" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="EventDto" eSuperTypes="#//IEventDto">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="logEntry" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IEventDto" instanceClassName="org.metable.hex.ch02.domain.entity.EventDto"
       abstract="true"/>

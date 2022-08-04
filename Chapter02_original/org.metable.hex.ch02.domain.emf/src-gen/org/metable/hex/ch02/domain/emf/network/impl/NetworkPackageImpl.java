@@ -300,6 +300,16 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
      * @generated
      */
     @Override
+    public EAttribute getEventDto_Id() {
+        return (EAttribute) eventDtoEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
     public EClass getIEventDto() {
         return iEventDtoEClass;
     }
@@ -400,6 +410,7 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
 
         eventDtoEClass = createEClass(EVENT_DTO);
         createEAttribute(eventDtoEClass, EVENT_DTO__LOG_ENTRY);
+        createEAttribute(eventDtoEClass, EVENT_DTO__ID);
 
         iEventDtoEClass = createEClass(IEVENT_DTO);
 
@@ -476,6 +487,8 @@ public class NetworkPackageImpl extends EPackageImpl implements NetworkPackage {
                 IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getEventDto_LogEntry(), ecorePackage.getEString(), "logEntry", null, 0, 1, EventDto.class,
                 !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getEventDto_Id(), ecorePackage.getEString(), "id", null, 0, 1, EventDto.class, !IS_TRANSIENT,
+                !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(iEventDtoEClass, org.metable.hex.ch02.domain.entity.EventDto.class, "IEventDto", IS_ABSTRACT,
                 !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);

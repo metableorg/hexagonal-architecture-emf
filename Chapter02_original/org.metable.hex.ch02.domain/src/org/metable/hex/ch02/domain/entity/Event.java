@@ -69,6 +69,11 @@ public class Event implements Comparable<Event> {
                 return timestamp.toString() + " " + id.toString() + " " + protocol.toString() + " "
                         + activity.getSourceHost() + " " + activity.getDestHost();
             }
+
+            @Override
+            public String getId() {
+                return id.toString();
+            }
         };
     }
 }
