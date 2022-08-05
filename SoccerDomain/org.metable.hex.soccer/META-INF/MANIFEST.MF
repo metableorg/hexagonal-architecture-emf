@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Soccer
+Bundle-SymbolicName: org.metable.hex.soccer
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.metable.hex.soccer
+Import-Package: org.metable.hex.domain.emf.soccer,
+ org.metable.hex.domain.emf.soccer.provider,
+ org.metable.hex.soccer.domain.entity
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.emf.edit
+Bundle-RequiredExecutionEnvironment: JavaSE-11
