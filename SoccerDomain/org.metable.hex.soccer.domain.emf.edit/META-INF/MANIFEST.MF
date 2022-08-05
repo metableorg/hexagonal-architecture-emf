@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.metable.hex.soccer.domain.emf.edit;singleton:=true
+Automatic-Module-Name: org.metable.hex.soccer.domain.emf.edit
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: org.metable.hex.domain.emf.soccer.provider.SoccerEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.metable.hex.domain.emf.soccer.provider
+Require-Bundle: org.eclipse.core.runtime,
+ org.metable.hex.soccer.domain.emf;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-11
