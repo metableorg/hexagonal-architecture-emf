@@ -5,3 +5,5 @@ Bundle-SymbolicName: org.metable.hex.soccer.domain
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: org.metable.hex.soccer.domain
 Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.metable.hex.soccer.domain.entity,
+ org.metable.hex.soccer.domain.valueobject

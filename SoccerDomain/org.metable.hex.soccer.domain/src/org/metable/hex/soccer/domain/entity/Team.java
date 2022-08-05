@@ -10,6 +10,11 @@ import org.metable.hex.soccer.domain.valueobject.RosterMember;
 
 public class Team {
 
+    @Override
+    public String toString() {
+        return "Team [id=" + id + ", name=" + name + "]";
+    }
+
     private static class Roster {
         private final Set<RosterMember> players;
 
@@ -37,15 +42,6 @@ public class Team {
 
             return Optional.empty();
         }
-
-        private void mapTo(TeamDto teamDto) {
-            final Iterator<RosterMember> it = players.iterator();
-
-            while (it.hasNext()) {
-                final RosterMember member = it.next();
-                teamDto.addRosterMember(member);
-            }
-        }
     }
 
     private final String id;
@@ -69,11 +65,5 @@ public class Team {
 
     public String getName() {
         return name;
-    }
-
-    public void mapTo(TeamDto teamDto) {
-        teamDto.setId(id);
-        teamDto.setName(name);
-        roster.mapTo(teamDto);
     }
 }

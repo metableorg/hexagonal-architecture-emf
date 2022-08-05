@@ -1,25 +1,25 @@
 package org.metable.hex.soccer.domain.entity;
 
-import java.util.Iterator;
+import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 public class SoccerUniverse {
 
-    private Set<Team> teams;
-
-    public void addTeam(final Team team) {
-        teams.add(team);
+    @Override
+    public String toString() {
+        return "SoccerUniverse [teams=" + teams + "]";
     }
 
-    public void mapTo(SoccerUniverseDto soccerUniverseDto) {
+    private Set<Team> teams = new HashSet<>();
 
-        final Iterator<Team> it = teams.iterator();
+    public Team newTeam(String name) {
+        Team team = new Team(UUID.randomUUID().toString(), name);
+        teams.add(team);
+        return team;
+    }
 
-        while (it.hasNext()) {
-            final Team team = it.next();
-            TeamDto teamDto = soccerUniverseDto.getTeamDto();
-            team.mapTo(teamDto);
-            soccerUniverseDto.addTeam(teamDto);
-        }
+    public void addTeam(Team team) {
+        teams.add(team);
     }
 }
