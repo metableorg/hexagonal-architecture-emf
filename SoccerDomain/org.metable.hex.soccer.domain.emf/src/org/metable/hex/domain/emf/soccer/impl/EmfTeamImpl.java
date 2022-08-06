@@ -30,7 +30,6 @@ import org.metable.hex.domain.emf.soccer.SoccerPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.metable.hex.domain.emf.soccer.impl.EmfTeamImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.metable.hex.domain.emf.soccer.impl.EmfTeamImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.metable.hex.domain.emf.soccer.impl.EmfTeamImpl#getRoster <em>Roster</em>}</li>
  * </ul>
@@ -38,26 +37,6 @@ import org.metable.hex.domain.emf.soccer.SoccerPackage;
  * @generated
  */
 public class EmfTeamImpl extends MinimalEObjectImpl.Container implements EmfTeam {
-    /**
-     * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getId()
-     * @generated
-     * @ordered
-     */
-    protected static final String ID_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getId()
-     * @generated
-     * @ordered
-     */
-    protected String id = ID_EDEFAULT;
-
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -105,29 +84,6 @@ public class EmfTeamImpl extends MinimalEObjectImpl.Container implements EmfTeam
     @Override
     protected EClass eStaticClass() {
         return SoccerPackage.Literals.EMF_TEAM;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public String getId() {
-        return id;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public void setId(String newId) {
-        String oldId = id;
-        id = newId;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.EMF_TEAM__ID, oldId, id));
     }
 
     /**
@@ -188,8 +144,6 @@ public class EmfTeamImpl extends MinimalEObjectImpl.Container implements EmfTeam
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case SoccerPackage.EMF_TEAM__ID:
-                return getId();
             case SoccerPackage.EMF_TEAM__NAME:
                 return getName();
             case SoccerPackage.EMF_TEAM__ROSTER:
@@ -207,9 +161,6 @@ public class EmfTeamImpl extends MinimalEObjectImpl.Container implements EmfTeam
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case SoccerPackage.EMF_TEAM__ID:
-                setId((String)newValue);
-                return;
             case SoccerPackage.EMF_TEAM__NAME:
                 setName((String)newValue);
                 return;
@@ -229,9 +180,6 @@ public class EmfTeamImpl extends MinimalEObjectImpl.Container implements EmfTeam
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case SoccerPackage.EMF_TEAM__ID:
-                setId(ID_EDEFAULT);
-                return;
             case SoccerPackage.EMF_TEAM__NAME:
                 setName(NAME_EDEFAULT);
                 return;
@@ -250,8 +198,6 @@ public class EmfTeamImpl extends MinimalEObjectImpl.Container implements EmfTeam
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case SoccerPackage.EMF_TEAM__ID:
-                return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
             case SoccerPackage.EMF_TEAM__NAME:
                 return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
             case SoccerPackage.EMF_TEAM__ROSTER:
@@ -270,9 +216,7 @@ public class EmfTeamImpl extends MinimalEObjectImpl.Container implements EmfTeam
         if (eIsProxy()) return super.toString();
 
         StringBuilder result = new StringBuilder(super.toString());
-        result.append(" (id: ");
-        result.append(id);
-        result.append(", name: ");
+        result.append(" (name: ");
         result.append(name);
         result.append(')');
         return result.toString();

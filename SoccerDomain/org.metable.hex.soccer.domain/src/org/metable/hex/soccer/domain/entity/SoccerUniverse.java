@@ -1,8 +1,8 @@
 package org.metable.hex.soccer.domain.entity;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.UUID;
 
 public class SoccerUniverse {
 
@@ -13,13 +13,16 @@ public class SoccerUniverse {
 
     private Set<Team> teams = new HashSet<>();
 
-    public Team newTeam(String name) {
-        Team team = new Team(UUID.randomUUID().toString(), name);
+    public void newTeam(String name) {
+        Team team = new Team(name);
         teams.add(team);
-        return team;
     }
 
     public void addTeam(Team team) {
         teams.add(team);
+    }
+
+    public Set<Team> getTeams() {
+        return Collections.unmodifiableSet(teams);
     }
 }

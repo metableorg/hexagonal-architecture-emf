@@ -2,6 +2,7 @@ package org.metable.hex.soccer.framework.adapters.file;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Set;
 
 import org.eclipse.emf.common.command.BasicCommandStack;
 import org.eclipse.emf.common.command.Command;
@@ -55,7 +56,7 @@ public class SoccerUniverseFileAdapter implements SoccerUniverseOutputPort {
         SoccerUniverse soccerUniverse = new SoccerUniverse();
 
         soccer.getTeams().forEach(team -> {
-            Team newTeam = new Team(team.getId(), team.getName());
+            Team newTeam = new Team(team.getName());
             soccerUniverse.addTeam(newTeam);
         });
 
@@ -80,23 +81,22 @@ public class SoccerUniverseFileAdapter implements SoccerUniverseOutputPort {
     }
 
     @Override
-    public void persist(Team team) throws IOException {
-        EmfTeam emfTeam = fetchTeam(team.getId());
+    public void persist() throws IOException {
 
-        if (emfTeam != null) {
-            // Do nothing for now.
-            return;
-        }
+        Set<Team> teams = soccerUniverse.getTeams();
 
-        emfTeam = SoccerFactory.eINSTANCE.createEmfTeam();
+        teams.forEach(team -> {
+            if (fetchTeam(team.getName()) == null) {
+                EmfTeam emfTeam = SoccerFactory.eINSTANCE.createEmfTeam();
 
-        emfTeam.setId(team.getId());
-        emfTeam.setName(team.getName());
+                emfTeam.setName(team.getName());
 
-        Command command = new CreateChildCommand(editingDomain, soccerUniverseEmf,
-                SoccerPackage.Literals.EMF_SOCCER_UNIVERSE__TEAMS, emfTeam, null);
+                Command command = new CreateChildCommand(editingDomain, soccerUniverseEmf,
+                        SoccerPackage.Literals.EMF_SOCCER_UNIVERSE__TEAMS, emfTeam, null);
 
-        editingDomain.getCommandStack().execute(command);
+                editingDomain.getCommandStack().execute(command);
+            }
+        });
 
         resource.save(null);
     }
@@ -114,10 +114,10 @@ public class SoccerUniverseFileAdapter implements SoccerUniverseOutputPort {
         soccerUniverse = toDomain(soccerUniverseEmf);
     }
 
-    private EmfTeam fetchTeam(String id) {
+    private EmfTeam fetchTeam(String name) {
         EList<EmfTeam> teams = soccerUniverseEmf.getTeams();
         for (EmfTeam team : teams) {
-            if (team.getId().contentEquals(id)) {
+            if (team.getName().contentEquals(name)) {
                 return team;
             }
         }

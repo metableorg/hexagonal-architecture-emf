@@ -39,22 +39,16 @@ public class Team {
         }
     }
 
-    private final String id;
-
     private final String name;
     private final Roster roster;
-    public Team(final String id, final String name) {
-        this.id = id;
+
+    public Team(final String name) {
         this.name = name;
         this.roster = new Roster();
     }
 
     public void addPlayer(final Player player, final Position position) {
         roster.addMember(new RosterMember(player, position));
-    }
-
-    public String getId() {
-        return id;
     }
 
     public String getName() {
@@ -65,9 +59,9 @@ public class Team {
         Optional<RosterMember> member = roster.findMember(player);
         member.ifPresent(m -> roster.removeMember(m));
     }
-    
+
     @Override
     public String toString() {
-        return "Team [id=" + id + ", name=" + name + "]";
+        return "Team [name=" + name + "]";
     }
 }

@@ -233,22 +233,13 @@ public interface SoccerPackage extends EPackage {
     int EMF_TEAM = 3;
 
     /**
-     * The feature id for the '<em><b>Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int EMF_TEAM__ID = 0;
-
-    /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int EMF_TEAM__NAME = 1;
+    int EMF_TEAM__NAME = 0;
 
     /**
      * The feature id for the '<em><b>Roster</b></em>' containment reference list.
@@ -257,7 +248,7 @@ public interface SoccerPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int EMF_TEAM__ROSTER = 2;
+    int EMF_TEAM__ROSTER = 1;
 
     /**
      * The number of structural features of the '<em>Emf Team</em>' class.
@@ -266,7 +257,7 @@ public interface SoccerPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int EMF_TEAM_FEATURE_COUNT = 3;
+    int EMF_TEAM_FEATURE_COUNT = 2;
 
     /**
      * The number of operations of the '<em>Emf Team</em>' class.
@@ -493,17 +484,6 @@ public interface SoccerPackage extends EPackage {
     EClass getEmfTeam();
 
     /**
-     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.EmfTeam#getId <em>Id</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Id</em>'.
-     * @see org.metable.hex.domain.emf.soccer.EmfTeam#getId()
-     * @see #getEmfTeam()
-     * @generated
-     */
-    EAttribute getEmfTeam_Id();
-
-    /**
      * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.EmfTeam#getName <em>Name</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -722,14 +702,6 @@ public interface SoccerPackage extends EPackage {
          * @generated
          */
         EClass EMF_TEAM = eINSTANCE.getEmfTeam();
-
-        /**
-         * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute EMF_TEAM__ID = eINSTANCE.getEmfTeam_Id();
 
         /**
          * The meta object literal for the '<em><b>Name</b></em>' attribute feature.

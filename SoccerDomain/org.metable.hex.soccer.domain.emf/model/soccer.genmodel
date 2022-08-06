@@ -39,7 +39,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//EmfRosterMember/number"/>
     </genClasses>
     <genClasses ecoreClass="soccer.ecore#//EmfTeam">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//EmfTeam/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//EmfTeam/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//EmfTeam/roster"/>
     </genClasses>

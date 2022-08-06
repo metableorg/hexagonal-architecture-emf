@@ -63,32 +63,9 @@ public class EmfTeamItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addIdPropertyDescriptor(object);
             addNamePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
-    }
-
-    /**
-     * This adds a property descriptor for the Id feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected void addIdPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_EmfTeam_id_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_EmfTeam_id_feature", "_UI_EmfTeam_type"),
-                 SoccerPackage.Literals.EMF_TEAM__ID,
-                 true,
-                 false,
-                 false,
-                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                 null,
-                 null));
     }
 
     /**
@@ -181,7 +158,6 @@ public class EmfTeamItemProvider
         updateChildren(notification);
 
         switch (notification.getFeatureID(EmfTeam.class)) {
-            case SoccerPackage.EMF_TEAM__ID:
             case SoccerPackage.EMF_TEAM__NAME:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;

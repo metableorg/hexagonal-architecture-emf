@@ -1,10 +1,10 @@
-package org.metable.hex.soccer.application.ports.output;
+package org.metable.hex.soccer.application.ports.input;
 
 import java.io.IOException;
 
+import org.metable.hex.soccer.application.ports.output.SoccerUniverseOutputPort;
 import org.metable.hex.soccer.application.usecases.SoccerUniverseUseCase;
 import org.metable.hex.soccer.domain.entity.SoccerUniverse;
-import org.metable.hex.soccer.domain.entity.Team;
 
 public class SoccerUniverseInputPort implements SoccerUniverseUseCase {
 
@@ -17,9 +17,10 @@ public class SoccerUniverseInputPort implements SoccerUniverseUseCase {
     @Override
     public void newTeam(String name) {
         SoccerUniverse soccerUniverse = outputPort.getSoccerUniverse();
-        Team team = soccerUniverse.newTeam(name);
+        soccerUniverse.newTeam(name);
+
         try {
-            outputPort.persist(team);
+            outputPort.persist();
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

@@ -53,7 +53,6 @@ public class WriteSoccerUniverse {
 
         // Teams
         EmfTeam team = SoccerFactory.eINSTANCE.createEmfTeam();
-        team.setId(UUID.randomUUID().toString());
         team.setName("Chelsea");
 
         // Roster
@@ -67,7 +66,6 @@ public class WriteSoccerUniverse {
         soccer.getTeams().add(team);
 
         team = SoccerFactory.eINSTANCE.createEmfTeam();
-        team.setId(UUID.randomUUID().toString());
         team.setName("Liverpool");
 
         rosterMember = SoccerFactory.eINSTANCE.createEmfRosterMember();

@@ -273,7 +273,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
      * @generated
      */
     @Override
-    public EAttribute getEmfTeam_Id() {
+    public EAttribute getEmfTeam_Name() {
         return (EAttribute)emfTeamEClass.getEStructuralFeatures().get(0);
     }
 
@@ -283,18 +283,8 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
      * @generated
      */
     @Override
-    public EAttribute getEmfTeam_Name() {
-        return (EAttribute)emfTeamEClass.getEStructuralFeatures().get(1);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
     public EReference getEmfTeam_Roster() {
-        return (EReference)emfTeamEClass.getEStructuralFeatures().get(2);
+        return (EReference)emfTeamEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -402,7 +392,6 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
         createEAttribute(emfRosterMemberEClass, EMF_ROSTER_MEMBER__NUMBER);
 
         emfTeamEClass = createEClass(EMF_TEAM);
-        createEAttribute(emfTeamEClass, EMF_TEAM__ID);
         createEAttribute(emfTeamEClass, EMF_TEAM__NAME);
         createEReference(emfTeamEClass, EMF_TEAM__ROSTER);
 
@@ -462,8 +451,7 @@ public class SoccerPackageImpl extends EPackageImpl implements SoccerPackage {
         initEAttribute(getEmfRosterMember_Number(), ecorePackage.getEInt(), "number", null, 0, 1, EmfRosterMember.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(emfTeamEClass, EmfTeam.class, "EmfTeam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getEmfTeam_Id(), ecorePackage.getEString(), "id", null, 0, 1, EmfTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getEmfTeam_Name(), ecorePackage.getEString(), "name", null, 0, 1, EmfTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getEmfTeam_Name(), ecorePackage.getEString(), "name", null, 0, 1, EmfTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getEmfTeam_Roster(), this.getEmfRosterMember(), null, "roster", null, 0, -1, EmfTeam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(emfSoccerUniverseEClass, EmfSoccerUniverse.class, "EmfSoccerUniverse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
