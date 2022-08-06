@@ -66,33 +66,33 @@ public class SoccerSwitch<T> extends Switch<T> {
     @Override
     protected T doSwitch(int classifierID, EObject theEObject) {
         switch (classifierID) {
-            case SoccerPackage.POSITION: {
-                Position position = (Position)theEObject;
-                T result = casePosition(position);
+            case SoccerPackage.EMF_POSITION: {
+                EmfPosition emfPosition = (EmfPosition)theEObject;
+                T result = caseEmfPosition(emfPosition);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
-            case SoccerPackage.PLAYER: {
-                Player player = (Player)theEObject;
-                T result = casePlayer(player);
+            case SoccerPackage.EMF_PLAYER: {
+                EmfPlayer emfPlayer = (EmfPlayer)theEObject;
+                T result = caseEmfPlayer(emfPlayer);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
-            case SoccerPackage.ROSTER_MEMBER: {
-                RosterMember rosterMember = (RosterMember)theEObject;
-                T result = caseRosterMember(rosterMember);
+            case SoccerPackage.EMF_ROSTER_MEMBER: {
+                EmfRosterMember emfRosterMember = (EmfRosterMember)theEObject;
+                T result = caseEmfRosterMember(emfRosterMember);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
-            case SoccerPackage.TEAM: {
-                Team team = (Team)theEObject;
-                T result = caseTeam(team);
+            case SoccerPackage.EMF_TEAM: {
+                EmfTeam emfTeam = (EmfTeam)theEObject;
+                T result = caseEmfTeam(emfTeam);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
-            case SoccerPackage.SOCCER_UNIVERSE: {
-                SoccerUniverse soccerUniverse = (SoccerUniverse)theEObject;
-                T result = caseSoccerUniverse(soccerUniverse);
+            case SoccerPackage.EMF_SOCCER_UNIVERSE: {
+                EmfSoccerUniverse emfSoccerUniverse = (EmfSoccerUniverse)theEObject;
+                T result = caseEmfSoccerUniverse(emfSoccerUniverse);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -101,77 +101,77 @@ public class SoccerSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Position</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>Emf Position</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
      * returning a non-null result will terminate the switch.
      * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Position</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Emf Position</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T casePosition(Position object) {
+    public T caseEmfPosition(EmfPosition object) {
         return null;
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Player</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>Emf Player</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
      * returning a non-null result will terminate the switch.
      * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Player</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Emf Player</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T casePlayer(Player object) {
+    public T caseEmfPlayer(EmfPlayer object) {
         return null;
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Roster Member</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>Emf Roster Member</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
      * returning a non-null result will terminate the switch.
      * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Roster Member</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Emf Roster Member</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseRosterMember(RosterMember object) {
+    public T caseEmfRosterMember(EmfRosterMember object) {
         return null;
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Team</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>Emf Team</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
      * returning a non-null result will terminate the switch.
      * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Team</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Emf Team</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseTeam(Team object) {
+    public T caseEmfTeam(EmfTeam object) {
         return null;
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Universe</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>Emf Soccer Universe</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
      * returning a non-null result will terminate the switch.
      * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Universe</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Emf Soccer Universe</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseSoccerUniverse(SoccerUniverse object) {
+    public T caseEmfSoccerUniverse(EmfSoccerUniverse object) {
         return null;
     }
 

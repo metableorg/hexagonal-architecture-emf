@@ -15,6 +15,8 @@ import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
 import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
+import org.metable.hex.domain.emf.soccer.EmfSoccerUniverse;
+import org.metable.hex.domain.emf.soccer.EmfTeam;
 import org.metable.hex.domain.emf.soccer.SoccerFactory;
 import org.metable.hex.domain.emf.soccer.SoccerPackage;
 import org.metable.hex.domain.emf.soccer.provider.SoccerItemProviderAdapterFactory;
@@ -49,24 +51,7 @@ public class SoccerUniverseFileAdapter implements SoccerUniverseOutputPort {
         return editingDomain;
     }
 
-    private Resource resource;
-
-    private SoccerUniverse readSoccerUniverse() throws IOException {
-        editingDomain = newEditingDomain();
-
-        ResourceSet resourceSet = editingDomain.getResourceSet();
-
-        resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("soccer", new XMIResourceFactoryImpl());
-        URI uri = URI.createURI("./soccer_universe.soccer");
-
-        resource = editingDomain.loadResource(uri.toFileString());
-
-        soccerUniverseEmf = (org.metable.hex.domain.emf.soccer.SoccerUniverse) resource.getContents().get(0);
-
-        return toDomain(soccerUniverseEmf);
-    }
-
-    private static SoccerUniverse toDomain(org.metable.hex.domain.emf.soccer.SoccerUniverse soccer) {
+    private static SoccerUniverse toDomain(EmfSoccerUniverse soccer) {
         SoccerUniverse soccerUniverse = new SoccerUniverse();
 
         soccer.getTeams().forEach(team -> {
@@ -77,9 +62,10 @@ public class SoccerUniverseFileAdapter implements SoccerUniverseOutputPort {
         return soccerUniverse;
     }
 
-    private org.metable.hex.domain.emf.soccer.SoccerUniverse soccerUniverseEmf;
-    private AdapterFactoryEditingDomain editingDomain;
+    private Resource resource;
+    private EmfSoccerUniverse soccerUniverseEmf;
     private SoccerUniverse soccerUniverse;
+    private AdapterFactoryEditingDomain editingDomain;
 
     private SoccerUniverseFileAdapter() throws IOException {
         @SuppressWarnings("unused")
@@ -94,34 +80,43 @@ public class SoccerUniverseFileAdapter implements SoccerUniverseOutputPort {
     }
 
     @Override
-    public void persist(Team team) {
-        org.metable.hex.domain.emf.soccer.Team emfTeam = fetchTeam(team.getId());
+    public void persist(Team team) throws IOException {
+        EmfTeam emfTeam = fetchTeam(team.getId());
 
         if (emfTeam != null) {
             // Do nothing for now.
             return;
         }
 
-        emfTeam = SoccerFactory.eINSTANCE.createTeam();
+        emfTeam = SoccerFactory.eINSTANCE.createEmfTeam();
 
         emfTeam.setId(team.getId());
         emfTeam.setName(team.getName());
 
         Command command = new CreateChildCommand(editingDomain, soccerUniverseEmf,
-                SoccerPackage.Literals.SOCCER_UNIVERSE__TEAMS, emfTeam, null);
+                SoccerPackage.Literals.EMF_SOCCER_UNIVERSE__TEAMS, emfTeam, null);
 
         editingDomain.getCommandStack().execute(command);
+
+        resource.save(null);
+    }
+
+    @Override
+    public void undo() {
+        editingDomain.getCommandStack().undo();
 
         try {
             resource.save(null);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        soccerUniverse = toDomain(soccerUniverseEmf);
     }
 
-    private org.metable.hex.domain.emf.soccer.Team fetchTeam(String id) {
-        EList<org.metable.hex.domain.emf.soccer.Team> teams = soccerUniverseEmf.getTeams();
-        for (org.metable.hex.domain.emf.soccer.Team team : teams) {
+    private EmfTeam fetchTeam(String id) {
+        EList<EmfTeam> teams = soccerUniverseEmf.getTeams();
+        for (EmfTeam team : teams) {
             if (team.getId().contentEquals(id)) {
                 return team;
             }
@@ -138,16 +133,18 @@ public class SoccerUniverseFileAdapter implements SoccerUniverseOutputPort {
 //        return property;
 //    }
 
-    @Override
-    public void undo() {
-        editingDomain.getCommandStack().undo();
+    private SoccerUniverse readSoccerUniverse() throws IOException {
+        editingDomain = newEditingDomain();
 
-        try {
-            resource.save(null);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        ResourceSet resourceSet = editingDomain.getResourceSet();
 
-        soccerUniverse = toDomain(soccerUniverseEmf);
+        resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("soccer", new XMIResourceFactoryImpl());
+        URI uri = URI.createURI("./soccer_universe.soccer");
+
+        resource = editingDomain.loadResource(uri.toFileString());
+
+        soccerUniverseEmf = (EmfSoccerUniverse) resource.getContents().get(0);
+
+        return toDomain(soccerUniverseEmf);
     }
 }

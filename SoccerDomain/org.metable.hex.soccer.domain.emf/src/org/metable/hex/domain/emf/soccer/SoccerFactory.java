@@ -22,49 +22,49 @@ public interface SoccerFactory extends EFactory {
     SoccerFactory eINSTANCE = org.metable.hex.domain.emf.soccer.impl.SoccerFactoryImpl.init();
 
     /**
-     * Returns a new object of class '<em>Position</em>'.
+     * Returns a new object of class '<em>Emf Position</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Position</em>'.
+     * @return a new object of class '<em>Emf Position</em>'.
      * @generated
      */
-    Position createPosition();
+    EmfPosition createEmfPosition();
 
     /**
-     * Returns a new object of class '<em>Player</em>'.
+     * Returns a new object of class '<em>Emf Player</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Player</em>'.
+     * @return a new object of class '<em>Emf Player</em>'.
      * @generated
      */
-    Player createPlayer();
+    EmfPlayer createEmfPlayer();
 
     /**
-     * Returns a new object of class '<em>Roster Member</em>'.
+     * Returns a new object of class '<em>Emf Roster Member</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Roster Member</em>'.
+     * @return a new object of class '<em>Emf Roster Member</em>'.
      * @generated
      */
-    RosterMember createRosterMember();
+    EmfRosterMember createEmfRosterMember();
 
     /**
-     * Returns a new object of class '<em>Team</em>'.
+     * Returns a new object of class '<em>Emf Team</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Team</em>'.
+     * @return a new object of class '<em>Emf Team</em>'.
      * @generated
      */
-    Team createTeam();
+    EmfTeam createEmfTeam();
 
     /**
-     * Returns a new object of class '<em>Universe</em>'.
+     * Returns a new object of class '<em>Emf Soccer Universe</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>Universe</em>'.
+     * @return a new object of class '<em>Emf Soccer Universe</em>'.
      * @generated
      */
-    SoccerUniverse createSoccerUniverse();
+    EmfSoccerUniverse createEmfSoccerUniverse();
 
     /**
      * Returns the package supported by this factory.

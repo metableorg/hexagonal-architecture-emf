@@ -10,14 +10,14 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Speciality Position</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Emf Speciality Position</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.metable.hex.domain.emf.soccer.SoccerPackage#getSpecialityPosition()
+ * @see org.metable.hex.domain.emf.soccer.SoccerPackage#getEmfSpecialityPosition()
  * @model
  * @generated
  */
-public enum SpecialityPosition implements Enumerator {
+public enum EmfSpecialityPosition implements Enumerator {
     /**
      * The '<em><b>STRIKER</b></em>' literal object.
      * <!-- begin-user-doc -->
@@ -208,13 +208,13 @@ public enum SpecialityPosition implements Enumerator {
     public static final int KEEPER_VALUE = 8;
 
     /**
-     * An array of all the '<em><b>Speciality Position</b></em>' enumerators.
+     * An array of all the '<em><b>Emf Speciality Position</b></em>' enumerators.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    private static final SpecialityPosition[] VALUES_ARRAY =
-        new SpecialityPosition[] {
+    private static final EmfSpecialityPosition[] VALUES_ARRAY =
+        new EmfSpecialityPosition[] {
             STRIKER,
             WING,
             LEFT,
@@ -227,24 +227,24 @@ public enum SpecialityPosition implements Enumerator {
         };
 
     /**
-     * A public read-only list of all the '<em><b>Speciality Position</b></em>' enumerators.
+     * A public read-only list of all the '<em><b>Emf Speciality Position</b></em>' enumerators.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    public static final List<SpecialityPosition> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+    public static final List<EmfSpecialityPosition> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
     /**
-     * Returns the '<em><b>Speciality Position</b></em>' literal with the specified literal value.
+     * Returns the '<em><b>Emf Speciality Position</b></em>' literal with the specified literal value.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @param literal the literal.
      * @return the matching enumerator or <code>null</code>.
      * @generated
      */
-    public static SpecialityPosition get(String literal) {
+    public static EmfSpecialityPosition get(String literal) {
         for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-            SpecialityPosition result = VALUES_ARRAY[i];
+            EmfSpecialityPosition result = VALUES_ARRAY[i];
             if (result.toString().equals(literal)) {
                 return result;
             }
@@ -253,16 +253,16 @@ public enum SpecialityPosition implements Enumerator {
     }
 
     /**
-     * Returns the '<em><b>Speciality Position</b></em>' literal with the specified name.
+     * Returns the '<em><b>Emf Speciality Position</b></em>' literal with the specified name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @param name the name.
      * @return the matching enumerator or <code>null</code>.
      * @generated
      */
-    public static SpecialityPosition getByName(String name) {
+    public static EmfSpecialityPosition getByName(String name) {
         for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-            SpecialityPosition result = VALUES_ARRAY[i];
+            EmfSpecialityPosition result = VALUES_ARRAY[i];
             if (result.getName().equals(name)) {
                 return result;
             }
@@ -271,14 +271,14 @@ public enum SpecialityPosition implements Enumerator {
     }
 
     /**
-     * Returns the '<em><b>Speciality Position</b></em>' literal with the specified integer value.
+     * Returns the '<em><b>Emf Speciality Position</b></em>' literal with the specified integer value.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @param value the integer value.
      * @return the matching enumerator or <code>null</code>.
      * @generated
      */
-    public static SpecialityPosition get(int value) {
+    public static EmfSpecialityPosition get(int value) {
         switch (value) {
             case STRIKER_VALUE: return STRIKER;
             case WING_VALUE: return WING;
@@ -320,7 +320,7 @@ public enum SpecialityPosition implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
-    private SpecialityPosition(int value, String name, String literal) {
+    private EmfSpecialityPosition(int value, String name, String literal) {
         this.value = value;
         this.name = name;
         this.literal = literal;
@@ -367,4 +367,4 @@ public enum SpecialityPosition implements Enumerator {
         return literal;
     }
     
-} //SpecialityPosition
+} //EmfSpecialityPosition

@@ -11,8 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -20,20 +18,20 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.metable.hex.domain.emf.soccer.SoccerFactory;
+import org.metable.hex.domain.emf.soccer.EmfRosterMember;
 import org.metable.hex.domain.emf.soccer.SoccerPackage;
-import org.metable.hex.domain.emf.soccer.SoccerUniverse;
 
 /**
- * This is the item provider adapter for a {@link org.metable.hex.domain.emf.soccer.SoccerUniverse} object.
+ * This is the item provider adapter for a {@link org.metable.hex.domain.emf.soccer.EmfRosterMember} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class SoccerUniverseItemProvider 
+public class EmfRosterMemberItemProvider 
     extends ItemProviderAdapter
     implements
         IEditingDomainItemProvider,
@@ -47,7 +45,7 @@ public class SoccerUniverseItemProvider
      * <!-- end-user-doc -->
      * @generated
      */
-    public SoccerUniverseItemProvider(AdapterFactory adapterFactory) {
+    public EmfRosterMemberItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -62,71 +60,27 @@ public class SoccerUniverseItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addPlayersPropertyDescriptor(object);
-            addTeamsPropertyDescriptor(object);
-            addPositionsPropertyDescriptor(object);
+            addPlayerPropertyDescriptor(object);
+            addPositionPropertyDescriptor(object);
+            addNumberPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
 
     /**
-     * This adds a property descriptor for the Players feature.
+     * This adds a property descriptor for the Player feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected void addPlayersPropertyDescriptor(Object object) {
+    protected void addPlayerPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_SoccerUniverse_players_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_SoccerUniverse_players_feature", "_UI_SoccerUniverse_type"),
-                 SoccerPackage.Literals.SOCCER_UNIVERSE__PLAYERS,
-                 true,
-                 false,
-                 false,
-                 null,
-                 null,
-                 null));
-    }
-
-    /**
-     * This adds a property descriptor for the Teams feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected void addTeamsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_SoccerUniverse_teams_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_SoccerUniverse_teams_feature", "_UI_SoccerUniverse_type"),
-                 SoccerPackage.Literals.SOCCER_UNIVERSE__TEAMS,
-                 true,
-                 false,
-                 false,
-                 null,
-                 null,
-                 null));
-    }
-
-    /**
-     * This adds a property descriptor for the Positions feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected void addPositionsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_SoccerUniverse_positions_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_SoccerUniverse_positions_feature", "_UI_SoccerUniverse_type"),
-                 SoccerPackage.Literals.SOCCER_UNIVERSE__POSITIONS,
+                 getString("_UI_EmfRosterMember_player_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_EmfRosterMember_player_feature", "_UI_EmfRosterMember_type"),
+                 SoccerPackage.Literals.EMF_ROSTER_MEMBER__PLAYER,
                  true,
                  false,
                  true,
@@ -136,45 +90,58 @@ public class SoccerUniverseItemProvider
     }
 
     /**
-     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+     * This adds a property descriptor for the Position feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    @Override
-    public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-        if (childrenFeatures == null) {
-            super.getChildrenFeatures(object);
-            childrenFeatures.add(SoccerPackage.Literals.SOCCER_UNIVERSE__PLAYERS);
-            childrenFeatures.add(SoccerPackage.Literals.SOCCER_UNIVERSE__TEAMS);
-        }
-        return childrenFeatures;
+    protected void addPositionPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_EmfRosterMember_position_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_EmfRosterMember_position_feature", "_UI_EmfRosterMember_type"),
+                 SoccerPackage.Literals.EMF_ROSTER_MEMBER__POSITION,
+                 true,
+                 false,
+                 true,
+                 null,
+                 null,
+                 null));
     }
 
     /**
+     * This adds a property descriptor for the Number feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    @Override
-    protected EStructuralFeature getChildFeature(Object object, Object child) {
-        // Check the type of the specified child object and return the proper feature to use for
-        // adding (see {@link AddCommand}) it as a child.
-
-        return super.getChildFeature(object, child);
+    protected void addNumberPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_EmfRosterMember_number_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_EmfRosterMember_number_feature", "_UI_EmfRosterMember_type"),
+                 SoccerPackage.Literals.EMF_ROSTER_MEMBER__NUMBER,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
-     * This returns SoccerUniverse.gif.
+     * This returns EmfRosterMember.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/SoccerUniverse"));
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/EmfRosterMember"));
     }
 
     /**
@@ -185,7 +152,8 @@ public class SoccerUniverseItemProvider
      */
     @Override
     public String getText(Object object) {
-        return getString("_UI_SoccerUniverse_type");
+        EmfRosterMember emfRosterMember = (EmfRosterMember)object;
+        return getString("_UI_EmfRosterMember_type") + " " + emfRosterMember.getNumber();
     }
 
 
@@ -200,10 +168,9 @@ public class SoccerUniverseItemProvider
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
 
-        switch (notification.getFeatureID(SoccerUniverse.class)) {
-            case SoccerPackage.SOCCER_UNIVERSE__PLAYERS:
-            case SoccerPackage.SOCCER_UNIVERSE__TEAMS:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+        switch (notification.getFeatureID(EmfRosterMember.class)) {
+            case SoccerPackage.EMF_ROSTER_MEMBER__NUMBER:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }
         super.notifyChanged(notification);
@@ -219,16 +186,6 @@ public class SoccerUniverseItemProvider
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
-
-        newChildDescriptors.add
-            (createChildParameter
-                (SoccerPackage.Literals.SOCCER_UNIVERSE__PLAYERS,
-                 SoccerFactory.eINSTANCE.createPlayer()));
-
-        newChildDescriptors.add
-            (createChildParameter
-                (SoccerPackage.Literals.SOCCER_UNIVERSE__TEAMS,
-                 SoccerFactory.eINSTANCE.createTeam()));
     }
 
     /**

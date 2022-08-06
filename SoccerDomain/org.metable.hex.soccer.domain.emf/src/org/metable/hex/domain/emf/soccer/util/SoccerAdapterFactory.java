@@ -68,24 +68,24 @@ public class SoccerAdapterFactory extends AdapterFactoryImpl {
     protected SoccerSwitch<Adapter> modelSwitch =
         new SoccerSwitch<Adapter>() {
             @Override
-            public Adapter casePosition(Position object) {
-                return createPositionAdapter();
+            public Adapter caseEmfPosition(EmfPosition object) {
+                return createEmfPositionAdapter();
             }
             @Override
-            public Adapter casePlayer(Player object) {
-                return createPlayerAdapter();
+            public Adapter caseEmfPlayer(EmfPlayer object) {
+                return createEmfPlayerAdapter();
             }
             @Override
-            public Adapter caseRosterMember(RosterMember object) {
-                return createRosterMemberAdapter();
+            public Adapter caseEmfRosterMember(EmfRosterMember object) {
+                return createEmfRosterMemberAdapter();
             }
             @Override
-            public Adapter caseTeam(Team object) {
-                return createTeamAdapter();
+            public Adapter caseEmfTeam(EmfTeam object) {
+                return createEmfTeamAdapter();
             }
             @Override
-            public Adapter caseSoccerUniverse(SoccerUniverse object) {
-                return createSoccerUniverseAdapter();
+            public Adapter caseEmfSoccerUniverse(EmfSoccerUniverse object) {
+                return createEmfSoccerUniverseAdapter();
             }
             @Override
             public Adapter defaultCase(EObject object) {
@@ -108,72 +108,72 @@ public class SoccerAdapterFactory extends AdapterFactoryImpl {
 
 
     /**
-     * Creates a new adapter for an object of class '{@link org.metable.hex.domain.emf.soccer.Position <em>Position</em>}'.
+     * Creates a new adapter for an object of class '{@link org.metable.hex.domain.emf.soccer.EmfPosition <em>Emf Position</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.metable.hex.domain.emf.soccer.Position
+     * @see org.metable.hex.domain.emf.soccer.EmfPosition
      * @generated
      */
-    public Adapter createPositionAdapter() {
+    public Adapter createEmfPositionAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.metable.hex.domain.emf.soccer.Player <em>Player</em>}'.
+     * Creates a new adapter for an object of class '{@link org.metable.hex.domain.emf.soccer.EmfPlayer <em>Emf Player</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.metable.hex.domain.emf.soccer.Player
+     * @see org.metable.hex.domain.emf.soccer.EmfPlayer
      * @generated
      */
-    public Adapter createPlayerAdapter() {
+    public Adapter createEmfPlayerAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.metable.hex.domain.emf.soccer.RosterMember <em>Roster Member</em>}'.
+     * Creates a new adapter for an object of class '{@link org.metable.hex.domain.emf.soccer.EmfRosterMember <em>Emf Roster Member</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.metable.hex.domain.emf.soccer.RosterMember
+     * @see org.metable.hex.domain.emf.soccer.EmfRosterMember
      * @generated
      */
-    public Adapter createRosterMemberAdapter() {
+    public Adapter createEmfRosterMemberAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.metable.hex.domain.emf.soccer.Team <em>Team</em>}'.
+     * Creates a new adapter for an object of class '{@link org.metable.hex.domain.emf.soccer.EmfTeam <em>Emf Team</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.metable.hex.domain.emf.soccer.Team
+     * @see org.metable.hex.domain.emf.soccer.EmfTeam
      * @generated
      */
-    public Adapter createTeamAdapter() {
+    public Adapter createEmfTeamAdapter() {
         return null;
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.metable.hex.domain.emf.soccer.SoccerUniverse <em>Universe</em>}'.
+     * Creates a new adapter for an object of class '{@link org.metable.hex.domain.emf.soccer.EmfSoccerUniverse <em>Emf Soccer Universe</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.metable.hex.domain.emf.soccer.SoccerUniverse
+     * @see org.metable.hex.domain.emf.soccer.EmfSoccerUniverse
      * @generated
      */
-    public Adapter createSoccerUniverseAdapter() {
+    public Adapter createEmfSoccerUniverseAdapter() {
         return null;
     }
 

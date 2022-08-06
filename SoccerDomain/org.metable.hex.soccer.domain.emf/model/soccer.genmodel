@@ -7,46 +7,46 @@
   <foreignModel>soccer.ecore</foreignModel>
   <genPackages prefix="Soccer" basePackage="org.metable.hex.domain.emf" disposableProviderFactory="true"
       ecorePackage="soccer.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="soccer.ecore#//FieldPosition">
-      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//FieldPosition/FORWARD"/>
-      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//FieldPosition/MIDDLE"/>
-      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//FieldPosition/BACK"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="soccer.ecore#//EmfFieldPosition">
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//EmfFieldPosition/FORWARD"/>
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//EmfFieldPosition/MIDDLE"/>
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//EmfFieldPosition/BACK"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="soccer.ecore#//SpecialityPosition">
-      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//SpecialityPosition/STRIKER"/>
-      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//SpecialityPosition/WING"/>
-      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//SpecialityPosition/LEFT"/>
-      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//SpecialityPosition/RIGHT"/>
-      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//SpecialityPosition/CENTER"/>
-      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//SpecialityPosition/ATTACKING"/>
-      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//SpecialityPosition/DEFENSIVE"/>
-      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//SpecialityPosition/SWEEPER"/>
-      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//SpecialityPosition/KEEPER"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="soccer.ecore#//EmfSpecialityPosition">
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//EmfSpecialityPosition/STRIKER"/>
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//EmfSpecialityPosition/WING"/>
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//EmfSpecialityPosition/LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//EmfSpecialityPosition/RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//EmfSpecialityPosition/CENTER"/>
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//EmfSpecialityPosition/ATTACKING"/>
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//EmfSpecialityPosition/DEFENSIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//EmfSpecialityPosition/SWEEPER"/>
+      <genEnumLiterals ecoreEnumLiteral="soccer.ecore#//EmfSpecialityPosition/KEEPER"/>
     </genEnums>
-    <genClasses ecoreClass="soccer.ecore#//Position">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Position/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Position/fieldPosition"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Position/specialityPosition"/>
+    <genClasses ecoreClass="soccer.ecore#//EmfPosition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//EmfPosition/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//EmfPosition/fieldPosition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//EmfPosition/specialityPosition"/>
     </genClasses>
-    <genClasses ecoreClass="soccer.ecore#//Player">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Player/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Player/firstName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Player/lastName"/>
+    <genClasses ecoreClass="soccer.ecore#//EmfPlayer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//EmfPlayer/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//EmfPlayer/firstName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//EmfPlayer/lastName"/>
     </genClasses>
-    <genClasses ecoreClass="soccer.ecore#//RosterMember">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccer.ecore#//RosterMember/player"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//RosterMember/position"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//RosterMember/number"/>
+    <genClasses ecoreClass="soccer.ecore#//EmfRosterMember">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccer.ecore#//EmfRosterMember/player"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccer.ecore#//EmfRosterMember/position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//EmfRosterMember/number"/>
     </genClasses>
-    <genClasses ecoreClass="soccer.ecore#//Team">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Team/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//Team/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//Team/roster"/>
+    <genClasses ecoreClass="soccer.ecore#//EmfTeam">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//EmfTeam/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soccer.ecore#//EmfTeam/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//EmfTeam/roster"/>
     </genClasses>
-    <genClasses ecoreClass="soccer.ecore#//SoccerUniverse">
-      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//SoccerUniverse/players"/>
-      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//SoccerUniverse/teams"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccer.ecore#//SoccerUniverse/positions"/>
+    <genClasses ecoreClass="soccer.ecore#//EmfSoccerUniverse">
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//EmfSoccerUniverse/players"/>
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//EmfSoccerUniverse/teams"/>
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//EmfSoccerUniverse/positions"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

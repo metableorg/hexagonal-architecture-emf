@@ -11,8 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -24,17 +22,16 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.metable.hex.domain.emf.soccer.RosterMember;
-import org.metable.hex.domain.emf.soccer.SoccerFactory;
+import org.metable.hex.domain.emf.soccer.EmfPlayer;
 import org.metable.hex.domain.emf.soccer.SoccerPackage;
 
 /**
- * This is the item provider adapter for a {@link org.metable.hex.domain.emf.soccer.RosterMember} object.
+ * This is the item provider adapter for a {@link org.metable.hex.domain.emf.soccer.EmfPlayer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class RosterMemberItemProvider 
+public class EmfPlayerItemProvider 
     extends ItemProviderAdapter
     implements
         IEditingDomainItemProvider,
@@ -48,7 +45,7 @@ public class RosterMemberItemProvider
      * <!-- end-user-doc -->
      * @generated
      */
-    public RosterMemberItemProvider(AdapterFactory adapterFactory) {
+    public EmfPlayerItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -63,95 +60,88 @@ public class RosterMemberItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addPlayerPropertyDescriptor(object);
-            addNumberPropertyDescriptor(object);
+            addIdPropertyDescriptor(object);
+            addFirstNamePropertyDescriptor(object);
+            addLastNamePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
 
     /**
-     * This adds a property descriptor for the Player feature.
+     * This adds a property descriptor for the Id feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected void addPlayerPropertyDescriptor(Object object) {
+    protected void addIdPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_RosterMember_player_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_RosterMember_player_feature", "_UI_RosterMember_type"),
-                 SoccerPackage.Literals.ROSTER_MEMBER__PLAYER,
+                 getString("_UI_EmfPlayer_id_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_EmfPlayer_id_feature", "_UI_EmfPlayer_type"),
+                 SoccerPackage.Literals.EMF_PLAYER__ID,
                  true,
                  false,
-                 true,
-                 null,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
     }
 
     /**
-     * This adds a property descriptor for the Number feature.
+     * This adds a property descriptor for the First Name feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected void addNumberPropertyDescriptor(Object object) {
+    protected void addFirstNamePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_RosterMember_number_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_RosterMember_number_feature", "_UI_RosterMember_type"),
-                 SoccerPackage.Literals.ROSTER_MEMBER__NUMBER,
+                 getString("_UI_EmfPlayer_firstName_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_EmfPlayer_firstName_feature", "_UI_EmfPlayer_type"),
+                 SoccerPackage.Literals.EMF_PLAYER__FIRST_NAME,
                  true,
                  false,
                  false,
-                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
                  null,
                  null));
     }
 
     /**
-     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+     * This adds a property descriptor for the Last Name feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    @Override
-    public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-        if (childrenFeatures == null) {
-            super.getChildrenFeatures(object);
-            childrenFeatures.add(SoccerPackage.Literals.ROSTER_MEMBER__POSITION);
-        }
-        return childrenFeatures;
+    protected void addLastNamePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_EmfPlayer_lastName_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_EmfPlayer_lastName_feature", "_UI_EmfPlayer_type"),
+                 SoccerPackage.Literals.EMF_PLAYER__LAST_NAME,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    protected EStructuralFeature getChildFeature(Object object, Object child) {
-        // Check the type of the specified child object and return the proper feature to use for
-        // adding (see {@link AddCommand}) it as a child.
-
-        return super.getChildFeature(object, child);
-    }
-
-    /**
-     * This returns RosterMember.gif.
+     * This returns EmfPlayer.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/RosterMember"));
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/EmfPlayer"));
     }
 
     /**
@@ -162,8 +152,10 @@ public class RosterMemberItemProvider
      */
     @Override
     public String getText(Object object) {
-        RosterMember rosterMember = (RosterMember)object;
-        return getString("_UI_RosterMember_type") + " " + rosterMember.getNumber();
+        String label = ((EmfPlayer)object).getId();
+        return label == null || label.length() == 0 ?
+            getString("_UI_EmfPlayer_type") :
+            getString("_UI_EmfPlayer_type") + " " + label;
     }
 
 
@@ -178,12 +170,11 @@ public class RosterMemberItemProvider
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
 
-        switch (notification.getFeatureID(RosterMember.class)) {
-            case SoccerPackage.ROSTER_MEMBER__NUMBER:
+        switch (notification.getFeatureID(EmfPlayer.class)) {
+            case SoccerPackage.EMF_PLAYER__ID:
+            case SoccerPackage.EMF_PLAYER__FIRST_NAME:
+            case SoccerPackage.EMF_PLAYER__LAST_NAME:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-                return;
-            case SoccerPackage.ROSTER_MEMBER__POSITION:
-                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
         super.notifyChanged(notification);
@@ -199,11 +190,6 @@ public class RosterMemberItemProvider
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
-
-        newChildDescriptors.add
-            (createChildParameter
-                (SoccerPackage.Literals.ROSTER_MEMBER__POSITION,
-                 SoccerFactory.eINSTANCE.createPosition()));
     }
 
     /**

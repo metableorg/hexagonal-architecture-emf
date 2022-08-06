@@ -3,33 +3,34 @@
 package org.metable.hex.domain.emf.soccer.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.metable.hex.domain.emf.soccer.Player;
-import org.metable.hex.domain.emf.soccer.Position;
-import org.metable.hex.domain.emf.soccer.RosterMember;
+import org.metable.hex.domain.emf.soccer.EmfPlayer;
+import org.metable.hex.domain.emf.soccer.EmfPosition;
+import org.metable.hex.domain.emf.soccer.EmfRosterMember;
 import org.metable.hex.domain.emf.soccer.SoccerPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Roster Member</b></em>'.
+ * An implementation of the model object '<em><b>Emf Roster Member</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.metable.hex.domain.emf.soccer.impl.RosterMemberImpl#getPlayer <em>Player</em>}</li>
- *   <li>{@link org.metable.hex.domain.emf.soccer.impl.RosterMemberImpl#getPosition <em>Position</em>}</li>
- *   <li>{@link org.metable.hex.domain.emf.soccer.impl.RosterMemberImpl#getNumber <em>Number</em>}</li>
+ *   <li>{@link org.metable.hex.domain.emf.soccer.impl.EmfRosterMemberImpl#getPlayer <em>Player</em>}</li>
+ *   <li>{@link org.metable.hex.domain.emf.soccer.impl.EmfRosterMemberImpl#getPosition <em>Position</em>}</li>
+ *   <li>{@link org.metable.hex.domain.emf.soccer.impl.EmfRosterMemberImpl#getNumber <em>Number</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RosterMemberImpl extends MinimalEObjectImpl.Container implements RosterMember {
+public class EmfRosterMemberImpl extends MinimalEObjectImpl.Container implements EmfRosterMember {
     /**
      * The cached value of the '{@link #getPlayer() <em>Player</em>}' reference.
      * <!-- begin-user-doc -->
@@ -38,7 +39,7 @@ public class RosterMemberImpl extends MinimalEObjectImpl.Container implements Ro
      * @generated
      * @ordered
      */
-    protected Player player;
+    protected EmfPlayer player;
 
     /**
      * The cached value of the '{@link #getPosition() <em>Position</em>}' reference.
@@ -48,7 +49,7 @@ public class RosterMemberImpl extends MinimalEObjectImpl.Container implements Ro
      * @generated
      * @ordered
      */
-    protected Position position;
+    protected EmfPosition position;
 
     /**
      * The default value of the '{@link #getNumber() <em>Number</em>}' attribute.
@@ -75,7 +76,7 @@ public class RosterMemberImpl extends MinimalEObjectImpl.Container implements Ro
      * <!-- end-user-doc -->
      * @generated
      */
-    protected RosterMemberImpl() {
+    protected EmfRosterMemberImpl() {
         super();
     }
 
@@ -86,7 +87,7 @@ public class RosterMemberImpl extends MinimalEObjectImpl.Container implements Ro
      */
     @Override
     protected EClass eStaticClass() {
-        return SoccerPackage.Literals.ROSTER_MEMBER;
+        return SoccerPackage.Literals.EMF_ROSTER_MEMBER;
     }
 
     /**
@@ -95,13 +96,13 @@ public class RosterMemberImpl extends MinimalEObjectImpl.Container implements Ro
      * @generated
      */
     @Override
-    public Player getPlayer() {
+    public EmfPlayer getPlayer() {
         if (player != null && player.eIsProxy()) {
             InternalEObject oldPlayer = (InternalEObject)player;
-            player = (Player)eResolveProxy(oldPlayer);
+            player = (EmfPlayer)eResolveProxy(oldPlayer);
             if (player != oldPlayer) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, SoccerPackage.ROSTER_MEMBER__PLAYER, oldPlayer, player));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, SoccerPackage.EMF_ROSTER_MEMBER__PLAYER, oldPlayer, player));
             }
         }
         return player;
@@ -112,7 +113,7 @@ public class RosterMemberImpl extends MinimalEObjectImpl.Container implements Ro
      * <!-- end-user-doc -->
      * @generated
      */
-    public Player basicGetPlayer() {
+    public EmfPlayer basicGetPlayer() {
         return player;
     }
 
@@ -122,11 +123,11 @@ public class RosterMemberImpl extends MinimalEObjectImpl.Container implements Ro
      * @generated
      */
     @Override
-    public void setPlayer(Player newPlayer) {
-        Player oldPlayer = player;
+    public void setPlayer(EmfPlayer newPlayer) {
+        EmfPlayer oldPlayer = player;
         player = newPlayer;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.ROSTER_MEMBER__PLAYER, oldPlayer, player));
+            eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.EMF_ROSTER_MEMBER__PLAYER, oldPlayer, player));
     }
 
     /**
@@ -135,13 +136,13 @@ public class RosterMemberImpl extends MinimalEObjectImpl.Container implements Ro
      * @generated
      */
     @Override
-    public Position getPosition() {
+    public EmfPosition getPosition() {
         if (position != null && position.eIsProxy()) {
             InternalEObject oldPosition = (InternalEObject)position;
-            position = (Position)eResolveProxy(oldPosition);
+            position = (EmfPosition)eResolveProxy(oldPosition);
             if (position != oldPosition) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, SoccerPackage.ROSTER_MEMBER__POSITION, oldPosition, position));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, SoccerPackage.EMF_ROSTER_MEMBER__POSITION, oldPosition, position));
             }
         }
         return position;
@@ -152,7 +153,7 @@ public class RosterMemberImpl extends MinimalEObjectImpl.Container implements Ro
      * <!-- end-user-doc -->
      * @generated
      */
-    public Position basicGetPosition() {
+    public EmfPosition basicGetPosition() {
         return position;
     }
 
@@ -162,11 +163,11 @@ public class RosterMemberImpl extends MinimalEObjectImpl.Container implements Ro
      * @generated
      */
     @Override
-    public void setPosition(Position newPosition) {
-        Position oldPosition = position;
+    public void setPosition(EmfPosition newPosition) {
+        EmfPosition oldPosition = position;
         position = newPosition;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.ROSTER_MEMBER__POSITION, oldPosition, position));
+            eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.EMF_ROSTER_MEMBER__POSITION, oldPosition, position));
     }
 
     /**
@@ -189,7 +190,7 @@ public class RosterMemberImpl extends MinimalEObjectImpl.Container implements Ro
         int oldNumber = number;
         number = newNumber;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.ROSTER_MEMBER__NUMBER, oldNumber, number));
+            eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.EMF_ROSTER_MEMBER__NUMBER, oldNumber, number));
     }
 
     /**
@@ -200,13 +201,13 @@ public class RosterMemberImpl extends MinimalEObjectImpl.Container implements Ro
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case SoccerPackage.ROSTER_MEMBER__PLAYER:
+            case SoccerPackage.EMF_ROSTER_MEMBER__PLAYER:
                 if (resolve) return getPlayer();
                 return basicGetPlayer();
-            case SoccerPackage.ROSTER_MEMBER__POSITION:
+            case SoccerPackage.EMF_ROSTER_MEMBER__POSITION:
                 if (resolve) return getPosition();
                 return basicGetPosition();
-            case SoccerPackage.ROSTER_MEMBER__NUMBER:
+            case SoccerPackage.EMF_ROSTER_MEMBER__NUMBER:
                 return getNumber();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -220,13 +221,13 @@ public class RosterMemberImpl extends MinimalEObjectImpl.Container implements Ro
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case SoccerPackage.ROSTER_MEMBER__PLAYER:
-                setPlayer((Player)newValue);
+            case SoccerPackage.EMF_ROSTER_MEMBER__PLAYER:
+                setPlayer((EmfPlayer)newValue);
                 return;
-            case SoccerPackage.ROSTER_MEMBER__POSITION:
-                setPosition((Position)newValue);
+            case SoccerPackage.EMF_ROSTER_MEMBER__POSITION:
+                setPosition((EmfPosition)newValue);
                 return;
-            case SoccerPackage.ROSTER_MEMBER__NUMBER:
+            case SoccerPackage.EMF_ROSTER_MEMBER__NUMBER:
                 setNumber((Integer)newValue);
                 return;
         }
@@ -241,13 +242,13 @@ public class RosterMemberImpl extends MinimalEObjectImpl.Container implements Ro
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case SoccerPackage.ROSTER_MEMBER__PLAYER:
-                setPlayer((Player)null);
+            case SoccerPackage.EMF_ROSTER_MEMBER__PLAYER:
+                setPlayer((EmfPlayer)null);
                 return;
-            case SoccerPackage.ROSTER_MEMBER__POSITION:
-                setPosition((Position)null);
+            case SoccerPackage.EMF_ROSTER_MEMBER__POSITION:
+                setPosition((EmfPosition)null);
                 return;
-            case SoccerPackage.ROSTER_MEMBER__NUMBER:
+            case SoccerPackage.EMF_ROSTER_MEMBER__NUMBER:
                 setNumber(NUMBER_EDEFAULT);
                 return;
         }
@@ -262,11 +263,11 @@ public class RosterMemberImpl extends MinimalEObjectImpl.Container implements Ro
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case SoccerPackage.ROSTER_MEMBER__PLAYER:
+            case SoccerPackage.EMF_ROSTER_MEMBER__PLAYER:
                 return player != null;
-            case SoccerPackage.ROSTER_MEMBER__POSITION:
+            case SoccerPackage.EMF_ROSTER_MEMBER__POSITION:
                 return position != null;
-            case SoccerPackage.ROSTER_MEMBER__NUMBER:
+            case SoccerPackage.EMF_ROSTER_MEMBER__NUMBER:
                 return number != NUMBER_EDEFAULT;
         }
         return super.eIsSet(featureID);
@@ -288,4 +289,4 @@ public class RosterMemberImpl extends MinimalEObjectImpl.Container implements Ro
         return result.toString();
     }
 
-} //RosterMemberImpl
+} //EmfRosterMemberImpl

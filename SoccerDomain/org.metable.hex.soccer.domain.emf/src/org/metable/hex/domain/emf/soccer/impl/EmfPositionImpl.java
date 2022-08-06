@@ -9,27 +9,27 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.metable.hex.domain.emf.soccer.FieldPosition;
-import org.metable.hex.domain.emf.soccer.Position;
+import org.metable.hex.domain.emf.soccer.EmfFieldPosition;
+import org.metable.hex.domain.emf.soccer.EmfPosition;
+import org.metable.hex.domain.emf.soccer.EmfSpecialityPosition;
 import org.metable.hex.domain.emf.soccer.SoccerPackage;
-import org.metable.hex.domain.emf.soccer.SpecialityPosition;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Position</b></em>'.
+ * An implementation of the model object '<em><b>Emf Position</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.metable.hex.domain.emf.soccer.impl.PositionImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.metable.hex.domain.emf.soccer.impl.PositionImpl#getFieldPosition <em>Field Position</em>}</li>
- *   <li>{@link org.metable.hex.domain.emf.soccer.impl.PositionImpl#getSpecialityPosition <em>Speciality Position</em>}</li>
+ *   <li>{@link org.metable.hex.domain.emf.soccer.impl.EmfPositionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.metable.hex.domain.emf.soccer.impl.EmfPositionImpl#getFieldPosition <em>Field Position</em>}</li>
+ *   <li>{@link org.metable.hex.domain.emf.soccer.impl.EmfPositionImpl#getSpecialityPosition <em>Speciality Position</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PositionImpl extends MinimalEObjectImpl.Container implements Position {
+public class EmfPositionImpl extends MinimalEObjectImpl.Container implements EmfPosition {
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -58,7 +58,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
      * @generated
      * @ordered
      */
-    protected static final FieldPosition FIELD_POSITION_EDEFAULT = FieldPosition.FORWARD;
+    protected static final EmfFieldPosition FIELD_POSITION_EDEFAULT = EmfFieldPosition.FORWARD;
 
     /**
      * The cached value of the '{@link #getFieldPosition() <em>Field Position</em>}' attribute.
@@ -68,7 +68,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
      * @generated
      * @ordered
      */
-    protected FieldPosition fieldPosition = FIELD_POSITION_EDEFAULT;
+    protected EmfFieldPosition fieldPosition = FIELD_POSITION_EDEFAULT;
 
     /**
      * The default value of the '{@link #getSpecialityPosition() <em>Speciality Position</em>}' attribute.
@@ -78,7 +78,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
      * @generated
      * @ordered
      */
-    protected static final SpecialityPosition SPECIALITY_POSITION_EDEFAULT = SpecialityPosition.STRIKER;
+    protected static final EmfSpecialityPosition SPECIALITY_POSITION_EDEFAULT = EmfSpecialityPosition.STRIKER;
 
     /**
      * The cached value of the '{@link #getSpecialityPosition() <em>Speciality Position</em>}' attribute.
@@ -88,14 +88,14 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
      * @generated
      * @ordered
      */
-    protected SpecialityPosition specialityPosition = SPECIALITY_POSITION_EDEFAULT;
+    protected EmfSpecialityPosition specialityPosition = SPECIALITY_POSITION_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected PositionImpl() {
+    protected EmfPositionImpl() {
         super();
     }
 
@@ -106,7 +106,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
      */
     @Override
     protected EClass eStaticClass() {
-        return SoccerPackage.Literals.POSITION;
+        return SoccerPackage.Literals.EMF_POSITION;
     }
 
     /**
@@ -129,7 +129,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.POSITION__NAME, oldName, name));
+            eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.EMF_POSITION__NAME, oldName, name));
     }
 
     /**
@@ -138,7 +138,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
      * @generated
      */
     @Override
-    public FieldPosition getFieldPosition() {
+    public EmfFieldPosition getFieldPosition() {
         return fieldPosition;
     }
 
@@ -148,11 +148,11 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
      * @generated
      */
     @Override
-    public void setFieldPosition(FieldPosition newFieldPosition) {
-        FieldPosition oldFieldPosition = fieldPosition;
+    public void setFieldPosition(EmfFieldPosition newFieldPosition) {
+        EmfFieldPosition oldFieldPosition = fieldPosition;
         fieldPosition = newFieldPosition == null ? FIELD_POSITION_EDEFAULT : newFieldPosition;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.POSITION__FIELD_POSITION, oldFieldPosition, fieldPosition));
+            eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.EMF_POSITION__FIELD_POSITION, oldFieldPosition, fieldPosition));
     }
 
     /**
@@ -161,7 +161,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
      * @generated
      */
     @Override
-    public SpecialityPosition getSpecialityPosition() {
+    public EmfSpecialityPosition getSpecialityPosition() {
         return specialityPosition;
     }
 
@@ -171,11 +171,11 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
      * @generated
      */
     @Override
-    public void setSpecialityPosition(SpecialityPosition newSpecialityPosition) {
-        SpecialityPosition oldSpecialityPosition = specialityPosition;
+    public void setSpecialityPosition(EmfSpecialityPosition newSpecialityPosition) {
+        EmfSpecialityPosition oldSpecialityPosition = specialityPosition;
         specialityPosition = newSpecialityPosition == null ? SPECIALITY_POSITION_EDEFAULT : newSpecialityPosition;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.POSITION__SPECIALITY_POSITION, oldSpecialityPosition, specialityPosition));
+            eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.EMF_POSITION__SPECIALITY_POSITION, oldSpecialityPosition, specialityPosition));
     }
 
     /**
@@ -186,11 +186,11 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case SoccerPackage.POSITION__NAME:
+            case SoccerPackage.EMF_POSITION__NAME:
                 return getName();
-            case SoccerPackage.POSITION__FIELD_POSITION:
+            case SoccerPackage.EMF_POSITION__FIELD_POSITION:
                 return getFieldPosition();
-            case SoccerPackage.POSITION__SPECIALITY_POSITION:
+            case SoccerPackage.EMF_POSITION__SPECIALITY_POSITION:
                 return getSpecialityPosition();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -204,14 +204,14 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case SoccerPackage.POSITION__NAME:
+            case SoccerPackage.EMF_POSITION__NAME:
                 setName((String)newValue);
                 return;
-            case SoccerPackage.POSITION__FIELD_POSITION:
-                setFieldPosition((FieldPosition)newValue);
+            case SoccerPackage.EMF_POSITION__FIELD_POSITION:
+                setFieldPosition((EmfFieldPosition)newValue);
                 return;
-            case SoccerPackage.POSITION__SPECIALITY_POSITION:
-                setSpecialityPosition((SpecialityPosition)newValue);
+            case SoccerPackage.EMF_POSITION__SPECIALITY_POSITION:
+                setSpecialityPosition((EmfSpecialityPosition)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -225,13 +225,13 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case SoccerPackage.POSITION__NAME:
+            case SoccerPackage.EMF_POSITION__NAME:
                 setName(NAME_EDEFAULT);
                 return;
-            case SoccerPackage.POSITION__FIELD_POSITION:
+            case SoccerPackage.EMF_POSITION__FIELD_POSITION:
                 setFieldPosition(FIELD_POSITION_EDEFAULT);
                 return;
-            case SoccerPackage.POSITION__SPECIALITY_POSITION:
+            case SoccerPackage.EMF_POSITION__SPECIALITY_POSITION:
                 setSpecialityPosition(SPECIALITY_POSITION_EDEFAULT);
                 return;
         }
@@ -246,11 +246,11 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case SoccerPackage.POSITION__NAME:
+            case SoccerPackage.EMF_POSITION__NAME:
                 return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-            case SoccerPackage.POSITION__FIELD_POSITION:
+            case SoccerPackage.EMF_POSITION__FIELD_POSITION:
                 return fieldPosition != FIELD_POSITION_EDEFAULT;
-            case SoccerPackage.POSITION__SPECIALITY_POSITION:
+            case SoccerPackage.EMF_POSITION__SPECIALITY_POSITION:
                 return specialityPosition != SPECIALITY_POSITION_EDEFAULT;
         }
         return super.eIsSet(featureID);
@@ -276,4 +276,4 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
         return result.toString();
     }
 
-} //PositionImpl
+} //EmfPositionImpl

@@ -2,32 +2,42 @@
  */
 package org.metable.hex.domain.emf.soccer.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.metable.hex.domain.emf.soccer.Player;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.metable.hex.domain.emf.soccer.EmfRosterMember;
+import org.metable.hex.domain.emf.soccer.EmfTeam;
 import org.metable.hex.domain.emf.soccer.SoccerPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Player</b></em>'.
+ * An implementation of the model object '<em><b>Emf Team</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.metable.hex.domain.emf.soccer.impl.PlayerImpl#getId <em>Id</em>}</li>
- *   <li>{@link org.metable.hex.domain.emf.soccer.impl.PlayerImpl#getFirstName <em>First Name</em>}</li>
- *   <li>{@link org.metable.hex.domain.emf.soccer.impl.PlayerImpl#getLastName <em>Last Name</em>}</li>
+ *   <li>{@link org.metable.hex.domain.emf.soccer.impl.EmfTeamImpl#getId <em>Id</em>}</li>
+ *   <li>{@link org.metable.hex.domain.emf.soccer.impl.EmfTeamImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.metable.hex.domain.emf.soccer.impl.EmfTeamImpl#getRoster <em>Roster</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
+public class EmfTeamImpl extends MinimalEObjectImpl.Container implements EmfTeam {
     /**
      * The default value of the '{@link #getId() <em>Id</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -49,51 +59,41 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
     protected String id = ID_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getFirstName() <em>First Name</em>}' attribute.
+     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getFirstName()
+     * @see #getName()
      * @generated
      * @ordered
      */
-    protected static final String FIRST_NAME_EDEFAULT = null;
+    protected static final String NAME_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getFirstName() <em>First Name</em>}' attribute.
+     * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getFirstName()
+     * @see #getName()
      * @generated
      * @ordered
      */
-    protected String firstName = FIRST_NAME_EDEFAULT;
+    protected String name = NAME_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getLastName() <em>Last Name</em>}' attribute.
+     * The cached value of the '{@link #getRoster() <em>Roster</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #getLastName()
+     * @see #getRoster()
      * @generated
      * @ordered
      */
-    protected static final String LAST_NAME_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getLastName() <em>Last Name</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getLastName()
-     * @generated
-     * @ordered
-     */
-    protected String lastName = LAST_NAME_EDEFAULT;
+    protected EList<EmfRosterMember> roster;
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected PlayerImpl() {
+    protected EmfTeamImpl() {
         super();
     }
 
@@ -104,7 +104,7 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
      */
     @Override
     protected EClass eStaticClass() {
-        return SoccerPackage.Literals.PLAYER;
+        return SoccerPackage.Literals.EMF_TEAM;
     }
 
     /**
@@ -127,7 +127,7 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
         String oldId = id;
         id = newId;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.PLAYER__ID, oldId, id));
+            eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.EMF_TEAM__ID, oldId, id));
     }
 
     /**
@@ -136,8 +136,8 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
      * @generated
      */
     @Override
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
     /**
@@ -146,11 +146,11 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
      * @generated
      */
     @Override
-    public void setFirstName(String newFirstName) {
-        String oldFirstName = firstName;
-        firstName = newFirstName;
+    public void setName(String newName) {
+        String oldName = name;
+        name = newName;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.PLAYER__FIRST_NAME, oldFirstName, firstName));
+            eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.EMF_TEAM__NAME, oldName, name));
     }
 
     /**
@@ -159,8 +159,11 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
      * @generated
      */
     @Override
-    public String getLastName() {
-        return lastName;
+    public EList<EmfRosterMember> getRoster() {
+        if (roster == null) {
+            roster = new EObjectContainmentEList<EmfRosterMember>(EmfRosterMember.class, this, SoccerPackage.EMF_TEAM__ROSTER);
+        }
+        return roster;
     }
 
     /**
@@ -169,11 +172,12 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
      * @generated
      */
     @Override
-    public void setLastName(String newLastName) {
-        String oldLastName = lastName;
-        lastName = newLastName;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, SoccerPackage.PLAYER__LAST_NAME, oldLastName, lastName));
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+        switch (featureID) {
+            case SoccerPackage.EMF_TEAM__ROSTER:
+                return ((InternalEList<?>)getRoster()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
@@ -184,12 +188,12 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case SoccerPackage.PLAYER__ID:
+            case SoccerPackage.EMF_TEAM__ID:
                 return getId();
-            case SoccerPackage.PLAYER__FIRST_NAME:
-                return getFirstName();
-            case SoccerPackage.PLAYER__LAST_NAME:
-                return getLastName();
+            case SoccerPackage.EMF_TEAM__NAME:
+                return getName();
+            case SoccerPackage.EMF_TEAM__ROSTER:
+                return getRoster();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -199,17 +203,19 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
      * <!-- end-user-doc -->
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case SoccerPackage.PLAYER__ID:
+            case SoccerPackage.EMF_TEAM__ID:
                 setId((String)newValue);
                 return;
-            case SoccerPackage.PLAYER__FIRST_NAME:
-                setFirstName((String)newValue);
+            case SoccerPackage.EMF_TEAM__NAME:
+                setName((String)newValue);
                 return;
-            case SoccerPackage.PLAYER__LAST_NAME:
-                setLastName((String)newValue);
+            case SoccerPackage.EMF_TEAM__ROSTER:
+                getRoster().clear();
+                getRoster().addAll((Collection<? extends EmfRosterMember>)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -223,14 +229,14 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case SoccerPackage.PLAYER__ID:
+            case SoccerPackage.EMF_TEAM__ID:
                 setId(ID_EDEFAULT);
                 return;
-            case SoccerPackage.PLAYER__FIRST_NAME:
-                setFirstName(FIRST_NAME_EDEFAULT);
+            case SoccerPackage.EMF_TEAM__NAME:
+                setName(NAME_EDEFAULT);
                 return;
-            case SoccerPackage.PLAYER__LAST_NAME:
-                setLastName(LAST_NAME_EDEFAULT);
+            case SoccerPackage.EMF_TEAM__ROSTER:
+                getRoster().clear();
                 return;
         }
         super.eUnset(featureID);
@@ -244,12 +250,12 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case SoccerPackage.PLAYER__ID:
+            case SoccerPackage.EMF_TEAM__ID:
                 return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-            case SoccerPackage.PLAYER__FIRST_NAME:
-                return FIRST_NAME_EDEFAULT == null ? firstName != null : !FIRST_NAME_EDEFAULT.equals(firstName);
-            case SoccerPackage.PLAYER__LAST_NAME:
-                return LAST_NAME_EDEFAULT == null ? lastName != null : !LAST_NAME_EDEFAULT.equals(lastName);
+            case SoccerPackage.EMF_TEAM__NAME:
+                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+            case SoccerPackage.EMF_TEAM__ROSTER:
+                return roster != null && !roster.isEmpty();
         }
         return super.eIsSet(featureID);
     }
@@ -266,12 +272,10 @@ public class PlayerImpl extends MinimalEObjectImpl.Container implements Player {
         StringBuilder result = new StringBuilder(super.toString());
         result.append(" (id: ");
         result.append(id);
-        result.append(", firstName: ");
-        result.append(firstName);
-        result.append(", lastName: ");
-        result.append(lastName);
+        result.append(", name: ");
+        result.append(name);
         result.append(')');
         return result.toString();
     }
 
-} //PlayerImpl
+} //EmfTeamImpl

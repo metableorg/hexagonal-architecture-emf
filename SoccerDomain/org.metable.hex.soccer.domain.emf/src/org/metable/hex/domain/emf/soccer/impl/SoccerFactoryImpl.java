@@ -57,11 +57,11 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
     @Override
     public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
-            case SoccerPackage.POSITION: return createPosition();
-            case SoccerPackage.PLAYER: return createPlayer();
-            case SoccerPackage.ROSTER_MEMBER: return createRosterMember();
-            case SoccerPackage.TEAM: return createTeam();
-            case SoccerPackage.SOCCER_UNIVERSE: return createSoccerUniverse();
+            case SoccerPackage.EMF_POSITION: return createEmfPosition();
+            case SoccerPackage.EMF_PLAYER: return createEmfPlayer();
+            case SoccerPackage.EMF_ROSTER_MEMBER: return createEmfRosterMember();
+            case SoccerPackage.EMF_TEAM: return createEmfTeam();
+            case SoccerPackage.EMF_SOCCER_UNIVERSE: return createEmfSoccerUniverse();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -75,10 +75,10 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
     @Override
     public Object createFromString(EDataType eDataType, String initialValue) {
         switch (eDataType.getClassifierID()) {
-            case SoccerPackage.FIELD_POSITION:
-                return createFieldPositionFromString(eDataType, initialValue);
-            case SoccerPackage.SPECIALITY_POSITION:
-                return createSpecialityPositionFromString(eDataType, initialValue);
+            case SoccerPackage.EMF_FIELD_POSITION:
+                return createEmfFieldPositionFromString(eDataType, initialValue);
+            case SoccerPackage.EMF_SPECIALITY_POSITION:
+                return createEmfSpecialityPositionFromString(eDataType, initialValue);
             default:
                 throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -92,10 +92,10 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
     @Override
     public String convertToString(EDataType eDataType, Object instanceValue) {
         switch (eDataType.getClassifierID()) {
-            case SoccerPackage.FIELD_POSITION:
-                return convertFieldPositionToString(eDataType, instanceValue);
-            case SoccerPackage.SPECIALITY_POSITION:
-                return convertSpecialityPositionToString(eDataType, instanceValue);
+            case SoccerPackage.EMF_FIELD_POSITION:
+                return convertEmfFieldPositionToString(eDataType, instanceValue);
+            case SoccerPackage.EMF_SPECIALITY_POSITION:
+                return convertEmfSpecialityPositionToString(eDataType, instanceValue);
             default:
                 throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -107,9 +107,9 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
      * @generated
      */
     @Override
-    public Position createPosition() {
-        PositionImpl position = new PositionImpl();
-        return position;
+    public EmfPosition createEmfPosition() {
+        EmfPositionImpl emfPosition = new EmfPositionImpl();
+        return emfPosition;
     }
 
     /**
@@ -118,9 +118,9 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
      * @generated
      */
     @Override
-    public Player createPlayer() {
-        PlayerImpl player = new PlayerImpl();
-        return player;
+    public EmfPlayer createEmfPlayer() {
+        EmfPlayerImpl emfPlayer = new EmfPlayerImpl();
+        return emfPlayer;
     }
 
     /**
@@ -129,9 +129,9 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
      * @generated
      */
     @Override
-    public RosterMember createRosterMember() {
-        RosterMemberImpl rosterMember = new RosterMemberImpl();
-        return rosterMember;
+    public EmfRosterMember createEmfRosterMember() {
+        EmfRosterMemberImpl emfRosterMember = new EmfRosterMemberImpl();
+        return emfRosterMember;
     }
 
     /**
@@ -140,9 +140,9 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
      * @generated
      */
     @Override
-    public Team createTeam() {
-        TeamImpl team = new TeamImpl();
-        return team;
+    public EmfTeam createEmfTeam() {
+        EmfTeamImpl emfTeam = new EmfTeamImpl();
+        return emfTeam;
     }
 
     /**
@@ -151,9 +151,9 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
      * @generated
      */
     @Override
-    public SoccerUniverse createSoccerUniverse() {
-        SoccerUniverseImpl soccerUniverse = new SoccerUniverseImpl();
-        return soccerUniverse;
+    public EmfSoccerUniverse createEmfSoccerUniverse() {
+        EmfSoccerUniverseImpl emfSoccerUniverse = new EmfSoccerUniverseImpl();
+        return emfSoccerUniverse;
     }
 
     /**
@@ -161,8 +161,8 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public FieldPosition createFieldPositionFromString(EDataType eDataType, String initialValue) {
-        FieldPosition result = FieldPosition.get(initialValue);
+    public EmfFieldPosition createEmfFieldPositionFromString(EDataType eDataType, String initialValue) {
+        EmfFieldPosition result = EmfFieldPosition.get(initialValue);
         if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
         return result;
     }
@@ -172,7 +172,7 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertFieldPositionToString(EDataType eDataType, Object instanceValue) {
+    public String convertEmfFieldPositionToString(EDataType eDataType, Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
@@ -181,8 +181,8 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public SpecialityPosition createSpecialityPositionFromString(EDataType eDataType, String initialValue) {
-        SpecialityPosition result = SpecialityPosition.get(initialValue);
+    public EmfSpecialityPosition createEmfSpecialityPositionFromString(EDataType eDataType, String initialValue) {
+        EmfSpecialityPosition result = EmfSpecialityPosition.get(initialValue);
         if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
         return result;
     }
@@ -192,7 +192,7 @@ public class SoccerFactoryImpl extends EFactoryImpl implements SoccerFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public String convertSpecialityPositionToString(EDataType eDataType, Object instanceValue) {
+    public String convertEmfSpecialityPositionToString(EDataType eDataType, Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 

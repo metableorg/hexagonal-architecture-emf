@@ -11,6 +11,8 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -22,16 +24,17 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.metable.hex.domain.emf.soccer.Player;
+import org.metable.hex.domain.emf.soccer.EmfTeam;
+import org.metable.hex.domain.emf.soccer.SoccerFactory;
 import org.metable.hex.domain.emf.soccer.SoccerPackage;
 
 /**
- * This is the item provider adapter for a {@link org.metable.hex.domain.emf.soccer.Player} object.
+ * This is the item provider adapter for a {@link org.metable.hex.domain.emf.soccer.EmfTeam} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PlayerItemProvider 
+public class EmfTeamItemProvider 
     extends ItemProviderAdapter
     implements
         IEditingDomainItemProvider,
@@ -45,7 +48,7 @@ public class PlayerItemProvider
      * <!-- end-user-doc -->
      * @generated
      */
-    public PlayerItemProvider(AdapterFactory adapterFactory) {
+    public EmfTeamItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -61,8 +64,7 @@ public class PlayerItemProvider
             super.getPropertyDescriptors(object);
 
             addIdPropertyDescriptor(object);
-            addFirstNamePropertyDescriptor(object);
-            addLastNamePropertyDescriptor(object);
+            addNamePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -78,9 +80,9 @@ public class PlayerItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_Player_id_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Player_id_feature", "_UI_Player_type"),
-                 SoccerPackage.Literals.PLAYER__ID,
+                 getString("_UI_EmfTeam_id_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_EmfTeam_id_feature", "_UI_EmfTeam_type"),
+                 SoccerPackage.Literals.EMF_TEAM__ID,
                  true,
                  false,
                  false,
@@ -90,19 +92,19 @@ public class PlayerItemProvider
     }
 
     /**
-     * This adds a property descriptor for the First Name feature.
+     * This adds a property descriptor for the Name feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected void addFirstNamePropertyDescriptor(Object object) {
+    protected void addNamePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_Player_firstName_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Player_firstName_feature", "_UI_Player_type"),
-                 SoccerPackage.Literals.PLAYER__FIRST_NAME,
+                 getString("_UI_EmfTeam_name_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_EmfTeam_name_feature", "_UI_EmfTeam_type"),
+                 SoccerPackage.Literals.EMF_TEAM__NAME,
                  true,
                  false,
                  false,
@@ -112,36 +114,44 @@ public class PlayerItemProvider
     }
 
     /**
-     * This adds a property descriptor for the Last Name feature.
+     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+     * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected void addLastNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add
-            (createItemPropertyDescriptor
-                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-                 getResourceLocator(),
-                 getString("_UI_Player_lastName_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Player_lastName_feature", "_UI_Player_type"),
-                 SoccerPackage.Literals.PLAYER__LAST_NAME,
-                 true,
-                 false,
-                 false,
-                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                 null,
-                 null));
+    @Override
+    public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+        if (childrenFeatures == null) {
+            super.getChildrenFeatures(object);
+            childrenFeatures.add(SoccerPackage.Literals.EMF_TEAM__ROSTER);
+        }
+        return childrenFeatures;
     }
 
     /**
-     * This returns Player.gif.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EStructuralFeature getChildFeature(Object object, Object child) {
+        // Check the type of the specified child object and return the proper feature to use for
+        // adding (see {@link AddCommand}) it as a child.
+
+        return super.getChildFeature(object, child);
+    }
+
+    /**
+     * This returns EmfTeam.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/Player"));
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/EmfTeam"));
     }
 
     /**
@@ -152,10 +162,10 @@ public class PlayerItemProvider
      */
     @Override
     public String getText(Object object) {
-        String label = ((Player)object).getId();
+        String label = ((EmfTeam)object).getName();
         return label == null || label.length() == 0 ?
-            getString("_UI_Player_type") :
-            getString("_UI_Player_type") + " " + label;
+            getString("_UI_EmfTeam_type") :
+            getString("_UI_EmfTeam_type") + " " + label;
     }
 
 
@@ -170,11 +180,13 @@ public class PlayerItemProvider
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
 
-        switch (notification.getFeatureID(Player.class)) {
-            case SoccerPackage.PLAYER__ID:
-            case SoccerPackage.PLAYER__FIRST_NAME:
-            case SoccerPackage.PLAYER__LAST_NAME:
+        switch (notification.getFeatureID(EmfTeam.class)) {
+            case SoccerPackage.EMF_TEAM__ID:
+            case SoccerPackage.EMF_TEAM__NAME:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+                return;
+            case SoccerPackage.EMF_TEAM__ROSTER:
+                fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
         super.notifyChanged(notification);
@@ -190,6 +202,11 @@ public class PlayerItemProvider
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
+
+        newChildDescriptors.add
+            (createChildParameter
+                (SoccerPackage.Literals.EMF_TEAM__ROSTER,
+                 SoccerFactory.eINSTANCE.createEmfRosterMember()));
     }
 
     /**

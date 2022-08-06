@@ -58,14 +58,14 @@ public interface SoccerPackage extends EPackage {
     SoccerPackage eINSTANCE = org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl.init();
 
     /**
-     * The meta object id for the '{@link org.metable.hex.domain.emf.soccer.impl.PositionImpl <em>Position</em>}' class.
+     * The meta object id for the '{@link org.metable.hex.domain.emf.soccer.impl.EmfPositionImpl <em>Emf Position</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.metable.hex.domain.emf.soccer.impl.PositionImpl
-     * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getPosition()
+     * @see org.metable.hex.domain.emf.soccer.impl.EmfPositionImpl
+     * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getEmfPosition()
      * @generated
      */
-    int POSITION = 0;
+    int EMF_POSITION = 0;
 
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -74,7 +74,7 @@ public interface SoccerPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int POSITION__NAME = 0;
+    int EMF_POSITION__NAME = 0;
 
     /**
      * The feature id for the '<em><b>Field Position</b></em>' attribute.
@@ -83,7 +83,7 @@ public interface SoccerPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int POSITION__FIELD_POSITION = 1;
+    int EMF_POSITION__FIELD_POSITION = 1;
 
     /**
      * The feature id for the '<em><b>Speciality Position</b></em>' attribute.
@@ -92,35 +92,35 @@ public interface SoccerPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int POSITION__SPECIALITY_POSITION = 2;
+    int EMF_POSITION__SPECIALITY_POSITION = 2;
 
     /**
-     * The number of structural features of the '<em>Position</em>' class.
+     * The number of structural features of the '<em>Emf Position</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int POSITION_FEATURE_COUNT = 3;
+    int EMF_POSITION_FEATURE_COUNT = 3;
 
     /**
-     * The number of operations of the '<em>Position</em>' class.
+     * The number of operations of the '<em>Emf Position</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int POSITION_OPERATION_COUNT = 0;
+    int EMF_POSITION_OPERATION_COUNT = 0;
 
     /**
-     * The meta object id for the '{@link org.metable.hex.domain.emf.soccer.impl.PlayerImpl <em>Player</em>}' class.
+     * The meta object id for the '{@link org.metable.hex.domain.emf.soccer.impl.EmfPlayerImpl <em>Emf Player</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.metable.hex.domain.emf.soccer.impl.PlayerImpl
-     * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getPlayer()
+     * @see org.metable.hex.domain.emf.soccer.impl.EmfPlayerImpl
+     * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getEmfPlayer()
      * @generated
      */
-    int PLAYER = 1;
+    int EMF_PLAYER = 1;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -129,7 +129,7 @@ public interface SoccerPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PLAYER__ID = 0;
+    int EMF_PLAYER__ID = 0;
 
     /**
      * The feature id for the '<em><b>First Name</b></em>' attribute.
@@ -138,7 +138,7 @@ public interface SoccerPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PLAYER__FIRST_NAME = 1;
+    int EMF_PLAYER__FIRST_NAME = 1;
 
     /**
      * The feature id for the '<em><b>Last Name</b></em>' attribute.
@@ -147,35 +147,35 @@ public interface SoccerPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PLAYER__LAST_NAME = 2;
+    int EMF_PLAYER__LAST_NAME = 2;
 
     /**
-     * The number of structural features of the '<em>Player</em>' class.
+     * The number of structural features of the '<em>Emf Player</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int PLAYER_FEATURE_COUNT = 3;
+    int EMF_PLAYER_FEATURE_COUNT = 3;
 
     /**
-     * The number of operations of the '<em>Player</em>' class.
+     * The number of operations of the '<em>Emf Player</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int PLAYER_OPERATION_COUNT = 0;
+    int EMF_PLAYER_OPERATION_COUNT = 0;
 
     /**
-     * The meta object id for the '{@link org.metable.hex.domain.emf.soccer.impl.RosterMemberImpl <em>Roster Member</em>}' class.
+     * The meta object id for the '{@link org.metable.hex.domain.emf.soccer.impl.EmfRosterMemberImpl <em>Emf Roster Member</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.metable.hex.domain.emf.soccer.impl.RosterMemberImpl
-     * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getRosterMember()
+     * @see org.metable.hex.domain.emf.soccer.impl.EmfRosterMemberImpl
+     * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getEmfRosterMember()
      * @generated
      */
-    int ROSTER_MEMBER = 2;
+    int EMF_ROSTER_MEMBER = 2;
 
     /**
      * The feature id for the '<em><b>Player</b></em>' reference.
@@ -184,7 +184,7 @@ public interface SoccerPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int ROSTER_MEMBER__PLAYER = 0;
+    int EMF_ROSTER_MEMBER__PLAYER = 0;
 
     /**
      * The feature id for the '<em><b>Position</b></em>' reference.
@@ -193,7 +193,7 @@ public interface SoccerPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int ROSTER_MEMBER__POSITION = 1;
+    int EMF_ROSTER_MEMBER__POSITION = 1;
 
     /**
      * The feature id for the '<em><b>Number</b></em>' attribute.
@@ -202,35 +202,35 @@ public interface SoccerPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int ROSTER_MEMBER__NUMBER = 2;
+    int EMF_ROSTER_MEMBER__NUMBER = 2;
 
     /**
-     * The number of structural features of the '<em>Roster Member</em>' class.
+     * The number of structural features of the '<em>Emf Roster Member</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ROSTER_MEMBER_FEATURE_COUNT = 3;
+    int EMF_ROSTER_MEMBER_FEATURE_COUNT = 3;
 
     /**
-     * The number of operations of the '<em>Roster Member</em>' class.
+     * The number of operations of the '<em>Emf Roster Member</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ROSTER_MEMBER_OPERATION_COUNT = 0;
+    int EMF_ROSTER_MEMBER_OPERATION_COUNT = 0;
 
     /**
-     * The meta object id for the '{@link org.metable.hex.domain.emf.soccer.impl.TeamImpl <em>Team</em>}' class.
+     * The meta object id for the '{@link org.metable.hex.domain.emf.soccer.impl.EmfTeamImpl <em>Emf Team</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.metable.hex.domain.emf.soccer.impl.TeamImpl
-     * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getTeam()
+     * @see org.metable.hex.domain.emf.soccer.impl.EmfTeamImpl
+     * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getEmfTeam()
      * @generated
      */
-    int TEAM = 3;
+    int EMF_TEAM = 3;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -239,7 +239,7 @@ public interface SoccerPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int TEAM__ID = 0;
+    int EMF_TEAM__ID = 0;
 
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -248,7 +248,7 @@ public interface SoccerPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int TEAM__NAME = 1;
+    int EMF_TEAM__NAME = 1;
 
     /**
      * The feature id for the '<em><b>Roster</b></em>' containment reference list.
@@ -257,35 +257,35 @@ public interface SoccerPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int TEAM__ROSTER = 2;
+    int EMF_TEAM__ROSTER = 2;
 
     /**
-     * The number of structural features of the '<em>Team</em>' class.
+     * The number of structural features of the '<em>Emf Team</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int TEAM_FEATURE_COUNT = 3;
+    int EMF_TEAM_FEATURE_COUNT = 3;
 
     /**
-     * The number of operations of the '<em>Team</em>' class.
+     * The number of operations of the '<em>Emf Team</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int TEAM_OPERATION_COUNT = 0;
+    int EMF_TEAM_OPERATION_COUNT = 0;
 
     /**
-     * The meta object id for the '{@link org.metable.hex.domain.emf.soccer.impl.SoccerUniverseImpl <em>Universe</em>}' class.
+     * The meta object id for the '{@link org.metable.hex.domain.emf.soccer.impl.EmfSoccerUniverseImpl <em>Emf Soccer Universe</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.metable.hex.domain.emf.soccer.impl.SoccerUniverseImpl
-     * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getSoccerUniverse()
+     * @see org.metable.hex.domain.emf.soccer.impl.EmfSoccerUniverseImpl
+     * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getEmfSoccerUniverse()
      * @generated
      */
-    int SOCCER_UNIVERSE = 4;
+    int EMF_SOCCER_UNIVERSE = 4;
 
     /**
      * The feature id for the '<em><b>Players</b></em>' containment reference list.
@@ -294,7 +294,7 @@ public interface SoccerPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SOCCER_UNIVERSE__PLAYERS = 0;
+    int EMF_SOCCER_UNIVERSE__PLAYERS = 0;
 
     /**
      * The feature id for the '<em><b>Teams</b></em>' containment reference list.
@@ -303,7 +303,7 @@ public interface SoccerPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SOCCER_UNIVERSE__TEAMS = 1;
+    int EMF_SOCCER_UNIVERSE__TEAMS = 1;
 
     /**
      * The feature id for the '<em><b>Positions</b></em>' containment reference list.
@@ -312,281 +312,281 @@ public interface SoccerPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SOCCER_UNIVERSE__POSITIONS = 2;
+    int EMF_SOCCER_UNIVERSE__POSITIONS = 2;
 
     /**
-     * The number of structural features of the '<em>Universe</em>' class.
+     * The number of structural features of the '<em>Emf Soccer Universe</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SOCCER_UNIVERSE_FEATURE_COUNT = 3;
+    int EMF_SOCCER_UNIVERSE_FEATURE_COUNT = 3;
 
     /**
-     * The number of operations of the '<em>Universe</em>' class.
+     * The number of operations of the '<em>Emf Soccer Universe</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SOCCER_UNIVERSE_OPERATION_COUNT = 0;
+    int EMF_SOCCER_UNIVERSE_OPERATION_COUNT = 0;
 
     /**
-     * The meta object id for the '{@link org.metable.hex.domain.emf.soccer.FieldPosition <em>Field Position</em>}' enum.
+     * The meta object id for the '{@link org.metable.hex.domain.emf.soccer.EmfFieldPosition <em>Emf Field Position</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.metable.hex.domain.emf.soccer.FieldPosition
-     * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getFieldPosition()
+     * @see org.metable.hex.domain.emf.soccer.EmfFieldPosition
+     * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getEmfFieldPosition()
      * @generated
      */
-    int FIELD_POSITION = 5;
+    int EMF_FIELD_POSITION = 5;
 
     /**
-     * The meta object id for the '{@link org.metable.hex.domain.emf.soccer.SpecialityPosition <em>Speciality Position</em>}' enum.
+     * The meta object id for the '{@link org.metable.hex.domain.emf.soccer.EmfSpecialityPosition <em>Emf Speciality Position</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.metable.hex.domain.emf.soccer.SpecialityPosition
-     * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getSpecialityPosition()
+     * @see org.metable.hex.domain.emf.soccer.EmfSpecialityPosition
+     * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getEmfSpecialityPosition()
      * @generated
      */
-    int SPECIALITY_POSITION = 6;
+    int EMF_SPECIALITY_POSITION = 6;
 
 
     /**
-     * Returns the meta object for class '{@link org.metable.hex.domain.emf.soccer.Position <em>Position</em>}'.
+     * Returns the meta object for class '{@link org.metable.hex.domain.emf.soccer.EmfPosition <em>Emf Position</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Position</em>'.
-     * @see org.metable.hex.domain.emf.soccer.Position
+     * @return the meta object for class '<em>Emf Position</em>'.
+     * @see org.metable.hex.domain.emf.soccer.EmfPosition
      * @generated
      */
-    EClass getPosition();
+    EClass getEmfPosition();
 
     /**
-     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.Position#getName <em>Name</em>}'.
+     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.EmfPosition#getName <em>Name</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the attribute '<em>Name</em>'.
-     * @see org.metable.hex.domain.emf.soccer.Position#getName()
-     * @see #getPosition()
+     * @see org.metable.hex.domain.emf.soccer.EmfPosition#getName()
+     * @see #getEmfPosition()
      * @generated
      */
-    EAttribute getPosition_Name();
+    EAttribute getEmfPosition_Name();
 
     /**
-     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.Position#getFieldPosition <em>Field Position</em>}'.
+     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.EmfPosition#getFieldPosition <em>Field Position</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the attribute '<em>Field Position</em>'.
-     * @see org.metable.hex.domain.emf.soccer.Position#getFieldPosition()
-     * @see #getPosition()
+     * @see org.metable.hex.domain.emf.soccer.EmfPosition#getFieldPosition()
+     * @see #getEmfPosition()
      * @generated
      */
-    EAttribute getPosition_FieldPosition();
+    EAttribute getEmfPosition_FieldPosition();
 
     /**
-     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.Position#getSpecialityPosition <em>Speciality Position</em>}'.
+     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.EmfPosition#getSpecialityPosition <em>Speciality Position</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the attribute '<em>Speciality Position</em>'.
-     * @see org.metable.hex.domain.emf.soccer.Position#getSpecialityPosition()
-     * @see #getPosition()
+     * @see org.metable.hex.domain.emf.soccer.EmfPosition#getSpecialityPosition()
+     * @see #getEmfPosition()
      * @generated
      */
-    EAttribute getPosition_SpecialityPosition();
+    EAttribute getEmfPosition_SpecialityPosition();
 
     /**
-     * Returns the meta object for class '{@link org.metable.hex.domain.emf.soccer.Player <em>Player</em>}'.
+     * Returns the meta object for class '{@link org.metable.hex.domain.emf.soccer.EmfPlayer <em>Emf Player</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Player</em>'.
-     * @see org.metable.hex.domain.emf.soccer.Player
+     * @return the meta object for class '<em>Emf Player</em>'.
+     * @see org.metable.hex.domain.emf.soccer.EmfPlayer
      * @generated
      */
-    EClass getPlayer();
+    EClass getEmfPlayer();
 
     /**
-     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.Player#getId <em>Id</em>}'.
+     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.EmfPlayer#getId <em>Id</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the attribute '<em>Id</em>'.
-     * @see org.metable.hex.domain.emf.soccer.Player#getId()
-     * @see #getPlayer()
+     * @see org.metable.hex.domain.emf.soccer.EmfPlayer#getId()
+     * @see #getEmfPlayer()
      * @generated
      */
-    EAttribute getPlayer_Id();
+    EAttribute getEmfPlayer_Id();
 
     /**
-     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.Player#getFirstName <em>First Name</em>}'.
+     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.EmfPlayer#getFirstName <em>First Name</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the attribute '<em>First Name</em>'.
-     * @see org.metable.hex.domain.emf.soccer.Player#getFirstName()
-     * @see #getPlayer()
+     * @see org.metable.hex.domain.emf.soccer.EmfPlayer#getFirstName()
+     * @see #getEmfPlayer()
      * @generated
      */
-    EAttribute getPlayer_FirstName();
+    EAttribute getEmfPlayer_FirstName();
 
     /**
-     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.Player#getLastName <em>Last Name</em>}'.
+     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.EmfPlayer#getLastName <em>Last Name</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the attribute '<em>Last Name</em>'.
-     * @see org.metable.hex.domain.emf.soccer.Player#getLastName()
-     * @see #getPlayer()
+     * @see org.metable.hex.domain.emf.soccer.EmfPlayer#getLastName()
+     * @see #getEmfPlayer()
      * @generated
      */
-    EAttribute getPlayer_LastName();
+    EAttribute getEmfPlayer_LastName();
 
     /**
-     * Returns the meta object for class '{@link org.metable.hex.domain.emf.soccer.RosterMember <em>Roster Member</em>}'.
+     * Returns the meta object for class '{@link org.metable.hex.domain.emf.soccer.EmfRosterMember <em>Emf Roster Member</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Roster Member</em>'.
-     * @see org.metable.hex.domain.emf.soccer.RosterMember
+     * @return the meta object for class '<em>Emf Roster Member</em>'.
+     * @see org.metable.hex.domain.emf.soccer.EmfRosterMember
      * @generated
      */
-    EClass getRosterMember();
+    EClass getEmfRosterMember();
 
     /**
-     * Returns the meta object for the reference '{@link org.metable.hex.domain.emf.soccer.RosterMember#getPlayer <em>Player</em>}'.
+     * Returns the meta object for the reference '{@link org.metable.hex.domain.emf.soccer.EmfRosterMember#getPlayer <em>Player</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the reference '<em>Player</em>'.
-     * @see org.metable.hex.domain.emf.soccer.RosterMember#getPlayer()
-     * @see #getRosterMember()
+     * @see org.metable.hex.domain.emf.soccer.EmfRosterMember#getPlayer()
+     * @see #getEmfRosterMember()
      * @generated
      */
-    EReference getRosterMember_Player();
+    EReference getEmfRosterMember_Player();
 
     /**
-     * Returns the meta object for the reference '{@link org.metable.hex.domain.emf.soccer.RosterMember#getPosition <em>Position</em>}'.
+     * Returns the meta object for the reference '{@link org.metable.hex.domain.emf.soccer.EmfRosterMember#getPosition <em>Position</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the reference '<em>Position</em>'.
-     * @see org.metable.hex.domain.emf.soccer.RosterMember#getPosition()
-     * @see #getRosterMember()
+     * @see org.metable.hex.domain.emf.soccer.EmfRosterMember#getPosition()
+     * @see #getEmfRosterMember()
      * @generated
      */
-    EReference getRosterMember_Position();
+    EReference getEmfRosterMember_Position();
 
     /**
-     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.RosterMember#getNumber <em>Number</em>}'.
+     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.EmfRosterMember#getNumber <em>Number</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the attribute '<em>Number</em>'.
-     * @see org.metable.hex.domain.emf.soccer.RosterMember#getNumber()
-     * @see #getRosterMember()
+     * @see org.metable.hex.domain.emf.soccer.EmfRosterMember#getNumber()
+     * @see #getEmfRosterMember()
      * @generated
      */
-    EAttribute getRosterMember_Number();
+    EAttribute getEmfRosterMember_Number();
 
     /**
-     * Returns the meta object for class '{@link org.metable.hex.domain.emf.soccer.Team <em>Team</em>}'.
+     * Returns the meta object for class '{@link org.metable.hex.domain.emf.soccer.EmfTeam <em>Emf Team</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Team</em>'.
-     * @see org.metable.hex.domain.emf.soccer.Team
+     * @return the meta object for class '<em>Emf Team</em>'.
+     * @see org.metable.hex.domain.emf.soccer.EmfTeam
      * @generated
      */
-    EClass getTeam();
+    EClass getEmfTeam();
 
     /**
-     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.Team#getId <em>Id</em>}'.
+     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.EmfTeam#getId <em>Id</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the attribute '<em>Id</em>'.
-     * @see org.metable.hex.domain.emf.soccer.Team#getId()
-     * @see #getTeam()
+     * @see org.metable.hex.domain.emf.soccer.EmfTeam#getId()
+     * @see #getEmfTeam()
      * @generated
      */
-    EAttribute getTeam_Id();
+    EAttribute getEmfTeam_Id();
 
     /**
-     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.Team#getName <em>Name</em>}'.
+     * Returns the meta object for the attribute '{@link org.metable.hex.domain.emf.soccer.EmfTeam#getName <em>Name</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the attribute '<em>Name</em>'.
-     * @see org.metable.hex.domain.emf.soccer.Team#getName()
-     * @see #getTeam()
+     * @see org.metable.hex.domain.emf.soccer.EmfTeam#getName()
+     * @see #getEmfTeam()
      * @generated
      */
-    EAttribute getTeam_Name();
+    EAttribute getEmfTeam_Name();
 
     /**
-     * Returns the meta object for the containment reference list '{@link org.metable.hex.domain.emf.soccer.Team#getRoster <em>Roster</em>}'.
+     * Returns the meta object for the containment reference list '{@link org.metable.hex.domain.emf.soccer.EmfTeam#getRoster <em>Roster</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the containment reference list '<em>Roster</em>'.
-     * @see org.metable.hex.domain.emf.soccer.Team#getRoster()
-     * @see #getTeam()
+     * @see org.metable.hex.domain.emf.soccer.EmfTeam#getRoster()
+     * @see #getEmfTeam()
      * @generated
      */
-    EReference getTeam_Roster();
+    EReference getEmfTeam_Roster();
 
     /**
-     * Returns the meta object for class '{@link org.metable.hex.domain.emf.soccer.SoccerUniverse <em>Universe</em>}'.
+     * Returns the meta object for class '{@link org.metable.hex.domain.emf.soccer.EmfSoccerUniverse <em>Emf Soccer Universe</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for class '<em>Universe</em>'.
-     * @see org.metable.hex.domain.emf.soccer.SoccerUniverse
+     * @return the meta object for class '<em>Emf Soccer Universe</em>'.
+     * @see org.metable.hex.domain.emf.soccer.EmfSoccerUniverse
      * @generated
      */
-    EClass getSoccerUniverse();
+    EClass getEmfSoccerUniverse();
 
     /**
-     * Returns the meta object for the containment reference list '{@link org.metable.hex.domain.emf.soccer.SoccerUniverse#getPlayers <em>Players</em>}'.
+     * Returns the meta object for the containment reference list '{@link org.metable.hex.domain.emf.soccer.EmfSoccerUniverse#getPlayers <em>Players</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the containment reference list '<em>Players</em>'.
-     * @see org.metable.hex.domain.emf.soccer.SoccerUniverse#getPlayers()
-     * @see #getSoccerUniverse()
+     * @see org.metable.hex.domain.emf.soccer.EmfSoccerUniverse#getPlayers()
+     * @see #getEmfSoccerUniverse()
      * @generated
      */
-    EReference getSoccerUniverse_Players();
+    EReference getEmfSoccerUniverse_Players();
 
     /**
-     * Returns the meta object for the containment reference list '{@link org.metable.hex.domain.emf.soccer.SoccerUniverse#getTeams <em>Teams</em>}'.
+     * Returns the meta object for the containment reference list '{@link org.metable.hex.domain.emf.soccer.EmfSoccerUniverse#getTeams <em>Teams</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the containment reference list '<em>Teams</em>'.
-     * @see org.metable.hex.domain.emf.soccer.SoccerUniverse#getTeams()
-     * @see #getSoccerUniverse()
+     * @see org.metable.hex.domain.emf.soccer.EmfSoccerUniverse#getTeams()
+     * @see #getEmfSoccerUniverse()
      * @generated
      */
-    EReference getSoccerUniverse_Teams();
+    EReference getEmfSoccerUniverse_Teams();
 
     /**
-     * Returns the meta object for the containment reference list '{@link org.metable.hex.domain.emf.soccer.SoccerUniverse#getPositions <em>Positions</em>}'.
+     * Returns the meta object for the containment reference list '{@link org.metable.hex.domain.emf.soccer.EmfSoccerUniverse#getPositions <em>Positions</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the meta object for the containment reference list '<em>Positions</em>'.
-     * @see org.metable.hex.domain.emf.soccer.SoccerUniverse#getPositions()
-     * @see #getSoccerUniverse()
+     * @see org.metable.hex.domain.emf.soccer.EmfSoccerUniverse#getPositions()
+     * @see #getEmfSoccerUniverse()
      * @generated
      */
-    EReference getSoccerUniverse_Positions();
+    EReference getEmfSoccerUniverse_Positions();
 
     /**
-     * Returns the meta object for enum '{@link org.metable.hex.domain.emf.soccer.FieldPosition <em>Field Position</em>}'.
+     * Returns the meta object for enum '{@link org.metable.hex.domain.emf.soccer.EmfFieldPosition <em>Emf Field Position</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for enum '<em>Field Position</em>'.
-     * @see org.metable.hex.domain.emf.soccer.FieldPosition
+     * @return the meta object for enum '<em>Emf Field Position</em>'.
+     * @see org.metable.hex.domain.emf.soccer.EmfFieldPosition
      * @generated
      */
-    EEnum getFieldPosition();
+    EEnum getEmfFieldPosition();
 
     /**
-     * Returns the meta object for enum '{@link org.metable.hex.domain.emf.soccer.SpecialityPosition <em>Speciality Position</em>}'.
+     * Returns the meta object for enum '{@link org.metable.hex.domain.emf.soccer.EmfSpecialityPosition <em>Emf Speciality Position</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for enum '<em>Speciality Position</em>'.
-     * @see org.metable.hex.domain.emf.soccer.SpecialityPosition
+     * @return the meta object for enum '<em>Emf Speciality Position</em>'.
+     * @see org.metable.hex.domain.emf.soccer.EmfSpecialityPosition
      * @generated
      */
-    EEnum getSpecialityPosition();
+    EEnum getEmfSpecialityPosition();
 
     /**
      * Returns the factory that creates the instances of the model.
@@ -612,14 +612,14 @@ public interface SoccerPackage extends EPackage {
      */
     interface Literals {
         /**
-         * The meta object literal for the '{@link org.metable.hex.domain.emf.soccer.impl.PositionImpl <em>Position</em>}' class.
+         * The meta object literal for the '{@link org.metable.hex.domain.emf.soccer.impl.EmfPositionImpl <em>Emf Position</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.metable.hex.domain.emf.soccer.impl.PositionImpl
-         * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getPosition()
+         * @see org.metable.hex.domain.emf.soccer.impl.EmfPositionImpl
+         * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getEmfPosition()
          * @generated
          */
-        EClass POSITION = eINSTANCE.getPosition();
+        EClass EMF_POSITION = eINSTANCE.getEmfPosition();
 
         /**
          * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -627,7 +627,7 @@ public interface SoccerPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute POSITION__NAME = eINSTANCE.getPosition_Name();
+        EAttribute EMF_POSITION__NAME = eINSTANCE.getEmfPosition_Name();
 
         /**
          * The meta object literal for the '<em><b>Field Position</b></em>' attribute feature.
@@ -635,7 +635,7 @@ public interface SoccerPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute POSITION__FIELD_POSITION = eINSTANCE.getPosition_FieldPosition();
+        EAttribute EMF_POSITION__FIELD_POSITION = eINSTANCE.getEmfPosition_FieldPosition();
 
         /**
          * The meta object literal for the '<em><b>Speciality Position</b></em>' attribute feature.
@@ -643,17 +643,17 @@ public interface SoccerPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute POSITION__SPECIALITY_POSITION = eINSTANCE.getPosition_SpecialityPosition();
+        EAttribute EMF_POSITION__SPECIALITY_POSITION = eINSTANCE.getEmfPosition_SpecialityPosition();
 
         /**
-         * The meta object literal for the '{@link org.metable.hex.domain.emf.soccer.impl.PlayerImpl <em>Player</em>}' class.
+         * The meta object literal for the '{@link org.metable.hex.domain.emf.soccer.impl.EmfPlayerImpl <em>Emf Player</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.metable.hex.domain.emf.soccer.impl.PlayerImpl
-         * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getPlayer()
+         * @see org.metable.hex.domain.emf.soccer.impl.EmfPlayerImpl
+         * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getEmfPlayer()
          * @generated
          */
-        EClass PLAYER = eINSTANCE.getPlayer();
+        EClass EMF_PLAYER = eINSTANCE.getEmfPlayer();
 
         /**
          * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -661,7 +661,7 @@ public interface SoccerPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute PLAYER__ID = eINSTANCE.getPlayer_Id();
+        EAttribute EMF_PLAYER__ID = eINSTANCE.getEmfPlayer_Id();
 
         /**
          * The meta object literal for the '<em><b>First Name</b></em>' attribute feature.
@@ -669,7 +669,7 @@ public interface SoccerPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute PLAYER__FIRST_NAME = eINSTANCE.getPlayer_FirstName();
+        EAttribute EMF_PLAYER__FIRST_NAME = eINSTANCE.getEmfPlayer_FirstName();
 
         /**
          * The meta object literal for the '<em><b>Last Name</b></em>' attribute feature.
@@ -677,17 +677,17 @@ public interface SoccerPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute PLAYER__LAST_NAME = eINSTANCE.getPlayer_LastName();
+        EAttribute EMF_PLAYER__LAST_NAME = eINSTANCE.getEmfPlayer_LastName();
 
         /**
-         * The meta object literal for the '{@link org.metable.hex.domain.emf.soccer.impl.RosterMemberImpl <em>Roster Member</em>}' class.
+         * The meta object literal for the '{@link org.metable.hex.domain.emf.soccer.impl.EmfRosterMemberImpl <em>Emf Roster Member</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.metable.hex.domain.emf.soccer.impl.RosterMemberImpl
-         * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getRosterMember()
+         * @see org.metable.hex.domain.emf.soccer.impl.EmfRosterMemberImpl
+         * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getEmfRosterMember()
          * @generated
          */
-        EClass ROSTER_MEMBER = eINSTANCE.getRosterMember();
+        EClass EMF_ROSTER_MEMBER = eINSTANCE.getEmfRosterMember();
 
         /**
          * The meta object literal for the '<em><b>Player</b></em>' reference feature.
@@ -695,7 +695,7 @@ public interface SoccerPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference ROSTER_MEMBER__PLAYER = eINSTANCE.getRosterMember_Player();
+        EReference EMF_ROSTER_MEMBER__PLAYER = eINSTANCE.getEmfRosterMember_Player();
 
         /**
          * The meta object literal for the '<em><b>Position</b></em>' reference feature.
@@ -703,7 +703,7 @@ public interface SoccerPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference ROSTER_MEMBER__POSITION = eINSTANCE.getRosterMember_Position();
+        EReference EMF_ROSTER_MEMBER__POSITION = eINSTANCE.getEmfRosterMember_Position();
 
         /**
          * The meta object literal for the '<em><b>Number</b></em>' attribute feature.
@@ -711,17 +711,17 @@ public interface SoccerPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute ROSTER_MEMBER__NUMBER = eINSTANCE.getRosterMember_Number();
+        EAttribute EMF_ROSTER_MEMBER__NUMBER = eINSTANCE.getEmfRosterMember_Number();
 
         /**
-         * The meta object literal for the '{@link org.metable.hex.domain.emf.soccer.impl.TeamImpl <em>Team</em>}' class.
+         * The meta object literal for the '{@link org.metable.hex.domain.emf.soccer.impl.EmfTeamImpl <em>Emf Team</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.metable.hex.domain.emf.soccer.impl.TeamImpl
-         * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getTeam()
+         * @see org.metable.hex.domain.emf.soccer.impl.EmfTeamImpl
+         * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getEmfTeam()
          * @generated
          */
-        EClass TEAM = eINSTANCE.getTeam();
+        EClass EMF_TEAM = eINSTANCE.getEmfTeam();
 
         /**
          * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -729,7 +729,7 @@ public interface SoccerPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute TEAM__ID = eINSTANCE.getTeam_Id();
+        EAttribute EMF_TEAM__ID = eINSTANCE.getEmfTeam_Id();
 
         /**
          * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -737,7 +737,7 @@ public interface SoccerPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EAttribute TEAM__NAME = eINSTANCE.getTeam_Name();
+        EAttribute EMF_TEAM__NAME = eINSTANCE.getEmfTeam_Name();
 
         /**
          * The meta object literal for the '<em><b>Roster</b></em>' containment reference list feature.
@@ -745,17 +745,17 @@ public interface SoccerPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference TEAM__ROSTER = eINSTANCE.getTeam_Roster();
+        EReference EMF_TEAM__ROSTER = eINSTANCE.getEmfTeam_Roster();
 
         /**
-         * The meta object literal for the '{@link org.metable.hex.domain.emf.soccer.impl.SoccerUniverseImpl <em>Universe</em>}' class.
+         * The meta object literal for the '{@link org.metable.hex.domain.emf.soccer.impl.EmfSoccerUniverseImpl <em>Emf Soccer Universe</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.metable.hex.domain.emf.soccer.impl.SoccerUniverseImpl
-         * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getSoccerUniverse()
+         * @see org.metable.hex.domain.emf.soccer.impl.EmfSoccerUniverseImpl
+         * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getEmfSoccerUniverse()
          * @generated
          */
-        EClass SOCCER_UNIVERSE = eINSTANCE.getSoccerUniverse();
+        EClass EMF_SOCCER_UNIVERSE = eINSTANCE.getEmfSoccerUniverse();
 
         /**
          * The meta object literal for the '<em><b>Players</b></em>' containment reference list feature.
@@ -763,7 +763,7 @@ public interface SoccerPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference SOCCER_UNIVERSE__PLAYERS = eINSTANCE.getSoccerUniverse_Players();
+        EReference EMF_SOCCER_UNIVERSE__PLAYERS = eINSTANCE.getEmfSoccerUniverse_Players();
 
         /**
          * The meta object literal for the '<em><b>Teams</b></em>' containment reference list feature.
@@ -771,7 +771,7 @@ public interface SoccerPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference SOCCER_UNIVERSE__TEAMS = eINSTANCE.getSoccerUniverse_Teams();
+        EReference EMF_SOCCER_UNIVERSE__TEAMS = eINSTANCE.getEmfSoccerUniverse_Teams();
 
         /**
          * The meta object literal for the '<em><b>Positions</b></em>' containment reference list feature.
@@ -779,27 +779,27 @@ public interface SoccerPackage extends EPackage {
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference SOCCER_UNIVERSE__POSITIONS = eINSTANCE.getSoccerUniverse_Positions();
+        EReference EMF_SOCCER_UNIVERSE__POSITIONS = eINSTANCE.getEmfSoccerUniverse_Positions();
 
         /**
-         * The meta object literal for the '{@link org.metable.hex.domain.emf.soccer.FieldPosition <em>Field Position</em>}' enum.
+         * The meta object literal for the '{@link org.metable.hex.domain.emf.soccer.EmfFieldPosition <em>Emf Field Position</em>}' enum.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.metable.hex.domain.emf.soccer.FieldPosition
-         * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getFieldPosition()
+         * @see org.metable.hex.domain.emf.soccer.EmfFieldPosition
+         * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getEmfFieldPosition()
          * @generated
          */
-        EEnum FIELD_POSITION = eINSTANCE.getFieldPosition();
+        EEnum EMF_FIELD_POSITION = eINSTANCE.getEmfFieldPosition();
 
         /**
-         * The meta object literal for the '{@link org.metable.hex.domain.emf.soccer.SpecialityPosition <em>Speciality Position</em>}' enum.
+         * The meta object literal for the '{@link org.metable.hex.domain.emf.soccer.EmfSpecialityPosition <em>Emf Speciality Position</em>}' enum.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
-         * @see org.metable.hex.domain.emf.soccer.SpecialityPosition
-         * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getSpecialityPosition()
+         * @see org.metable.hex.domain.emf.soccer.EmfSpecialityPosition
+         * @see org.metable.hex.domain.emf.soccer.impl.SoccerPackageImpl#getEmfSpecialityPosition()
          * @generated
          */
-        EEnum SPECIALITY_POSITION = eINSTANCE.getSpecialityPosition();
+        EEnum EMF_SPECIALITY_POSITION = eINSTANCE.getEmfSpecialityPosition();
 
     }
 

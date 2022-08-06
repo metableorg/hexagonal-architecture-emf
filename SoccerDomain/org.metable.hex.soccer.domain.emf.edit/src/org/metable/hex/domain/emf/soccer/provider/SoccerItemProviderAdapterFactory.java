@@ -72,118 +72,118 @@ public class SoccerItemProviderAdapterFactory extends SoccerAdapterFactory imple
     }
 
     /**
-     * This keeps track of the one adapter used for all {@link org.metable.hex.domain.emf.soccer.Position} instances.
+     * This keeps track of the one adapter used for all {@link org.metable.hex.domain.emf.soccer.EmfPosition} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected PositionItemProvider positionItemProvider;
+    protected EmfPositionItemProvider emfPositionItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.metable.hex.domain.emf.soccer.Position}.
+     * This creates an adapter for a {@link org.metable.hex.domain.emf.soccer.EmfPosition}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
-    public Adapter createPositionAdapter() {
-        if (positionItemProvider == null) {
-            positionItemProvider = new PositionItemProvider(this);
+    public Adapter createEmfPositionAdapter() {
+        if (emfPositionItemProvider == null) {
+            emfPositionItemProvider = new EmfPositionItemProvider(this);
         }
 
-        return positionItemProvider;
+        return emfPositionItemProvider;
     }
 
     /**
-     * This keeps track of the one adapter used for all {@link org.metable.hex.domain.emf.soccer.Player} instances.
+     * This keeps track of the one adapter used for all {@link org.metable.hex.domain.emf.soccer.EmfPlayer} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected PlayerItemProvider playerItemProvider;
+    protected EmfPlayerItemProvider emfPlayerItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.metable.hex.domain.emf.soccer.Player}.
+     * This creates an adapter for a {@link org.metable.hex.domain.emf.soccer.EmfPlayer}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
-    public Adapter createPlayerAdapter() {
-        if (playerItemProvider == null) {
-            playerItemProvider = new PlayerItemProvider(this);
+    public Adapter createEmfPlayerAdapter() {
+        if (emfPlayerItemProvider == null) {
+            emfPlayerItemProvider = new EmfPlayerItemProvider(this);
         }
 
-        return playerItemProvider;
+        return emfPlayerItemProvider;
     }
 
     /**
-     * This keeps track of the one adapter used for all {@link org.metable.hex.domain.emf.soccer.RosterMember} instances.
+     * This keeps track of the one adapter used for all {@link org.metable.hex.domain.emf.soccer.EmfRosterMember} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected RosterMemberItemProvider rosterMemberItemProvider;
+    protected EmfRosterMemberItemProvider emfRosterMemberItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.metable.hex.domain.emf.soccer.RosterMember}.
+     * This creates an adapter for a {@link org.metable.hex.domain.emf.soccer.EmfRosterMember}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
-    public Adapter createRosterMemberAdapter() {
-        if (rosterMemberItemProvider == null) {
-            rosterMemberItemProvider = new RosterMemberItemProvider(this);
+    public Adapter createEmfRosterMemberAdapter() {
+        if (emfRosterMemberItemProvider == null) {
+            emfRosterMemberItemProvider = new EmfRosterMemberItemProvider(this);
         }
 
-        return rosterMemberItemProvider;
+        return emfRosterMemberItemProvider;
     }
 
     /**
-     * This keeps track of the one adapter used for all {@link org.metable.hex.domain.emf.soccer.Team} instances.
+     * This keeps track of the one adapter used for all {@link org.metable.hex.domain.emf.soccer.EmfTeam} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected TeamItemProvider teamItemProvider;
+    protected EmfTeamItemProvider emfTeamItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.metable.hex.domain.emf.soccer.Team}.
+     * This creates an adapter for a {@link org.metable.hex.domain.emf.soccer.EmfTeam}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
-    public Adapter createTeamAdapter() {
-        if (teamItemProvider == null) {
-            teamItemProvider = new TeamItemProvider(this);
+    public Adapter createEmfTeamAdapter() {
+        if (emfTeamItemProvider == null) {
+            emfTeamItemProvider = new EmfTeamItemProvider(this);
         }
 
-        return teamItemProvider;
+        return emfTeamItemProvider;
     }
 
     /**
-     * This keeps track of the one adapter used for all {@link org.metable.hex.domain.emf.soccer.SoccerUniverse} instances.
+     * This keeps track of the one adapter used for all {@link org.metable.hex.domain.emf.soccer.EmfSoccerUniverse} instances.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected SoccerUniverseItemProvider soccerUniverseItemProvider;
+    protected EmfSoccerUniverseItemProvider emfSoccerUniverseItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.metable.hex.domain.emf.soccer.SoccerUniverse}.
+     * This creates an adapter for a {@link org.metable.hex.domain.emf.soccer.EmfSoccerUniverse}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
-    public Adapter createSoccerUniverseAdapter() {
-        if (soccerUniverseItemProvider == null) {
-            soccerUniverseItemProvider = new SoccerUniverseItemProvider(this);
+    public Adapter createEmfSoccerUniverseAdapter() {
+        if (emfSoccerUniverseItemProvider == null) {
+            emfSoccerUniverseItemProvider = new EmfSoccerUniverseItemProvider(this);
         }
 
-        return soccerUniverseItemProvider;
+        return emfSoccerUniverseItemProvider;
     }
 
     /**
@@ -291,11 +291,11 @@ public class SoccerItemProviderAdapterFactory extends SoccerAdapterFactory imple
      */
     @Override
     public void dispose() {
-        if (positionItemProvider != null) positionItemProvider.dispose();
-        if (playerItemProvider != null) playerItemProvider.dispose();
-        if (rosterMemberItemProvider != null) rosterMemberItemProvider.dispose();
-        if (teamItemProvider != null) teamItemProvider.dispose();
-        if (soccerUniverseItemProvider != null) soccerUniverseItemProvider.dispose();
+        if (emfPositionItemProvider != null) emfPositionItemProvider.dispose();
+        if (emfPlayerItemProvider != null) emfPlayerItemProvider.dispose();
+        if (emfRosterMemberItemProvider != null) emfRosterMemberItemProvider.dispose();
+        if (emfTeamItemProvider != null) emfTeamItemProvider.dispose();
+        if (emfSoccerUniverseItemProvider != null) emfSoccerUniverseItemProvider.dispose();
     }
 
 }

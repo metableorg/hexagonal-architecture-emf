@@ -22,16 +22,16 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.metable.hex.domain.emf.soccer.Position;
+import org.metable.hex.domain.emf.soccer.EmfPosition;
 import org.metable.hex.domain.emf.soccer.SoccerPackage;
 
 /**
- * This is the item provider adapter for a {@link org.metable.hex.domain.emf.soccer.Position} object.
+ * This is the item provider adapter for a {@link org.metable.hex.domain.emf.soccer.EmfPosition} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PositionItemProvider 
+public class EmfPositionItemProvider 
     extends ItemProviderAdapter
     implements
         IEditingDomainItemProvider,
@@ -45,7 +45,7 @@ public class PositionItemProvider
      * <!-- end-user-doc -->
      * @generated
      */
-    public PositionItemProvider(AdapterFactory adapterFactory) {
+    public EmfPositionItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -78,9 +78,9 @@ public class PositionItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_Position_name_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Position_name_feature", "_UI_Position_type"),
-                 SoccerPackage.Literals.POSITION__NAME,
+                 getString("_UI_EmfPosition_name_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_EmfPosition_name_feature", "_UI_EmfPosition_type"),
+                 SoccerPackage.Literals.EMF_POSITION__NAME,
                  true,
                  false,
                  false,
@@ -100,9 +100,9 @@ public class PositionItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_Position_fieldPosition_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Position_fieldPosition_feature", "_UI_Position_type"),
-                 SoccerPackage.Literals.POSITION__FIELD_POSITION,
+                 getString("_UI_EmfPosition_fieldPosition_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_EmfPosition_fieldPosition_feature", "_UI_EmfPosition_type"),
+                 SoccerPackage.Literals.EMF_POSITION__FIELD_POSITION,
                  true,
                  false,
                  false,
@@ -122,9 +122,9 @@ public class PositionItemProvider
             (createItemPropertyDescriptor
                 (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
                  getResourceLocator(),
-                 getString("_UI_Position_specialityPosition_feature"),
-                 getString("_UI_PropertyDescriptor_description", "_UI_Position_specialityPosition_feature", "_UI_Position_type"),
-                 SoccerPackage.Literals.POSITION__SPECIALITY_POSITION,
+                 getString("_UI_EmfPosition_specialityPosition_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_EmfPosition_specialityPosition_feature", "_UI_EmfPosition_type"),
+                 SoccerPackage.Literals.EMF_POSITION__SPECIALITY_POSITION,
                  true,
                  false,
                  false,
@@ -134,14 +134,14 @@ public class PositionItemProvider
     }
 
     /**
-     * This returns Position.gif.
+     * This returns EmfPosition.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/Position"));
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/EmfPosition"));
     }
 
     /**
@@ -152,10 +152,10 @@ public class PositionItemProvider
      */
     @Override
     public String getText(Object object) {
-        String label = ((Position)object).getName();
+        String label = ((EmfPosition)object).getName();
         return label == null || label.length() == 0 ?
-            getString("_UI_Position_type") :
-            getString("_UI_Position_type") + " " + label;
+            getString("_UI_EmfPosition_type") :
+            getString("_UI_EmfPosition_type") + " " + label;
     }
 
 
@@ -170,10 +170,10 @@ public class PositionItemProvider
     public void notifyChanged(Notification notification) {
         updateChildren(notification);
 
-        switch (notification.getFeatureID(Position.class)) {
-            case SoccerPackage.POSITION__NAME:
-            case SoccerPackage.POSITION__FIELD_POSITION:
-            case SoccerPackage.POSITION__SPECIALITY_POSITION:
+        switch (notification.getFeatureID(EmfPosition.class)) {
+            case SoccerPackage.EMF_POSITION__NAME:
+            case SoccerPackage.EMF_POSITION__FIELD_POSITION:
+            case SoccerPackage.EMF_POSITION__SPECIALITY_POSITION:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
         }

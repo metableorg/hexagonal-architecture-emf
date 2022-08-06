@@ -8,14 +8,14 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.metable.hex.domain.emf.soccer.FieldPosition;
-import org.metable.hex.domain.emf.soccer.Player;
-import org.metable.hex.domain.emf.soccer.Position;
-import org.metable.hex.domain.emf.soccer.RosterMember;
+import org.metable.hex.domain.emf.soccer.EmfFieldPosition;
+import org.metable.hex.domain.emf.soccer.EmfPlayer;
+import org.metable.hex.domain.emf.soccer.EmfPosition;
+import org.metable.hex.domain.emf.soccer.EmfRosterMember;
+import org.metable.hex.domain.emf.soccer.EmfSoccerUniverse;
+import org.metable.hex.domain.emf.soccer.EmfSpecialityPosition;
+import org.metable.hex.domain.emf.soccer.EmfTeam;
 import org.metable.hex.domain.emf.soccer.SoccerFactory;
-import org.metable.hex.domain.emf.soccer.SoccerUniverse;
-import org.metable.hex.domain.emf.soccer.SpecialityPosition;
-import org.metable.hex.domain.emf.soccer.Team;
 
 public class WriteSoccerUniverse {
 
@@ -26,17 +26,17 @@ public class WriteSoccerUniverse {
 
         Resource resource = resourceSet.createResource(uri);
 
-        SoccerUniverse soccer = SoccerFactory.eINSTANCE.createSoccerUniverse();
+        EmfSoccerUniverse soccer = SoccerFactory.eINSTANCE.createEmfSoccerUniverse();
 
         // Players
-        Player mendy = SoccerFactory.eINSTANCE.createPlayer();
+        EmfPlayer mendy = SoccerFactory.eINSTANCE.createEmfPlayer();
         mendy.setId(UUID.randomUUID().toString());
         mendy.setFirstName("Edouard");
         mendy.setLastName("Mendy");
 
         soccer.getPlayers().add(mendy);
 
-        Player becker = SoccerFactory.eINSTANCE.createPlayer();
+        EmfPlayer becker = SoccerFactory.eINSTANCE.createEmfPlayer();
         becker.setId(UUID.randomUUID().toString());
         becker.setFirstName("Alisson");
         becker.setLastName("Becker");
@@ -44,20 +44,20 @@ public class WriteSoccerUniverse {
         soccer.getPlayers().add(becker);
 
         // Positions
-        Position keeper = SoccerFactory.eINSTANCE.createPosition();
+        EmfPosition keeper = SoccerFactory.eINSTANCE.createEmfPosition();
         keeper.setName("Goalkeeper");
-        keeper.setFieldPosition(FieldPosition.BACK);
-        keeper.setSpecialityPosition(SpecialityPosition.KEEPER);
+        keeper.setFieldPosition(EmfFieldPosition.BACK);
+        keeper.setSpecialityPosition(EmfSpecialityPosition.KEEPER);
 
         soccer.getPositions().add(keeper);
 
         // Teams
-        Team team = SoccerFactory.eINSTANCE.createTeam();
+        EmfTeam team = SoccerFactory.eINSTANCE.createEmfTeam();
         team.setId(UUID.randomUUID().toString());
         team.setName("Chelsea");
 
         // Roster
-        RosterMember rosterMember = SoccerFactory.eINSTANCE.createRosterMember();
+        EmfRosterMember rosterMember = SoccerFactory.eINSTANCE.createEmfRosterMember();
         rosterMember.setPlayer(mendy);
         rosterMember.setPosition(keeper);
         rosterMember.setNumber(1);
@@ -66,11 +66,11 @@ public class WriteSoccerUniverse {
 
         soccer.getTeams().add(team);
 
-        team = SoccerFactory.eINSTANCE.createTeam();
+        team = SoccerFactory.eINSTANCE.createEmfTeam();
         team.setId(UUID.randomUUID().toString());
         team.setName("Liverpool");
 
-        rosterMember = SoccerFactory.eINSTANCE.createRosterMember();
+        rosterMember = SoccerFactory.eINSTANCE.createEmfRosterMember();
         rosterMember.setPlayer(becker);
         rosterMember.setPosition(keeper);
         rosterMember.setNumber(1);

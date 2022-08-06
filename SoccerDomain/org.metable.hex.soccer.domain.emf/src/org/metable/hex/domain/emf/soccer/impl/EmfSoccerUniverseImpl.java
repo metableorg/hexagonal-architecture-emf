@@ -16,28 +16,28 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.metable.hex.domain.emf.soccer.Player;
-import org.metable.hex.domain.emf.soccer.Position;
+import org.metable.hex.domain.emf.soccer.EmfPlayer;
+import org.metable.hex.domain.emf.soccer.EmfPosition;
+import org.metable.hex.domain.emf.soccer.EmfSoccerUniverse;
+import org.metable.hex.domain.emf.soccer.EmfTeam;
 import org.metable.hex.domain.emf.soccer.SoccerPackage;
-import org.metable.hex.domain.emf.soccer.SoccerUniverse;
-import org.metable.hex.domain.emf.soccer.Team;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Universe</b></em>'.
+ * An implementation of the model object '<em><b>Emf Soccer Universe</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.metable.hex.domain.emf.soccer.impl.SoccerUniverseImpl#getPlayers <em>Players</em>}</li>
- *   <li>{@link org.metable.hex.domain.emf.soccer.impl.SoccerUniverseImpl#getTeams <em>Teams</em>}</li>
- *   <li>{@link org.metable.hex.domain.emf.soccer.impl.SoccerUniverseImpl#getPositions <em>Positions</em>}</li>
+ *   <li>{@link org.metable.hex.domain.emf.soccer.impl.EmfSoccerUniverseImpl#getPlayers <em>Players</em>}</li>
+ *   <li>{@link org.metable.hex.domain.emf.soccer.impl.EmfSoccerUniverseImpl#getTeams <em>Teams</em>}</li>
+ *   <li>{@link org.metable.hex.domain.emf.soccer.impl.EmfSoccerUniverseImpl#getPositions <em>Positions</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SoccerUniverseImpl extends MinimalEObjectImpl.Container implements SoccerUniverse {
+public class EmfSoccerUniverseImpl extends MinimalEObjectImpl.Container implements EmfSoccerUniverse {
     /**
      * The cached value of the '{@link #getPlayers() <em>Players</em>}' containment reference list.
      * <!-- begin-user-doc -->
@@ -46,7 +46,7 @@ public class SoccerUniverseImpl extends MinimalEObjectImpl.Container implements 
      * @generated
      * @ordered
      */
-    protected EList<Player> players;
+    protected EList<EmfPlayer> players;
 
     /**
      * The cached value of the '{@link #getTeams() <em>Teams</em>}' containment reference list.
@@ -56,7 +56,7 @@ public class SoccerUniverseImpl extends MinimalEObjectImpl.Container implements 
      * @generated
      * @ordered
      */
-    protected EList<Team> teams;
+    protected EList<EmfTeam> teams;
 
     /**
      * The cached value of the '{@link #getPositions() <em>Positions</em>}' containment reference list.
@@ -66,14 +66,14 @@ public class SoccerUniverseImpl extends MinimalEObjectImpl.Container implements 
      * @generated
      * @ordered
      */
-    protected EList<Position> positions;
+    protected EList<EmfPosition> positions;
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected SoccerUniverseImpl() {
+    protected EmfSoccerUniverseImpl() {
         super();
     }
 
@@ -84,7 +84,7 @@ public class SoccerUniverseImpl extends MinimalEObjectImpl.Container implements 
      */
     @Override
     protected EClass eStaticClass() {
-        return SoccerPackage.Literals.SOCCER_UNIVERSE;
+        return SoccerPackage.Literals.EMF_SOCCER_UNIVERSE;
     }
 
     /**
@@ -93,9 +93,9 @@ public class SoccerUniverseImpl extends MinimalEObjectImpl.Container implements 
      * @generated
      */
     @Override
-    public EList<Player> getPlayers() {
+    public EList<EmfPlayer> getPlayers() {
         if (players == null) {
-            players = new EObjectContainmentEList<Player>(Player.class, this, SoccerPackage.SOCCER_UNIVERSE__PLAYERS);
+            players = new EObjectContainmentEList<EmfPlayer>(EmfPlayer.class, this, SoccerPackage.EMF_SOCCER_UNIVERSE__PLAYERS);
         }
         return players;
     }
@@ -106,9 +106,9 @@ public class SoccerUniverseImpl extends MinimalEObjectImpl.Container implements 
      * @generated
      */
     @Override
-    public EList<Team> getTeams() {
+    public EList<EmfTeam> getTeams() {
         if (teams == null) {
-            teams = new EObjectContainmentEList<Team>(Team.class, this, SoccerPackage.SOCCER_UNIVERSE__TEAMS);
+            teams = new EObjectContainmentEList<EmfTeam>(EmfTeam.class, this, SoccerPackage.EMF_SOCCER_UNIVERSE__TEAMS);
         }
         return teams;
     }
@@ -119,9 +119,9 @@ public class SoccerUniverseImpl extends MinimalEObjectImpl.Container implements 
      * @generated
      */
     @Override
-    public EList<Position> getPositions() {
+    public EList<EmfPosition> getPositions() {
         if (positions == null) {
-            positions = new EObjectContainmentEList<Position>(Position.class, this, SoccerPackage.SOCCER_UNIVERSE__POSITIONS);
+            positions = new EObjectContainmentEList<EmfPosition>(EmfPosition.class, this, SoccerPackage.EMF_SOCCER_UNIVERSE__POSITIONS);
         }
         return positions;
     }
@@ -134,11 +134,11 @@ public class SoccerUniverseImpl extends MinimalEObjectImpl.Container implements 
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
-            case SoccerPackage.SOCCER_UNIVERSE__PLAYERS:
+            case SoccerPackage.EMF_SOCCER_UNIVERSE__PLAYERS:
                 return ((InternalEList<?>)getPlayers()).basicRemove(otherEnd, msgs);
-            case SoccerPackage.SOCCER_UNIVERSE__TEAMS:
+            case SoccerPackage.EMF_SOCCER_UNIVERSE__TEAMS:
                 return ((InternalEList<?>)getTeams()).basicRemove(otherEnd, msgs);
-            case SoccerPackage.SOCCER_UNIVERSE__POSITIONS:
+            case SoccerPackage.EMF_SOCCER_UNIVERSE__POSITIONS:
                 return ((InternalEList<?>)getPositions()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -152,11 +152,11 @@ public class SoccerUniverseImpl extends MinimalEObjectImpl.Container implements 
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-            case SoccerPackage.SOCCER_UNIVERSE__PLAYERS:
+            case SoccerPackage.EMF_SOCCER_UNIVERSE__PLAYERS:
                 return getPlayers();
-            case SoccerPackage.SOCCER_UNIVERSE__TEAMS:
+            case SoccerPackage.EMF_SOCCER_UNIVERSE__TEAMS:
                 return getTeams();
-            case SoccerPackage.SOCCER_UNIVERSE__POSITIONS:
+            case SoccerPackage.EMF_SOCCER_UNIVERSE__POSITIONS:
                 return getPositions();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -171,17 +171,17 @@ public class SoccerUniverseImpl extends MinimalEObjectImpl.Container implements 
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-            case SoccerPackage.SOCCER_UNIVERSE__PLAYERS:
+            case SoccerPackage.EMF_SOCCER_UNIVERSE__PLAYERS:
                 getPlayers().clear();
-                getPlayers().addAll((Collection<? extends Player>)newValue);
+                getPlayers().addAll((Collection<? extends EmfPlayer>)newValue);
                 return;
-            case SoccerPackage.SOCCER_UNIVERSE__TEAMS:
+            case SoccerPackage.EMF_SOCCER_UNIVERSE__TEAMS:
                 getTeams().clear();
-                getTeams().addAll((Collection<? extends Team>)newValue);
+                getTeams().addAll((Collection<? extends EmfTeam>)newValue);
                 return;
-            case SoccerPackage.SOCCER_UNIVERSE__POSITIONS:
+            case SoccerPackage.EMF_SOCCER_UNIVERSE__POSITIONS:
                 getPositions().clear();
-                getPositions().addAll((Collection<? extends Position>)newValue);
+                getPositions().addAll((Collection<? extends EmfPosition>)newValue);
                 return;
         }
         super.eSet(featureID, newValue);
@@ -195,13 +195,13 @@ public class SoccerUniverseImpl extends MinimalEObjectImpl.Container implements 
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-            case SoccerPackage.SOCCER_UNIVERSE__PLAYERS:
+            case SoccerPackage.EMF_SOCCER_UNIVERSE__PLAYERS:
                 getPlayers().clear();
                 return;
-            case SoccerPackage.SOCCER_UNIVERSE__TEAMS:
+            case SoccerPackage.EMF_SOCCER_UNIVERSE__TEAMS:
                 getTeams().clear();
                 return;
-            case SoccerPackage.SOCCER_UNIVERSE__POSITIONS:
+            case SoccerPackage.EMF_SOCCER_UNIVERSE__POSITIONS:
                 getPositions().clear();
                 return;
         }
@@ -216,14 +216,14 @@ public class SoccerUniverseImpl extends MinimalEObjectImpl.Container implements 
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-            case SoccerPackage.SOCCER_UNIVERSE__PLAYERS:
+            case SoccerPackage.EMF_SOCCER_UNIVERSE__PLAYERS:
                 return players != null && !players.isEmpty();
-            case SoccerPackage.SOCCER_UNIVERSE__TEAMS:
+            case SoccerPackage.EMF_SOCCER_UNIVERSE__TEAMS:
                 return teams != null && !teams.isEmpty();
-            case SoccerPackage.SOCCER_UNIVERSE__POSITIONS:
+            case SoccerPackage.EMF_SOCCER_UNIVERSE__POSITIONS:
                 return positions != null && !positions.isEmpty();
         }
         return super.eIsSet(featureID);
     }
 
-} //SoccerUniverseImpl
+} //EmfSoccerUniverseImpl
