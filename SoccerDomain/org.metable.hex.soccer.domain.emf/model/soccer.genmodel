@@ -44,8 +44,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//Team/roster"/>
     </genClasses>
     <genClasses ecoreClass="soccer.ecore#//SoccerUniverse">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//SoccerUniverse/players"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//SoccerUniverse/teams"/>
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//SoccerUniverse/players"/>
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference soccer.ecore#//SoccerUniverse/teams"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soccer.ecore#//SoccerUniverse/positions"/>
     </genClasses>
   </genPackages>

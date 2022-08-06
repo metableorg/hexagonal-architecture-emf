@@ -62,9 +62,55 @@ public class SoccerUniverseItemProvider
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
+            addPlayersPropertyDescriptor(object);
+            addTeamsPropertyDescriptor(object);
             addPositionsPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
+    }
+
+    /**
+     * This adds a property descriptor for the Players feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addPlayersPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_SoccerUniverse_players_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_SoccerUniverse_players_feature", "_UI_SoccerUniverse_type"),
+                 SoccerPackage.Literals.SOCCER_UNIVERSE__PLAYERS,
+                 true,
+                 false,
+                 false,
+                 null,
+                 null,
+                 null));
+    }
+
+    /**
+     * This adds a property descriptor for the Teams feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addTeamsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_SoccerUniverse_teams_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_SoccerUniverse_teams_feature", "_UI_SoccerUniverse_type"),
+                 SoccerPackage.Literals.SOCCER_UNIVERSE__TEAMS,
+                 true,
+                 false,
+                 false,
+                 null,
+                 null,
+                 null));
     }
 
     /**

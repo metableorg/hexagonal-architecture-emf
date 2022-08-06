@@ -10,11 +10,6 @@ import org.metable.hex.soccer.domain.valueobject.RosterMember;
 
 public class Team {
 
-    @Override
-    public String toString() {
-        return "Team [id=" + id + ", name=" + name + "]";
-    }
-
     private static class Roster {
         private final Set<RosterMember> players;
 
@@ -24,10 +19,6 @@ public class Team {
 
         public void addMember(final RosterMember member) {
             players.add(member);
-        }
-
-        public void removeMember(final RosterMember member) {
-            players.remove(member);
         }
 
         public Optional<RosterMember> findMember(final Player player) {
@@ -42,12 +33,16 @@ public class Team {
 
             return Optional.empty();
         }
+
+        public void removeMember(final RosterMember member) {
+            players.remove(member);
+        }
     }
 
     private final String id;
+
     private final String name;
     private final Roster roster;
-
     public Team(final String id, final String name) {
         this.id = id;
         this.name = name;
@@ -58,12 +53,21 @@ public class Team {
         roster.addMember(new RosterMember(player, position));
     }
 
-    public void removePlayer(final Player player) {
-        Optional<RosterMember> member = roster.findMember(player);
-        member.ifPresent(m -> roster.removeMember(m));
+    public String getId() {
+        return id;
     }
 
     public String getName() {
         return name;
+    }
+
+    public void removePlayer(final Player player) {
+        Optional<RosterMember> member = roster.findMember(player);
+        member.ifPresent(m -> roster.removeMember(m));
+    }
+    
+    @Override
+    public String toString() {
+        return "Team [id=" + id + ", name=" + name + "]";
     }
 }
