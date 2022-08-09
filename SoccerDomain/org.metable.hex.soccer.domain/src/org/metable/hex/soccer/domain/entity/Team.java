@@ -2,6 +2,7 @@ package org.metable.hex.soccer.domain.entity;
 
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 
@@ -40,19 +41,36 @@ public class Team {
     }
 
     private final String name;
+
     private final Roster roster;
 
     public Team(final String name) {
         this.name = name;
         this.roster = new Roster();
     }
-
     public void addPlayer(final Player player, final Position position) {
         roster.addMember(new RosterMember(player, position));
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Team other = (Team) obj;
+        return Objects.equals(name, other.name);
+    }
+
     public String getName() {
         return name;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 
     public void removePlayer(final Player player) {

@@ -1,7 +1,9 @@
 package org.metable.hex.soccer.framework.adapters.file;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
 
 import org.eclipse.emf.common.command.BasicCommandStack;
@@ -12,6 +14,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.emf.edit.command.CreateChildCommand;
+import org.eclipse.emf.edit.command.DeleteCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
@@ -34,6 +37,24 @@ public class SoccerUniverseFileAdapter implements SoccerUniverseOutputPort {
             instance = new SoccerUniverseFileAdapter();
         }
         return instance;
+    }
+
+    private static boolean containsTeam(EList<EmfTeam> teams, String name) {
+        for (EmfTeam team : teams) {
+            if (team.getName().contentEquals(name)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean containsTeam(Set<Team> teams, String name) {
+        for (Team team : teams) {
+            if (team.getName().contentEquals(name)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private static AdapterFactoryEditingDomain newEditingDomain() {
@@ -62,10 +83,11 @@ public class SoccerUniverseFileAdapter implements SoccerUniverseOutputPort {
 
         return soccerUniverse;
     }
-
     private Resource resource;
     private EmfSoccerUniverse soccerUniverseEmf;
+
     private SoccerUniverse soccerUniverse;
+
     private AdapterFactoryEditingDomain editingDomain;
 
     private SoccerUniverseFileAdapter() throws IOException {
@@ -76,29 +98,32 @@ public class SoccerUniverseFileAdapter implements SoccerUniverseOutputPort {
     }
 
     @Override
+    public boolean canUndo() {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public SoccerUniverse getSoccerUniverse() {
         return soccerUniverse;
     }
 
     @Override
     public void persist() throws IOException {
-
-        Set<Team> teams = soccerUniverse.getTeams();
-
-        teams.forEach(team -> {
-            if (fetchTeam(team.getName()) == null) {
-                EmfTeam emfTeam = SoccerFactory.eINSTANCE.createEmfTeam();
-
-                emfTeam.setName(team.getName());
-
-                Command command = new CreateChildCommand(editingDomain, soccerUniverseEmf,
-                        SoccerPackage.Literals.EMF_SOCCER_UNIVERSE__TEAMS, emfTeam, null);
-
-                editingDomain.getCommandStack().execute(command);
-            }
-        });
+        addTeams();
+        removeTeams();
 
         resource.save(null);
+    }
+
+    @Override
+    public void persist(Team team) throws IOException {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void redo() {
+        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
@@ -114,24 +139,22 @@ public class SoccerUniverseFileAdapter implements SoccerUniverseOutputPort {
         soccerUniverse = toDomain(soccerUniverseEmf);
     }
 
-    private EmfTeam fetchTeam(String name) {
-        EList<EmfTeam> teams = soccerUniverseEmf.getTeams();
-        for (EmfTeam team : teams) {
-            if (team.getName().contentEquals(name)) {
-                return team;
-            }
-        }
-        return null;
-    }
+    private void addTeams() {
+        Set<Team> teams = soccerUniverse.getTeams();
 
-//    private IItemPropertyDescriptor getPropertyDescriptor(EObject owner, EStructuralFeature attribute) {
-//        IItemPropertySource propertySource = (IItemPropertySource) editingDomain.getAdapterFactory().adapt(owner,
-//                IItemPropertySource.class);
-//
-//        IItemPropertyDescriptor property = propertySource.getPropertyDescriptor(owner, attribute);
-//
-//        return property;
-//    }
+        teams.forEach(team -> {
+            if (!containsTeam(soccerUniverseEmf.getTeams(), team.getName())) {
+                EmfTeam emfTeam = SoccerFactory.eINSTANCE.createEmfTeam();
+
+                emfTeam.setName(team.getName());
+
+                Command command = new CreateChildCommand(editingDomain, soccerUniverseEmf,
+                        SoccerPackage.Literals.EMF_SOCCER_UNIVERSE__TEAMS, emfTeam, null);
+
+                editingDomain.getCommandStack().execute(command);
+            }
+        });
+    }
 
     private SoccerUniverse readSoccerUniverse() throws IOException {
         editingDomain = newEditingDomain();
@@ -146,5 +169,22 @@ public class SoccerUniverseFileAdapter implements SoccerUniverseOutputPort {
         soccerUniverseEmf = (EmfSoccerUniverse) resource.getContents().get(0);
 
         return toDomain(soccerUniverseEmf);
+    }
+
+    private void removeTeams() {
+        List<EmfTeam> teamsToDelete = new ArrayList<>();
+
+        EList<EmfTeam> teams = soccerUniverseEmf.getTeams();
+
+        teams.forEach(team -> {
+            if (!containsTeam(soccerUniverse.getTeams(), team.getName())) {
+                teamsToDelete.add(team);
+            }
+        });
+
+        teamsToDelete.forEach(team -> {
+            Command command = DeleteCommand.create(editingDomain, team);
+            editingDomain.getCommandStack().execute(command);
+        });
     }
 }

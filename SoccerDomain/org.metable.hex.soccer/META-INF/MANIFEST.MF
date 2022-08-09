@@ -6,7 +6,8 @@ Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: org.metable.hex.soccer
 Import-Package: org.metable.hex.domain.emf.soccer,
  org.metable.hex.domain.emf.soccer.provider,
- org.metable.hex.soccer.domain.entity
+ org.metable.hex.soccer.domain.entity,
+ org.metable.hex.soccer.domain.valueobject
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi,
  org.eclipse.emf.edit

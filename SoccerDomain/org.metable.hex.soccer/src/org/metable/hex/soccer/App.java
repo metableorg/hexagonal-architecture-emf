@@ -20,10 +20,14 @@ public class App {
         SoccerUniverse soccerUniverse = SoccerUniverseFileAdapter.getInstance().getSoccerUniverse();
         System.out.println("Soccer universe: " + soccerUniverse);
         
+        input.removeTeam("Man City");
+        soccerUniverse = SoccerUniverseFileAdapter.getInstance().getSoccerUniverse();
+        System.out.println("Soccer universe: " + soccerUniverse);
+        
+        input.undo();
 //        input.undo();
 //        input.undo();
-//        input.undo();
-
+        
         soccerUniverse = SoccerUniverseFileAdapter.getInstance().getSoccerUniverse();
         System.out.println("Soccer universe: " + soccerUniverse);
     }
