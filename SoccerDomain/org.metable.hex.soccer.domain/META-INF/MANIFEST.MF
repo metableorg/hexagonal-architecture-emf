@@ -7,3 +7,4 @@ Automatic-Module-Name: org.metable.hex.soccer.domain
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.metable.hex.soccer.domain.entity,
  org.metable.hex.soccer.domain.valueobject
+Require-Bundle: org.junit
