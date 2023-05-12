@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>60</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=yellow
+style=wordwrap
+View favorite soccer players
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>140</y>
+      <w>310</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>halign=left
+style=wordwrap
+bg=blue
+Show player's first name, last name, and team</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>220</y>
+      <w>280</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=green
+style=wordwrap
+*List is not empty*
+
+Favorite players are:
+*First Name   Last Name   Team*
+Mason           Mount           Chelsea
+Thiago           Silva           Chelsea
+* View favorites
+=&gt; Show
+*First Name   Last Name   Team*
+Mason           Mount           Chelsea
+Thiago           Silva           Chelsea
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>370</y>
+      <w>420</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=green
+style=wordwrap
+*No favorites message is cleared when first favorite is added*
+
+Message indicating there are no favorite players.
+Player "Mason Mount Chelsea" is added.
+* View favorites
+=&gt; Show
+*First Name   Last Name   Team*
+Mason           Mount           Chelsea
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>230</y>
+      <w>340</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=green
+style=wordwrap
+*List is empty*
+
+Favorite player list is empty.
+* View favorites
+=&gt; Message indicating there are no favorite players.
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>540</y>
+      <w>390</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=green
+style=wordwrap
+*No favorites message is displayed when last favorite is deleted*
+
+Favorite player list contains:
+*First Name   Last Name   Team*
+Mason           Mount           Chelsea
+Player "Mason Mount Chelsea" is deleted.
+* View favorites
+=&gt; Message indicating there are no favorite players.
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>590</x>
+      <y>140</y>
+      <w>310</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>halign=left
+style=wordwrap
+bg=blue
+Show message if there are no favorites</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>40</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=yellow
+Add new player to favorites list
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>150</y>
+      <w>240</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=blue
+style=wordwrap
+Player's first name, last name, and team name must be specified.
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>150</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=blue
+Don't allow duplicates</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>980</x>
+      <y>150</y>
+      <w>320</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=blue
+Give confirmation that a player has been added.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>980</x>
+      <y>240</y>
+      <w>440</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=green
+style=wordwrap
+*Favorite player succesfully added*
+
+List contains
+*First Name   Last Name   Team*
+Mason           Mount           Chelsea
+
+first name: "Thiago"
+last name: "Silva"
+team: "Chelsea"
+* Add player
+=&gt; Message indicating that player "Thiago Silva" for "Chelsea" has been added.
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>380</y>
+      <w>420</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=green
+*Team name is missing*
+
+first name: "Mason"
+last name: "Mount"
+* team: ""
+=&gt; Add player is not available
+=&gt; Message indicating that the team name is missing.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>230</y>
+      <w>420</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=green
+*Fulle name and team are specified*
+
+first name: "Mason"
+last name: "Mount"
+team: "Chelsea"
+* Add player
+=&gt; Player "Mason Mount" for "Chelsea" added to the list.
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>540</y>
+      <w>420</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=green
+style=wordwrap
+*First name is missing*
+
+last name: "Mount"
+team: "Chelsea"
+* first name: ""
+=&gt; Add player is not available
+=&gt; Message indicating that the player's first is missing.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>230</y>
+      <w>440</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=green
+style=wordwrap
+*Duplicate favorite player*
+
+List contains
+*First Name   Last Name   Team*
+Mason           Mount           Chelsea
+
+first name: "Mason"
+last name: "Mount"
+team: "Chelsea"
+* Add player
+=&gt; Player "Mason Mount" for "Chelsea" is _not_ added to the list.
+=&gt; Message indicating that player "Mason Mount" for "Chelsea" is already in the list.
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

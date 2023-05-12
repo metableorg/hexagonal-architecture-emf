@@ -4,17 +4,31 @@ import java.util.Objects;
 
 public class Player {
     private final String id;
-
-    @SuppressWarnings("unused")
     private final String firstName;
-
-    @SuppressWarnings("unused")
     private final String lastName;
+    private final String teamName;
 
-    public Player(final String id, final String firstName, final String lastName) {
+    public Player(final String id, final String firstName, final String lastName, final String teamName) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.teamName = teamName;
+    }
+
+    public Player(final String id, final String firstName, final String lastName) {
+        this(id, firstName, lastName, "");
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getTeamName() {
+        return teamName;
     }
 
     @Override
@@ -39,5 +53,9 @@ public class Player {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    public boolean hasId(String identity) {
+        return Objects.equals(id, identity);
     }
 }
