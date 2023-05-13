@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Test
+Bundle-SymbolicName: org.metable.hex.soccer.test
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.metable.hex.soccer.test
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: org.junit;bundle-version="4.13.2"
+Import-Package: org.metable.hex.soccer.application.ports.input,
+ org.metable.hex.soccer.application.ports.output,
+ org.metable.hex.soccer.domain.entity
