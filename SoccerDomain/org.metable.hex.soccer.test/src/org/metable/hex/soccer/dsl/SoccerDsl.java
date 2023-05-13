@@ -10,6 +10,23 @@ public class SoccerDsl {
         this.driver = driver;
     }
 
+    public void addFavoritePlayer() {
+        driver.addFavoritePlayer();
+    }
+
+    public boolean addFavoritePlayerIsAvailable() {
+        return driver.addFavoritePlayerIsAvailable();
+    }
+
+    public void deleteFavoritePlayer(String... args) {
+        final Parameters params = new Parameters(args);
+        final String firstName = params.Optional("first name", "Mason");
+        final String lastName = params.Optional("last name", "Mount");
+        final String teamName = params.Optional("team name", "Chelsea");
+
+        driver.deleteFavoritePlayer(firstName, lastName, teamName);
+    }
+
     public void enterPlayerInfo(String... args) {
         final Parameters params = new Parameters(args);
         final String firstName = params.Optional("first name", "Mason");
@@ -17,10 +34,6 @@ public class SoccerDsl {
         final String teamName = params.Optional("team name", "Chelsea");
 
         driver.enterPlayerInfo(firstName, lastName, teamName);
-    }
-
-    public void viewFavoritePlayers() {
-        driver.viewFavorites();
     }
 
     public void favoritePlayer(String... args) {
@@ -32,26 +45,6 @@ public class SoccerDsl {
         driver.favoritePlayer(firstName, lastName, teamName);
     }
 
-    public boolean favoritePlayersViewContainsPlayer(String... args) {
-        final Parameters params = new Parameters(args);
-        final String firstName = params.Optional("first name", "Mason");
-        final String lastName = params.Optional("last name", "Mount");
-        final String teamName = params.Optional("team name", "Chelsea");
-
-        return driver.favoritePlayersViewContainsPlayer(firstName, lastName, teamName);
-    }
-
-    public boolean favoritePlayersViewContainsMessage(String... args) {
-        final Parameters params = new Parameters(args);
-        final String message = params.Optional("message", "");
-
-        return driver.favoritePlayersViewContainsMessage(message);
-    }
-
-    public void addFavoritePlayer() {
-        driver.addFavoritePlayer();
-    }
-
     public boolean favoritePlayersContains(String... args) {
         final Parameters params = new Parameters(args);
         final String firstName = params.Optional("first name", "Mason");
@@ -61,10 +54,23 @@ public class SoccerDsl {
         return driver.favoritePlayersContains(firstName, lastName, teamName);
     }
 
-    public void deleteFavoritePlayer(String... args) {
+    public boolean favoritePlayersViewContainsMessage(String... args) {
         final Parameters params = new Parameters(args);
-        final String identity = params.Optional("identity", "1");
+        final String message = params.Optional("message", "");
 
-        driver.deleteFavoritePlayer(identity);
+        return driver.favoritePlayersViewContainsMessage(message);
+    }
+
+    public boolean favoritePlayersViewContainsPlayer(String... args) {
+        final Parameters params = new Parameters(args);
+        final String firstName = params.Optional("first name", "Mason");
+        final String lastName = params.Optional("last name", "Mount");
+        final String teamName = params.Optional("team name", "Chelsea");
+
+        return driver.favoritePlayersViewContainsPlayer(firstName, lastName, teamName);
+    }
+
+    public void viewFavoritePlayers() {
+        driver.viewFavorites();
     }
 }

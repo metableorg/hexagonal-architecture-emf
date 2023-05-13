@@ -55,7 +55,19 @@ public class Player {
         return Objects.hash(id);
     }
 
-    public boolean hasId(String identity) {
-        return Objects.equals(id, identity);
+    public boolean matches(String firstName, String lastName, String teamName) {
+        if (!this.firstName.equals(firstName)) {
+            return false;
+        }
+
+        if (!this.lastName.equals(lastName)) {
+            return false;
+        }
+
+        if (!this.teamName.equals(teamName)) {
+            return false;
+        }
+
+        return true;
     }
 }

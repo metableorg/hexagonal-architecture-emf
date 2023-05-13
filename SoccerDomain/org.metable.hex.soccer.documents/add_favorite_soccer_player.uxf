@@ -126,7 +126,7 @@ team: "Chelsea"
       <x>30</x>
       <y>540</y>
       <w>420</w>
-      <h>170</h>
+      <h>130</h>
     </coordinates>
     <panel_attributes>halign=left
 bg=green

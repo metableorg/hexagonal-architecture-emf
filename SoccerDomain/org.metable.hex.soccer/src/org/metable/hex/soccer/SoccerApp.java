@@ -7,6 +7,7 @@ import java.util.List;
 
 import javax.swing.JFrame;
 
+import org.metable.hex.soccer.application.ports.input.DeleteFavoritePlayerCommand;
 import org.metable.hex.soccer.application.ports.output.FavoritePlayersStorePort;
 import org.metable.hex.soccer.domain.entity.Player;
 
@@ -34,8 +35,7 @@ public class SoccerApp {
         }
 
         @Override
-        public void removeFavorite(String identity) {
-            // TODO Auto-generated method stub
+        public void removeFavorite(DeleteFavoritePlayerCommand command) {
         }
     }
 

@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.swing.JPanel;
 
+import org.metable.hex.soccer.application.ports.input.AddFavoritePlayerCommand;
 import org.metable.hex.soccer.application.ports.input.PlayerCommandPort;
 import org.metable.hex.soccer.application.ports.output.FavoritePlayersStorePort;
 import org.metable.hex.soccer.application.ports.output.FavoritePlayersViewPort;
@@ -17,6 +18,7 @@ public class FavoritesViewPanel extends JPanel implements FavoritePlayersViewPor
     private FavoritePlayersPanel favoritePlayersPanel;
     private FavoritePlayersStorePort favoritePlayers;
     private MessagePanel messagePanel;
+    private PlayerCommandPort playerCommandPort;
 
     /**
      * Create the panel.
@@ -33,18 +35,18 @@ public class FavoritesViewPanel extends JPanel implements FavoritePlayersViewPor
     private void init() {
         setLayout(new BorderLayout(0, 0));
 
-        PlayerCommandPort playerCommandPort = new PlayerCommandPort(favoritePlayers, this);
-
-        favoritePlayerForm = new AddFavoritePlayerFormPanel(playerCommandPort);
+        favoritePlayerForm = new AddFavoritePlayerFormPanel();
         add(favoritePlayerForm, BorderLayout.NORTH);
 
-        favoritePlayersPanel = new FavoritePlayersPanel(playerCommandPort);
+        favoritePlayersPanel = new FavoritePlayersPanel();
         add(favoritePlayersPanel, BorderLayout.CENTER);
 
         messagePanel = new MessagePanel();
         add(messagePanel, BorderLayout.SOUTH);
 
-        playerCommandPort.requestFavorites();
+        playerCommandPort = new PlayerCommandPort(favoritePlayers, this);
+
+        enterPlayerInfo("", "", "");
     }
 
     @Override
@@ -65,5 +67,17 @@ public class FavoritesViewPanel extends JPanel implements FavoritePlayersViewPor
     @Override
     public void removeMessage(String message) {
         messagePanel.removeMessage(message);
+    }
+
+    public void enterPlayerInfo(String firstName, String lastName, String teamName) {
+        playerCommandPort.enterPlayerInfo(firstName, lastName, teamName);
+    }
+
+    public void addFavoritePlayer(AddFavoritePlayerCommand command) {
+        playerCommandPort.addFavoritePlayer(command);
+    }
+
+    public void requestFavorites() {
+        playerCommandPort.requestFavorites();
     }
 }

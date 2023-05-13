@@ -16,7 +16,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import org.metable.hex.soccer.application.ports.input.AddFavoritePlayerCommand;
-import org.metable.hex.soccer.application.ports.input.PlayerCommandPort;
 
 @SuppressWarnings("serial")
 public class AddFavoritePlayerFormPanel extends JPanel {
@@ -24,7 +23,6 @@ public class AddFavoritePlayerFormPanel extends JPanel {
     private JTextField lastNameTextField;
     private JTextField teamNameTextField;
     private JButton addButton;
-    private PlayerCommandPort playerCommandPort;
 
     /**
      * Create the panel.
@@ -53,7 +51,8 @@ public class AddFavoritePlayerFormPanel extends JPanel {
         firstNameTextField.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
-                playerCommandPort.enterPlayerInfo(firstNameTextField.getText(), lastNameTextField.getText(),
+                FavoritesViewPanel parent = (FavoritesViewPanel) getParent();
+                parent.enterPlayerInfo(firstNameTextField.getText(), lastNameTextField.getText(),
                         teamNameTextField.getText());
             }
         });
@@ -78,7 +77,8 @@ public class AddFavoritePlayerFormPanel extends JPanel {
         lastNameTextField.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
-                playerCommandPort.enterPlayerInfo(firstNameTextField.getText(), lastNameTextField.getText(),
+                FavoritesViewPanel parent = (FavoritesViewPanel) getParent();
+                parent.enterPlayerInfo(firstNameTextField.getText(), lastNameTextField.getText(),
                         teamNameTextField.getText());
             }
         });
@@ -103,8 +103,10 @@ public class AddFavoritePlayerFormPanel extends JPanel {
         teamNameTextField.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
-                playerCommandPort.enterPlayerInfo(firstNameTextField.getText(), lastNameTextField.getText(),
+                FavoritesViewPanel parent = (FavoritesViewPanel) getParent();
+                parent.enterPlayerInfo(firstNameTextField.getText(), lastNameTextField.getText(),
                         teamNameTextField.getText());
+                ;
             }
         });
         GridBagConstraints gbc_teamNameTextField = new GridBagConstraints();
@@ -124,7 +126,9 @@ public class AddFavoritePlayerFormPanel extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 AddFavoritePlayerCommand command = new AddFavoritePlayerCommand(firstNameTextField.getText(),
                         lastNameTextField.getText(), teamNameTextField.getText());
-                playerCommandPort.addFavoritePlayer(command);
+                
+                FavoritesViewPanel parent = (FavoritesViewPanel) getParent();
+                parent.addFavoritePlayer(command);
             }
         });
         addButton.setEnabled(false);
@@ -132,11 +136,6 @@ public class AddFavoritePlayerFormPanel extends JPanel {
 
         JPanel panel = new JPanel();
         add(panel, BorderLayout.NORTH);
-    }
-
-    public AddFavoritePlayerFormPanel(PlayerCommandPort playerCommandPort) {
-        this();
-        this.playerCommandPort = playerCommandPort;
     }
 
     public void enableAddFavorite(boolean value) {

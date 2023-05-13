@@ -11,7 +11,6 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
-import org.metable.hex.soccer.application.ports.input.PlayerCommandPort;
 import org.metable.hex.soccer.domain.entity.Player;
 
 @SuppressWarnings("serial")
@@ -19,7 +18,6 @@ public class FavoritePlayersPanel extends JPanel {
 
     private JList<String> favoritePlayersList;
     private ListModel listModel;
-    private PlayerCommandPort playerCommandPort;
 
     private class ListModel extends DefaultListModel<String> {
 
@@ -41,7 +39,8 @@ public class FavoritePlayersPanel extends JPanel {
         JButton showFavoritesButton = new JButton("Show Favorite Players");
         showFavoritesButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                playerCommandPort.requestFavorites();
+                FavoritesViewPanel parent = (FavoritesViewPanel) getParent();
+                parent.requestFavorites();
             }
         });
         add(showFavoritesButton, BorderLayout.NORTH);
@@ -54,11 +53,6 @@ public class FavoritePlayersPanel extends JPanel {
         favoritePlayersList.setModel(listModel);
         scrollPane.setViewportView(favoritePlayersList);
 
-    }
-
-    public FavoritePlayersPanel(PlayerCommandPort playerCommandPort) {
-        this();
-        this.playerCommandPort = playerCommandPort;
     }
 
     public void view(List<Player> players) {

@@ -11,12 +11,6 @@ public class CommonTest {
     protected SoccerDsl dsl;
     protected SoccerDslDriver driver;
 
-    protected void doAfterEachTest() {
-    }
-
-    protected void doBeforeEachTest() {
-    }
-
     @Before
     public void setUp() throws Exception {
         driver = new DefaultSoccerDslDriver();
@@ -30,5 +24,11 @@ public class CommonTest {
         driver.dispose();
 
         doAfterEachTest();
+    }
+
+    protected void doAfterEachTest() {
+    }
+
+    protected void doBeforeEachTest() {
     }
 }

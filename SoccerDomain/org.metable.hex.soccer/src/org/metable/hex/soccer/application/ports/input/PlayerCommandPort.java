@@ -9,7 +9,10 @@ import org.metable.hex.soccer.domain.entity.Player;
 
 public class PlayerCommandPort implements FavoritePlayersUseCase {
 
-    private static final String NO_FAVORITES_MESSAGE = "You have no favorite players.";
+    private static final String MESSAGE_NO_FAVORITES = "You have no favorite players.";
+    private static final String MESSAGE_FIRST_NAME_IS_MISSING = "First name is missing.";
+    private static final String MESSAGE_LAST_NAME_IS_MISSING = "Last name is missing.";
+    private static final String MESSAGE_TEAM_NAME_IS_MISSING = "Team name is missing.";
 
     private final FavoritePlayersStorePort store;
     private final FavoritePlayersViewPort view;
@@ -17,19 +20,8 @@ public class PlayerCommandPort implements FavoritePlayersUseCase {
     public PlayerCommandPort(FavoritePlayersStorePort store, FavoritePlayersViewPort view) {
         this.store = store;
         this.view = view;
-    }
 
-    @Override
-    public void requestFavorites() {
-        List<Player> favorites = store.queryFavorites();
-
-        view.removeMessage(NO_FAVORITES_MESSAGE);
-
-        if (favorites.isEmpty()) {
-            view.addMessage(NO_FAVORITES_MESSAGE);
-        }
-
-        view.view(favorites);
+        requestFavorites();
     }
 
     @Override
@@ -38,27 +30,52 @@ public class PlayerCommandPort implements FavoritePlayersUseCase {
         requestFavorites();
     }
 
+    public void deleteFavoritePlayer(DeleteFavoritePlayerCommand command) {
+        store.removeFavorite(command);
+        requestFavorites();
+    }
+
     @Override
     public void enterPlayerInfo(String firstName, String lastName, String teamName) {
         view.enableAddFavorite(false);
+        view.removeMessage(MESSAGE_FIRST_NAME_IS_MISSING);
+        view.removeMessage(MESSAGE_LAST_NAME_IS_MISSING);
+        view.removeMessage(MESSAGE_TEAM_NAME_IS_MISSING);
 
-        if (firstName.isEmpty()) {
-            return;
+        boolean haveAllRequiredData = true;
+
+        if (firstName.strip().isEmpty()) {
+            view.addMessage(MESSAGE_FIRST_NAME_IS_MISSING);
+            haveAllRequiredData = false;
         }
 
-        if (lastName.isEmpty()) {
-            return;
+        if (lastName.strip().isEmpty()) {
+            view.addMessage(MESSAGE_LAST_NAME_IS_MISSING);
+            haveAllRequiredData = false;
         }
 
-        if (teamName.isEmpty()) {
+        if (teamName.strip().isEmpty()) {
+            view.addMessage(MESSAGE_TEAM_NAME_IS_MISSING);
+            haveAllRequiredData = false;
+        }
+
+        if (!haveAllRequiredData) {
             return;
         }
 
         view.enableAddFavorite(true);
     }
 
-    public void deleteFavoritePlayer(DeleteFavoritePlayerCommand command) {
-        store.removeFavorite(command.identity);
-        requestFavorites();
+    @Override
+    public void requestFavorites() {
+        List<Player> favorites = store.queryFavorites();
+
+        view.removeMessage(MESSAGE_NO_FAVORITES);
+
+        if (favorites.isEmpty()) {
+            view.addMessage(MESSAGE_NO_FAVORITES);
+        }
+
+        view.view(favorites);
     }
 }

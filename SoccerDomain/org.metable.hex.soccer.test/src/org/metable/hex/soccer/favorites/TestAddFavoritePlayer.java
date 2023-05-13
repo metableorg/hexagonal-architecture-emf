@@ -19,14 +19,32 @@ public class TestAddFavoritePlayer extends CommonTest {
     }
 
     @Test
-    public void should_prevent_add_player_when_team_name_is_missing() {
-        // Given
-
+    public void should_prevent_add_player_when_first_name_is_missing() {
         // When
-        dsl.enterPlayerInfo("first name: Mason", "last name: Mount", "team name:");
+        dsl.enterPlayerInfo("first name: ", "last name: Mount", "team name: Chelsea");
 
         // Then
-//        Assert.assertTrue(dsl.addFavoritePlayerIsNotAvailable());
-//        Assert.assertTrue(dsl.informationalMessagesContains("Team name is missing."));
+        Assert.assertFalse(dsl.addFavoritePlayerIsAvailable());
+        Assert.assertTrue(dsl.favoritePlayersViewContainsMessage("message: First name is missing."));
+    }
+
+    @Test
+    public void should_prevent_add_player_when_team_name_is_missing() {
+        // When
+        dsl.enterPlayerInfo("first name: Mason", "last name: Mount", "team name: ");
+
+        // Then
+        Assert.assertFalse(dsl.addFavoritePlayerIsAvailable());
+        Assert.assertTrue(dsl.favoritePlayersViewContainsMessage("message: Team name is missing."));
+    }
+
+    @Test
+    public void should_prevent_add_player_when_last_name_is_missing() {
+        // When
+        dsl.enterPlayerInfo("first name: Mason", "last name: ", "team name: Chelsea");
+
+        // Then
+        Assert.assertFalse(dsl.addFavoritePlayerIsAvailable());
+        Assert.assertTrue(dsl.favoritePlayersViewContainsMessage("message: Last name is missing."));
     }
 }

@@ -30,11 +30,11 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
         }
 
         @Override
-        public void removeFavorite(String identity) {
+        public void removeFavorite(DeleteFavoritePlayerCommand command) {
             Player playerToDelete = null;
 
             for (Player player : favoritePlayers) {
-                if (player.hasId(identity)) {
+                if (player.matches(command.firstName, command.lastName, command.teamName)) {
                     playerToDelete = player;
                     break;
                 }
@@ -56,8 +56,20 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
         private List<String> messages = new ArrayList<>();
 
         @Override
-        public void view(List<Player> players) {
-            this.favoritePlayers = new ArrayList<>(players);
+        public void addMessage(String message) {
+            messages.add(message);
+        }
+
+        public boolean contains(String targetMessage) {
+
+            for (String message : messages) {
+
+                if (message.equals(targetMessage)) {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public boolean contains(String firstName, String lastName, String teamName) {
@@ -82,36 +94,8 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
             return false;
         }
 
-        public boolean contains(String targetMessage) {
-
-            for (String message : messages) {
-
-                if (message.equals(targetMessage)) {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
-        public void setPlayerFirstName(String name) {
-            this.firstName = name;
-        }
-
-        public void setPlayerLastName(String name) {
-            this.lastName = name;
-        }
-
-        public void setTeamName(String name) {
-            this.teamName = name;
-        }
-
         public void enableAddFavorite(boolean value) {
             addFavoriteEnabled = value;
-        }
-
-        public boolean isAddFavoriteEnabled() {
-            return addFavoriteEnabled;
         }
 
         public String getPlayerFirstName() {
@@ -126,15 +110,31 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
             return teamName;
         }
 
-        @Override
-        public void addMessage(String message) {
-            messages.add(message);
+        public boolean isAddFavoriteEnabled() {
+            return addFavoriteEnabled;
         }
 
         @Override
         public void removeMessage(String message) {
 
             messages.remove(message);
+        }
+
+        public void setPlayerFirstName(String name) {
+            this.firstName = name;
+        }
+
+        public void setPlayerLastName(String name) {
+            this.lastName = name;
+        }
+
+        public void setTeamName(String name) {
+            this.teamName = name;
+        }
+
+        @Override
+        public void view(List<Player> players) {
+            this.favoritePlayers = new ArrayList<>(players);
         }
     }
 
@@ -144,30 +144,31 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
     private final PlayerCommandPort playerCommandPort = new PlayerCommandPort(favoritePlayers, view);
 
     @Override
-    public void viewFavorites() {
-        playerCommandPort.requestFavorites();
+    public void addFavoritePlayer() {
+
+        if (!view.isAddFavoriteEnabled()) {
+            throw new java.lang.IllegalStateException("Add favorite player not enabled.");
+        }
+
+        AddFavoritePlayerCommand command = new AddFavoritePlayerCommand(view.getPlayerFirstName(),
+                view.getPlayerLastName(), view.getTeamName());
+
+        playerCommandPort.addFavoritePlayer(command);
     }
 
     @Override
-    public void favoritePlayer(String firstName, String lastName, String teamName) {
-        favoritePlayers.addFavorite(firstName, lastName, teamName);
-        viewFavorites();
+    public boolean addFavoritePlayerIsAvailable() {
+        return view.isAddFavoriteEnabled();
+    }
+
+    @Override
+    public void deleteFavoritePlayer(String firstName, String lastName, String teamName) {
+        DeleteFavoritePlayerCommand command = new DeleteFavoritePlayerCommand(firstName, lastName, teamName);
+        playerCommandPort.deleteFavoritePlayer(command);
     }
 
     @Override
     public void dispose() {
-    }
-
-    @Override
-    public boolean favoritePlayersViewContainsPlayer(String firstName, String lastName, String teamName) {
-
-        return view.contains(firstName, lastName, teamName);
-    }
-
-    @Override
-    public boolean favoritePlayersViewContainsMessage(String message) {
-
-        return view.contains(message);
     }
 
     @Override
@@ -177,6 +178,12 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
         view.setTeamName(teamName);
 
         playerCommandPort.enterPlayerInfo(firstName, lastName, teamName);
+    }
+
+    @Override
+    public void favoritePlayer(String firstName, String lastName, String teamName) {
+        favoritePlayers.addFavorite(firstName, lastName, teamName);
+        viewFavorites();
     }
 
     @Override
@@ -204,22 +211,20 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
     }
 
     @Override
-    public void addFavoritePlayer() {
+    public boolean favoritePlayersViewContainsMessage(String message) {
 
-        if (!view.isAddFavoriteEnabled()) {
-            throw new java.lang.IllegalStateException("Add favorite player not enabled.");
-        }
-
-        AddFavoritePlayerCommand command = new AddFavoritePlayerCommand(view.getPlayerFirstName(),
-                view.getPlayerLastName(), view.getTeamName());
-
-        playerCommandPort.addFavoritePlayer(command);
+        return view.contains(message);
     }
 
     @Override
-    public void deleteFavoritePlayer(String identity) {
-        DeleteFavoritePlayerCommand command = new DeleteFavoritePlayerCommand(identity);
-        playerCommandPort.deleteFavoritePlayer(command);
+    public boolean favoritePlayersViewContainsPlayer(String firstName, String lastName, String teamName) {
+
+        return view.contains(firstName, lastName, teamName);
+    }
+
+    @Override
+    public void viewFavorites() {
+        playerCommandPort.requestFavorites();
     }
 
 }

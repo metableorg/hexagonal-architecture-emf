@@ -1,15 +1,20 @@
 package org.metable.hex.soccer;
 
-import javax.swing.JPanel;
-import java.awt.GridBagLayout;
-import javax.swing.JLabel;
 import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
 public class MessagePanel extends JPanel {
 
-    private JLabel messageTextLabel;
+    private final JLabel messageTextLabel;
+
+    private final List<String> messages;
 
     /**
      * Create the panel.
@@ -36,14 +41,26 @@ public class MessagePanel extends JPanel {
         gbc_messageTextLabel.gridy = 0;
         add(messageTextLabel, gbc_messageTextLabel);
 
+        messages = new ArrayList<>();
     }
 
     public void addMessage(String message) {
-        messageTextLabel.setText(message);
+        messages.add(message);
+        refresh();
+    }
+
+    private void refresh() {
+        String messageText = "";
+
+        for (String message : messages) {
+            messageText += " " + message;
+        }
+
+        messageTextLabel.setText(messageText);
     }
 
     public void removeMessage(String message) {
-        messageTextLabel.setText("");
+        messages.remove(message);
+        refresh();
     }
-
 }

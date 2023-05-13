@@ -4,7 +4,9 @@ public interface SoccerDslDriver {
 
     void addFavoritePlayer();
 
-    void deleteFavoritePlayer(String identity);
+    boolean addFavoritePlayerIsAvailable();
+
+    void deleteFavoritePlayer(String firstName, String lastName, String teamName);
 
     void dispose();
 
