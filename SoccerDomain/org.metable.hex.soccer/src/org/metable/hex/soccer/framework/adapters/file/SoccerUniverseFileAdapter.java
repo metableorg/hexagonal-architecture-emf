@@ -83,6 +83,7 @@ public class SoccerUniverseFileAdapter implements SoccerUniverseOutputPort {
 
         return soccerUniverse;
     }
+
     private Resource resource;
     private EmfSoccerUniverse soccerUniverseEmf;
 

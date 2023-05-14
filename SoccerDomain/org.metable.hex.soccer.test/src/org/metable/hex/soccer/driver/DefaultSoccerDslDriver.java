@@ -24,6 +24,27 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
         }
 
         @Override
+        public boolean contains(String firstName, String lastName, String teamName) {
+            for (Player player : favoritePlayers) {
+                if (!player.getFirstName().equals(firstName)) {
+                    continue;
+                }
+
+                if (!player.getLastName().equals(lastName)) {
+                    continue;
+                }
+
+                if (!player.getTeamName().equals(teamName)) {
+                    continue;
+                }
+
+                return true;
+            }
+
+            return false;
+        }
+
+        @Override
         public List<Player> queryFavorites() {
             List<Player> result = new ArrayList<>(favoritePlayers);
             return result;
@@ -146,10 +167,6 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
     @Override
     public void addFavoritePlayer() {
 
-        if (!view.isAddFavoriteEnabled()) {
-            throw new java.lang.IllegalStateException("Add favorite player not enabled.");
-        }
-
         AddFavoritePlayerCommand command = new AddFavoritePlayerCommand(view.getPlayerFirstName(),
                 view.getPlayerLastName(), view.getTeamName());
 
@@ -220,6 +237,11 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
     public boolean favoritePlayersViewContainsPlayer(String firstName, String lastName, String teamName) {
 
         return view.contains(firstName, lastName, teamName);
+    }
+
+    @Override
+    public int numberOfFavoritePlayers() {
+        return favoritePlayers.queryFavorites().size();
     }
 
     @Override

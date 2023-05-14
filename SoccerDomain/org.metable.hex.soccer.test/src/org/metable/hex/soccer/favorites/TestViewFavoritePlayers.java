@@ -37,21 +37,21 @@ public class TestViewFavoritePlayers extends CommonTest {
     }
 
     @Test
-    public void should_show_message_when_requested_to_view_favorite_players_and_there_are_no_favorites() {
-        // When
-        dsl.viewFavoritePlayers();
-
-        // Then
-        Assert.assertTrue(dsl.favoritePlayersViewContainsMessage("message: You have no favorite players."));
-    }
-
-    @Test
     public void should_show_no_favorites_message_when_last_favorite_player_is_deleted() {
         // Given
         dsl.favoritePlayer("first name: Mason", "last name: Mount", "team name: Chelsea");
 
         // When
         dsl.deleteFavoritePlayer("first name: Mason", "last name: Mount", "team name: Chelsea");
+
+        // Then
+        Assert.assertTrue(dsl.favoritePlayersViewContainsMessage("message: You have no favorite players."));
+    }
+
+    @Test
+    public void should_show_no_favorites_message_when_requested_to_view_favorite_players_and_there_are_no_favorites() {
+        // When
+        dsl.viewFavoritePlayers();
 
         // Then
         Assert.assertTrue(dsl.favoritePlayersViewContainsMessage("message: You have no favorite players."));

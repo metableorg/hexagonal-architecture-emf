@@ -32,6 +32,38 @@ public class FavoritesViewPanel extends JPanel implements FavoritePlayersViewPor
         init();
     }
 
+    public void addFavoritePlayer(AddFavoritePlayerCommand command) {
+        playerCommandPort.addFavoritePlayer(command);
+    }
+
+    @Override
+    public void addMessage(String message) {
+        messagePanel.addMessage(message);
+    }
+
+    @Override
+    public void enableAddFavorite(boolean value) {
+        favoritePlayerForm.enableAddFavorite(value);
+    }
+
+    public void enterPlayerInfo(String firstName, String lastName, String teamName) {
+        playerCommandPort.enterPlayerInfo(firstName, lastName, teamName);
+    }
+
+    @Override
+    public void removeMessage(String message) {
+        messagePanel.removeMessage(message);
+    }
+
+    public void requestFavorites() {
+        playerCommandPort.requestFavorites();
+    }
+
+    @Override
+    public void view(List<Player> players) {
+        favoritePlayersPanel.view(players);
+    }
+
     private void init() {
         setLayout(new BorderLayout(0, 0));
 
@@ -47,37 +79,5 @@ public class FavoritesViewPanel extends JPanel implements FavoritePlayersViewPor
         playerCommandPort = new PlayerCommandPort(favoritePlayers, this);
 
         enterPlayerInfo("", "", "");
-    }
-
-    @Override
-    public void view(List<Player> players) {
-        favoritePlayersPanel.view(players);
-    }
-
-    @Override
-    public void enableAddFavorite(boolean value) {
-        favoritePlayerForm.enableAddFavorite(value);
-    }
-
-    @Override
-    public void addMessage(String message) {
-        messagePanel.addMessage(message);
-    }
-
-    @Override
-    public void removeMessage(String message) {
-        messagePanel.removeMessage(message);
-    }
-
-    public void enterPlayerInfo(String firstName, String lastName, String teamName) {
-        playerCommandPort.enterPlayerInfo(firstName, lastName, teamName);
-    }
-
-    public void addFavoritePlayer(AddFavoritePlayerCommand command) {
-        playerCommandPort.addFavoritePlayer(command);
-    }
-
-    public void requestFavorites() {
-        playerCommandPort.requestFavorites();
     }
 }

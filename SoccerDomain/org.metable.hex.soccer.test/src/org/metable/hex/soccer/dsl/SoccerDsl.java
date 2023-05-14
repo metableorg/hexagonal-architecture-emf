@@ -70,6 +70,10 @@ public class SoccerDsl {
         return driver.favoritePlayersViewContainsPlayer(firstName, lastName, teamName);
     }
 
+    public int numberOfFavoritePlayers() {
+        return driver.numberOfFavoritePlayers();
+    }
+
     public void viewFavoritePlayers() {
         driver.viewFavorites();
     }

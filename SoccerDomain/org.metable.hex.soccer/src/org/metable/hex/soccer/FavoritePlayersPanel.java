@@ -16,9 +16,6 @@ import org.metable.hex.soccer.domain.entity.Player;
 @SuppressWarnings("serial")
 public class FavoritePlayersPanel extends JPanel {
 
-    private JList<String> favoritePlayersList;
-    private ListModel listModel;
-
     private class ListModel extends DefaultListModel<String> {
 
         public void view(List<Player> players) {
@@ -29,6 +26,9 @@ public class FavoritePlayersPanel extends JPanel {
             }
         }
     }
+    private JList<String> favoritePlayersList;
+
+    private ListModel listModel;
 
     /**
      * Create the panel.
@@ -47,7 +47,7 @@ public class FavoritePlayersPanel extends JPanel {
 
         JScrollPane scrollPane = new JScrollPane();
         add(scrollPane, BorderLayout.CENTER);
-        
+
         favoritePlayersList = new JList<>();
         listModel = new ListModel();
         favoritePlayersList.setModel(listModel);

@@ -126,7 +126,7 @@ public class AddFavoritePlayerFormPanel extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 AddFavoritePlayerCommand command = new AddFavoritePlayerCommand(firstNameTextField.getText(),
                         lastNameTextField.getText(), teamNameTextField.getText());
-                
+
                 FavoritesViewPanel parent = (FavoritesViewPanel) getParent();
                 parent.addFavoritePlayer(command);
             }

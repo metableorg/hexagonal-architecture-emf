@@ -20,6 +20,8 @@ public interface SoccerDslDriver {
 
     boolean favoritePlayersViewContainsPlayer(String firstName, String lastName, String teamName);
 
+    int numberOfFavoritePlayers();
+
     void viewFavorites();
 
 }

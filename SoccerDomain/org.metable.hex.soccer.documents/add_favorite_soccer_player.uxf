@@ -159,9 +159,8 @@ Mason           Mount           Chelsea
 
 first name: "Mason"
 last name: "Mount"
-team: "Chelsea"
-* Add player
-=&gt; Player "Mason Mount" for "Chelsea" is _not_ added to the list.
+* team: "Chelsea"
+=&gt; Add player is not available
 =&gt; Message indicating that player "Mason Mount" for "Chelsea" is already in the list.
 </panel_attributes>
     <additional_attributes/>

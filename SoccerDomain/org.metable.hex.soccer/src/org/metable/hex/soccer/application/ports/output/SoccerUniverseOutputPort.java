@@ -6,9 +6,9 @@ import org.metable.hex.soccer.domain.entity.SoccerUniverse;
 import org.metable.hex.soccer.domain.entity.Team;
 
 public interface SoccerUniverseOutputPort extends UndoRedoPort {
-    void persist() throws IOException;
-    
-    void persist(Team team) throws IOException;
-    
     SoccerUniverse getSoccerUniverse();
+
+    void persist() throws IOException;
+
+    void persist(Team team) throws IOException;
 }

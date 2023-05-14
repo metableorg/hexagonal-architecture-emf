@@ -9,6 +9,8 @@ public interface FavoritePlayersStorePort {
 
     public void addFavorite(String firstName, String lastName, String teamName);
 
+    public boolean contains(String firstName, String lastName, String teamName);
+
     public List<Player> queryFavorites();
 
     public void removeFavorite(DeleteFavoritePlayerCommand command);

@@ -13,6 +13,7 @@ public class PlayerCommandPort implements FavoritePlayersUseCase {
     private static final String MESSAGE_FIRST_NAME_IS_MISSING = "First name is missing.";
     private static final String MESSAGE_LAST_NAME_IS_MISSING = "Last name is missing.";
     private static final String MESSAGE_TEAM_NAME_IS_MISSING = "Team name is missing.";
+    private static final String MESSAGE_DUPLICATES_NOT_ALLOWED = "Duplicates are not allowed.";
 
     private final FavoritePlayersStorePort store;
     private final FavoritePlayersViewPort view;
@@ -26,7 +27,11 @@ public class PlayerCommandPort implements FavoritePlayersUseCase {
 
     @Override
     public void addFavoritePlayer(AddFavoritePlayerCommand command) {
+        if (store.contains(command.firstName, command.lastName, command.teamName)) {
+            return;
+        }
         store.addFavorite(command.firstName, command.lastName, command.teamName);
+        enterPlayerInfo(command.firstName, command.lastName, command.teamName);
         requestFavorites();
     }
 
@@ -41,6 +46,7 @@ public class PlayerCommandPort implements FavoritePlayersUseCase {
         view.removeMessage(MESSAGE_FIRST_NAME_IS_MISSING);
         view.removeMessage(MESSAGE_LAST_NAME_IS_MISSING);
         view.removeMessage(MESSAGE_TEAM_NAME_IS_MISSING);
+        view.removeMessage(MESSAGE_DUPLICATES_NOT_ALLOWED);
 
         boolean haveAllRequiredData = true;
 
@@ -60,6 +66,11 @@ public class PlayerCommandPort implements FavoritePlayersUseCase {
         }
 
         if (!haveAllRequiredData) {
+            return;
+        }
+
+        if (store.contains(firstName.strip(), lastName.strip(), teamName.strip())) {
+            view.addMessage(MESSAGE_DUPLICATES_NOT_ALLOWED);
             return;
         }
 

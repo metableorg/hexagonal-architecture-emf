@@ -13,10 +13,6 @@ import org.metable.hex.soccer.domain.entity.Player;
 
 public class SoccerApp {
 
-    private JFrame frame;
-    private FavoritesViewPanel view;
-    private FavoritePlayers favoritePlayers;
-
     private static class FavoritePlayers implements FavoritePlayersStorePort {
 
         private final List<Player> favoritePlayers = new ArrayList<>();
@@ -29,6 +25,27 @@ public class SoccerApp {
         }
 
         @Override
+        public boolean contains(String firstName, String lastName, String teamName) {
+            for (Player player : favoritePlayers) {
+                if (!player.getFirstName().equals(firstName)) {
+                    continue;
+                }
+
+                if (!player.getLastName().equals(lastName)) {
+                    continue;
+                }
+
+                if (!player.getTeamName().equals(teamName)) {
+                    continue;
+                }
+
+                return true;
+            }
+
+            return false;
+        }
+
+        @Override
         public List<Player> queryFavorites() {
             List<Player> result = new ArrayList<>(favoritePlayers);
             return result;
@@ -38,7 +55,6 @@ public class SoccerApp {
         public void removeFavorite(DeleteFavoritePlayerCommand command) {
         }
     }
-
     /**
      * Launch the application.
      */
@@ -54,6 +70,11 @@ public class SoccerApp {
             }
         });
     }
+    private JFrame frame;
+
+    private FavoritesViewPanel view;
+
+    private FavoritePlayers favoritePlayers;
 
     /**
      * Create the application.

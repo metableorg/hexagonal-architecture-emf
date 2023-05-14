@@ -27,11 +27,6 @@ public class SoccerUniverseInputPort implements SoccerUniverseUseCase {
     }
 
     @Override
-    public void undo() {
-        outputPort.undo();
-    }
-
-    @Override
     public void removeTeam(String name) {
         SoccerUniverse soccerUniverse = outputPort.getSoccerUniverse();
         soccerUniverse.removeTeam(name);
@@ -41,5 +36,10 @@ public class SoccerUniverseInputPort implements SoccerUniverseUseCase {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void undo() {
+        outputPort.undo();
     }
 }

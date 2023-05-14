@@ -49,6 +49,11 @@ public class MessagePanel extends JPanel {
         refresh();
     }
 
+    public void removeMessage(String message) {
+        messages.remove(message);
+        refresh();
+    }
+
     private void refresh() {
         String messageText = "";
 
@@ -57,10 +62,5 @@ public class MessagePanel extends JPanel {
         }
 
         messageTextLabel.setText(messageText);
-    }
-
-    public void removeMessage(String message) {
-        messages.remove(message);
-        refresh();
     }
 }
