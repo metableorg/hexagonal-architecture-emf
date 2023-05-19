@@ -18,15 +18,6 @@ public class SoccerDsl {
         return driver.addFavoritePlayerIsAvailable();
     }
 
-    public void deleteFavoritePlayer(String... args) {
-        final Parameters params = new Parameters(args);
-        final String firstName = params.Optional("first name", "Mason");
-        final String lastName = params.Optional("last name", "Mount");
-        final String teamName = params.Optional("team name", "Chelsea");
-
-        driver.deleteFavoritePlayer(firstName, lastName, teamName);
-    }
-
     public void enterPlayerInfo(String... args) {
         final Parameters params = new Parameters(args);
         final String firstName = params.Optional("first name", "Mason");
@@ -72,6 +63,37 @@ public class SoccerDsl {
 
     public int numberOfFavoritePlayers() {
         return driver.numberOfFavoritePlayers();
+    }
+
+    public void removeFavoritePlayer(String... args) {
+        final Parameters params = new Parameters(args);
+        final String firstName = params.Optional("first name", "Mason");
+        final String lastName = params.Optional("last name", "Mount");
+        final String teamName = params.Optional("team name", "Chelsea");
+
+        driver.removeFavoritePlayer(firstName, lastName, teamName);
+    }
+
+    public boolean removeFavoritePlayerIsAvailable() {
+        return driver.removeFavoritePlayerIsAvailable();
+    }
+
+    public void selectPlayer(String... args) {
+        final Parameters params = new Parameters(args);
+        final String firstName = params.Optional("first name", "Mason");
+        final String lastName = params.Optional("last name", "Mount");
+        final String teamName = params.Optional("team name", "Chelsea");
+
+        driver.selectPlayer(firstName, lastName, teamName);
+    }
+
+    public void unselectPlayer(String... args) {
+        final Parameters params = new Parameters(args);
+        final String firstName = params.Optional("first name", "Mason");
+        final String lastName = params.Optional("last name", "Mount");
+        final String teamName = params.Optional("team name", "Chelsea");
+
+        driver.unselectPlayer(firstName, lastName, teamName);
     }
 
     public void viewFavoritePlayers() {

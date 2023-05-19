@@ -10,7 +10,11 @@ public interface FavoritePlayersViewPort {
 
     public void enableAddFavorite(boolean value);
 
+    public void enableRemoveFavorite(boolean value);
+
     public void removeMessage(String message);
 
     public void view(List<Player> players);
+
+    void selectionChanged(List<Integer> selectedIndices);
 }

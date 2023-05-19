@@ -74,6 +74,7 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
         private String lastName;
         private String teamName;
         private boolean addFavoriteEnabled;
+        private boolean removeFavoriteEnabled;
         private List<String> messages = new ArrayList<>();
 
         @Override
@@ -95,6 +96,20 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
 
         public boolean contains(String firstName, String lastName, String teamName) {
 
+            return getPlayer(firstName, lastName, teamName) != null;
+        }
+
+        public void enableAddFavorite(boolean value) {
+            addFavoriteEnabled = value;
+        }
+
+        @Override
+        public void enableRemoveFavorite(boolean value) {
+            removeFavoriteEnabled = value;
+        }
+
+        public Player getPlayer(String firstName, String lastName, String teamName) {
+
             for (Player player : favoritePlayers) {
 
                 if (!player.getFirstName().equals(firstName)) {
@@ -109,14 +124,10 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
                     continue;
                 }
 
-                return true;
+                return player;
             }
 
-            return false;
-        }
-
-        public void enableAddFavorite(boolean value) {
-            addFavoriteEnabled = value;
+            return null;
         }
 
         public String getPlayerFirstName() {
@@ -135,10 +146,18 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
             return addFavoriteEnabled;
         }
 
+        public boolean isRemoveFavoriteEnabled() {
+            return removeFavoriteEnabled;
+        }
+
         @Override
         public void removeMessage(String message) {
 
             messages.remove(message);
+        }
+
+        @Override
+        public void selectionChanged(List<Integer> selectedIndices) {
         }
 
         public void setPlayerFirstName(String name) {
@@ -155,7 +174,7 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
 
         @Override
         public void view(List<Player> players) {
-            this.favoritePlayers = new ArrayList<>(players);
+            favoritePlayers = new ArrayList<>(players);
         }
     }
 
@@ -176,12 +195,6 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
     @Override
     public boolean addFavoritePlayerIsAvailable() {
         return view.isAddFavoriteEnabled();
-    }
-
-    @Override
-    public void deleteFavoritePlayer(String firstName, String lastName, String teamName) {
-        DeleteFavoritePlayerCommand command = new DeleteFavoritePlayerCommand(firstName, lastName, teamName);
-        playerCommandPort.deleteFavoritePlayer(command);
     }
 
     @Override
@@ -245,8 +258,28 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
     }
 
     @Override
+    public void removeFavoritePlayer(String firstName, String lastName, String teamName) {
+        DeleteFavoritePlayerCommand command = new DeleteFavoritePlayerCommand(firstName, lastName, teamName);
+        playerCommandPort.removeFavoritePlayer(command);
+    }
+
+    @Override
+    public boolean removeFavoritePlayerIsAvailable() {
+        return view.isRemoveFavoriteEnabled();
+    }
+
+    @Override
+    public void selectPlayer(String firstName, String lastName, String teamName) {
+        playerCommandPort.selectPlayer(firstName, lastName, teamName);
+    }
+
+    @Override
+    public void unselectPlayer(String firstName, String lastName, String teamName) {
+        playerCommandPort.unselectPlayer(firstName, lastName, teamName);
+    }
+
+    @Override
     public void viewFavorites() {
         playerCommandPort.requestFavorites();
     }
-
 }

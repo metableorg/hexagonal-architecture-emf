@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>530</x>
+      <y>20</y>
+      <w>230</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=yellow
+Remove player from favorites list
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>80</y>
+      <w>240</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=blue
+style=wordwrap
+Player must be in favorites list</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>890</x>
+      <y>80</y>
+      <w>180</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=blue
+Removals can be undone</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>160</y>
+      <w>360</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=green
+*Players are removed*
+
+List contains
+*First Name   Last Name   Team*
+Mason           Mount           Chelsea
+Thiago           Silva             Chelsea
+Reece           James           Chelsea
+
+Players Mason Mount  and Reece James are selected
+
+* Players are removed
+
+=&gt; List contains
+*First Name   Last Name   Team*
+Thiago           Silva             Chelsea</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>890</x>
+      <y>560</y>
+      <w>330</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=green
+*Player removal is undone*
+
+List contains
+*First Name   Last Name   Team*
+Mason           Mount           Chelsea
+
+Player Mason Mount removed
+
+* Removal is undone
+
+=&gt; List contains
+*First Name   Last Name   Team*
+Mason           Mount           Chelsea
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>530</x>
+      <y>80</y>
+      <w>240</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=blue
+style=wordwrap
+More than one player can be removed</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>380</y>
+      <w>330</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=green
+*Remove is available*
+
+List contains
+*First Name   Last Name   Team*
+Mason           Mount           Chelsea
+No player is selected
+Remove player is not available
+
+* Player Mason Mount for Chelsea is selected
+=&gt; Remove player is available
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>580</y>
+      <w>320</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=green
+*Player is removed*
+
+List contains
+*First Name   Last Name   Team*
+Mason           Mount           Chelsea
+Thiago           Silva             Chelsea
+
+Player Mason Mount is selected
+
+* Player is removed
+
+=&gt; List contains
+*First Name   Last Name   Team*
+Thiago           Silva             Chelsea</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>160</y>
+      <w>330</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=green
+*Remove is not available*
+
+List contains
+*First Name   Last Name   Team*
+Mason           Mount           Chelsea
+
+Player Mason Mount is selected
+Remove player is available
+
+* Player is unselected
+
+=&gt; Remove player is not available
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>890</x>
+      <y>170</y>
+      <w>330</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=green
+*Undo is not available*
+
+List contains
+*First Name   Last Name   Team*
+Mason           Mount           Chelsea
+
+* View favorites
+
+=&gt; Undo removal is not available
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>890</x>
+      <y>360</y>
+      <w>330</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=green
+*Undo is available*
+
+List contains
+*First Name   Last Name   Team*
+Mason           Mount           Chelsea
+
+* Player Mason Mount removed
+
+=&gt; Undo removal is available
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>850</y>
+      <w>320</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>halign=left
+bg=green
+*Removed player is not selected*
+
+List contains
+*First Name   Last Name   Team*
+Mason           Mount           Chelsea
+Thiago           Silva             Chelsea
+
+Player Mason Mount is selected
+Player is removed
+
+=&gt; Player Mason Mount is not selected</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

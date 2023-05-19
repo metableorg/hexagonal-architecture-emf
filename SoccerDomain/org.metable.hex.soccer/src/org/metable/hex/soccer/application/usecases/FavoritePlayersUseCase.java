@@ -9,8 +9,12 @@ public interface FavoritePlayersUseCase {
 
     void addFavoritePlayer(AddFavoritePlayerCommand command);
 
-    void deleteFavoritePlayer(DeleteFavoritePlayerCommand command);
-
     void enterPlayerInfo(String firstName, String lastName, String teamName);
+
+    void removeFavoritePlayer(DeleteFavoritePlayerCommand command);
+
+    void selectPlayer(String firstName, String lastName, String teamName);
+
+    void unselectPlayer(String firstName, String lastName, String teamName);
 
 }

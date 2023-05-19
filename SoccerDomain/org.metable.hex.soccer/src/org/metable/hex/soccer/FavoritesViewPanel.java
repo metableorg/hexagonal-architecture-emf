@@ -80,4 +80,12 @@ public class FavoritesViewPanel extends JPanel implements FavoritePlayersViewPor
 
         enterPlayerInfo("", "", "");
     }
+
+    @Override
+    public void selectionChanged(List<Integer> selectedIndices) {
+    }
+
+    @Override
+    public void enableRemoveFavorite(boolean value) {
+    }
 }

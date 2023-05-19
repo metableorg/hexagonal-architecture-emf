@@ -42,7 +42,7 @@ public class TestViewFavoritePlayers extends CommonTest {
         dsl.favoritePlayer("first name: Mason", "last name: Mount", "team name: Chelsea");
 
         // When
-        dsl.deleteFavoritePlayer("first name: Mason", "last name: Mount", "team name: Chelsea");
+        dsl.removeFavoritePlayer("first name: Mason", "last name: Mount", "team name: Chelsea");
 
         // Then
         Assert.assertTrue(dsl.favoritePlayersViewContainsMessage("message: You have no favorite players."));
