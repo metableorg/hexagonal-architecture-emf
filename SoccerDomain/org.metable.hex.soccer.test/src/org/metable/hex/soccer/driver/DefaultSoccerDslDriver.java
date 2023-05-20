@@ -67,19 +67,48 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
         }
     }
 
-    private static class FavoritePlayersView implements FavoritePlayersViewPort {
+    private class FavoritePlayersView implements FavoritePlayersViewPort {
 
         private List<Player> favoritePlayers;
-        private String firstName;
-        private String lastName;
-        private String teamName;
+        private String firstName = "";
+        private String lastName = "";
+        private String teamName = "";
         private boolean addFavoriteEnabled;
         private boolean removeFavoriteEnabled;
         private List<String> messages = new ArrayList<>();
 
+        private final PlayerCommandPort playerCommandPort;
+        private Player selectedPlayer;
+
+        public FavoritePlayersView() {
+            playerCommandPort = new PlayerCommandPort(DefaultSoccerDslDriver.this.favoritePlayers, this);
+        }
+
         @Override
         public void addMessage(String message) {
             messages.add(message);
+        }
+
+        @Override
+        public void clearSelection() {
+            selectedPlayer = null;
+        }
+
+        public void clickAddFavortePlayerButton() {
+            AddFavoritePlayerCommand command = new AddFavoritePlayerCommand(getPlayerFirstName(), getPlayerLastName(),
+                    getTeamName());
+            playerCommandPort.addFavoritePlayer(command);
+        }
+
+        public void clickRemoveFavoritePlayerButton() {
+            final Player selected = getSelectedPlayer();
+            if (selected == null) {
+                return;
+            }
+
+            DeleteFavoritePlayerCommand command = new DeleteFavoritePlayerCommand(selected.getFirstName(),
+                    selected.getLastName(), selected.getTeamName());
+            playerCommandPort.removeFavoritePlayer(command);
         }
 
         public boolean contains(String targetMessage) {
@@ -138,6 +167,10 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
             return lastName;
         }
 
+        public Player getSelectedPlayer() {
+            return selectedPlayer;
+        }
+
         public String getTeamName() {
             return teamName;
         }
@@ -150,6 +183,10 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
             return removeFavoriteEnabled;
         }
 
+        public void refresh() {
+            playerCommandPort.requestFavorites();
+        }
+
         @Override
         public void removeMessage(String message) {
 
@@ -160,16 +197,28 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
         public void selectionChanged(List<Integer> selectedIndices) {
         }
 
+        public void selectPlayer(String firstName, String lastName, String teamName) {
+            playerCommandPort.selectPlayer(firstName, lastName, teamName);
+            selectedPlayer = new Player("0", firstName, lastName, teamName);
+        }
+
         public void setPlayerFirstName(String name) {
             this.firstName = name;
+            playerCommandPort.enterPlayerInfo(firstName, lastName, teamName);
         }
 
         public void setPlayerLastName(String name) {
             this.lastName = name;
+            playerCommandPort.enterPlayerInfo(firstName, lastName, teamName);
         }
 
         public void setTeamName(String name) {
             this.teamName = name;
+            playerCommandPort.enterPlayerInfo(firstName, lastName, teamName);
+        }
+
+        public void unselectPlayer(String firstName, String lastName, String teamName) {
+            playerCommandPort.unselectPlayer(firstName, lastName, teamName);
         }
 
         @Override
@@ -181,15 +230,10 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
     private final FavoritePlayers favoritePlayers = new FavoritePlayers();
     private final FavoritePlayersView view = new FavoritePlayersView();
 
-    private final PlayerCommandPort playerCommandPort = new PlayerCommandPort(favoritePlayers, view);
-
     @Override
     public void addFavoritePlayer() {
 
-        AddFavoritePlayerCommand command = new AddFavoritePlayerCommand(view.getPlayerFirstName(),
-                view.getPlayerLastName(), view.getTeamName());
-
-        playerCommandPort.addFavoritePlayer(command);
+        view.clickAddFavortePlayerButton();
     }
 
     @Override
@@ -203,11 +247,10 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
 
     @Override
     public void enterPlayerInfo(String firstName, String lastName, String teamName) {
+
         view.setPlayerFirstName(firstName);
         view.setPlayerLastName(lastName);
         view.setTeamName(teamName);
-
-        playerCommandPort.enterPlayerInfo(firstName, lastName, teamName);
     }
 
     @Override
@@ -258,9 +301,8 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
     }
 
     @Override
-    public void removeFavoritePlayer(String firstName, String lastName, String teamName) {
-        DeleteFavoritePlayerCommand command = new DeleteFavoritePlayerCommand(firstName, lastName, teamName);
-        playerCommandPort.removeFavoritePlayer(command);
+    public void removeFavoritePlayer() {
+        view.clickRemoveFavoritePlayerButton();
     }
 
     @Override
@@ -270,16 +312,18 @@ public class DefaultSoccerDslDriver implements SoccerDslDriver {
 
     @Override
     public void selectPlayer(String firstName, String lastName, String teamName) {
-        playerCommandPort.selectPlayer(firstName, lastName, teamName);
+        view.selectPlayer(firstName, lastName, teamName);
     }
 
     @Override
     public void unselectPlayer(String firstName, String lastName, String teamName) {
-        playerCommandPort.unselectPlayer(firstName, lastName, teamName);
+        view.unselectPlayer(firstName, lastName, teamName);
+
     }
 
     @Override
     public void viewFavorites() {
-        playerCommandPort.requestFavorites();
+        view.refresh();
+
     }
 }

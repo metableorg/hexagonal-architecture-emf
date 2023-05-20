@@ -112,6 +112,7 @@ public class PlayerCommandPort implements FavoritePlayersUseCase {
 
     public void removeFavoritePlayer(DeleteFavoritePlayerCommand command) {
         store.removeFavorite(command);
+        clearSelection();
         requestFavorites();
     }
 
@@ -147,5 +148,11 @@ public class PlayerCommandPort implements FavoritePlayersUseCase {
         selectedPlayer.ifPresent(p -> selectedPlayers.remove(p));
 
         view.enableRemoveFavorite(!selectedPlayers.isEmpty());
+    }
+
+    private void clearSelection() {
+        selectedPlayers.clear();
+        view.clearSelection();
+        view.enableRemoveFavorite(false);
     }
 }

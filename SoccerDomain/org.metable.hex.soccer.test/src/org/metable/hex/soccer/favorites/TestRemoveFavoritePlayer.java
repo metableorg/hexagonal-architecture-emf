@@ -32,4 +32,23 @@ public class TestRemoveFavoritePlayer extends CommonTest {
         // Then
         Assert.assertFalse(dsl.removeFavoritePlayerIsAvailable());
     }
+
+    @Test
+    public void should_remove_selected_player() {
+        // Given
+        dsl.favoritePlayer("first name: Mason", "last name: Mount", "team name: Chelsea");
+        dsl.favoritePlayer("first name: Thiago", "last name: Silva", "team name: Chelsea");
+
+        dsl.selectPlayer("first name: Mason", "last name: Mount", "team name: Chelsea");
+
+        // When
+        dsl.removeFavoritePlayer();
+
+        // Then
+        Assert.assertFalse(dsl.removeFavoritePlayerIsAvailable());
+        Assert.assertFalse(
+                dsl.favoritePlayersViewContainsPlayer("first name: Mason", "last name: Mount", "team name: Chelsea"));
+        Assert.assertTrue(
+                dsl.favoritePlayersViewContainsPlayer("first name: Thiago", "last name: Silva", "team name: Chelsea"));
+    }
 }

@@ -42,8 +42,18 @@ public class FavoritesViewPanel extends JPanel implements FavoritePlayersViewPor
     }
 
     @Override
+    public void clearSelection() {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
     public void enableAddFavorite(boolean value) {
         favoritePlayerForm.enableAddFavorite(value);
+    }
+
+    @Override
+    public void enableRemoveFavorite(boolean value) {
     }
 
     public void enterPlayerInfo(String firstName, String lastName, String teamName) {
@@ -57,6 +67,10 @@ public class FavoritesViewPanel extends JPanel implements FavoritePlayersViewPor
 
     public void requestFavorites() {
         playerCommandPort.requestFavorites();
+    }
+
+    @Override
+    public void selectionChanged(List<Integer> selectedIndices) {
     }
 
     @Override
@@ -79,13 +93,5 @@ public class FavoritesViewPanel extends JPanel implements FavoritePlayersViewPor
         playerCommandPort = new PlayerCommandPort(favoritePlayers, this);
 
         enterPlayerInfo("", "", "");
-    }
-
-    @Override
-    public void selectionChanged(List<Integer> selectedIndices) {
-    }
-
-    @Override
-    public void enableRemoveFavorite(boolean value) {
     }
 }

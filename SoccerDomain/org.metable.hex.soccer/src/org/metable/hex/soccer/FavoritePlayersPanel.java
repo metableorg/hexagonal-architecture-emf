@@ -26,6 +26,7 @@ public class FavoritePlayersPanel extends JPanel {
             }
         }
     }
+
     private JList<String> favoritePlayersList;
 
     private ListModel listModel;

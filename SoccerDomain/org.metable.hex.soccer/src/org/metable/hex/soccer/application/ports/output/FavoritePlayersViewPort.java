@@ -8,6 +8,8 @@ public interface FavoritePlayersViewPort {
 
     public void addMessage(String message);
 
+    public void clearSelection();
+
     public void enableAddFavorite(boolean value);
 
     public void enableRemoveFavorite(boolean value);

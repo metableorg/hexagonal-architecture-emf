@@ -55,6 +55,7 @@ public class SoccerApp {
         public void removeFavorite(DeleteFavoritePlayerCommand command) {
         }
     }
+
     /**
      * Launch the application.
      */
@@ -70,6 +71,7 @@ public class SoccerApp {
             }
         });
     }
+
     private JFrame frame;
 
     private FavoritesViewPanel view;

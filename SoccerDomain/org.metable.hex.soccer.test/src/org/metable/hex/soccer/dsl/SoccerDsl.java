@@ -65,13 +65,8 @@ public class SoccerDsl {
         return driver.numberOfFavoritePlayers();
     }
 
-    public void removeFavoritePlayer(String... args) {
-        final Parameters params = new Parameters(args);
-        final String firstName = params.Optional("first name", "Mason");
-        final String lastName = params.Optional("last name", "Mount");
-        final String teamName = params.Optional("team name", "Chelsea");
-
-        driver.removeFavoritePlayer(firstName, lastName, teamName);
+    public void removeFavoritePlayer() {
+        driver.removeFavoritePlayer();
     }
 
     public boolean removeFavoritePlayerIsAvailable() {

@@ -20,7 +20,7 @@ public interface SoccerDslDriver {
 
     int numberOfFavoritePlayers();
 
-    void removeFavoritePlayer(String firstName, String lastName, String teamName);
+    void removeFavoritePlayer();
 
     boolean removeFavoritePlayerIsAvailable();
 
@@ -29,5 +29,4 @@ public interface SoccerDslDriver {
     void unselectPlayer(String firstName, String lastName, String teamName);
 
     void viewFavorites();
-
 }

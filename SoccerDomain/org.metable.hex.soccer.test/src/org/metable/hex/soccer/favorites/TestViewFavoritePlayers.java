@@ -40,9 +40,10 @@ public class TestViewFavoritePlayers extends CommonTest {
     public void should_show_no_favorites_message_when_last_favorite_player_is_deleted() {
         // Given
         dsl.favoritePlayer("first name: Mason", "last name: Mount", "team name: Chelsea");
+        dsl.selectPlayer("first name: Mason", "last name: Mount", "team name: Chelsea");
 
         // When
-        dsl.removeFavoritePlayer("first name: Mason", "last name: Mount", "team name: Chelsea");
+        dsl.removeFavoritePlayer();
 
         // Then
         Assert.assertTrue(dsl.favoritePlayersViewContainsMessage("message: You have no favorite players."));
